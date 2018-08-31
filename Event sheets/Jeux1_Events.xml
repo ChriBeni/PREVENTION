@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Jeux1_Events</name>
+    <events>
+        <include>Fonctions</include>
+        <include>Mecanique</include>
+        <event-group description="" sid="541331488743113" title="JEUX 1" />
+    </events>
+</c2eventsheet>

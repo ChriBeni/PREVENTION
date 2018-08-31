@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Mecanique</name>
+    <events>
+        <event-group description="" sid="414963927129591" title="Barre de progression déplacement">
+            <sub-events>
+                <event-block sid="463864090297531">
+                    <conditions>
+                        <condition id="5" name="Is tag playing" sid="942826101450441" type="Audio">
+                            <param id="0" name="Tag">Voix</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="487694366642364" type="System">
+                            <param id="0" name="Variable">Lecture</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="166215498842573" type="System">
+                            <param id="0" name="Seconds">0.02</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="479585955511250">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="224448049105995" type="Barre_progression_top">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">Cible</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="590100604692283" type="Barre_progression_top">
+                                    <param id="0" name="X">round((830+(Progression*Step))+(Step/Audio.Duration(Voix)*Audio.PlaybackTime(Voix)))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="862405602109517">
+                    <conditions>
+                        <condition id="0" name="Is playing" sid="405983815477164" type="Video" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="489189097880128" type="System">
+                            <param id="0" name="Seconds">0.02</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="971376670812941">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="945725434728813" type="Barre_progression_top">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">Cible</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="359043897300520" type="Barre_progression_top">
+                                    <param id="0" name="X">round((830+(Progression*Step))+(Step/Video.Duration*Video.PlaybackTime))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="682691322503969" title="Barre de progression cible">
+            <sub-events>
+                <comment>On détermine la cible à atteindre (sa position en x) pour le bouton de progression - 830 est sa position de départ, la cible est sa position actuelle +1 - Le Step est la longueur de la barre de progression divisée par le nombre total de sons dans le xml</comment>
+                <event-block sid="985839992015518">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="562566988250951" type="Touch">
+                            <param id="0" name="Object">Btn_Lecture</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="181531498142113" type="System">
+                            <param id="0" name="Variable">Cible</param>
+                            <param id="1" name="Value">round(830+((Progression+1)*Step))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="178029998945584" title="Boutons">
+            <sub-events>
+                <event-group description="" sid="133628918510779" title="Bouton de réglage du son">
+                    <sub-events>
+                        <event-group description="" sid="246445390139880" title="Volume">
+                            <sub-events>
+                                <event-block sid="771885024388315">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="632576268966603" type="Curseur_son" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="283408230216426" type="System">
+                                            <param id="0" name="Variable">Volume_son</param>
+                                            <param id="1" name="Value">0-round((172/Curseur_son.X)*10)</param>
+                                        </action>
+                                        <action id="10" name="Set master volume" sid="888917407356835" type="Audio">
+                                            <param id="0" name="dB">Volume_son</param>
+                                        </action>
+                                        <action id="4" name="Set volume" sid="332799996632843" type="Video">
+                                            <param id="0" name="Volume">Volume_son</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="401308134070459">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="480744016439649" type="Curseur_son" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="10" name="Set master volume" sid="577135463867434" type="Audio">
+                                            <param id="0" name="dB">Volume_son</param>
+                                        </action>
+                                        <action id="4" name="Set volume" sid="983370235526020" type="Video">
+                                            <param id="0" name="Volume">Volume_son</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="731273225336363" title="Comportement du bouton de réglage du son">
+                            <sub-events>
+                                <event-group description="" sid="909119025639819" title="Limites">
+                                    <sub-events>
+                                        <event-block sid="841568078697109">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="794827956751485" type="Curseur_son">
+                                                    <param id="0" name="Comparison">3</param>
+                                                    <param id="1" name="X co-ordinate">88</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="617031418848301" type="Curseur_son">
+                                                    <param id="0" name="X">88</param>
+                                                </action>
+                                                <action id="10" name="Set master volume" sid="943357131069133" type="Audio">
+                                                    <param id="0" name="dB">-48</param>
+                                                </action>
+                                                <action id="4" name="Set volume" sid="680390266061312" type="Media">
+                                                    <param id="0" name="Volume">-48</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="209508889327916" type="Son_off">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="352917958935616">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="202003502844192" type="System">
+                                                            <param id="0" name="Variable">SST</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="226443461511732" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="597156077599748" type="System">
+                                                            <param id="0" name="Variable">SST</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="944089901533888">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="273237331818018" type="Curseur_son">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="X co-ordinate">88</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="343570548921667" type="Son_off">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="391380298874499">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="604337476107212" type="Curseur_son">
+                                                    <param id="0" name="Comparison">5</param>
+                                                    <param id="1" name="X co-ordinate">260</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="549626441471045" type="Curseur_son">
+                                                    <param id="0" name="X">260</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="758776623184169" title="Gestion de la variable associée au bouton de réglage">
+                            <sub-events>
+                                <event-block sid="859850695723907">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="250327910238798" type="Touch">
+                                            <param id="0" name="Object">Btn_Son</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="768935436383973" type="System">
+                                            <param id="0" name="Variable">Reglage_son</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="989195522335718">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="806103024494018" type="System">
+                                            <param id="0" name="Variable">Reglage_son</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="573689453080747" type="Touch">
+                                            <param id="0" name="Object">Reglage_son_general</param>
+                                        </condition>
+                                        <condition id="7" inverted="1" name="Cursor is over object" sid="552536654983882" type="Mouse">
+                                            <param id="0" name="Object">Reglage_son_general</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="186487677409792" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="975235069977258" type="System">
+                                            <param id="0" name="Variable">Reglage_son</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="914449371183697" title="Visibilité du slider">
+                            <sub-events>
+                                <event-block sid="685219693852633">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="959383329554380" type="System">
+                                            <param id="0" name="Variable">Reglage_son</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="582765218794578" type="Reglage_son_curseur">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="742854138701653" type="Curseur_son">
+                                            <param id="0" name="Instance variable">Actif</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="283629534290662">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="767068939740461" type="System">
+                                            <param id="0" name="Variable">Reglage_son</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="443446286963768" type="Reglage_son_curseur">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="142463364145267" type="Curseur_son">
+                                            <param id="0" name="Instance variable">Actif</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="871036822794519" title="Bouton sous-titres">
+                    <sub-events>
+                        <event-group description="" sid="571192993514636" title="Gestion de la variable associée au bouton des sous-titres">
+                            <sub-events>
+                                <comment>Tourniquet : on incrément toujours la variable qui est remise à 0 quand elle est strictement supérieure à 1</comment>
+                                <event-block sid="720135510731902">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="536435246446156" type="System">
+                                            <param id="0" name="Variable">SST</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="340921094561627" type="System">
+                                            <param id="0" name="Variable">SST</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="182751608257610">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="503552495848711" type="System">
+                                            <param id="0" name="Variable">SST</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="861119373024954" type="BTN_SStitre">
+                                            <param id="0" name="Frame number">SST</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="139260393527539" title="Comportement du bouton des sous-titres">
+                            <sub-events>
+                                <event-block sid="364853329410799">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="325688966242307" type="Touch">
+                                            <param id="0" name="Object">BTN_SStitre</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="142584011348908" type="System">
+                                            <param id="0" name="Variable">SST</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="455097019110070" title="Visibilité des sous-titres">
+                            <sub-events>
+                                <event-block sid="460281030970459">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="805652441114314" type="System">
+                                            <param id="0" name="Variable">SST</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="246633890719279" type="Soustitre">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="655344405357607">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="760882302467095" type="System">
+                                            <param id="0" name="Variable">SST</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="675187940809638" type="Soustitre">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="854295312078682" title="Bouton play/pause">
+                    <sub-events>
+                        <comment>Gestion de la lecture et de la pause - Les propriétés de la pause sont activées pour le composant audio afin qu&apos;il soit pris en compte quand le time scale est à 0</comment>
+                        <event-block sid="288716451202844">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="274383296845679" type="Touch">
+                                    <param id="0" name="Object">Btn_Lecture</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="457370852890776" type="Btn_Lecture">
+                                    <param id="0" name="Instance variable">Actif</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="866826608446426" type="System">
+                                    <param id="0" name="Variable">Lecture</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="494388565897373" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="224407284254158" type="System">
+                                    <param id="0" name="Variable">Lecture</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="410623874854565" type="Btn_Lecture">
+                                    <param id="0" name="Animation">&quot;PlayToPause&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="314719949647059" type="Btn_Lecture">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="264877341260244" type="Btn_Lecture">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="983856715079929">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="963591137474086" type="Touch">
+                                    <param id="0" name="Object">Btn_Lecture</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="605952575368211" type="Btn_Lecture">
+                                    <param id="0" name="Instance variable">Actif</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="517143520269183" type="System">
+                                    <param id="0" name="Variable">Lecture</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="986355538425020" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="864160676716636" type="Btn_Lecture">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="528302727886095" type="Btn_Lecture">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="889928534415219" type="Btn_Lecture">
+                                    <param id="0" name="Animation">&quot;PauseToPlay&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="718855955300253" type="System">
+                                    <param id="0" name="Seconds">0.55</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="120812121178645" type="System">
+                                    <param id="0" name="Variable">Lecture</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="728171009551521">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="833203613565088" type="Btn_Lecture">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">23</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="256356554404296" type="Btn_Lecture">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="321292812050104" type="Btn_Lecture">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="944053499207993" type="System">
+                                            <param id="0" name="Time scale">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="412168771846524">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="496237154589056" type="Touch">
+                                    <param id="0" name="Object">Btn_Lecture</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="474347949073396" type="Btn_Lecture">
+                                    <param id="0" name="Instance variable">Actif</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="250127397483401" type="System">
+                                    <param id="0" name="Variable">Lecture</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="219138176886209" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="112106124581578" type="System">
+                                    <param id="0" name="Variable">Lecture</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="308680920191746" type="Btn_Lecture">
+                                    <param id="0" name="Animation">&quot;PlayToPause&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Cas du bouton inactif</comment>
+                        <event-block sid="423224857636454">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="300702787030382" type="Btn_Lecture">
+                                    <param id="0" name="Instance variable">Actif</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="644795175319579" type="Btn_Lecture">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="447060090992408" type="Btn_Lecture">
+                                    <param id="0" name="Opacity">30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Cas du bouton qui redevient actif</comment>
+                        <event-block sid="171575653455638">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="269714669520701" type="Btn_Lecture">
+                                    <param id="0" name="Instance variable">Actif</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="186195091668631">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="947857128368926" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="168629677445820" type="Btn_Lecture">
+                                            <param id="0" name="Animation">&quot;PauseToPlay&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="192401758173689" type="Btn_Lecture">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="401238188146067" type="Btn_Lecture">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-group description="" sid="386820594641963" title="Clignotement">
+                            <sub-events>
+                                <event-block sid="156278885291525">
+                                    <conditions>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="969061449552473" type="Audio">
+                                            <param id="0" name="Tag">Voix</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="974719612467161" type="System">
+                                            <param id="0" name="Variable">Lecture</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="714465679733941" type="Soustitre">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="166653322850662">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="877573202368729" type="System">
+                                            <param id="0" name="Variable">Lecture</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set time scale" sid="263598466642140" type="System">
+                                            <param id="0" name="Time scale">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="313169417233614">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="284626585687679" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="389507197953553" type="Btn_Lecture">
+                                                    <param id="0" name="Animation">&quot;PauseToPlay&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="615745966467297" type="System">
+                                                    <param id="0" name="Seconds">0.05</param>
+                                                </action>
+                                                <action behavior="Sine" id="0" name="Set active" sid="357647236594206" type="Btn_Lecture">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="870444445922573" title="Bouton de fermeture / burger">
+                    <sub-events>
+                        <event-block sid="486981999449118">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="823923757544212" type="Touch">
+                                    <param id="0" name="Object">Btn_Close</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="171306752182080" type="Btn_Close">
+                                    <param id="0" name="Animation">&quot;Close&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="347680877245455" type="System">
+                                    <param id="0" name="Seconds">0.55</param>
+                                </action>
+                                <action id="1" name="Close" sid="257100494813287" type="Browser" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="807299413571085" title="Curseur mouseover">
+            <sub-events>
+                <event-block sid="410643813549087">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="505172108257580" type="Mouse">
+                            <param id="0" name="Object">Curseur</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="770109228896178" type="Curseur">
+                            <param id="0" name="Instance variable">Actif</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="650924288492994" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="458871638558868">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="485775385719483" type="Mouse">
+                            <param id="0" name="Object">Curseur</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="959506928658359" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="820665292828732" title="Détection de la fin du son joué">
+            <sub-events>
+                <event-block sid="676311699032630">
+                    <conditions>
+                        <condition id="0" name="On ended" sid="387824749409043" type="Audio">
+                            <param id="0" name="Tag">Voix</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-42" name="Signal" sid="326926027138068" type="System">
+                            <param id="0" name="Tag">&quot;Suite_OK&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
