@@ -3,9 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GR04_Event</name>
     <events>
+        <include>GR04_Variables</include>
+        <include>GR04_Fonctions</include>
         <include>Mecanique</include>
         <include>Fonctions</include>
-        <event-group description="" sid="961347847732925" title="Chargement Intro2">
+        <event-group description="" sid="961347847732925" title="GR04 - Chargement Intro">
             <sub-events>
                 <event-block sid="731168980236983">
                     <conditions>
@@ -40,9 +42,9 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="703917165329342" title="XML2">
+                <event-group description="" sid="703917165329342" title="GR04 - XML">
                     <sub-events>
-                        <event-group description="" sid="201699320954631" title="Chargement du xml2">
+                        <event-group description="" sid="201699320954631" title="GR04 - Chargement du xml">
                             <sub-events>
                                 <comment>Chargement du xml dans Ajax - Fichier à charger dans le répertoire xml du projet</comment>
                                 <event-block sid="215091329134238">
@@ -87,7 +89,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" inactive="1" sid="895571665483345" title="Timeline G102">
+        <event-group description="" inactive="1" sid="895571665483345" title="Timeline GR04">
             <sub-events>
                 <comment>On joue le son - L&apos;index commence à 0 car les données sont stockées dans un array - On attend le signal de fin de son pour incrémenter la variable</comment>
                 <event-block sid="772388472009787">

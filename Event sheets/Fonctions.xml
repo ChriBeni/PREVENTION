@@ -169,7 +169,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="376756307524355" type="Reglage_son_curseur">
+                        <action id="-15" name="Set visible" sid="376756307524355" type="UI_Reglage_son_curseur">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="338547538944676" type="Son_off">

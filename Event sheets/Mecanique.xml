@@ -217,10 +217,10 @@
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                         <condition id="4" inverted="1" name="Is touching object" sid="573689453080747" type="Touch">
-                                            <param id="0" name="Object">Reglage_son_general</param>
+                                            <param id="0" name="Object">UI_Reglage_son_general</param>
                                         </condition>
                                         <condition id="7" inverted="1" name="Cursor is over object" sid="552536654983882" type="Mouse">
-                                            <param id="0" name="Object">Reglage_son_general</param>
+                                            <param id="0" name="Object">UI_Reglage_son_general</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -246,7 +246,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="582765218794578" type="Reglage_son_curseur">
+                                        <action id="-15" name="Set visible" sid="582765218794578" type="UI_Reglage_son_curseur">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="742854138701653" type="Curseur_son">
@@ -264,7 +264,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="443446286963768" type="Reglage_son_curseur">
+                                        <action id="-15" name="Set visible" sid="443446286963768" type="UI_Reglage_son_curseur">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="142463364145267" type="Curseur_son">
@@ -625,9 +625,9 @@
                 <event-block sid="410643813549087">
                     <conditions>
                         <condition id="7" name="Cursor is over object" sid="505172108257580" type="Mouse">
-                            <param id="0" name="Object">Curseur</param>
+                            <param id="0" name="Object">UI_Curseur</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="770109228896178" type="Curseur">
+                        <condition id="-7" name="Compare instance variable" sid="770109228896178" type="UI_Curseur">
                             <param id="0" name="Instance variable">Actif</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -642,7 +642,7 @@
                 <event-block sid="458871638558868">
                     <conditions>
                         <condition id="7" inverted="1" name="Cursor is over object" sid="485775385719483" type="Mouse">
-                            <param id="0" name="Object">Curseur</param>
+                            <param id="0" name="Object">UI_Curseur</param>
                         </condition>
                     </conditions>
                     <actions>
