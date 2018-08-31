@@ -2,7 +2,7 @@
 <c2layout>
     <name>GR04</name>
     <sid>854228769560319</sid>
-    <event-sheet>Introduction_Events</event-sheet>
+    <event-sheet>GR04_Event</event-sheet>
     <size>
         <width>1920</width>
         <height>1080</height>
@@ -54,8 +54,8 @@
             </instances>
             <effects />
         </layer>
-        <layer name="JEU 01" sid="325279241800731">
-            <initially-visible>1</initially-visible>
+        <layer name="03_JEU 01" sid="325279241800731">
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -72,8 +72,8 @@
             <instances />
             <effects />
         </layer>
-        <layer name="TRANSITION 01" sid="436291926790971">
-            <initially-visible>1</initially-visible>
+        <layer name="02_TRANSITION 01" sid="436291926790971">
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -87,10 +87,97 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="Sprite" uid="32">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>932</x>
+                        <y>427</y>
+                        <z>0</z>
+                        <width>250</width>
+                        <height>250</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
-        <layer name="VIDEO" sid="197323774339142">
+        <layer name="01_VIDEO" sid="197323774339142">
+            <initially-visible>0</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Video_Background" uid="17">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>961</x>
+                        <y>444</y>
+                        <z>0</z>
+                        <width>778</width>
+                        <height>454</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Video" uid="30">
+                    <properties>
+                        <webm-source></webm-source>
+                        <ogg-theora-source></ogg-theora-source>
+                        <h264-source>Video_Test1.mp4</h264-source>
+                        <autoplay>Yes</autoplay>
+                        <play-in-background>No</play-in-background>
+                        <initial-visibility>Visible</initial-visibility>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>602</x>
+                        <y>243</y>
+                        <z>0</z>
+                        <width>720</width>
+                        <height>400</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="00_START" sid="255535749724904">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>

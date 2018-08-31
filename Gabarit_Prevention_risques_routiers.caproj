@@ -361,27 +361,38 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder name="GR04" />
+        <object-folder name="GR04">
+            <object-type name="Sprite" sid="866510374567325">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491651786540350" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="GR05" />
         <object-folder name="GR03" />
         <object-folder name="GR02" />
         <object-folder name="GR01" />
-        <object-type name="Visuel" sid="475769882177075">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="659464046923414" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Fond\Fond2.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Video_Background" sid="785672011992702">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="411931630391520" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
+        <object-folder name="Commun">
+            <object-type name="Visuel" sid="475769882177075">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="659464046923414" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Fond\Fond2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Video_Background" sid="785672011992702">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="411931630391520" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Intro_Text" sid="770778991214471">
             <plugin id="Text" />
         </object-type>
@@ -548,6 +559,7 @@
         </file-folder>
         <file-folder name="xml">
             <file name="G0101.xml" />
+            <file name="GR04.xml" />
         </file-folder>
         <file name="Video_Test1.mp4" />
     </files-folder>

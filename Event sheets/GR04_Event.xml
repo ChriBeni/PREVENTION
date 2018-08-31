@@ -3,10 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GR04_Event</name>
     <events>
-        <include>GR04_Variables</include>
-        <include>GR04_Fonctions</include>
         <include>Mecanique</include>
         <include>Fonctions</include>
+        <include>GR04_Variables</include>
+        <include>GR04_Fonctions</include>
         <event-group description="" sid="961347847732925" title="GR04 - Chargement Intro">
             <sub-events>
                 <event-block sid="731168980236983">
@@ -51,8 +51,8 @@
                                     <conditions />
                                     <actions>
                                         <action id="1" name="Request project file" sid="964478414967564" type="AJAX">
-                                            <param id="0" name="Tag">&quot;G0101&quot;</param>
-                                            <param id="1" name="File">G0101.xml</param>
+                                            <param id="0" name="Tag">&quot;GR04&quot;</param>
+                                            <param id="1" name="File">GR04.xml</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -60,7 +60,7 @@
                                 <event-block sid="828918631056795">
                                     <conditions>
                                         <condition id="0" name="On completed" sid="984158476060189" type="AJAX">
-                                            <param id="0" name="Tag">&quot;G0101&quot;</param>
+                                            <param id="0" name="Tag">&quot;GR04&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -75,10 +75,10 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="251128519204162" type="Function">
                                             <param id="0" name="Name">&quot;Parse_xml&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;G0101&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;GR04&quot;</param>
                                         </action>
                                         <action id="-12" name="Set group active" sid="175101637993524" type="System">
-                                            <param id="0" name="Group name">&quot;Timeline G0101&quot;</param>
+                                            <param id="0" name="Group name">&quot;Timeline GR04&quot;</param>
                                             <param id="1" name="State">1</param>
                                         </action>
                                     </actions>
@@ -92,95 +92,80 @@
         <event-group description="" inactive="1" sid="895571665483345" title="Timeline GR04">
             <sub-events>
                 <comment>On joue le son - L&apos;index commence à 0 car les données sont stockées dans un array - On attend le signal de fin de son pour incrémenter la variable</comment>
-                <event-block sid="772388472009787">
+                <event-block sid="732829023668199">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="696912784891736" type="Touch">
+                        <condition id="3" name="On touched object" sid="739722737262407" type="Touch">
                             <param id="0" name="Object">Btn_Lecture</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="703372439829697" type="System">
+                        <condition id="-14" name="Compare variable" sid="223658121244009" type="System">
                             <param id="0" name="Variable">Progression</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="811815571971592" type="Function">
-                            <param id="0" name="Name">&quot;Play_sound&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-4" name="Set layer visible" sid="448814943189335" type="System">
+                            <param id="0" name="Layer">&quot;00_START&quot;</param>
+                            <param id="1" name="Visibility">0</param>
                         </action>
-                        <action id="-41" name="Wait for signal" sid="174888937224033" type="System">
-                            <param id="0" name="Tag">&quot;Suite_OK&quot;</param>
+                        <action id="-4" name="Set layer visible" sid="740469303832917" type="System">
+                            <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
+                            <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="634104093991108" type="System">
+                        <action id="-12" name="Set group active" sid="220813312458609" type="System">
+                            <param id="0" name="Group name">&quot;GR04 - Fin lecture vidéo&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="869848450081363" title="GR04 - Fin lecture vidéo">
+            <sub-events>
+                <event-block sid="961962410628541">
+                    <conditions>
+                        <condition id="2" name="Has ended" sid="808982727716463" type="Video" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="0" name="Set active" sid="677548995720496" type="Texte_chargement_video">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="767680911786717" type="Texte_chargement_video">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="705341301330602" type="Btn_Lecture">
+                            <param id="0" name="Instance variable">Actif</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="959681753367335" type="System">
+                            <param id="0" name="Variable">Lecture</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="475298640077064" type="System">
                             <param id="0" name="Variable">Progression</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="647018133771001">
+                <event-block sid="676065774590996">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="928585326073856" type="Touch">
+                        <condition id="3" name="On touched object" sid="451232110152514" type="Touch">
                             <param id="0" name="Object">Btn_Lecture</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="539999319407849" type="System">
+                        <condition id="-14" name="Compare variable" sid="406518053025919" type="System">
                             <param id="0" name="Variable">Progression</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="141888773507125" type="Function">
-                            <param id="0" name="Name">&quot;Play_sound&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-4" name="Set layer visible" sid="283653424307017" type="System">
+                            <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
+                            <param id="1" name="Visibility">0</param>
                         </action>
-                        <action id="-41" name="Wait for signal" sid="717156004430614" type="System">
-                            <param id="0" name="Tag">&quot;Suite_OK&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="769935023596390" type="System">
-                            <param id="0" name="Variable">Progression</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="470988677145642">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="939085136741970" type="Touch">
-                            <param id="0" name="Object">Btn_Lecture</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="244605769084554" type="System">
-                            <param id="0" name="Variable">Progression</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="524351379929168" type="Function">
-                            <param id="0" name="Name">&quot;Play_sound&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="491339995793974" type="System">
-                            <param id="0" name="Tag">&quot;Suite_OK&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="867469974432754" type="System">
-                            <param id="0" name="Variable">Progression</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="578189775918160">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="725848030358526" type="Touch">
-                            <param id="0" name="Object">Btn_Lecture</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="516860305203020" type="System">
-                            <param id="0" name="Variable">Progression</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="385801374409738" type="System">
-                            <param id="0" name="Layout">Video1</param>
+                        <action id="-4" name="Set layer visible" sid="429023334386895" type="System">
+                            <param id="0" name="Layer">&quot;02_TRANSITION 01&quot;</param>
+                            <param id="1" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
