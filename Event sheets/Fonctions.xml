@@ -160,6 +160,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Reglage son</comment>
         <event-group description="" sid="953256974585360" title="Réglage du son">
             <sub-events>
                 <event-block sid="648789063412633">
