@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Video1_Events</name>
     <events>
-        <include>Mecanique</include>
-        <include>Fonctions</include>
+        <include>UI_Mecanique</include>
+        <include>UI_Fonctions</include>
         <event-group description="" sid="219279313032967" title="Chargement vidéo">
             <sub-events>
                 <event-block sid="411183075754612">

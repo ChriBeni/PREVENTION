@@ -459,10 +459,10 @@
     </layout-folder>
     <event-folder>
         <event-folder name="UI">
-            <event-sheet>Fonctions.xml</event-sheet>
-            <event-sheet>Mecanique.xml</event-sheet>
+            <event-sheet>UI_Fonctions.xml</event-sheet>
+            <event-sheet>UI_Mecanique.xml</event-sheet>
             <event-sheet>UI_Events.xml</event-sheet>
-            <event-sheet>Variables.xml</event-sheet>
+            <event-sheet>UI_Variables.xml</event-sheet>
         </event-folder>
         <event-folder name="GR01" />
         <event-folder name="GR02" />

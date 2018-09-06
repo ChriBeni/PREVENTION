@@ -10,14 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">GR04</layout>
+        <layout active="1" order="0">GR04</layout>
         <layout order="7">UI</layout>
-        <event-sheet active="1" order="1">GR04_Event</event-sheet>
+        <event-sheet order="1">GR04_Event</event-sheet>
         <event-sheet order="2">GR04_Fonctions</event-sheet>
         <event-sheet order="3">GR04_Variables</event-sheet>
-        <event-sheet order="4">Mecanique</event-sheet>
-        <event-sheet order="5">Fonctions</event-sheet>
-        <event-sheet active="1" order="6">Variables</event-sheet>
+        <event-sheet order="4">UI_Mecanique</event-sheet>
+        <event-sheet order="5">UI_Fonctions</event-sheet>
+        <event-sheet order="6">UI_Variables</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

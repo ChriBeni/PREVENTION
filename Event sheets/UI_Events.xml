@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI_Events</name>
     <events>
-        <include>Fonctions</include>
-        <include>Mecanique</include>
+        <include>UI_Fonctions</include>
+        <include>UI_Mecanique</include>
     </events>
 </c2eventsheet>

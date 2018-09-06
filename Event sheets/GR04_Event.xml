@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GR04_Event</name>
     <events>
-        <include>Mecanique</include>
-        <include>Fonctions</include>
+        <include>UI_Mecanique</include>
+        <include>UI_Fonctions</include>
         <include>GR04_Variables</include>
         <include>GR04_Fonctions</include>
         <event-group description="" sid="961347847732925" title="GR04 - Chargement Intro">

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Mecanique</name>
+    <name>UI_Mecanique</name>
     <events>
         <event-group description="" sid="414963927129591" title="Barre de progression déplacement">
             <sub-events>
