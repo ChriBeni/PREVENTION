@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Variables</name>
     <events>
+        <variable constant="0" name="Variable1" sid="411908149723363" static="0" type="number">0</variable>
         <variable constant="0" name="Volume_son" sid="994412083711037" static="0" type="number">0</variable>
         <variable constant="0" name="Reglage_son" sid="131382896637469" static="0" type="number">0</variable>
         <variable constant="0" name="Cible" sid="867229755673998" static="0" type="number">0</variable>
