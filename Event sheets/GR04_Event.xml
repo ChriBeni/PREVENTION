@@ -120,6 +120,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>test</comment>
         <event-group description="" inactive="1" sid="869848450081363" title="GR04 - Fin lecture vidéo">
             <sub-events>
                 <event-block sid="961962410628541">
