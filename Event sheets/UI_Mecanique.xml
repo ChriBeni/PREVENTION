@@ -725,6 +725,10 @@
                                             <param id="0" name="Variable">numeroMarqueur</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="264334061191685" type="Function">
+                                            <param id="0" name="Name">&quot;initNavigation&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>

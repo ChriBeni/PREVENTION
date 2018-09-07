@@ -96,109 +96,119 @@
         <event-group description="" inactive="1" sid="895571665483345" title="Timeline GR04">
             <sub-events>
                 <comment>On joue le son - L&apos;index commence à 0 car les données sont stockées dans un array - On attend le signal de fin de son pour incrémenter la variable</comment>
-                <comment>MARQUEUR 2 = Transition dialogue</comment>
-                <event-block sid="385396112244740">
+                <event-block sid="845664971260577">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="351448674230608" type="System">
-                            <param id="0" name="Variable">numeroMarqueur</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
+                        <condition id="0" name="On function" sid="512169596267994" type="Function">
+                            <param id="0" name="Name">&quot;initNavigation&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-4" name="Set layer visible" sid="565671086806150" type="System">
-                            <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="417190176438059" type="System">
-                            <param id="0" name="Layer">&quot;02_TRANSITION 01&quot;</param>
-                            <param id="1" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>MARQUEUR 1 = Vidéo</comment>
-                <event-block sid="732829023668199">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="223658121244009" type="System">
-                            <param id="0" name="Variable">numeroMarqueur</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set layer visible" sid="448814943189335" type="System">
-                            <param id="0" name="Layer">&quot;00_START&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="740469303832917" type="System">
-                            <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
-                            <param id="1" name="Visibility">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="410333246093204" type="System">
-                            <param id="0" name="Variable">etatLectureVideo</param>
-                            <param id="1" name="Value">PLAY</param>
-                        </action>
-                        <action id="-12" name="Set group active" sid="220813312458609" type="System">
-                            <param id="0" name="Group name">&quot;GR04 - Fin lecture vidéo&quot;</param>
-                            <param id="1" name="State">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="910386714777737" type="System">
-                            <param id="0" name="Variable">etatBoutonPrec</param>
-                            <param id="1" name="Value">ACTIF</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="759599381976139" type="System">
-                            <param id="0" name="Variable">etatBoutonPause</param>
-                            <param id="1" name="Value">ACTIF</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="282329013521926" type="System">
-                            <param id="0" name="Variable">etatBoutonSuiv</param>
-                            <param id="1" name="Value">ACTIF</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="845493246235423" type="System">
-                            <param id="0" name="Variable">etatBoutonPlay</param>
-                            <param id="1" name="Value">ACTIF</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="841044586773426" type="System">
-                            <param id="0" name="Variable">TEST</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>MARQUEUR 0 = Page avec bouton START</comment>
-                <event-block sid="428908436746388">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="628018022479236" type="System">
-                            <param id="0" name="Variable">numeroMarqueur</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set layer visible" sid="407362558209130" type="System">
-                            <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="627156430669977" type="System">
-                            <param id="0" name="Layer">&quot;00_START&quot;</param>
-                            <param id="1" name="Visibility">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="674179105128630" type="System">
-                            <param id="0" name="Variable">etatBoutonPlay</param>
-                            <param id="1" name="Value">INACTIF</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="700871420421593" type="System">
-                            <param id="0" name="Variable">etatBoutonPause</param>
-                            <param id="1" name="Value">INACTIF</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="255374435340407" type="System">
-                            <param id="0" name="Variable">etatBoutonSuiv</param>
-                            <param id="1" name="Value">INACTIF</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="722315270384243" type="System">
-                            <param id="0" name="Variable">etatBoutonPrec</param>
-                            <param id="1" name="Value">INACTIF</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <comment>MARQUEUR 2 = Transition dialogue</comment>
+                        <event-block sid="385396112244740">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="351448674230608" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="565671086806150" type="System">
+                                    <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="417190176438059" type="System">
+                                    <param id="0" name="Layer">&quot;02_TRANSITION 01&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 1 = Vidéo</comment>
+                        <event-block sid="732829023668199">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="223658121244009" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="448814943189335" type="System">
+                                    <param id="0" name="Layer">&quot;00_START&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="740469303832917" type="System">
+                                    <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="410333246093204" type="System">
+                                    <param id="0" name="Variable">etatLectureVideo</param>
+                                    <param id="1" name="Value">PLAY</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="220813312458609" type="System">
+                                    <param id="0" name="Group name">&quot;GR04 - Fin lecture vidéo&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="910386714777737" type="System">
+                                    <param id="0" name="Variable">etatBoutonPrec</param>
+                                    <param id="1" name="Value">ACTIF</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="759599381976139" type="System">
+                                    <param id="0" name="Variable">etatBoutonPause</param>
+                                    <param id="1" name="Value">ACTIF</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="282329013521926" type="System">
+                                    <param id="0" name="Variable">etatBoutonSuiv</param>
+                                    <param id="1" name="Value">ACTIF</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="845493246235423" type="System">
+                                    <param id="0" name="Variable">etatBoutonPlay</param>
+                                    <param id="1" name="Value">ACTIF</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="841044586773426" type="System">
+                                    <param id="0" name="Variable">TEST</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 0 = Page avec bouton START</comment>
+                        <event-block sid="428908436746388">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="628018022479236" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="407362558209130" type="System">
+                                    <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="627156430669977" type="System">
+                                    <param id="0" name="Layer">&quot;00_START&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="674179105128630" type="System">
+                                    <param id="0" name="Variable">etatBoutonPlay</param>
+                                    <param id="1" name="Value">INACTIF</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="700871420421593" type="System">
+                                    <param id="0" name="Variable">etatBoutonPause</param>
+                                    <param id="1" name="Value">INACTIF</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="255374435340407" type="System">
+                                    <param id="0" name="Variable">etatBoutonSuiv</param>
+                                    <param id="1" name="Value">INACTIF</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="722315270384243" type="System">
+                                    <param id="0" name="Variable">etatBoutonPrec</param>
+                                    <param id="1" name="Value">INACTIF</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -268,11 +278,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="990786424595913">
-            <conditions>
-                <condition id="2" name="Has ended" sid="182084383443818" type="Media" />
-            </conditions>
-            <actions />
-        </event-block>
     </events>
 </c2eventsheet>
