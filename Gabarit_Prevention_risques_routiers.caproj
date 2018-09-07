@@ -81,7 +81,7 @@
             <object-type name="Touch" sid="624171327171805">
                 <plugin id="Touch" />
             </object-type>
-            <object-type name="Video" sid="370313632252254">
+            <object-type name="GR04_Video" sid="370313632252254">
                 <plugin id="video" />
             </object-type>
             <object-type name="MM_Preloader" sid="241498756627469">
@@ -465,42 +465,12 @@
         <object-type name="BTN_SUIV" sid="259027369140347">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="285292633665263" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_01.png">
-                        <collision-poly>
-                            <point x="0.148148" y="0.156863" />
-                            <point x="0.5" y="0" />
-                            <point x="0.87037" y="0.137255" />
-                            <point x="0.777778" y="0.490196" />
-                            <point x="0.5" y="1" />
-                            <point x="0.148148" y="0.843137" />
-                            <point x="0.037037" y="0.490196" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_02.png">
-                        <collision-poly>
-                            <point x="0.12963" y="0.137255" />
-                            <point x="0.5" y="0" />
-                            <point x="0.87037" y="0.137255" />
-                            <point x="1" y="0.490196" />
-                            <point x="0.87037" y="0.862745" />
-                            <point x="0.5" y="1" />
-                            <point x="0.12963" y="0.862745" />
-                            <point x="0" y="0.490196" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_03.png">
-                        <collision-poly>
-                            <point x="0.12963" y="0.137255" />
-                            <point x="0.5" y="0" />
-                            <point x="0.87037" y="0.137255" />
-                            <point x="1" y="0.490196" />
-                            <point x="0.87037" y="0.862745" />
-                            <point x="0.5" y="1" />
-                            <point x="0.12963" y="0.862745" />
-                            <point x="0" y="0.490196" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="2" loop="0" name="ETATS" pingpong="0" repeatcount="1" repeatto="0" sid="285292633665263" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_02.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="CLIGNOTE" pingpong="0" repeatcount="1" repeatto="0" sid="787622472059880" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -543,7 +513,7 @@
         </family>
         <family name="Media" plugin-id="video" sid="188895337925674">
             <members>
-                <member>Video</member>
+                <member>GR04_Video</member>
             </members>
         </family>
     </families>

@@ -31,7 +31,7 @@
                             <param id="0" name="X">830+(numeroMarqueur*Step)</param>
                         </action>
                         <action id="4" name="Add object" sid="932669168881882" type="MM_Preloader">
-                            <param id="0" name="Object">Video</param>
+                            <param id="0" name="Object">GR04_Video</param>
                         </action>
                         <action id="2" name="Start" sid="840240888654815" type="MM_Preloader" />
                         <action id="-10" name="Set value" sid="108767305614415" type="Btn_Lecture">

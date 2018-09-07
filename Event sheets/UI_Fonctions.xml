@@ -183,7 +183,7 @@
                         <action id="10" name="Set master volume" sid="395558482827729" type="Audio">
                             <param id="0" name="dB">Volume_son</param>
                         </action>
-                        <action id="4" name="Set volume" sid="668405283508777" type="Video">
+                        <action id="4" name="Set volume" sid="668405283508777" type="GR04_Video">
                             <param id="0" name="Volume">Volume_son</param>
                         </action>
                     </actions>

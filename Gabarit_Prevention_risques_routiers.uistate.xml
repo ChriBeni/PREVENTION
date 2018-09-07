@@ -27,7 +27,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="1" name="UI_Curseur" />
         <family expanded="0" name="UI_Reglage_son_curseur" />
         <family expanded="0" name="UI_Reglage_son_general" />
-        <family expanded="0" name="Media" />
+        <family expanded="1" name="Media" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />

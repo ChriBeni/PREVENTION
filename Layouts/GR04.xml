@@ -151,7 +151,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Video" uid="30">
+                <instance type="GR04_Video" uid="30">
                     <properties>
                         <webm-source></webm-source>
                         <ogg-theora-source></ogg-theora-source>

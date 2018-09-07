@@ -39,7 +39,7 @@
                 </event-block>
                 <event-block sid="862405602109517">
                     <conditions>
-                        <condition id="0" name="Is playing" sid="405983815477164" type="Video" />
+                        <condition id="0" name="Is playing" sid="405983815477164" type="GR04_Video" />
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="489189097880128" type="System">
@@ -56,7 +56,7 @@
                             </conditions>
                             <actions>
                                 <action id="-1" name="Set X" sid="359043897300520" type="Barre_progression_top">
-                                    <param id="0" name="X">round((830+(numeroMarqueur*Step))+(Step/Video.Duration*Video.PlaybackTime))</param>
+                                    <param id="0" name="X">round((830+(numeroMarqueur*Step))+(Step/GR04_Video.Duration*GR04_Video.PlaybackTime))</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -100,7 +100,7 @@
                                         <action id="10" name="Set master volume" sid="888917407356835" type="Audio">
                                             <param id="0" name="dB">Volume_son</param>
                                         </action>
-                                        <action id="4" name="Set volume" sid="332799996632843" type="Video">
+                                        <action id="4" name="Set volume" sid="332799996632843" type="GR04_Video">
                                             <param id="0" name="Volume">Volume_son</param>
                                         </action>
                                     </actions>
@@ -113,7 +113,7 @@
                                         <action id="10" name="Set master volume" sid="577135463867434" type="Audio">
                                             <param id="0" name="dB">Volume_son</param>
                                         </action>
-                                        <action id="4" name="Set volume" sid="983370235526020" type="Video">
+                                        <action id="4" name="Set volume" sid="983370235526020" type="GR04_Video">
                                             <param id="0" name="Volume">Volume_son</param>
                                         </action>
                                     </actions>
@@ -676,6 +676,61 @@
         </event-group>
         <event-group description="" sid="890987078647250" title="UI - BOUTONS">
             <sub-events>
+                <event-group description="" sid="170414474053171" title="COMMUN - BOUTON START">
+                    <sub-events>
+                        <event-group description="" sid="524753604765678" title="COMMUN - BOUTON START - SURVOL">
+                            <sub-events>
+                                <event-block sid="833633112586450">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="838645324665429" type="Mouse">
+                                            <param id="0" name="Object">BTN_Commencer</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="190709677385413" type="BTN_Commencer">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="0" name="Set cursor style" sid="776823078785480" type="Mouse">
+                                            <param id="0" name="Cursor style">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="780994406749386">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Cursor is over object" sid="754142700755129" type="Mouse">
+                                            <param id="0" name="Object">BTN_Commencer</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="689133656376387" type="BTN_Commencer">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="0" name="Set cursor style" sid="852807410148371" type="Mouse">
+                                            <param id="0" name="Cursor style">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="664479751934779" title="COMMUN - BOUTON START - CLIC">
+                            <sub-events>
+                                <event-block sid="163029473501515">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="551558730554277" type="Touch">
+                                            <param id="0" name="Object">BTN_Commencer</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="966858228612445" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="517280039736602" title="UI - BOUTON PLAY">
                     <sub-events>
                         <event-group description="" sid="120132341500851" title="UI - BOUTON PLAY - VISIBLE">
@@ -705,6 +760,38 @@
                                     <actions>
                                         <action id="-15" name="Set visible" sid="752801449658770" type="BTN_PLAY">
                                             <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="285891867873064" title="UI - BOUTON PLAY - ACTIF">
+                            <sub-events>
+                                <event-block sid="388667145129611">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="174868392214322" type="System">
+                                            <param id="0" name="Variable">etatBoutonPlay</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="782546454391797" type="BTN_PLAY">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="471920292186714">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="912962558314060" type="System">
+                                            <param id="0" name="Variable">etatBoutonPlay</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">INACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="717911678721611" type="BTN_PLAY">
+                                            <param id="0" name="Opacity">20</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -905,6 +992,131 @@
                                         <action id="-9" name="Set value" sid="847796347445140" type="System">
                                             <param id="0" name="Variable">etatLecture</param>
                                             <param id="1" name="Value">PAUSE</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="771990199942662" title="UI - BOUTON SUIVANT">
+                    <sub-events>
+                        <event-group description="" sid="921941853215660" title="UI - BOUTON SUIVANT - VISIBLE">
+                            <sub-events>
+                                <event-block sid="792769656603128">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="185913523473136" type="System">
+                                            <param id="0" name="Variable">etatLecture</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">END</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="140684399603207" type="BTN_SUIV">
+                                            <param id="0" name="Animation">&quot;CLIGNOTE&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="775092008171368" title="UI - BOUTON SUIVANT - ACTIF">
+                            <sub-events>
+                                <event-block sid="163801444079845">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="757977709618674" type="System">
+                                            <param id="0" name="Variable">etatBoutonSuiv</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="230201538158876" type="BTN_SUIV">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="356681913865787">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="257638430643752" type="System">
+                                            <param id="0" name="Variable">etatBoutonSuiv</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">INACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="385232805645308" type="BTN_SUIV">
+                                            <param id="0" name="Opacity">20</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="157575542543488" title="UI - BOUTON SUIVANT - SURVOL">
+                            <sub-events>
+                                <event-block sid="840037936968391">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="520255445412130" type="Mouse">
+                                            <param id="0" name="Object">BTN_SUIV</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="280254394460093" type="System">
+                                            <param id="0" name="Variable">etatBoutonSuiv</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="268099703288349" type="BTN_SUIV">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="0" name="Set cursor style" sid="861177611614445" type="Mouse">
+                                            <param id="0" name="Cursor style">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="642827910211167">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Cursor is over object" sid="118049506441362" type="Mouse">
+                                            <param id="0" name="Object">BTN_SUIV</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="739717440877928" type="System">
+                                            <param id="0" name="Variable">etatBoutonSuiv</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="260408529919738" type="BTN_SUIV">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="0" name="Set cursor style" sid="595655974980942" type="Mouse">
+                                            <param id="0" name="Cursor style">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="609669975949041" title="UI - BOUTON SUIVANT - CLIC">
+                            <sub-events>
+                                <event-block sid="293184902573210">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="451315621773635" type="Touch">
+                                            <param id="0" name="Object">BTN_SUIV</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="742946230202295" type="System">
+                                            <param id="0" name="Variable">etatBoutonSuiv</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="803072059140173" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="237588745704076" type="BTN_SUIV">
+                                            <param id="0" name="Animation">&quot;ETATS&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
