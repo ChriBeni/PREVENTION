@@ -393,6 +393,35 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="BTN_Commencer" sid="790998860059136">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="495095320554556" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\BtnCommencer01.png">
+                            <collision-poly>
+                                <point x="0.230909" y="0.3175" />
+                                <point x="0.5" y="0.2975" />
+                                <point x="0.898182" y="0.5" />
+                                <point x="0.770909" y="0.685" />
+                                <point x="0.5" y="0.7025" />
+                                <point x="0.227273" y="0.6875" />
+                                <point x="0.1" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\BtnCommencer02.png">
+                            <collision-poly>
+                                <point x="0.221818" y="0.305" />
+                                <point x="0.5" y="0.2975" />
+                                <point x="0.778182" y="0.305" />
+                                <point x="0.898182" y="0.5" />
+                                <point x="0.78" y="0.6975" />
+                                <point x="0.218182" y="0.7" />
+                                <point x="0.1" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Intro_Text" sid="770778991214471">
             <plugin id="Text" />
@@ -404,6 +433,85 @@
                     <behavior id="Sin" />
                 </behavior-type>
             </behaviors>
+        </object-type>
+        <object-type name="Sprite3" sid="670287036531360">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="546328303425091" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\decors_fond.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="823739245288538">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738145323954970" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BARRE_BAS.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BTN_PLAY" sid="716467068838185">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="ETATS" pingpong="0" repeatcount="1" repeatto="0" sid="309641880757156" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_PLAY_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_PLAY_02.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="CLIGNOTE" pingpong="0" repeatcount="1" repeatto="0" sid="592044107538759" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507463" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BTN_SUIV" sid="259027369140347">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="285292633665263" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_01.png">
+                        <collision-poly>
+                            <point x="0.148148" y="0.156863" />
+                            <point x="0.5" y="0" />
+                            <point x="0.87037" y="0.137255" />
+                            <point x="0.777778" y="0.490196" />
+                            <point x="0.5" y="1" />
+                            <point x="0.148148" y="0.843137" />
+                            <point x="0.037037" y="0.490196" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_02.png">
+                        <collision-poly>
+                            <point x="0.12963" y="0.137255" />
+                            <point x="0.5" y="0" />
+                            <point x="0.87037" y="0.137255" />
+                            <point x="1" y="0.490196" />
+                            <point x="0.87037" y="0.862745" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12963" y="0.862745" />
+                            <point x="0" y="0.490196" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_03.png">
+                        <collision-poly>
+                            <point x="0.12963" y="0.137255" />
+                            <point x="0.5" y="0" />
+                            <point x="0.87037" y="0.137255" />
+                            <point x="1" y="0.490196" />
+                            <point x="0.87037" y="0.862745" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12963" y="0.862745" />
+                            <point x="0" y="0.490196" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BTN_PAUSE" sid="310546075109503">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="595166312884138" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_PAUSE_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_PAUSE_02.png" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -563,5 +671,6 @@
             <file name="GR04.xml" />
         </file-folder>
         <file name="Video_Test1.mp4" />
+        <file name="La Poste - Risques Routiers _ se garer toujours en marche arrière.mp4" />
     </files-folder>
 </c2project>

@@ -3,6 +3,21 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI_Variables</name>
     <events>
+        <comment>CONSTANTES</comment>
+        <variable constant="1" name="END" sid="670004296417267" static="0" type="number">2</variable>
+        <variable constant="1" name="PLAY" sid="769012328197548" static="0" type="number">1</variable>
+        <variable constant="1" name="PAUSE" sid="905721925635095" static="0" type="number">0</variable>
+        <variable constant="1" name="NON" sid="907285140334598" static="0" type="number">0</variable>
+        <variable constant="1" name="OUI" sid="885493270921133" static="0" type="number">1</variable>
+        <variable constant="1" name="INACTIF" sid="510484119313382" static="0" type="number">0</variable>
+        <variable constant="1" name="ACTIF" sid="175270860040957" static="0" type="number">1</variable>
+        <comment>ETATS</comment>
+        <variable constant="0" name="etatBoutonPause" sid="269728549487493" static="0" type="number">0</variable>
+        <variable constant="0" name="etatBoutonPlay" sid="784501278322801" static="0" type="number">0</variable>
+        <variable constant="0" name="etatBoutonRetour" sid="549999754225550" static="0" type="number">0</variable>
+        <variable constant="0" name="etatBoutonAvance" sid="714751088380995" static="0" type="number">0</variable>
+        <variable constant="0" name="etatLecture" sid="424636579015896" static="0" type="number">0</variable>
+        <variable comment="n° de rang =&gt; permet d&apos;appeler les sons et ss-titres dans l&apos;array" constant="0" name="numeroMarqueur" sid="438890224343227" static="0" type="number">0</variable>
         <variable constant="0" name="Variable1" sid="411908149723363" static="0" type="number">0</variable>
         <variable constant="0" name="Volume_son" sid="994412083711037" static="0" type="number">0</variable>
         <variable constant="0" name="Reglage_son" sid="131382896637469" static="0" type="number">0</variable>
@@ -11,7 +26,6 @@
         <variable constant="0" name="SST" sid="127391712628735" static="0" type="number">0</variable>
         <variable comment="déclenche la mise en pause du système ou la lecture" constant="0" name="Lecture" sid="143223608551718" static="0" type="number">0</variable>
         <variable constant="0" name="Granule" sid="580580184927443" static="0" type="text"></variable>
-        <variable comment="n° de rang =&gt; permet d&apos;appeler les sons et ss-titres dans l&apos;array" constant="0" name="Progression" sid="438890224343227" static="0" type="number">0</variable>
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="Compteur" sid="406283611126352" static="0" type="number">0</variable>
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="Nb_nodes_X" sid="221501204787963" static="0" type="number">0</variable>
         <variable constant="0" name="Repere_son" sid="683468447894144" static="0" type="text"></variable>

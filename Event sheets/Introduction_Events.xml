@@ -24,11 +24,11 @@
                             <param id="0" name="Mode">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="861107963297097" type="System">
-                            <param id="0" name="Variable">Progression</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-1" name="Set X" sid="550444155710015" type="Barre_progression_top">
-                            <param id="0" name="X">830+(Progression*Step)</param>
+                            <param id="0" name="X">830+(numeroMarqueur*Step)</param>
                         </action>
                         <action id="4" name="Add object" sid="932669168881882" type="MM_Preloader">
                             <param id="0" name="Object">Video</param>
@@ -96,7 +96,7 @@
                             <param id="0" name="Object">Btn_Lecture</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="701706432155137" type="System">
-                            <param id="0" name="Variable">Progression</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -110,7 +110,7 @@
                             <param id="0" name="Tag">&quot;Suite_OK&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="770990078844096" type="System">
-                            <param id="0" name="Variable">Progression</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -121,7 +121,7 @@
                             <param id="0" name="Object">Btn_Lecture</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="244436034818642" type="System">
-                            <param id="0" name="Variable">Progression</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -135,7 +135,7 @@
                             <param id="0" name="Tag">&quot;Suite_OK&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="566552921578934" type="System">
-                            <param id="0" name="Variable">Progression</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Value">2</param>
                         </action>
                     </actions>
@@ -146,7 +146,7 @@
                             <param id="0" name="Object">Btn_Lecture</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="950289395883457" type="System">
-                            <param id="0" name="Variable">Progression</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -160,7 +160,7 @@
                             <param id="0" name="Tag">&quot;Suite_OK&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="675565966817791" type="System">
-                            <param id="0" name="Variable">Progression</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Value">3</param>
                         </action>
                     </actions>
@@ -171,7 +171,7 @@
                             <param id="0" name="Object">Btn_Lecture</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="896642462288783" type="System">
-                            <param id="0" name="Variable">Progression</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>

@@ -24,11 +24,11 @@
                             <param id="0" name="Mode">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="726373340220774" type="System">
-                            <param id="0" name="Variable">Progression</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Value">3</param>
                         </action>
                         <action id="-1" name="Set X" sid="810194401661891" type="Barre_progression_top">
-                            <param id="0" name="X">830+(Progression*Step)</param>
+                            <param id="0" name="X">830+(numeroMarqueur*Step)</param>
                         </action>
                         <action id="-10" name="Set value" sid="581937516256243" type="Btn_Lecture">
                             <param id="0" name="Instance variable">Actif</param>
@@ -105,7 +105,7 @@
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="246723263552783" type="System">
-                            <param id="0" name="Variable">Progression</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Value">4</param>
                         </action>
                     </actions>
@@ -116,7 +116,7 @@
                             <param id="0" name="Object">Btn_Lecture</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="997342146547205" type="System">
-                            <param id="0" name="Variable">Progression</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>

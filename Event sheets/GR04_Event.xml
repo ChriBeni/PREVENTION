@@ -26,19 +26,23 @@
                             <param id="0" name="Mode">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="348251450605307" type="System">
-                            <param id="0" name="Variable">Progression</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-1" name="Set X" sid="737600677584881" type="Barre_progression_top">
-                            <param id="0" name="X">830+(Progression*Step)</param>
+                            <param id="0" name="X">830+(numeroMarqueur*Step)</param>
                         </action>
                         <action id="4" name="Add object" sid="683982748884733" type="MM_Preloader">
                             <param id="0" name="Object">Video</param>
                         </action>
                         <action id="2" name="Start" sid="393952087647296" type="MM_Preloader" />
-                        <action id="-10" name="Set value" sid="274021403252930" type="Btn_Lecture">
+                        <action disabled="1" id="-10" name="Set value" sid="274021403252930" type="Btn_Lecture">
                             <param id="0" name="Instance variable">Actif</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="385280812241279" type="System">
+                            <param id="0" name="Variable">etatLecture</param>
+                            <param id="1" name="Value">PLAY</param>
                         </action>
                     </actions>
                 </event-block>
@@ -92,15 +96,33 @@
         <event-group description="" inactive="1" sid="895571665483345" title="Timeline GR04">
             <sub-events>
                 <comment>On joue le son - L&apos;index commence à 0 car les données sont stockées dans un array - On attend le signal de fin de son pour incrémenter la variable</comment>
+                <comment>MARQUEUR 2 = Transition dialogue</comment>
+                <event-block sid="385396112244740">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="351448674230608" type="System">
+                            <param id="0" name="Variable">numeroMarqueur</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="565671086806150" type="System">
+                            <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="417190176438059" type="System">
+                            <param id="0" name="Layer">&quot;02_TRANSITION 01&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>MARQUEUR 1 = Vidéo</comment>
                 <event-block sid="732829023668199">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="739722737262407" type="Touch">
-                            <param id="0" name="Object">Btn_Lecture</param>
-                        </condition>
                         <condition id="-14" name="Compare variable" sid="223658121244009" type="System">
-                            <param id="0" name="Variable">Progression</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -112,15 +134,63 @@
                             <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="6" name="Play" sid="742591508048842" type="Media" />
                         <action id="-12" name="Set group active" sid="220813312458609" type="System">
                             <param id="0" name="Group name">&quot;GR04 - Fin lecture vidéo&quot;</param>
                             <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="910386714777737" type="System">
+                            <param id="0" name="Variable">etatBoutonRetour</param>
+                            <param id="1" name="Value">ACTIF</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="759599381976139" type="System">
+                            <param id="0" name="Variable">etatBoutonPause</param>
+                            <param id="1" name="Value">ACTIF</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="282329013521926" type="System">
+                            <param id="0" name="Variable">etatBoutonAvance</param>
+                            <param id="1" name="Value">ACTIF</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>MARQUEUR 0 = START</comment>
+                <event-block sid="428908436746388">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="628018022479236" type="System">
+                            <param id="0" name="Variable">numeroMarqueur</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="407362558209130" type="System">
+                            <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="627156430669977" type="System">
+                            <param id="0" name="Layer">&quot;00_START&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="674179105128630" type="System">
+                            <param id="0" name="Variable">etatBoutonPlay</param>
+                            <param id="1" name="Value">INACTIF</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="700871420421593" type="System">
+                            <param id="0" name="Variable">etatBoutonPause</param>
+                            <param id="1" name="Value">INACTIF</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="255374435340407" type="System">
+                            <param id="0" name="Variable">etatBoutonAvance</param>
+                            <param id="1" name="Value">INACTIF</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="722315270384243" type="System">
+                            <param id="0" name="Variable">etatBoutonRetour</param>
+                            <param id="1" name="Value">INACTIF</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <comment>test</comment>
         <event-group description="" inactive="1" sid="869848450081363" title="GR04 - Fin lecture vidéo">
             <sub-events>
                 <event-block sid="961962410628541">
@@ -134,7 +204,7 @@
                         <action id="-15" name="Set visible" sid="767680911786717" type="Texte_chargement_video">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="705341301330602" type="Btn_Lecture">
+                        <action disabled="1" id="-10" name="Set value" sid="705341301330602" type="Btn_Lecture">
                             <param id="0" name="Instance variable">Actif</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -143,8 +213,12 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="475298640077064" type="System">
-                            <param id="0" name="Variable">Progression</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="0" name="Variable">numeroMarqueur</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="577323045940105" type="System">
+                            <param id="0" name="Variable">etatBoutonPlay</param>
+                            <param id="1" name="Value">ACTIF</param>
                         </action>
                     </actions>
                 </event-block>
@@ -153,23 +227,69 @@
                         <condition id="3" name="On touched object" sid="451232110152514" type="Touch">
                             <param id="0" name="Object">Btn_Lecture</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="406518053025919" type="System">
-                            <param id="0" name="Variable">Progression</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-4" name="Set layer visible" sid="283653424307017" type="System">
-                            <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="429023334386895" type="System">
-                            <param id="0" name="Layer">&quot;02_TRANSITION 01&quot;</param>
-                            <param id="1" name="Visibility">1</param>
+                        <action id="-10" name="Add to" sid="986256833307315" type="System">
+                            <param id="0" name="Variable">numeroMarqueur</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="578321031937934" title="COMMUN - BTN START">
+            <sub-events>
+                <event-group description="" sid="789523069835329" title="COMMUN - START CLIC">
+                    <sub-events>
+                        <event-block sid="792435206984937">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="182976263555619" type="Touch">
+                                    <param id="0" name="Object">BTN_Commencer</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="513972137050170" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="941872792378861" title="COMMUN - START SURVOL">
+                    <sub-events>
+                        <event-block sid="823187420823492">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="514013382601596" type="Mouse">
+                                    <param id="0" name="Object">BTN_Commencer</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="706974288011413" type="BTN_Commencer">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="0" name="Set cursor style" sid="819390515790656" type="Mouse">
+                                    <param id="0" name="Cursor style">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="992643709654720">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="620291898278340" type="Mouse">
+                                    <param id="0" name="Object">BTN_Commencer</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="548098174279015" type="BTN_Commencer">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="0" name="Set cursor style" sid="830184808775229" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>

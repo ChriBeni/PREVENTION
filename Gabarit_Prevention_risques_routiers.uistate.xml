@@ -10,14 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">GR04</layout>
-        <layout order="7">UI</layout>
-        <event-sheet order="1">GR04_Event</event-sheet>
-        <event-sheet order="2">GR04_Fonctions</event-sheet>
-        <event-sheet order="3">GR04_Variables</event-sheet>
-        <event-sheet order="4">UI_Mecanique</event-sheet>
-        <event-sheet order="5">UI_Fonctions</event-sheet>
-        <event-sheet order="6">UI_Variables</event-sheet>
+        <layout order="0">GR04</layout>
+        <layout order="5">UI</layout>
+        <event-sheet active="1" order="1">GR04_Event</event-sheet>
+        <event-sheet order="2">UI_Mecanique</event-sheet>
+        <event-sheet order="3">UI_Fonctions</event-sheet>
+        <event-sheet order="4">UI_Variables</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -26,7 +24,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="0" name="UI_Curseur" />
+        <family expanded="1" name="UI_Curseur" />
         <family expanded="0" name="UI_Reglage_son_curseur" />
         <family expanded="0" name="UI_Reglage_son_general" />
         <family expanded="0" name="Media" />
@@ -83,5 +81,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Visuel/" />
         <folder expanded="1" path="animation-folder/Video_Background/" />
+        <folder expanded="1" path="animation-folder/BTN_Commencer/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/BTN_PLAY/" />
+        <folder expanded="1" path="animation-folder/BTN_SUIV/" />
+        <folder expanded="1" path="animation-folder/BTN_PAUSE/" />
     </folders-expanded>
 </c2uistate>
