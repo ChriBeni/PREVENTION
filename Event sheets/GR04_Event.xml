@@ -14,10 +14,6 @@
                         <condition id="-2" name="On start of layout" sid="948705570190841" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="760538106898991" type="Function">
-                            <param id="0" name="Name">&quot;Init_bouton_son&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                         <action id="0" name="Call function" sid="680542286265437" type="Function">
                             <param id="0" name="Name">&quot;initTitre&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;le titre du granule&quot;</param>
@@ -45,7 +41,7 @@
                             <param id="0" name="X">830+(numeroMarqueur*Step)</param>
                         </action>
                         <action id="4" name="Add object" sid="683982748884733" type="MM_Preloader">
-                            <param id="0" name="Object">GR04_Video</param>
+                            <param id="0" name="Object">Media</param>
                         </action>
                         <action id="2" name="Start" sid="393952087647296" type="MM_Preloader" />
                         <action disabled="1" id="-10" name="Set value" sid="274021403252930" type="Btn_Lecture">
@@ -55,6 +51,10 @@
                         <action id="-9" name="Set value" sid="385280812241279" type="System">
                             <param id="0" name="Variable">etatLecture</param>
                             <param id="1" name="Value">PLAY</param>
+                        </action>
+                        <action id="0" name="Call function" sid="760538106898991" type="Function">
+                            <param id="0" name="Name">&quot;Init_bouton_son&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -163,7 +163,7 @@
                                     <param id="0" name="Group name">&quot;GR04 - Fin lecture vidéo&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
-                                <action disabled="1" id="-9" name="Set value" sid="731579138002392" type="System">
+                                <action id="-9" name="Set value" sid="731579138002392" type="System">
                                     <param id="0" name="Variable">etatBoutonSuiv</param>
                                     <param id="1" name="Value">INACTIF</param>
                                 </action>
