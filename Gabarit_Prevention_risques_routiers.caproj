@@ -26,6 +26,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra, Alex Hanson-White" id="PinPlus" version="1">Pin+</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
     </used-behaviors>
     <used-effects />
@@ -435,6 +436,25 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="GR04_Bulle_img_02" sid="955631641453121">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780053539850913" speed="5">
+                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR04_Bulle_txt_02" sid="121636986778386">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR04_FOND_perso_voiture" sid="718363420610280">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="344038957630411" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\PERSO voiture.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="GR05" />
         <object-folder name="GR03" />
@@ -506,14 +526,6 @@
                 </behavior-type>
             </behaviors>
         </object-type>
-        <object-type name="Sprite2" sid="718363420610280">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="344038957630411" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\PERSO voiture.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="UI_Curseur" plugin-id="Sprite" sid="871919883988788">
@@ -546,6 +558,21 @@
             <members>
                 <member>GR04_Video</member>
             </members>
+        </family>
+        <family name="COMMUN_Bulles_img" plugin-id="Sprite" sid="604228847572226">
+            <members>
+                <member>GR04_Bulle_img_02</member>
+            </members>
+        </family>
+        <family name="COMMUN_Bulles_txt" plugin-id="Text" sid="323993993325509">
+            <members>
+                <member>GR04_Bulle_txt_02</member>
+            </members>
+            <behaviors>
+                <behavior-type name="PinFamille" sid="382646813008038">
+                    <behavior id="PinPlus" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>

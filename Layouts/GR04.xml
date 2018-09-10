@@ -88,7 +88,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sprite2" uid="32">
+                <instance type="GR04_FOND_perso_voiture" uid="32">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -106,6 +106,79 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="GR04_Bulle_img_02" uid="38">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>960.387573242</x>
+                        <y>170.536849976</y>
+                        <z>0</z>
+                        <width>927.87689209</width>
+                        <height>121.70148468</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500417709</hotspotX>
+                        <hotspotY>0.503184736</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="GR04_Bulle_txt_02" uid="39">
+                    <properties>
+                        <text></text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Articulate,-35,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="PinFamille">
+                            <properties>
+                                <x>Enabled</x>
+                                <y>Enabled</y>
+                                <zindex>Disabled</zindex>
+                                <angle>Disabled</angle>
+                                <width>Disabled</width>
+                                <height>Disabled</height>
+                                <opacity>Enabled</opacity>
+                                <visibility>Enabled</visibility>
+                                <collisions-enabled>Disabled</collisions-enabled>
+                                <timescale>Disabled</timescale>
+                                <hotspot-x>Disabled</hotspot-x>
+                                <hotspot-y>Disabled</hotspot-y>
+                                <imagepoint>0</imagepoint>
+                                <animation>Disabled</animation>
+                                <frame>Disabled</frame>
+                                <mirror>Disabled</mirror>
+                                <flip>Disabled</flip>
+                                <destroy>Disabled</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>579</x>
+                        <y>125</y>
+                        <z>0</z>
+                        <width>829</width>
+                        <height>101</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

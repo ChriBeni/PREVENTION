@@ -696,7 +696,34 @@
                                     <param id="0" name="Name">&quot;initUI&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="292528243616651" type="Barre_progression_masque">
+                                    <param id="0" name="Pin to">Barre_progression_top</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="10" name="Request fullscreen" sid="468361807588941" type="Browser">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="853942139132214" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="964829320314840" type="Barre_progression_top">
+                                    <param id="0" name="X">830+(numeroMarqueur*Step)</param>
+                                </action>
+                                <action id="4" name="Add object" sid="640470138348603" type="MM_Preloader">
+                                    <param id="0" name="Object">Media</param>
+                                </action>
+                                <action id="2" name="Start" sid="824931471893229" type="MM_Preloader" />
+                                <action id="-9" name="Set value" sid="933175666864270" type="System">
+                                    <param id="0" name="Variable">etatLecture</param>
+                                    <param id="1" name="Value">PLAY</param>
+                                </action>
+                                <action id="0" name="Call function" sid="954684266378883" type="Function">
+                                    <param id="0" name="Name">&quot;Init_bouton_son&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -710,6 +737,37 @@
                             </conditions>
                             <actions />
                         </event-block>
+                        <event-group description="" sid="641371026981657" title="UI - INIT - XML CHARGEMENT">
+                            <sub-events>
+                                <comment>Lorsque le xml est chargé on passe les données dans le plugin xml</comment>
+                                <event-block sid="942601895385029">
+                                    <conditions>
+                                        <condition id="0" name="On completed" sid="176788836130598" type="AJAX">
+                                            <param id="0" name="Tag">numeroGranule</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Load" sid="120773348772721" type="XML">
+                                            <param id="0" name="XML">AJAX.LastData</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>On appelle la fonction qui va récupérer les données du xml dans un array et on active le groupe qui convient</comment>
+                                <event-block sid="418185081919871">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="489361597322175" type="Function">
+                                            <param id="0" name="Name">&quot;Parse_xml&quot;</param>
+                                            <param id="1" name="Parameter {n}">numeroGranule</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="357756585762034" type="System">
+                                            <param id="0" name="Group name">numeroGranule&amp;&quot; - TIMELINE&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                     </sub-events>
                 </event-group>
             </sub-events>
@@ -903,6 +961,9 @@
                                             <param id="0" name="Variable">etatLecture</param>
                                             <param id="1" name="Value">PLAY</param>
                                         </action>
+                                        <action id="-13" name="Set time scale" sid="357095530994872" type="System">
+                                            <param id="0" name="Time scale">1.0</param>
+                                        </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="507002250865560">
@@ -1046,6 +1107,9 @@
                                         <action id="-9" name="Set value" sid="847796347445140" type="System">
                                             <param id="0" name="Variable">etatLecture</param>
                                             <param id="1" name="Value">PAUSE</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="810343230698017" type="System">
+                                            <param id="0" name="Time scale">0</param>
                                         </action>
                                     </actions>
                                     <sub-events>

@@ -28,5 +28,22 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="838592826315071" title="GR04 - GESTION - PIN">
+            <sub-events>
+                <event-block sid="682428715808324">
+                    <conditions>
+                        <condition id="0" name="On function" sid="284911525201322" type="Function">
+                            <param id="0" name="Name">&quot;GR04_initPin&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="PinFamille" id="0" name="Pin to object" sid="985521935269946" type="GR04_Bulle_txt_02">
+                            <param id="0" name="Pin to">GR04_Bulle_img_02</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
