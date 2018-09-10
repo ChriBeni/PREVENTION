@@ -16,7 +16,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="2">UI_Mecanique</event-sheet>
         <event-sheet order="3">UI_Fonctions</event-sheet>
         <event-sheet order="4">UI_Variables</event-sheet>
-        <event-sheet order="6">GR04_Fonctions</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

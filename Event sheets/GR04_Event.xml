@@ -9,7 +9,7 @@
         <include>GR04_Fonctions</include>
         <event-group description="" sid="961347847732925" title="GR04 - INIT">
             <sub-events>
-                <comment>Chargement du titre + vidéo + fichier xml dans Ajax - Fichier à charger dans le répertoire xml du projet</comment>
+                <comment>Chargement du titre + vidéo + fichier xml dans Ajax - Fichier à charger dans le répertoire xml du projet </comment>
                 <event-block sid="731168980236983">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="948705570190841" type="System" />
@@ -19,13 +19,9 @@
                             <param id="0" name="Variable">numeroGranule</param>
                             <param id="1" name="Value">&quot;GR04&quot;</param>
                         </action>
-                        <action id="0" name="Call function" sid="680542286265437" type="Function">
-                            <param id="0" name="Name">&quot;initTitre&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;le titre du granule&quot;{###}&quot;Préfixe du granule (ex:GR04)&quot;</param>
-                        </action>
                         <action id="0" name="Call function" sid="563079481847935" type="Function">
                             <param id="0" name="Name">&quot;initUI&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;GR04_Video&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;le titre du granule&quot;</param>
                         </action>
                         <action id="1" name="Request project file" sid="964478414967564" type="AJAX">
                             <param id="0" name="Tag">numeroGranule</param>
@@ -39,9 +35,10 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>IMPORTANT =&gt; Garder la nomenclature &quot;N°de granule - TIMELINE&quot;</comment>
         <event-group description="" inactive="1" sid="895571665483345" title="GR04 - TIMELINE">
             <sub-events>
-                <comment> le chiffre de &quot;numéroMarqueur&quot; doit correspondre à la ligne du xml</comment>
+                <comment> le chiffre de &quot;numéroMarqueur&quot; doit correspondre à la ligne du xml </comment>
                 <event-block sid="845664971260577">
                     <conditions>
                         <condition id="0" name="On function" sid="512169596267994" type="Function">
@@ -71,7 +68,7 @@
                                 <action id="0" name="Set text" sid="447785241639846" type="GR04_Bulle_txt_02">
                                     <param id="0" name="Text">Array_reperes_son.At(numeroMarqueur,2)</param>
                                 </action>
-                                <action id="0" name="Set text" sid="338296294553160" type="GR04_Bulle_txt_02">
+                                <action disabled="1" id="0" name="Set text" sid="338296294553160" type="GR04_Bulle_txt_02">
                                     <param id="0" name="Text">&quot;Retrouvons nos 2 amis sur la route&quot;</param>
                                 </action>
                             </actions>
