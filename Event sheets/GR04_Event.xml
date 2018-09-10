@@ -18,6 +18,18 @@
                             <param id="0" name="Name">&quot;Init_bouton_son&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Call function" sid="680542286265437" type="Function">
+                            <param id="0" name="Name">&quot;initTitre&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;le titre du granule&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="563079481847935" type="Function">
+                            <param id="0" name="Name">&quot;initUI&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;GR04_Video&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="231026058521548" type="Function">
+                            <param id="0" name="Name">&quot;initXML&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;GR04.xml&quot;{###}&quot;GR04&quot;</param>
+                        </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="543526459288608" type="Barre_progression_masque">
                             <param id="0" name="Pin to">Barre_progression_top</param>
                             <param id="1" name="Mode">0</param>
@@ -82,7 +94,7 @@
                                             <param id="1" name="Parameter {n}">&quot;GR04&quot;</param>
                                         </action>
                                         <action id="-12" name="Set group active" sid="175101637993524" type="System">
-                                            <param id="0" name="Group name">&quot;Timeline GR04&quot;</param>
+                                            <param id="0" name="Group name">&quot;GR04 - TIMELINE&quot;</param>
                                             <param id="1" name="State">1</param>
                                         </action>
                                     </actions>
@@ -93,7 +105,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" inactive="1" sid="895571665483345" title="Timeline GR04">
+        <event-group description="" inactive="1" sid="895571665483345" title="GR04 - TIMELINE">
             <sub-events>
                 <comment>On joue le son - L&apos;index commence à 0 car les données sont stockées dans un array - On attend le signal de fin de son pour incrémenter la variable</comment>
                 <event-block sid="845664971260577">
@@ -114,9 +126,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-4" name="Set layer visible" sid="565671086806150" type="System">
-                                    <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
+                                <action id="0" name="Call function" sid="907318130713407" type="Function">
+                                    <param id="0" name="Name">&quot;GR04_AllLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="417190176438059" type="System">
                                     <param id="0" name="Layer">&quot;02_TRANSITION 01&quot;</param>
@@ -134,41 +146,26 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-4" name="Set layer visible" sid="448814943189335" type="System">
-                                    <param id="0" name="Layer">&quot;00_START&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
+                                <action id="0" name="Call function" sid="980494513870746" type="Function">
+                                    <param id="0" name="Name">&quot;GR04_AllLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="740469303832917" type="System">
                                     <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
                                     <param id="1" name="Visibility">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="410333246093204" type="System">
-                                    <param id="0" name="Variable">etatLectureVideo</param>
-                                    <param id="1" name="Value">PLAY</param>
+                                <action id="0" name="Call function" sid="515255229887764" type="Function">
+                                    <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
+                                    <param id="1" name="Parameter {n}">ACTIF</param>
                                 </action>
+                                <action id="6" name="Play" sid="297142830253718" type="Media" />
                                 <action id="-12" name="Set group active" sid="220813312458609" type="System">
                                     <param id="0" name="Group name">&quot;GR04 - Fin lecture vidéo&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="910386714777737" type="System">
-                                    <param id="0" name="Variable">etatBoutonPrec</param>
-                                    <param id="1" name="Value">ACTIF</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="759599381976139" type="System">
-                                    <param id="0" name="Variable">etatBoutonPause</param>
-                                    <param id="1" name="Value">ACTIF</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="282329013521926" type="System">
+                                <action disabled="1" id="-9" name="Set value" sid="731579138002392" type="System">
                                     <param id="0" name="Variable">etatBoutonSuiv</param>
-                                    <param id="1" name="Value">ACTIF</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="845493246235423" type="System">
-                                    <param id="0" name="Variable">etatBoutonPlay</param>
-                                    <param id="1" name="Value">ACTIF</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="841044586773426" type="System">
-                                    <param id="0" name="Variable">TEST</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">INACTIF</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -182,29 +179,17 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-4" name="Set layer visible" sid="407362558209130" type="System">
-                                    <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
+                                <action id="0" name="Call function" sid="335385302699462" type="Function">
+                                    <param id="0" name="Name">&quot;GR04_AllLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="627156430669977" type="System">
                                     <param id="0" name="Layer">&quot;00_START&quot;</param>
                                     <param id="1" name="Visibility">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="674179105128630" type="System">
-                                    <param id="0" name="Variable">etatBoutonPlay</param>
-                                    <param id="1" name="Value">INACTIF</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="700871420421593" type="System">
-                                    <param id="0" name="Variable">etatBoutonPause</param>
-                                    <param id="1" name="Value">INACTIF</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="255374435340407" type="System">
-                                    <param id="0" name="Variable">etatBoutonSuiv</param>
-                                    <param id="1" name="Value">INACTIF</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="722315270384243" type="System">
-                                    <param id="0" name="Variable">etatBoutonPrec</param>
-                                    <param id="1" name="Value">INACTIF</param>
+                                <action id="0" name="Call function" sid="723877744060632" type="Function">
+                                    <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
+                                    <param id="1" name="Parameter {n}">INACTIF</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -214,18 +199,7 @@
         </event-group>
         <event-group description="" inactive="1" sid="869848450081363" title="GR04 - Fin lecture vidéo">
             <sub-events>
-                <event-block sid="835948917782432">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="936285309772854" type="System">
-                            <param id="0" name="Variable">etatLectureVideo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">PLAY</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="6" name="Play" sid="742591508048842" type="Media" />
-                    </actions>
-                </event-block>
+                <comment>A la fin de la video, on rend le bouton suiv actif, qui clignotera automatiquement car la lecture est à END</comment>
                 <event-block sid="961962410628541">
                     <conditions>
                         <condition id="2" name="Has ended" sid="808982727716463" type="GR04_Video" />
@@ -237,20 +211,8 @@
                         <action id="-15" name="Set visible" sid="767680911786717" type="Texte_chargement_video">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action disabled="1" id="-10" name="Set value" sid="705341301330602" type="Btn_Lecture">
-                            <param id="0" name="Instance variable">Actif</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action disabled="1" id="-9" name="Set value" sid="959681753367335" type="System">
-                            <param id="0" name="Variable">Lecture</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action disabled="1" id="-9" name="Set value" sid="475298640077064" type="System">
-                            <param id="0" name="Variable">numeroMarqueur</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                        <action disabled="1" id="-9" name="Set value" sid="577323045940105" type="System">
-                            <param id="0" name="Variable">etatBoutonPlay</param>
+                        <action id="-9" name="Set value" sid="799476954262673" type="System">
+                            <param id="0" name="Variable">etatBoutonSuiv</param>
                             <param id="1" name="Value">ACTIF</param>
                         </action>
                         <action id="-9" name="Set value" sid="513587555056497" type="System">
@@ -263,17 +225,14 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="676065774590996">
+                <event-block sid="398217101595200">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="451232110152514" type="Touch">
-                            <param id="0" name="Object">Btn_Lecture</param>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="642334630867380" type="System">
+                            <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="986256833307315" type="System">
-                            <param id="0" name="Variable">numeroMarqueur</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
+                        <action id="5" name="Pause" sid="760879639928136" type="Media" />
                     </actions>
                 </event-block>
             </sub-events>
