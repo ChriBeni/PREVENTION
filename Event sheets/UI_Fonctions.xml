@@ -14,41 +14,45 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="497501231432353" type="System">
-                            <param id="0" name="Variable">Repere_son</param>
-                            <param id="1" name="Value">Array_reperes_son.At(numeroMarqueur,0)</param>
+                            <param id="0" name="Variable">xmlRepereSon</param>
+                            <param id="1" name="Value">ARRAY_reperesSon.At(numeroMarqueur,0)</param>
                         </action>
                         <action id="-9" name="Set value" sid="976964613776024" type="System">
-                            <param id="0" name="Variable">Voix</param>
-                            <param id="1" name="Value">Array_reperes_son.At(numeroMarqueur,1)</param>
+                            <param id="0" name="Variable">xmlNomMP3</param>
+                            <param id="1" name="Value">ARRAY_reperesSon.At(numeroMarqueur,1)</param>
                         </action>
                         <action id="-9" name="Set value" sid="718149121409093" type="System">
-                            <param id="0" name="Variable">Sous_titre</param>
-                            <param id="1" name="Value">Array_reperes_son.At(numeroMarqueur,2)</param>
+                            <param id="0" name="Variable">xmlSoustitreType</param>
+                            <param id="1" name="Value">ARRAY_reperesSon.At(numeroMarqueur,2)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="303255726548099" type="System">
+                            <param id="0" name="Variable">xmlSoustitreTxt</param>
+                            <param id="1" name="Value">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
                         </action>
                         <action id="0" name="Set text" sid="922176414450040" type="Repere_son">
-                            <param id="0" name="Text">Repere_son</param>
+                            <param id="0" name="Text">xmlRepereSon</param>
                         </action>
                         <action id="0" name="Set text" sid="331762020900764" type="Soustitre">
-                            <param id="0" name="Text">Sous_titre</param>
+                            <param id="0" name="Text">xmlSoustitreTxt</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="497986646484072">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="291156189705548" type="System">
-                                    <param id="0" name="Variable">Lecture</param>
+                                    <param id="0" name="Variable">etatLecture</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
+                                    <param id="2" name="Value">PLAY</param>
                                 </condition>
                                 <condition id="-4" name="Trigger once while true" sid="226925409401806" type="System" />
                             </conditions>
                             <actions>
                                 <action id="7" name="Play (by name)" sid="529964662159365" type="Audio">
                                     <param id="0" name="Folder">0</param>
-                                    <param id="1" name="Audio file name">Voix</param>
+                                    <param id="1" name="Audio file name">xmlNomMP3</param>
                                     <param id="3" name="Loop">0</param>
                                     <param id="4" name="Volume">0</param>
-                                    <param id="2" name="Tag (optional)">Voix</param>
+                                    <param id="2" name="Tag (optional)">xmlNomMP3</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -79,10 +83,83 @@
                         <action id="10" name="Set master volume" sid="395558482827729" type="Audio">
                             <param id="0" name="dB">Volume_son</param>
                         </action>
-                        <action id="4" name="Set volume" sid="668405283508777" type="GR04_Video">
+                        <action id="4" name="Set volume" sid="668405283508777" type="Video">
                             <param id="0" name="Volume">Volume_son</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="990746182170465" title="TRANSITIONS">
+            <sub-events>
+                <event-block sid="686500918100143">
+                    <conditions>
+                        <condition id="0" name="On function" sid="748312494827037" type="Function">
+                            <param id="0" name="Name">&quot;bulleVisible&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="621833558677109">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="915526884089403" type="COMMUN_Bulles_img">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="508187426425345" type="COMMUN_Bulles_img">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="512361741565925" type="COMMUN_Bulles_img" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="746628414798161">
+                    <conditions>
+                        <condition id="0" name="On function" sid="299001335521865" type="Function">
+                            <param id="0" name="Name">&quot;bulleRestartVisible&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="329208580695437">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="669127818159306" type="COMMUN_Bulles_img">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="126796290372782" type="COMMUN_Bulles_img">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="236103550042282" type="COMMUN_Bulles_img" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="544597726289739">
+                    <conditions>
+                        <condition id="0" name="On function" sid="234340633344651" type="Function">
+                            <param id="0" name="Name">&quot;bulleInvisible&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="521023288146499">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="477204010247828" type="COMMUN_Bulles_img">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="279290910675434" type="COMMUN_Bulles_img">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action behavior="Fade" disabled="1" id="1" name="Start fade" sid="392883140789922" type="COMMUN_Bulles_img" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

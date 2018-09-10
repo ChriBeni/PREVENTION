@@ -25,6 +25,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra, Alex Hanson-White" id="PinPlus" version="1">Pin+</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -67,7 +68,7 @@
             <object-type name="Mouse" sid="355545889950827">
                 <plugin id="Mouse" />
             </object-type>
-            <object-type global="1" name="Array_reperes_son" sid="741297115919522">
+            <object-type global="1" name="ARRAY_reperesSon" sid="741297115919522">
                 <plugin id="Arr" />
             </object-type>
             <object-type name="Function" sid="897957069673742">
@@ -82,7 +83,7 @@
             <object-type name="Touch" sid="624171327171805">
                 <plugin id="Touch" />
             </object-type>
-            <object-type name="GR04_Video" sid="370313632252254">
+            <object-type name="Video" sid="370313632252254">
                 <plugin id="video" />
             </object-type>
             <object-type name="MM_Preloader" sid="241498756627469">
@@ -426,6 +427,9 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="UI_Titre" sid="986530450245778">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="GR04">
             <object-type name="Sprite" sid="866510374567325">
@@ -556,13 +560,18 @@
         </family>
         <family name="Media" plugin-id="video" sid="188895337925674">
             <members>
-                <member>GR04_Video</member>
+                <member>Video</member>
             </members>
         </family>
         <family name="COMMUN_Bulles_img" plugin-id="Sprite" sid="604228847572226">
             <members>
                 <member>GR04_Bulle_img_02</member>
             </members>
+            <behaviors>
+                <behavior-type name="Fade" sid="686787345422105">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
         </family>
         <family name="COMMUN_Bulles_txt" plugin-id="Text" sid="323993993325509">
             <members>
@@ -681,7 +690,12 @@
         <sound-folder name="GR01" />
         <sound-folder name="GR02" />
         <sound-folder name="GR03" />
-        <sound-folder name="GR04" />
+        <sound-folder name="GR04">
+            <file name="GR04_D03.ogg" />
+            <file name="GR04_D03.m4a" />
+            <file name="GR04_D02.ogg" />
+            <file name="GR04_D02.m4a" />
+        </sound-folder>
         <sound-folder name="GR05" />
     </sounds-folder>
     <music-folder />
@@ -698,7 +712,6 @@
             <file name="G0101.xml" />
             <file name="GR04.xml" />
         </file-folder>
-        <file name="Video_Test1.mp4" />
         <file name="La Poste - Risques Routiers _ se garer toujours en marche arrière.mp4" />
     </files-folder>
 </c2project>

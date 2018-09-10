@@ -87,7 +87,7 @@
             <sub-events>
                 <event-block sid="720255040915482">
                     <conditions>
-                        <condition id="2" name="Has ended" sid="405994194508132" type="GR04_Video" />
+                        <condition id="2" name="Has ended" sid="405994194508132" type="Video" />
                     </conditions>
                     <actions>
                         <action behavior="Sine" id="0" name="Set active" sid="542213838786861" type="Texte_chargement_video">
