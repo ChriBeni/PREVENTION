@@ -1487,14 +1487,14 @@
                                 <event-block sid="745066185592811">
                                     <conditions>
                                         <condition id="7" name="Cursor is over object" sid="177425766336407" type="Mouse">
-                                            <param id="0" name="Object">Btn_Close</param>
+                                            <param id="0" name="Object">UI_BTN_Close</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set cursor style" sid="300760762578195" type="Mouse">
                                             <param id="0" name="Cursor style">1</param>
                                         </action>
-                                        <action id="5" name="Set frame" sid="102911320113770" type="Btn_Close">
+                                        <action id="5" name="Set frame" sid="102911320113770" type="UI_BTN_Close">
                                             <param id="0" name="Frame number">1</param>
                                         </action>
                                     </actions>
@@ -1502,14 +1502,14 @@
                                 <event-block sid="832132025106825">
                                     <conditions>
                                         <condition id="7" inverted="1" name="Cursor is over object" sid="297856040684485" type="Mouse">
-                                            <param id="0" name="Object">Btn_Close</param>
+                                            <param id="0" name="Object">UI_BTN_Close</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set cursor style" sid="655951035593074" type="Mouse">
                                             <param id="0" name="Cursor style">0</param>
                                         </action>
-                                        <action id="5" name="Set frame" sid="841158958501158" type="Btn_Close">
+                                        <action id="5" name="Set frame" sid="841158958501158" type="UI_BTN_Close">
                                             <param id="0" name="Frame number">0</param>
                                         </action>
                                     </actions>
@@ -1521,11 +1521,11 @@
                                 <event-block sid="486981999449118">
                                     <conditions>
                                         <condition id="3" name="On touched object" sid="823923757544212" type="Touch">
-                                            <param id="0" name="Object">Btn_Close</param>
+                                            <param id="0" name="Object">UI_BTN_Close</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="171306752182080" type="Btn_Close">
+                                        <action id="4" name="Set animation" sid="171306752182080" type="UI_BTN_Close">
                                             <param id="0" name="Animation">&quot;Close&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -1600,7 +1600,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="360022428233402" title="GRANULE - INIT">
+        <event-group description="" sid="360022428233402" title="GRANULE">
             <sub-events>
                 <event-group description="" sid="893989250346459" title="GRANULE - INIT - INTERFACE">
                     <sub-events>
@@ -1619,10 +1619,6 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="839809382037983" title="GRANULE - TIMELINE">
-            <sub-events>
                 <event-group description="" sid="674647361912453" title="GRANULE - TIMELINE - Passage auto">
                     <sub-events>
                         <event-block sid="531008618808649">
