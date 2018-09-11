@@ -569,7 +569,9 @@
             <layout>Jeux1.xml</layout>
         </layout-folder>
         <layout-folder name="GR01" />
-        <layout-folder name="GR02" />
+        <layout-folder name="GR02">
+            <layout>GR02.xml</layout>
+        </layout-folder>
         <layout-folder name="GR03" />
         <layout-folder name="GR04">
             <layout>GR04.xml</layout>
