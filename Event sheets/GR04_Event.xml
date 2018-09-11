@@ -96,7 +96,7 @@
                                     <param id="1" name="Parameter {n}">&quot;Je me teste&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="506806523661746" type="Function">
-                                    <param id="0" name="Name">&quot;GR04_AllLayersInvisible&quot;</param>
+                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="128434627892219" type="System">
@@ -131,7 +131,7 @@
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="0" name="Call function" sid="980494513870746" type="Function">
-                                    <param id="0" name="Name">&quot;GR04_AllLayersInvisible&quot;</param>
+                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="740469303832917" type="System">
@@ -145,6 +145,10 @@
                                 <action disabled="1" id="-9" name="Set value" sid="731579138002392" type="System">
                                     <param id="0" name="Variable">etatBoutonSuiv</param>
                                     <param id="1" name="Value">INACTIF</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="132663822941137" type="System">
+                                    <param id="0" name="Variable">etatLectureVideo</param>
+                                    <param id="1" name="Value">PLAY</param>
                                 </action>
                                 <action id="6" name="Play" sid="297142830253718" type="Media" />
                                 <action id="-12" name="Set group active" sid="220813312458609" type="System">
@@ -171,16 +175,12 @@
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="0" name="Call function" sid="335385302699462" type="Function">
-                                    <param id="0" name="Name">&quot;GR04_AllLayersInvisible&quot;</param>
+                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="627156430669977" type="System">
                                     <param id="0" name="Layer">&quot;00_START&quot;</param>
                                     <param id="1" name="Visibility">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="723877744060632" type="Function">
-                                    <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
-                                    <param id="1" name="Parameter {n}">INACTIF</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -196,17 +196,24 @@
                         <condition id="2" name="Has ended" sid="808982727716463" type="Video" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="799476954262673" type="System">
+                        <action disabled="1" id="-42" name="Signal" sid="513862687654842" type="System">
+                            <param id="0" name="Tag">&quot;sonFini&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="758042094793899" type="System">
                             <param id="0" name="Variable">etatBoutonSuiv</param>
                             <param id="1" name="Value">ACTIF</param>
                         </action>
-                        <action id="-9" name="Set value" sid="513587555056497" type="System">
+                        <action id="-9" name="Set value" sid="383602842929997" type="System">
                             <param id="0" name="Variable">etatLectureVideo</param>
                             <param id="1" name="Value">END</param>
                         </action>
-                        <action id="0" name="Call function" sid="775298513616033" type="Function">
+                        <action id="0" name="Call function" sid="104143332633039" type="Function">
                             <param id="0" name="Name">&quot;passageAuto&quot;</param>
                             <param id="1" name="Parameter {n}">NON</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="775298513616033" type="Function">
+                            <param id="0" name="Name">&quot;finDeVideo&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>

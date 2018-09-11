@@ -674,7 +674,7 @@
                                     <param id="0" name="Name">&quot;Init_bouton_son&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="0" name="Set text" sid="538411466280561" type="UI_Titre">
+                                <action id="0" name="Set text" sid="989883978873450" type="UI_TXT_Titre">
                                     <param id="0" name="Text">Function.Param(0)</param>
                                 </action>
                             </actions>
@@ -686,7 +686,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Append text" sid="159360063645632" type="UI_Titre">
+                                <action id="1" name="Append text" sid="582101072078237" type="UI_TXT_Titre">
                                     <param id="0" name="Text">newline&amp;Function.Param(0)</param>
                                 </action>
                             </actions>
@@ -1079,10 +1079,34 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">PLAY</param>
                                         </condition>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="942218975781477" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-15" name="Set visible" sid="439461173172123" type="UI_BTN_Pause">
                                             <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="757888332475954" type="System">
+                                            <param id="0" name="Variable">etatBoutonPause</param>
+                                            <param id="1" name="Value">ACTIF</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="458608617111859">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="368581231920323" type="System">
+                                            <param id="0" name="Variable">etatLecture</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">END</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="752465402009435" type="System">
+                                            <param id="0" name="Variable">etatBoutonPause</param>
+                                            <param id="1" name="Value">INACTIF</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1132,11 +1156,6 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">ACTIF</param>
                                         </condition>
-                                        <condition id="-14" inverted="1" name="Compare variable" sid="725824092105992" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">END</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set cursor style" sid="331410047692937" type="Mouse">
@@ -1156,11 +1175,6 @@
                                             <param id="0" name="Variable">etatBoutonPause</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">ACTIF</param>
-                                        </condition>
-                                        <condition id="-14" inverted="1" name="Compare variable" sid="787212445263489" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">END</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1185,11 +1199,6 @@
                                             <param id="0" name="Variable">etatBoutonPause</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">ACTIF</param>
-                                        </condition>
-                                        <condition id="-14" inverted="1" name="Compare variable" sid="361707897064872" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">END</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1232,9 +1241,6 @@
                                         <action id="4" name="Set animation" sid="140684399603207" type="UI_BTN_Suiv">
                                             <param id="0" name="Animation">&quot;CLIGNOTE&quot;</param>
                                             <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="943251332307347" type="UI_BTN_Pause">
-                                            <param id="0" name="Opacity">20</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1348,14 +1354,6 @@
                                         <action id="-10" name="Add to" sid="803072059140173" type="System">
                                             <param id="0" name="Variable">numeroMarqueur</param>
                                             <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action disabled="1" id="4" name="Set animation" sid="237588745704076" type="UI_BTN_Suiv">
-                                            <param id="0" name="Animation">&quot;ETATS&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action disabled="1" id="-9" name="Set value" sid="490809175971047" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Value">PLAY</param>
                                         </action>
                                         <action id="0" name="Call function" sid="905915515022208" type="Function">
                                             <param id="0" name="Name">&quot;initNavigation&quot;</param>
@@ -1601,7 +1599,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set playback time" sid="261465962630853" type="Media">
-                                            <param id="0" name="Time">80</param>
+                                            <param id="0" name="Time">82</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1702,6 +1700,61 @@
                                     <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="511835113729997">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="567854774436391" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="433741699854410" type="Function">
+                                            <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
+                                            <param id="1" name="Parameter {n}">INACTIF</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="919483992424364" title="GRANULE - INIT - Layers">
+                    <sub-events>
+                        <event-block sid="440668960547322">
+                            <conditions>
+                                <condition id="0" name="On function" sid="639318582429781" type="Function">
+                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="573421059760768">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="946144073392759" type="System">
+                                            <param id="0" name="Name">&quot;layers&quot;</param>
+                                            <param id="1" name="Start index">1</param>
+                                            <param id="2" name="End index">20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="113139386613931" type="System">
+                                            <param id="0" name="Layer">LayerIndex(loopindex)</param>
+                                            <param id="1" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="619756257120312">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="251820857343577" type="System">
+                                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -1791,32 +1844,70 @@
                                     <param id="0" name="Variable">xmlSoustitreTxt</param>
                                     <param id="1" name="Value">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
                                 </action>
-                                <action id="0" name="Set text" sid="180161259573066" type="Repere_son">
-                                    <param id="0" name="Text">xmlRepereSon</param>
-                                </action>
                                 <action id="0" name="Set text" sid="614475302948527" type="Soustitre">
                                     <param id="0" name="Text">xmlSoustitreTxt</param>
                                 </action>
                             </actions>
                             <sub-events>
+                                <comment>Alimentation du Mouchard</comment>
                                 <event-block sid="669311352511701">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="180161259573066" type="MOUCHARD_TXT_varRepXml">
+                                            <param id="0" name="Text">xmlRepereSon</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="202577792390240" type="MOUCHARD_TXT_varMarqueur">
+                                            <param id="0" name="Text">numeroMarqueur</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="367964245153082">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="145880506602710" type="System">
+                                        <condition id="-14" name="Compare variable" sid="509776530924691" type="System">
+                                            <param id="0" name="Variable">xmlNomMP3</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="672281839663093" type="MOUCHARD_TXT_varNomSon">
+                                            <param id="0" name="Text">&quot;none&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="289475105567443">
+                                    <conditions>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="648768332271302" type="System">
+                                            <param id="0" name="Variable">xmlNomMP3</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="199539635953163" type="MOUCHARD_TXT_varNomSon">
+                                            <param id="0" name="Text">xmlNomMP3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>On joue le son</comment>
+                                <event-block sid="364952411107282">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="860967825798131" type="System">
                                             <param id="0" name="Variable">etatLecture</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">PLAY</param>
                                         </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="277744080271979" type="System" />
+                                        <condition id="-4" name="Trigger once while true" sid="128927646234748" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="7" name="Play (by name)" sid="458693734069940" type="Audio">
+                                        <action id="7" name="Play (by name)" sid="643466447082652" type="Audio">
                                             <param id="0" name="Folder">0</param>
                                             <param id="1" name="Audio file name">xmlNomMP3</param>
                                             <param id="3" name="Loop">0</param>
                                             <param id="4" name="Volume">0</param>
                                             <param id="2" name="Tag (optional)">xmlNomMP3</param>
                                         </action>
-                                        <action disabled="1" id="-9" name="Set value" sid="329746979487927" type="System">
+                                        <action disabled="1" id="-9" name="Set value" sid="329217762800355" type="System">
                                             <param id="0" name="Variable">etatLectureSon</param>
                                             <param id="1" name="Value">PLAY</param>
                                         </action>
@@ -1852,7 +1943,7 @@
             <sub-events>
                 <event-group description="" sid="182084316281619" title="VIDEO - DETECTION FIN">
                     <sub-events>
-                        <event-block sid="974764649180295">
+                        <event-block disabled="1" sid="974764649180295">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="756776720821888" type="System">
                                     <param id="0" name="Variable">etatLectureVideo</param>
@@ -1866,6 +1957,107 @@
                                     <param id="0" name="Tag">&quot;sonFini&quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="205363150579659">
+                            <conditions>
+                                <condition id="0" name="On function" sid="605238845290373" type="Function">
+                                    <param id="0" name="Name">&quot;finDeVideo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="473200191276578" title="MOUCHARD">
+            <sub-events>
+                <event-block sid="173186702251055">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="936467598461574" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="809599207199064" type="MOUCHARD_TXT_varTime">
+                            <param id="0" name="Text">zeropad(int(time/60% 60), 1) &amp; &quot;:&quot; &amp; zeropad(int(time%60), 2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="392468558348831" title="MOUCHARD - Visible">
+                    <sub-events>
+                        <event-block sid="291927500946703">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="285258646448445" type="System">
+                                    <param id="0" name="Variable">modeDeveloppeur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">OUI</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="362927405935564" type="MOUCHARD_Fond">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="922251497447219">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="830279153252511" type="System">
+                                    <param id="0" name="Variable">modeDeveloppeur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">NON</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="932690284529636" type="MOUCHARD_Fond">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="328619012939023" title="MOUCHARD - Pin">
+                    <sub-events>
+                        <event-block disabled="1" sid="770007490564000">
+                            <conditions>
+                                <condition id="0" name="On function" sid="428443235818005" type="Function">
+                                    <param id="0" name="Name">&quot;initPinMouchard&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="PinFamille" id="0" name="Pin to object" sid="928055911834812" type="MOUCHARD_TXT_Marqueur">
+                                    <param id="0" name="Pin to">MOUCHARD_Fond</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="196172525648530">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="661565605555676" type="System">
+                                            <param id="0" name="Object">UI_MOUCHARD_Txt</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="PinFamille" id="0" name="Pin to object" sid="641068822271642" type="UI_MOUCHARD_Txt">
+                                            <param id="0" name="Pin to">MOUCHARD_Fond</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="595083699127838">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="942217488942663" type="System">
+                                            <param id="0" name="Object">UI_MOUCHARD_Sprites</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="PinFamille" id="0" name="Pin to object" sid="764531591450425" type="UI_MOUCHARD_Sprites">
+                                            <param id="0" name="Pin to">MOUCHARD_Fond</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
