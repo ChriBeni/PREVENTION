@@ -363,7 +363,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="BTN_PAUSE" sid="310546075109503">
+            <object-type name="UI_BTN_Pause" sid="310546075109503">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="595166312884138" speed="0">
@@ -372,7 +372,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="BTN_PLAY" sid="716467068838185">
+            <object-type name="UI_BTN_Play" sid="716467068838185">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="ETATS" pingpong="0" repeatcount="1" repeatto="0" sid="309641880757156" speed="0">
@@ -384,7 +384,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="BTN_PREC" sid="377860655934960">
+            <object-type name="UI_BTN_Prec" sid="377860655934960">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="421904229705015" speed="0">
@@ -407,7 +407,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="BTN_SUIV" sid="259027369140347">
+            <object-type name="UI_BTN_Suiv" sid="259027369140347">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="ETATS" pingpong="0" repeatcount="1" repeatto="0" sid="285292633665263" speed="0">
@@ -419,7 +419,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="BARRE_NAV" sid="823739245288538">
+            <object-type name="UI_Fond_Nav_Bas" sid="823739245288538">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738145323954970" speed="5">
@@ -429,6 +429,14 @@
             </object-type>
             <object-type name="UI_Titre" sid="986530450245778">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="UI_Fond_Nav_Haut" sid="373245587639142">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="420866324537048" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BARRE_HAUT.png" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="GR04">
@@ -682,10 +690,6 @@
             <file name="G0101_D03_c.ogg" />
             <file name="G0101_D03_d.m4a" />
             <file name="G0101_D03_d.ogg" />
-            <file name="G0101_D03_e.m4a" />
-            <file name="G0101_D03_e.ogg" />
-            <file name="G0101_D04_a.m4a" />
-            <file name="G0101_D04_a.ogg" />
         </sound-folder>
         <sound-folder name="GR01" />
         <sound-folder name="GR02" />
