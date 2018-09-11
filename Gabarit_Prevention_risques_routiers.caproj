@@ -620,7 +620,11 @@
             <event-sheet>UI_Variables.xml</event-sheet>
         </event-folder>
         <event-folder name="GR01" />
-        <event-folder name="GR02" />
+        <event-folder name="GR02">
+            <event-sheet>GR02_Event.xml</event-sheet>
+            <event-sheet>GR02_Fonctions.xml</event-sheet>
+            <event-sheet>GR02_Variables.xml</event-sheet>
+        </event-folder>
         <event-folder name="GR03" />
         <event-folder name="GR04">
             <event-sheet>GR04_Event.xml</event-sheet>
@@ -719,5 +723,6 @@
             <file name="GR04.xml" />
         </file-folder>
         <file name="La Poste - Risques Routiers _ se garer toujours en marche arrière.mp4" />
+        <file name="VIDEO_GR02.mp4" />
     </files-folder>
 </c2project>
