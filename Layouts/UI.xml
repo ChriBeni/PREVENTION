@@ -29,6 +29,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="UI_Fond_Nav_Haut" uid="41">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>960</x>
+                        <y>41</y>
+                        <z>0</z>
+                        <width>1920</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="Soustitre" uid="1">
                     <properties>
                         <text></text>
@@ -108,7 +130,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BARRE_NAV" uid="3">
+                <instance type="UI_Fond_Nav_Bas" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -388,7 +410,7 @@
                         <opacity>0.600000024</opacity>
                     </world>
                 </instance>
-                <instance type="BTN_PLAY" uid="34">
+                <instance type="UI_BTN_Play" uid="34">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -410,7 +432,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BTN_SUIV" uid="35">
+                <instance type="UI_BTN_Suiv" uid="35">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -432,7 +454,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BTN_PAUSE" uid="36">
+                <instance type="UI_BTN_Pause" uid="36">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -454,7 +476,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BTN_PREC" uid="37">
+                <instance type="UI_BTN_Prec" uid="37">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -492,10 +514,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>147</x>
-                        <y>12</y>
+                        <y>2</y>
                         <z>0</z>
-                        <width>1007</width>
-                        <height>48</height>
+                        <width>1682</width>
+                        <height>79</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

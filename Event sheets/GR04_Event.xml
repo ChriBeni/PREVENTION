@@ -64,9 +64,18 @@
                                 <action id="0" name="Set text" sid="447785241639846" type="GR04_Bulle_txt_02">
                                     <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
                                 </action>
-                                <action id="0" name="Call function" sid="425252652196443" type="Function">
+                            </actions>
+                        </event-block>
+                        <comment>&#x09;OBLIGATOIRE - signal que le son et l&apos;anim sont fini</comment>
+                        <event-block sid="141650493819928">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="791140008048303" type="Function">
                                     <param id="0" name="Name">&quot;passageAuto&quot;</param>
                                     <param id="1" name="Parameter {n}">NON</param>
+                                </action>
+                                <action id="-42" name="Signal" sid="925999503924581" type="System">
+                                    <param id="0" name="Tag">&quot;animFini&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -88,6 +97,10 @@
                                     <param id="0" name="Layer">&quot;02_TRANSITION 01&quot;</param>
                                     <param id="1" name="Visibility">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="375632704744170" type="Function">
+                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Je me test&quot;</param>
+                                </action>
                                 <action id="0" name="Set text" sid="214607222351761" type="GR04_Bulle_txt_02">
                                     <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
                                 </action>
@@ -95,13 +108,18 @@
                                     <param id="0" name="Name">&quot;bulleVisible&quot;</param>
                                     <param id="1" name="Parameter {n}">GR04_Bulle_img_02.UID</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <comment>&#x09;OBLIGATOIRE - signal que le son et l&apos;anim sont fini</comment>
+                        <event-block sid="178781943931501">
+                            <conditions />
+                            <actions>
                                 <action id="0" name="Call function" sid="934194540750917" type="Function">
                                     <param id="0" name="Name">&quot;passageAuto&quot;</param>
                                     <param id="1" name="Parameter {n}">OUI</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="942752639740023" type="Function">
-                                    <param id="0" name="Name">&quot;Play_sound&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
+                                <action id="-42" name="Signal" sid="108810896278106" type="System">
+                                    <param id="0" name="Tag">&quot;animFini&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -174,10 +192,10 @@
                         <condition id="2" name="Has ended" sid="808982727716463" type="Video" />
                     </conditions>
                     <actions>
-                        <action behavior="Sine" id="0" name="Set active" sid="677548995720496" type="Texte_chargement_video">
+                        <action behavior="Sine" disabled="1" id="0" name="Set active" sid="677548995720496" type="Texte_chargement_video">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="767680911786717" type="Texte_chargement_video">
+                        <action disabled="1" id="-15" name="Set visible" sid="767680911786717" type="Texte_chargement_video">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="799476954262673" type="System">
@@ -191,6 +209,9 @@
                         <action id="0" name="Call function" sid="775298513616033" type="Function">
                             <param id="0" name="Name">&quot;passageAuto&quot;</param>
                             <param id="1" name="Parameter {n}">NON</param>
+                        </action>
+                        <action id="-42" name="Signal" sid="739513640308590" type="System">
+                            <param id="0" name="Tag">&quot;animFini&quot;</param>
                         </action>
                     </actions>
                 </event-block>
