@@ -15,6 +15,10 @@
                         <condition id="-2" name="On start of layout" sid="948705570190841" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="104327840875186" type="System">
+                            <param id="0" name="Variable">modeDeveloppeur</param>
+                            <param id="1" name="Value">OUI</param>
+                        </action>
                         <action id="-9" name="Set value" sid="629215645891148" type="System">
                             <param id="0" name="Variable">numeroGranule</param>
                             <param id="1" name="Value">&quot;GR04&quot;</param>
