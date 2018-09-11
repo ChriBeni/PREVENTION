@@ -1610,12 +1610,7 @@
                                     <param id="0" name="Name">&quot;passageAuto&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="212683166576737" type="Function">
-                                    <param id="0" name="Name">&quot;Play_sound&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block sid="405456043791354">
                                     <conditions>
@@ -1624,12 +1619,17 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">OUI</param>
                                         </condition>
+                                        <condition disabled="1" id="-14" name="Compare variable" sid="663942054079959" type="System">
+                                            <param id="0" name="Variable">etatLectureAnim</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">END</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-41" name="Wait for signal" sid="302040727084619" type="System">
                                             <param id="0" name="Tag">&quot;sonFini&quot;</param>
                                         </action>
-                                        <action id="-41" name="Wait for signal" sid="710275761162705" type="System">
+                                        <action disabled="1" id="-41" name="Wait for signal" sid="710275761162705" type="System">
                                             <param id="0" name="Tag">&quot;animFini&quot;</param>
                                         </action>
                                         <action id="-10" name="Add to" sid="691420255637186" type="System">
@@ -1657,12 +1657,17 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">NON</param>
                                         </condition>
+                                        <condition disabled="1" id="-14" name="Compare variable" sid="669925622197691" type="System">
+                                            <param id="0" name="Variable">etatLectureAnim</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">END</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-41" name="Wait for signal" sid="524166590220830" type="System">
                                             <param id="0" name="Tag">&quot;sonFini&quot;</param>
                                         </action>
-                                        <action id="-41" name="Wait for signal" sid="111510793629315" type="System">
+                                        <action disabled="1" id="-41" name="Wait for signal" sid="111510793629315" type="System">
                                             <param id="0" name="Tag">&quot;animFini&quot;</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="122414532743409" type="System">
@@ -1685,7 +1690,7 @@
                         <event-block sid="603372953909695">
                             <conditions>
                                 <condition id="0" name="On function" sid="980307041691809" type="Function">
-                                    <param id="0" name="Name">&quot;Play_sound&quot;</param>
+                                    <param id="0" name="Name">&quot;jouerSon&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
