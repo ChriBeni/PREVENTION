@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GR04_Fonctions</name>
     <events>
+        <variable constant="0" name="GR04_layerCompteur" sid="216746207738835" static="0" type="number">0</variable>
         <event-group description="" sid="433183129092597" title="GR04 - GESTION - LAYERS">
             <sub-events>
                 <event-block sid="175223575180608">
@@ -12,19 +13,44 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-4" name="Set layer visible" sid="176010263616655" type="System">
+                        <action disabled="1" id="-4" name="Set layer visible" sid="176010263616655" type="System">
                             <param id="0" name="Layer">&quot;00_START&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
-                        <action id="-4" name="Set layer visible" sid="101463127386058" type="System">
+                        <action disabled="1" id="-4" name="Set layer visible" sid="101463127386058" type="System">
                             <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
-                        <action id="-4" name="Set layer visible" sid="468303811114806" type="System">
+                        <action disabled="1" id="-4" name="Set layer visible" sid="468303811114806" type="System">
                             <param id="0" name="Layer">&quot;02_TRANSITION 01&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="102963934947566">
+                            <conditions>
+                                <condition id="-10" name="For" sid="152379585298230" type="System">
+                                    <param id="0" name="Name">&quot;layerInvisible&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="582314426605103" type="System">
+                                    <param id="0" name="Variable">GR04_layerCompteur</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="210116451553849" type="System">
+                                    <param id="0" name="Layer">LayerIndex(GR04_layerCompteur)</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="705119042750917" type="System">
+                                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
