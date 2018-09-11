@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>GR02</name>
-    <sid>998156745435021</sid>
-    <event-sheet>GR02_Event</event-sheet>
+    <name>GR03</name>
+    <sid>230858759832533</sid>
+    <event-sheet>GR03_03_Event</event-sheet>
     <size>
         <width>1920</width>
         <height>1080</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="GR02_Fond" sid="848541796958059">
+        <layer name="Fond" sid="337178276203637">
             <initially-visible>1</initially-visible>
             <background-color>221,241,241</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="COM_Fond" uid="1">
+                <instance type="COM_Fond" uid="54">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -54,97 +54,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="GR02_08_END" sid="534092561000885">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
-        <layer name="GR02_07_FICHE" sid="420947021206653">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
-        <layer name="GR02_06_TRANSITION 03" sid="484094905629519">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
-        <layer name="GR02_05_JEU 02" sid="824774080360374">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
-        <layer name="GR02_04_TRANSITION 02" sid="830153309628454">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
-        <layer name="GR02_03_JEU 01" sid="698585099521816">
+        <layer name="03_JEU 01" sid="977911064442478">
             <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -162,7 +72,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="GR02_02_TRANSITION 01" sid="562083001306685">
+        <layer name="02_TRANSITION 01" sid="450007158268340">
             <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -178,7 +88,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="GR04_FOND_perso_voiture" uid="43">
+                <instance type="GR04_FOND_perso_voiture" uid="55">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -200,7 +110,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GR04_Bulle_img_02" uid="2">
+                <instance type="GR04_Bulle_img_02" uid="56">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -233,7 +143,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GR04_Bulle_txt_02" uid="45">
+                <instance type="GR04_Bulle_txt_02" uid="57">
                     <properties>
                         <text></text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -287,7 +197,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="GR02_01_VIDEO" sid="168102233833596">
+        <layer name="01_VIDEO" sid="120839722708960">
             <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -303,7 +213,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="COM_Video_Background" uid="46">
+                <instance type="COM_Video_Background" uid="58">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -314,10 +224,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>961</x>
-                        <y>444</y>
+                        <y>532</y>
                         <z>0</z>
-                        <width>879.478271484</width>
-                        <height>479.942871094</height>
+                        <width>1300</width>
+                        <height>740</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -325,11 +235,11 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Video" uid="47">
+                <instance type="Video" uid="59">
                     <properties>
                         <webm-source></webm-source>
                         <ogg-theora-source></ogg-theora-source>
-                        <h264-source>VIDEO_GR02</h264-source>
+                        <h264-source>VIDEO_GR03.mp4</h264-source>
                         <autoplay>No</autoplay>
                         <play-in-background>No</play-in-background>
                         <initial-visibility>Visible</initial-visibility>
@@ -351,7 +261,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="GR02_00_START" sid="261066036139266">
+        <layer name="00_START" sid="674604262317442">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -367,7 +277,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="COM_BTN_Commencer" uid="48">
+                <instance type="COM_BTN_Commencer" uid="60">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -392,7 +302,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="UI" sid="362781001514837">
+        <layer name="UI" sid="584976579049882">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
