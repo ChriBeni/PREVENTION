@@ -55,7 +55,7 @@
             <effects />
         </layer>
         <layer name="GR02_08_END" sid="534092561000885">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -73,7 +73,7 @@
             <effects />
         </layer>
         <layer name="GR02_07_FICHE" sid="420947021206653">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -91,7 +91,7 @@
             <effects />
         </layer>
         <layer name="GR02_06_TRANSITION 03" sid="484094905629519">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -105,11 +105,34 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="GR02_FOND_perso_voiture" uid="44">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>960</x>
+                        <y>538</y>
+                        <z>0</z>
+                        <width>1920</width>
+                        <height>1080</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="GR02_05_JEU 02" sid="824774080360374">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -127,7 +150,7 @@
             <effects />
         </layer>
         <layer name="GR02_04_TRANSITION 02" sid="830153309628454">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -141,7 +164,30 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="GR02_FOND_perso_voiture" uid="43">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>960</x>
+                        <y>538</y>
+                        <z>0</z>
+                        <width>1920</width>
+                        <height>1080</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="GR02_03_JEU 01" sid="698585099521816">
@@ -178,7 +224,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="GR04_FOND_perso_voiture" uid="43">
+                <instance type="GR02_FOND_perso_voiture" uid="25">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -200,7 +246,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GR04_Bulle_img_02" uid="44">
+                <instance type="GR02_Bulle_img_01_01" uid="45">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -221,11 +267,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>960.387573242</x>
-                        <y>170.536849976</y>
+                        <x>960.388000488</x>
+                        <y>170.537002563</y>
                         <z>0</z>
-                        <width>927.87689209</width>
-                        <height>121.70148468</height>
+                        <width>927.87701416</width>
+                        <height>121.700996399</height>
                         <depth>0</depth>
                         <hotspotX>0.500417709</hotspotX>
                         <hotspotY>0.503184736</hotspotY>
@@ -233,14 +279,14 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GR04_Bulle_txt_02" uid="45">
+                <instance type="GR02_Bulle_txt_01_01" uid="52">
                     <properties>
-                        <text></text>
+                        <text>Text Transition 01 Bulle 01</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Articulate,-35,400,0</font>
+                        <font>Arial,-16</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -314,10 +360,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>961</x>
-                        <y>444</y>
+                        <y>532</y>
                         <z>0</z>
-                        <width>879.478271484</width>
-                        <height>479.942871094</height>
+                        <width>1300</width>
+                        <height>740</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -329,7 +375,7 @@
                     <properties>
                         <webm-source></webm-source>
                         <ogg-theora-source></ogg-theora-source>
-                        <h264-source>VIDEO_GR02</h264-source>
+                        <h264-source>VIDEO_GR02.mp4</h264-source>
                         <autoplay>No</autoplay>
                         <play-in-background>No</play-in-background>
                         <initial-visibility>Visible</initial-visibility>

@@ -453,7 +453,27 @@
         </object-folder>
         <object-folder name="GR05" />
         <object-folder name="GR03" />
-        <object-folder name="GR02" />
+        <object-folder name="GR02">
+            <object-type name="GR02_FOND_perso_voiture" sid="264139185871618">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="902905379948642" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\PERSO voiture.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR02_Bulle_img_01_01" sid="764298133625945">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="337228477819993" speed="5">
+                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR02_Bulle_txt_01_01" sid="252340650638716">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-folder name="GR01" />
         <object-folder name="Commun">
             <object-type name="Visuel" sid="475769882177075">
@@ -547,6 +567,7 @@
         </family>
         <family name="COMMUN_Bulles_img" plugin-id="Sprite" sid="604228847572226">
             <members>
+                <member>GR02_Bulle_img_01_01</member>
                 <member>GR04_Bulle_img_02</member>
             </members>
             <behaviors>
@@ -557,6 +578,7 @@
         </family>
         <family name="COMMUN_Bulles_txt" plugin-id="Text" sid="323993993325509">
             <members>
+                <member>GR02_Bulle_txt_01_01</member>
                 <member>GR04_Bulle_txt_02</member>
             </members>
             <behaviors>
@@ -696,11 +718,7 @@
             <file name="G0101.xml" />
             <file name="GR04.xml" />
         </file-folder>
-<<<<<<< HEAD
-        <file name="La Poste - Risques Routiers _ se garer toujours en marche arrière.mp4" />
         <file name="VIDEO_GR02.mp4" />
-=======
         <file name="La Poste - Risques Routiers _ se garer toujours en marche arriere.mp4" />
->>>>>>> 3b9ce6200a2a0218217901efce6f2b867fe2884f
     </files-folder>
 </c2project>
