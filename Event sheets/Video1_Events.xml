@@ -90,12 +90,6 @@
                         <condition id="2" name="Has ended" sid="405994194508132" type="Video" />
                     </conditions>
                     <actions>
-                        <action behavior="Sine" id="0" name="Set active" sid="542213838786861" type="Texte_chargement_video">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="130142927221966" type="Texte_chargement_video">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
                         <action id="-10" name="Set value" sid="667984999862307" type="Btn_Lecture">
                             <param id="0" name="Instance variable">Actif</param>
                             <param id="1" name="Value">1</param>

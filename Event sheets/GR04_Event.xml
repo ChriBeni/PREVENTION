@@ -9,7 +9,7 @@
         <include>GR04_Fonctions</include>
         <event-group description="" sid="961347847732925" title="GR04 - INIT">
             <sub-events>
-                <comment>Chargement du titre + vidéo + fichier xml dans Ajax - Fichier à charger dans le répertoire xml du projet </comment>
+                <comment>Chargement du titre + vidéo + fichier xml dans Ajax - Fichier à charger dans le répertoire xml du projet</comment>
                 <event-block sid="731168980236983">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="948705570190841" type="System" />
@@ -90,7 +90,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="375632704744170" type="Function">
                                     <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;Je me test&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Je me teste&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="506806523661746" type="Function">
                                     <param id="0" name="Name">&quot;GR04_AllLayersInvisible&quot;</param>
