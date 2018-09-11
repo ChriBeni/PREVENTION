@@ -27,7 +27,7 @@
                             <param id="0" name="Name">&quot;initUI&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Conduire de façon attentive&quot;</param>
                         </action>
-                        <action id="1" name="Request project file" sid="801161980320318" type="AJAX">
+                        <action id="1" name="Request project file" sid="260901722556314" type="AJAX">
                             <param id="0" name="Tag">numeroGranule</param>
                             <param id="1" name="File">GR03.xml</param>
                         </action>

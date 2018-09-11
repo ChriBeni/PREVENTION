@@ -1,70 +1,70 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Liste des medias pour le granule GR03 -->
 <medias code="GR03">
-	<media  id="D00_a" url="GR03_D00_a.mp3" speaker="">
+	<media  id="D00_a" url="GR03_D00_a" speaker="">
 		<soutitre>
 					</soutitre>
-	</media>	<media  id="D00_b" url="GR03_D00_b.mp3" speaker="">
+	</media>	<media  id="D00_b" url="GR03_D00_b" speaker="">
 		<soutitre>
 					</soutitre>
-	</media>	<media  id="D01_a" url="GR03_D01_a.mp3" speaker="Dial">
+	</media>	<media  id="D01_a" url="GR03_D01_a" speaker="Dial">
 		<soutitre>
 			Il n’avait pas vu le piéton ! Comme quoi il faut vraiment adopter une conduite attentive pour anticiper les arrêts !		</soutitre>
-	</media>	<media  id="D01_b" url="GR03_D01_b.mp3" speaker="Dial">
+	</media>	<media  id="D01_b" url="GR03_D01_b" speaker="Dial">
 		<soutitre>
 			Ok, mais il ne faut pas dramatiser ! Il n’y a pas eu d’accident !		</soutitre>
-	</media>	<media  id="D01_c" url="GR03_D01_c.mp3" speaker="Dial">
+	</media>	<media  id="D01_c" url="GR03_D01_c" speaker="Dial">
 		<soutitre>
 			J’ai lu quelque part qu’il y a les arrêts que tu dois impérativement respecter, et d’autres où tu peux passer mais tu dois décider quand même si tu ralentis ou pas.		</soutitre>
-	</media>	<media  id="D02_a" url="GR03_D02_a.mp3" speaker="Dial">
+	</media>	<media  id="D02_a" url="GR03_D02_a" speaker="Dial">
 		<soutitre>
 			Les passages piétons sont facultatifs j’espère ? Honnêtement, s’il n’y a personne, je n’ai pas de raison de ralentir et de m’arrêter.<br/>On fait tous ça !		</soutitre>
-	</media>	<media  id="D02_b" url="GR03_D02_b.mp3" speaker="Dial">
+	</media>	<media  id="D02_b" url="GR03_D02_b" speaker="Dial">
 		<soutitre>
 			Justement ! On ne sait jamais ! Tu lèves le pied pour ralentir, même si tu ne vois personne à priori.<br/>Une personne peut toujours débouler ! Tu ne te souviens déjà plus de la vidéo ?<br/>		</soutitre>
-	</media>	<media  id="D03_a" url="GR03_D03_a.mp3" speaker="Dial">
+	</media>	<media  id="D03_a" url="GR03_D03_a" speaker="Dial">
 		<soutitre>
 			Admettons.  Ici,  le feu est à l’orange, à ta place j’accélèrerais pour dégager le carrefour. Il y a suffisamment d’encombrements, pas la peine d’en rajouter !		</soutitre>
-	</media>	<media  id="D03_b" url="GR03_D03_b.mp3" speaker="Dial">
+	</media>	<media  id="D03_b" url="GR03_D03_b" speaker="Dial">
 		<soutitre>
 			Noon ! Le Code de la route est clair : tu t’arrêtes à l’orange ! Je te rappelle que c’est une infraction au Code de la route, sauf si tu laissais passer un véhicule prioritaire.<br/>		</soutitre>
-	</media>	<media  id="D04_a" url="GR03_D04_a.mp3" speaker="Dial">
+	</media>	<media  id="D04_a" url="GR03_D04_a" speaker="Dial">
 		<soutitre>
 			Pour les stops, j’ai une technique infaillible ! Je ralentis bien, et si je ne vois personne, j’accélère pour rattraper le temps perdu !		</soutitre>
-	</media>	<media  id="D04_b" url="GR03_D04_b.mp3" speaker="Dial">
+	</media>	<media  id="D04_b" url="GR03_D04_b" speaker="Dial">
 		<soutitre>
 			Non ! Ça s’appelle  glisser un stop  et c’est interdit ! Tu dois t’arrêter, marquer l’arrêt, il faut même compter jusqu’à 3. S’arrêter à un STOP est obligatoire.		</soutitre>
-	</media>	<media  id="D05_a" url="GR03_D05_a.mp3" speaker="Dial">
+	</media>	<media  id="D05_a" url="GR03_D05_a" speaker="Dial">
 		<soutitre>
 			Connaitre la bonne distance de sécurité c’est pas facile sauf sur autoroute.		</soutitre>
-	</media>	<media  id="D05_b" url="GR03_D05_b.mp3" speaker="Dial">
+	</media>	<media  id="D05_b" url="GR03_D05_b" speaker="Dial">
 		<soutitre>
 			Oui bien sûr ! Et en plus même si je les connaissais par cœur,  je n’ai aucune idée de ce que ça représente concrètement !		</soutitre>
-	</media>	<media  id="D05_c" url="GR03_D05_c.mp3" speaker="Dial">
+	</media>	<media  id="D05_c" url="GR03_D05_c" speaker="Dial">
 		<soutitre>
 			Pour ça j’ai une technique plus simple. Il suffit de compter 2 secondes en prenant un repère. Ça marche toujours quelle que soit la vitesse. 		</soutitre>
-	</media>	<media  id="D05_d" url="GR03_D05_d.mp3" speaker="Dial">
+	</media>	<media  id="D05_d" url="GR03_D05_d" speaker="Dial">
 		<soutitre>
 			Viens, on va s’entraîner.		</soutitre>
-	</media>	<media  id="D06_a" url="GR03_D06_a.mp3" speaker="Off">
+	</media>	<media  id="D06_a" url="GR03_D06_a" speaker="Off">
 		<soutitre>
 			Aïe ! Votre distance n’est pas suffisante pour vous arrêter sans percuter le véhicule devant vous !<br/><br/>Savez-vous qu’un choc à 80 km/h est aussi violent que de tomber du 7ème étage d’un immeuble ?<br/>Rejouez pour vous entraîner ou passez à la suite.		</soutitre>
-	</media>	<media  id="D06_b" url="GR03_D06_b.mp3" speaker="Off">
+	</media>	<media  id="D06_b" url="GR03_D06_b" speaker="Off">
 		<soutitre>
 			Ouf ! Vous avez évalué la bonne distance de sécurité pour vous arrêter sans percuter le véhicule devant vous.<br/><br/>Savez-vous qu’un choc à 80 km/h est aussi violent que de tomber du 7ème étage  d’un immeuble ?<br/>Heureusement, plus de peur que de mal !<br/><br/>Rejouez pour vous entraîner ou passez à la suite.		</soutitre>
-	</media>	<media  id="D07_a" url="GR03_D07_a.mp3" speaker="Dial">
+	</media>	<media  id="D07_a" url="GR03_D07_a" speaker="Dial">
 		<soutitre>
 			C’est bien joli tout ça, mais j’ai l’ABS et je freine mieux même à la dernière minute.		</soutitre>
-	</media>	<media  id="D07_b" url="GR03_D07_b.mp3" speaker="Dial">
+	</media>	<media  id="D07_b" url="GR03_D07_b" speaker="Dial">
 		<soutitre>
 			Non, c’est une idée reçue. <br/>Le système de freinage ABS empêche juste les roues de se bloquer.<br/>La seule bonne façon de modifier sa conduite, c’est de toujours conserver les bonnes distances de sécurité, même en ville !		</soutitre>
-	</media>	<media  id="D08_a" url="GR03_D08_a.mp3" speaker="Dial">
+	</media>	<media  id="D08_a" url="GR03_D08_a" speaker="Dial">
 		<soutitre>
 			Et s’il pleut ou que la météo est mauvaise, tu anticipes davantage, tu augmentes les distances de sécurité, tu diminues ta vitesse et tu évites les manœuvres brusques !		</soutitre>
-	</media>	<media  id="D08_b" url="GR03_D08_b.mp3" speaker="Dial">
+	</media>	<media  id="D08_b" url="GR03_D08_b" speaker="Dial">
 		<soutitre>
 			Il n’y a pas que la météo qui soit facteur de risque ! Regarde ces cartes.		</soutitre>
-	</media>	<media  id="D08_a" url="GR03_D08_a.mp3" speaker="Off">
+	</media>	<media  id="D08_a" url="GR03_D08_a" speaker="Off">
 		<soutitre>
 			Le bon geste ! J’adopte une conduite qui anticipe les arrêts (passage piéton, feu tricolore, stop, etc …) en décelant systématiquement avant de freiner.		</soutitre>
 	</media></medias>
