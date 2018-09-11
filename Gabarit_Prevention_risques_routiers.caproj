@@ -469,7 +469,16 @@
             </object-type>
         </object-folder>
         <object-folder name="GR05" />
-        <object-folder name="GR03" />
+        <object-folder name="GR03">
+            <object-type name="GR03_FOND_perso_voiture" sid="569268001455767">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="539892584117988" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\PERSO voiture.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="GR02" />
         <object-folder name="GR01" />
         <object-folder name="Commun">
@@ -601,7 +610,9 @@
         </layout-folder>
         <layout-folder name="GR01" />
         <layout-folder name="GR02" />
-        <layout-folder name="GR03" />
+        <layout-folder name="GR03">
+            <layout>GR03_03_Video.xml</layout>
+        </layout-folder>
         <layout-folder name="GR04">
             <layout>GR04.xml</layout>
         </layout-folder>
@@ -619,7 +630,11 @@
         </event-folder>
         <event-folder name="GR01" />
         <event-folder name="GR02" />
-        <event-folder name="GR03" />
+        <event-folder name="GR03">
+            <event-sheet>GR03_03_Video_Event.xml</event-sheet>
+            <event-sheet>GR03_03_Variables.xml</event-sheet>
+            <event-sheet>GR03_03_Fonctions.xml</event-sheet>
+        </event-folder>
         <event-folder name="GR04">
             <event-sheet>GR04_Event.xml</event-sheet>
             <event-sheet>GR04_Fonctions.xml</event-sheet>
@@ -715,7 +730,9 @@
         <file-folder name="xml">
             <file name="G0101.xml" />
             <file name="GR04.xml" />
+            <file name="GR03.xml" />
         </file-folder>
         <file name="La Poste - Risques Routiers _ se garer toujours en marche arrière.mp4" />
+        <file name="La Poste_Risques_Routiers_respecter_les_distances_de_securite_et_adopter_une_conduite_attentive.mp4" />
     </files-folder>
 </c2project>
