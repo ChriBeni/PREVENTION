@@ -62,7 +62,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="427882251464275" type="Function">
-                                    <param id="0" name="Name">&quot;jouerSon&quot;</param>
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="0" name="Set text" sid="447785241639846" type="GR04_Bulle_txt_02">
@@ -85,8 +85,12 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="960580639256279" type="Function">
-                                    <param id="0" name="Name">&quot;jouerSon&quot;</param>
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="375632704744170" type="Function">
+                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Je me test&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="506806523661746" type="Function">
                                     <param id="0" name="Name">&quot;GR04_AllLayersInvisible&quot;</param>
@@ -95,10 +99,6 @@
                                 <action id="-4" name="Set layer visible" sid="128434627892219" type="System">
                                     <param id="0" name="Layer">&quot;02_TRANSITION 01&quot;</param>
                                     <param id="1" name="Visibility">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="375632704744170" type="Function">
-                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;Je me test&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="214607222351761" type="GR04_Bulle_txt_02">
                                     <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
@@ -123,6 +123,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="519440221243845" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="0" name="Call function" sid="980494513870746" type="Function">
                                     <param id="0" name="Name">&quot;GR04_AllLayersInvisible&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -156,6 +160,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="299162153901598" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="0" name="Call function" sid="335385302699462" type="Function">
                                     <param id="0" name="Name">&quot;GR04_AllLayersInvisible&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -189,9 +197,6 @@
                         <action id="-9" name="Set value" sid="513587555056497" type="System">
                             <param id="0" name="Variable">etatLectureVideo</param>
                             <param id="1" name="Value">END</param>
-                        </action>
-                        <action disabled="1" id="-42" name="Signal" sid="739513640308590" type="System">
-                            <param id="0" name="Tag">&quot;animFini&quot;</param>
                         </action>
                         <action id="0" name="Call function" sid="775298513616033" type="Function">
                             <param id="0" name="Name">&quot;passageAuto&quot;</param>
