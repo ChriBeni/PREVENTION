@@ -92,6 +92,16 @@
             </object-type>
         </object-folder>
         <object-folder name="UI">
+            <object-folder name="MOUCHARD">
+                <object-type name="MOUCHARD_Background" sid="490378462867301">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="540870216340868" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-type name="Nav" sid="455680968235134">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -421,6 +431,15 @@
             <object-type name="UI_TXT_Titre" sid="809985609582750">
                 <plugin id="rex_bbcodeText" />
             </object-type>
+            <object-type name="UI_BTN_Skip" sid="249285225524657">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="158636843783577" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SKIP_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SKIP_02.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="GR04">
             <object-type name="Sprite" sid="866510374567325">
@@ -452,16 +471,25 @@
             </object-type>
         </object-folder>
         <object-folder name="GR05" />
+<<<<<<< HEAD
         <object-folder name="GR03" />
         <object-folder name="GR02">
             <object-type name="GR02_FOND_perso_voiture" sid="264139185871618">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="902905379948642" speed="5">
+=======
+        <object-folder name="GR03">
+            <object-type name="GR03_FOND_perso_voiture" sid="569268001455767">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="539892584117988" speed="5">
+>>>>>>> 16fd0d64fb24f5c3e9a6182ee6bbbc9880cb5a09
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\PERSO voiture.png" />
                     </animation>
                 </animation-folder>
             </object-type>
+<<<<<<< HEAD
             <object-type name="GR02_Bulle_img_01_01" sid="764298133625945">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -474,6 +502,10 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
+=======
+        </object-folder>
+        <object-folder name="GR02" />
+>>>>>>> 16fd0d64fb24f5c3e9a6182ee6bbbc9880cb5a09
         <object-folder name="GR01" />
         <object-folder name="Commun">
             <object-type name="Visuel" sid="475769882177075">
@@ -596,6 +628,9 @@
             <layout>Jeux1.xml</layout>
         </layout-folder>
         <layout-folder name="GR01" />
+        <layout-folder name="GR03">
+            <layout>GR03.xml</layout>
+        </layout-folder>
         <layout-folder name="GR02">
             <layout>GR02.xml</layout>
         </layout-folder>
@@ -616,6 +651,11 @@
             <event-sheet>UI_Variables.xml</event-sheet>
         </event-folder>
         <event-folder name="GR01" />
+        <event-folder name="GR03">
+            <event-sheet>GR03_03_Event.xml</event-sheet>
+            <event-sheet>GR03_03_Variables.xml</event-sheet>
+            <event-sheet>GR03_03_Fonctions.xml</event-sheet>
+        </event-folder>
         <event-folder name="GR02">
             <event-sheet>GR02_Event.xml</event-sheet>
             <event-sheet>GR02_Fonctions.xml</event-sheet>
@@ -636,15 +676,15 @@
         </event-folder>
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="7" />
-        <global-instance type="Touch" uid="8">
+        <global-instance type="Mouse" uid="10" />
+        <global-instance type="Touch" uid="11">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="AJAX" uid="10" />
-        <global-instance type="Function" uid="11" />
-        <global-instance type="Audio" uid="12">
+        <global-instance type="AJAX" uid="12" />
+        <global-instance type="Function" uid="24" />
+        <global-instance type="Audio" uid="49">
             <properties>
                 <timescale-audio>On (sounds and music)</timescale-audio>
                 <saveload>All</saveload>
@@ -658,8 +698,8 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Browser" uid="24" />
-        <global-instance type="MM_Preloader" uid="49">
+        <global-instance type="Browser" uid="52" />
+        <global-instance type="MM_Preloader" uid="53">
             <properties>
                 <mm_preloader-version-14></mm_preloader-version-14>
                 <stabilizer>Disabled</stabilizer>
@@ -695,7 +735,48 @@
         </sound-folder>
         <sound-folder name="GR01" />
         <sound-folder name="GR02" />
-        <sound-folder name="GR03" />
+        <sound-folder name="GR03">
+            <file name="GR03_D01_a.m4a" />
+            <file name="GR03_D01_a.ogg" />
+            <file name="GR03_D01_b.m4a" />
+            <file name="GR03_D01_b.ogg" />
+            <file name="GR03_D01_c.m4a" />
+            <file name="GR03_D01_c.ogg" />
+            <file name="GR03_D02_a.m4a" />
+            <file name="GR03_D02_a.ogg" />
+            <file name="GR03_D02_b.m4a" />
+            <file name="GR03_D02_b.ogg" />
+            <file name="GR03_D03_a.m4a" />
+            <file name="GR03_D03_a.ogg" />
+            <file name="GR03_D03_b.m4a" />
+            <file name="GR03_D03_b.ogg" />
+            <file name="GR03_D04_a.m4a" />
+            <file name="GR03_D04_a.ogg" />
+            <file name="GR03_D04_b.m4a" />
+            <file name="GR03_D04_b.ogg" />
+            <file name="GR03_D05_a.m4a" />
+            <file name="GR03_D05_a.ogg" />
+            <file name="GR03_D05_b.m4a" />
+            <file name="GR03_D05_b.ogg" />
+            <file name="GR03_D05_c.m4a" />
+            <file name="GR03_D05_c.ogg" />
+            <file name="GR03_D05_d.m4a" />
+            <file name="GR03_D05_d.ogg" />
+            <file name="GR03_D06_a.m4a" />
+            <file name="GR03_D06_a.ogg" />
+            <file name="GR03_D06_b.m4a" />
+            <file name="GR03_D06_b.ogg" />
+            <file name="GR03_D07_a.m4a" />
+            <file name="GR03_D07_a.ogg" />
+            <file name="GR03_D07_b.m4a" />
+            <file name="GR03_D07_b.ogg" />
+            <file name="GR03_D08_a.m4a" />
+            <file name="GR03_D08_a.ogg" />
+            <file name="GR03_D08_b.m4a" />
+            <file name="GR03_D08_b.ogg" />
+            <file name="GR03_D09_a.m4a" />
+            <file name="GR03_D09_a.ogg" />
+        </sound-folder>
         <sound-folder name="GR04">
             <file name="GR04_D03.ogg" />
             <file name="GR04_D03.m4a" />
@@ -717,8 +798,20 @@
         <file-folder name="xml">
             <file name="G0101.xml" />
             <file name="GR04.xml" />
+            <file name="GR4.xml" />
+            <file name="GR03.xml" />
         </file-folder>
+        <file-folder name="Videos">
+            <file name="VIDEO_GR01.mp4" />
+            <file name="VIDEO_GR03.mp4" />
+            <file name="VIDEO_GR04.mp4" />
+            <file name="VIDEO_GR05.mp4" />
+            <file name="VIDEO_GR02.mp4" />
+        </file-folder>
+<<<<<<< HEAD
         <file name="VIDEO_GR02.mp4" />
         <file name="La Poste - Risques Routiers _ se garer toujours en marche arriere.mp4" />
+=======
+>>>>>>> 16fd0d64fb24f5c3e9a6182ee6bbbc9880cb5a09
     </files-folder>
 </c2project>

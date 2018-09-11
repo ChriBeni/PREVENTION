@@ -695,14 +695,6 @@
                 </event-group>
                 <event-group description="" sid="288024723145682" title="UI - INIT - XML">
                     <sub-events>
-                        <event-block sid="899837307559810">
-                            <conditions>
-                                <condition id="0" name="On function" sid="111535344699776" type="Function">
-                                    <param id="0" name="Name">&quot;initXML&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                        </event-block>
                         <event-group description="" sid="641371026981657" title="UI - INIT - XML Chargement">
                             <sub-events>
                                 <comment>Lorsque le xml est chargé on passe les données dans le plugin xml</comment>
@@ -1140,6 +1132,11 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">ACTIF</param>
                                         </condition>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="725824092105992" type="System">
+                                            <param id="0" name="Variable">etatLecture</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">END</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set cursor style" sid="331410047692937" type="Mouse">
@@ -1159,6 +1156,11 @@
                                             <param id="0" name="Variable">etatBoutonPause</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">ACTIF</param>
+                                        </condition>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="787212445263489" type="System">
+                                            <param id="0" name="Variable">etatLecture</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">END</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1183,6 +1185,11 @@
                                             <param id="0" name="Variable">etatBoutonPause</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">ACTIF</param>
+                                        </condition>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="361707897064872" type="System">
+                                            <param id="0" name="Variable">etatLecture</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">END</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1224,6 +1231,24 @@
                                     <actions>
                                         <action id="4" name="Set animation" sid="140684399603207" type="UI_BTN_Suiv">
                                             <param id="0" name="Animation">&quot;CLIGNOTE&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="943251332307347" type="UI_BTN_Pause">
+                                            <param id="0" name="Opacity">20</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="822621385021238">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="209565029511536" type="System">
+                                            <param id="0" name="Variable">etatLecture</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PLAY</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="787525383465441" type="UI_BTN_Suiv">
+                                            <param id="0" name="Animation">&quot;ETATS&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
@@ -1320,16 +1345,15 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="33" name="Stop all" sid="576883309638326" type="Audio" />
                                         <action id="-10" name="Add to" sid="803072059140173" type="System">
                                             <param id="0" name="Variable">numeroMarqueur</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="4" name="Set animation" sid="237588745704076" type="UI_BTN_Suiv">
+                                        <action disabled="1" id="4" name="Set animation" sid="237588745704076" type="UI_BTN_Suiv">
                                             <param id="0" name="Animation">&quot;ETATS&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="490809175971047" type="System">
+                                        <action disabled="1" id="-9" name="Set value" sid="490809175971047" type="System">
                                             <param id="0" name="Variable">etatLecture</param>
                                             <param id="1" name="Value">PLAY</param>
                                         </action>
@@ -1453,20 +1477,16 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="33" name="Stop all" sid="816362920225112" type="Audio" />
+                                        <action disabled="1" id="33" name="Stop all" sid="816362920225112" type="Audio" />
                                         <action id="-11" name="Subtract from" sid="765033227971692" type="System">
                                             <param id="0" name="Variable">numeroMarqueur</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="4" name="Set animation" sid="265247255767080" type="UI_BTN_Prec">
+                                        <action disabled="1" id="4" name="Set animation" sid="384357502826949" type="UI_BTN_Suiv">
                                             <param id="0" name="Animation">&quot;ETATS&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
-                                        <action id="4" name="Set animation" sid="384357502826949" type="UI_BTN_Suiv">
-                                            <param id="0" name="Animation">&quot;ETATS&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="434598465884262" type="System">
+                                        <action disabled="1" id="-9" name="Set value" sid="434598465884262" type="System">
                                             <param id="0" name="Variable">etatLecture</param>
                                             <param id="1" name="Value">PLAY</param>
                                         </action>
@@ -1525,14 +1545,64 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="171306752182080" type="UI_BTN_Close">
-                                            <param id="0" name="Animation">&quot;Close&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
                                         <action id="-16" name="Wait" sid="347680877245455" type="System">
                                             <param id="0" name="Seconds">0.55</param>
                                         </action>
                                         <action id="1" name="Close" sid="257100494813287" type="Browser" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="521864746796179" title="UI - BOUTON SKIP VIDEO">
+                    <sub-events>
+                        <event-group description="" sid="196521421864077" title="UI - BOUTON SKIP VIDEO - SURVOL">
+                            <sub-events>
+                                <event-block sid="931646942290359">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="337249320640664" type="Mouse">
+                                            <param id="0" name="Object">UI_BTN_Skip</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set cursor style" sid="530789747943332" type="Mouse">
+                                            <param id="0" name="Cursor style">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="323126142471676" type="UI_BTN_Skip">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="137321462872028">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Cursor is over object" sid="565545461876609" type="Mouse">
+                                            <param id="0" name="Object">UI_BTN_Skip</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set cursor style" sid="154369490999255" type="Mouse">
+                                            <param id="0" name="Cursor style">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="651542065659333" type="UI_BTN_Skip">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="972589827548846" title="UI - BOUTON SKIP VIDEO - CLIC">
+                            <sub-events>
+                                <event-block sid="544113423262796">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="573030527262915" type="Touch">
+                                            <param id="0" name="Object">UI_BTN_Skip</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set playback time" sid="261465962630853" type="Media">
+                                            <param id="0" name="Time">80</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1611,9 +1681,25 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="33" name="Stop all" sid="101258421572030" type="Audio" />
+                                <action id="-9" name="Set value" sid="134878377963387" type="System">
+                                    <param id="0" name="Variable">etatLecture</param>
+                                    <param id="1" name="Value">PLAY</param>
+                                </action>
                                 <action id="0" name="Call function" sid="737373393837597" type="Function">
                                     <param id="0" name="Name">&quot;jouerSon&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="538581623796379" type="UI_BTN_Suiv">
+                                    <param id="0" name="Animation">&quot;ETATS&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="140008561820362" type="UI_BTN_Prec">
+                                    <param id="0" name="Animation">&quot;ETATS&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="408067002026417" type="UI_BTN_Pause">
+                                    <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1636,24 +1722,17 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">OUI</param>
                                         </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="120601839756344" type="System" />
                                     </conditions>
                                     <actions>
                                         <action id="-41" name="Wait for signal" sid="302040727084619" type="System">
                                             <param id="0" name="Tag">&quot;sonFini&quot;</param>
                                         </action>
-                                        <action id="-10" name="Add to" sid="691420255637186" type="System">
+                                        <action id="-10" name="Add to" sid="492775776404232" type="System">
                                             <param id="0" name="Variable">numeroMarqueur</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="4" name="Set animation" sid="352423484928655" type="UI_BTN_Suiv">
-                                            <param id="0" name="Animation">&quot;ETATS&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="538859125631280" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Value">PLAY</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="400119084185976" type="Function">
+                                        <action id="0" name="Call function" sid="995825127612656" type="Function">
                                             <param id="0" name="Name">&quot;initNavigation&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
@@ -1666,12 +1745,13 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">NON</param>
                                         </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="512996096221618" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-41" name="Wait for signal" sid="524166590220830" type="System">
+                                        <action id="-41" name="Wait for signal" sid="316257768822265" type="System">
                                             <param id="0" name="Tag">&quot;sonFini&quot;</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="122414532743409" type="System">
+                                        <action id="-9" name="Set value" sid="696837618736373" type="System">
                                             <param id="0" name="Variable">etatLecture</param>
                                             <param id="1" name="Value">END</param>
                                         </action>
@@ -1736,6 +1816,10 @@
                                             <param id="4" name="Volume">0</param>
                                             <param id="2" name="Tag (optional)">xmlNomMP3</param>
                                         </action>
+                                        <action disabled="1" id="-9" name="Set value" sid="329746979487927" type="System">
+                                            <param id="0" name="Variable">etatLectureSon</param>
+                                            <param id="1" name="Value">PLAY</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1752,6 +1836,33 @@
                             </conditions>
                             <actions>
                                 <action id="-42" name="Signal" sid="326926027138068" type="System">
+                                    <param id="0" name="Tag">&quot;sonFini&quot;</param>
+                                </action>
+                                <action disabled="1" id="-9" name="Set value" sid="206978435060864" type="System">
+                                    <param id="0" name="Variable">etatLectureSon</param>
+                                    <param id="1" name="Value">END</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="951177378774872" title="VIDEO">
+            <sub-events>
+                <event-group description="" sid="182084316281619" title="VIDEO - DETECTION FIN">
+                    <sub-events>
+                        <event-block sid="974764649180295">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="756776720821888" type="System">
+                                    <param id="0" name="Variable">etatLectureVideo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">END</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="252905013852337" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-42" name="Signal" sid="801434755295036" type="System">
                                     <param id="0" name="Tag">&quot;sonFini&quot;</param>
                                 </action>
                             </actions>

@@ -239,7 +239,7 @@
                     <properties>
                         <webm-source></webm-source>
                         <ogg-theora-source></ogg-theora-source>
-                        <h264-source>La Poste - Risques Routiers _ se garer toujours en marche arrière.mp4</h264-source>
+                        <h264-source>VIDEO_GR04.mp4</h264-source>
                         <autoplay>No</autoplay>
                         <play-in-background>No</play-in-background>
                         <initial-visibility>Visible</initial-visibility>

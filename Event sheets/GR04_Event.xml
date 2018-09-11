@@ -15,6 +15,10 @@
                         <condition id="-2" name="On start of layout" sid="948705570190841" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="104327840875186" type="System">
+                            <param id="0" name="Variable">modeDeveloppeur</param>
+                            <param id="1" name="Value">OUI</param>
+                        </action>
                         <action id="-9" name="Set value" sid="629215645891148" type="System">
                             <param id="0" name="Variable">numeroGranule</param>
                             <param id="1" name="Value">&quot;GR04&quot;</param>
@@ -30,10 +34,6 @@
                         <action id="1" name="Request project file" sid="964478414967564" type="AJAX">
                             <param id="0" name="Tag">numeroGranule</param>
                             <param id="1" name="File">GR04.xml</param>
-                        </action>
-                        <action id="0" name="Call function" sid="231026058521548" type="Function">
-                            <param id="0" name="Name">&quot;initXML&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -84,6 +84,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-15" name="Set visible" sid="958227795846881" type="UI_BTN_Skip">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
                                 <action id="0" name="Call function" sid="960580639256279" type="Function">
                                     <param id="0" name="Name">&quot;initMarqueur&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -139,14 +142,17 @@
                                     <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
                                     <param id="1" name="Parameter {n}">ACTIF</param>
                                 </action>
-                                <action id="6" name="Play" sid="297142830253718" type="Media" />
-                                <action id="-12" name="Set group active" sid="220813312458609" type="System">
-                                    <param id="0" name="Group name">&quot;GR04 - Fin lecture vidéo&quot;</param>
-                                    <param id="1" name="State">1</param>
-                                </action>
                                 <action disabled="1" id="-9" name="Set value" sid="731579138002392" type="System">
                                     <param id="0" name="Variable">etatBoutonSuiv</param>
                                     <param id="1" name="Value">INACTIF</param>
+                                </action>
+                                <action id="6" name="Play" sid="297142830253718" type="Media" />
+                                <action id="-12" name="Set group active" sid="220813312458609" type="System">
+                                    <param id="0" name="Group name">&quot;GR04 - VIDEO - Fin lecture&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="729614675130289" type="UI_BTN_Skip">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -182,7 +188,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" inactive="1" sid="869848450081363" title="GR04 - Fin lecture vidéo">
+        <event-group description="" inactive="1" sid="869848450081363" title="GR04 - VIDEO - Fin lecture">
             <sub-events>
                 <comment>A la fin de la video, on rend le bouton suiv actif, qui clignotera automatiquement car la lecture est à END (grâce au passage auto = NON)</comment>
                 <event-block sid="961962410628541">
@@ -194,7 +200,7 @@
                             <param id="0" name="Variable">etatBoutonSuiv</param>
                             <param id="1" name="Value">ACTIF</param>
                         </action>
-                        <action disabled="1" id="-9" name="Set value" sid="513587555056497" type="System">
+                        <action id="-9" name="Set value" sid="513587555056497" type="System">
                             <param id="0" name="Variable">etatLectureVideo</param>
                             <param id="1" name="Value">END</param>
                         </action>
@@ -204,6 +210,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Si la vidéo n&apos;est pas à l&apos;écran, on la remet au début</comment>
                 <event-block sid="398217101595200">
                     <conditions>
                         <condition id="-9" inverted="1" name="Layer is visible" sid="642334630867380" type="System">
