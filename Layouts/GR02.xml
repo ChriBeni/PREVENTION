@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="COM_Fond" uid="42">
+                <instance type="COM_Fond" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -200,7 +200,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GR04_Bulle_img_02" uid="44">
+                <instance type="GR04_Bulle_img_02" uid="2">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>

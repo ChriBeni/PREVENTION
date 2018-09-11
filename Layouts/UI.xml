@@ -51,7 +51,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Soustitre" uid="1">
+                <instance type="Soustitre" uid="3">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -78,7 +78,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Repere_son" uid="2">
+                <instance type="Repere_son" uid="4">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -105,7 +105,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_Fond_Nav_Bas" uid="3">
+                <instance type="UI_Fond_Nav_Bas" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -199,7 +199,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Btn_Lecture" uid="4">
+                <instance type="Btn_Lecture" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -500,7 +500,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_BTN_Close" uid="5">
+                <instance type="UI_BTN_Close" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -522,7 +522,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_BTN_Son" uid="6">
+                <instance type="UI_BTN_Son" uid="8">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

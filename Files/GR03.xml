@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Liste des medias pour le granule GR03 -->
 <medias code="GR03">
-	<media  id="D01_a" url="GR03_D01_a.mp3" speaker="Dial">
+	<media  id="D00_a" url="GR03_D00_a.mp3" speaker="">
+		<soutitre>
+					</soutitre>
+	</media>	<media  id="D00_b" url="GR03_D00_b.mp3" speaker="">
+		<soutitre>
+					</soutitre>
+	</media>	<media  id="D01_a" url="GR03_D01_a.mp3" speaker="Dial">
 		<soutitre>
 			Il n’avait pas vu le piéton ! Comme quoi il faut vraiment adopter une conduite attentive pour anticiper les arrêts !		</soutitre>
 	</media>	<media  id="D01_b" url="GR03_D01_b.mp3" speaker="Dial">
