@@ -52,17 +52,17 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" disabled="1" sid="665174894240059" title="GR02 - GESTION - PIN">
+        <event-group description="" sid="665174894240059" title="GR02 - GESTION - PIN">
             <sub-events>
-                <event-block disabled="1" sid="352067034276595">
+                <event-block sid="352067034276595">
                     <conditions>
                         <condition id="0" name="On function" sid="750290667016629" type="Function">
-                            <param id="0" name="Name">&quot;GR04_initPin&quot;</param>
+                            <param id="0" name="Name">&quot;GR02_initPin&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="PinFamille" id="0" name="Pin to object" sid="514917870723848" type="GR04_Bulle_txt_02">
-                            <param id="0" name="Pin to">GR04_Bulle_img_02</param>
+                        <action behavior="PinFamille" id="0" name="Pin to object" sid="593144494830034" type="GR02_Bulle_txt_01_01">
+                            <param id="0" name="Pin to">GR02_Bulle_img_01_01</param>
                             <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
