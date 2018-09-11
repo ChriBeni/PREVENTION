@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Fond" uid="42">
+                <instance type="COM_Fond" uid="42">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -303,7 +303,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Video_Background" uid="46">
+                <instance type="COM_Video_Background" uid="46">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -316,8 +316,8 @@
                         <x>961</x>
                         <y>444</y>
                         <z>0</z>
-                        <width>778</width>
-                        <height>454</height>
+                        <width>879.478271484</width>
+                        <height>479.942871094</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -367,7 +367,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BTN_Commencer" uid="48">
+                <instance type="COM_BTN_Commencer" uid="48">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

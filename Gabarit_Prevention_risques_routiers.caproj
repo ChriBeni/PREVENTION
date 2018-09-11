@@ -21,6 +21,7 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="XML" version="1">XML</plugin>
+        <plugin author="Rex.Rainbow" id="rex_bbcodeText" version="0.100000001">BBcode Text</plugin>
         <plugin author="Scirra" id="video" version="1">Video</plugin>
     </used-plugins>
     <used-behaviors>
@@ -187,54 +188,6 @@
             </object-type>
             <object-type name="Repere_son" sid="495821545326751">
                 <plugin id="Text" />
-            </object-type>
-            <object-type name="Btn_Close" sid="804915021013818">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="582473029301281" speed="0">
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0001.png">
-                            <collision-poly>
-                                <point x="0.233645" y="0.347222" />
-                                <point x="0.495327" y="0.0833333" />
-                                <point x="0.757009" y="0.361111" />
-                                <point x="0.775701" y="0.5" />
-                                <point x="0.757009" y="0.638889" />
-                                <point x="0.495327" y="0.916667" />
-                                <point x="0.233645" y="0.652778" />
-                                <point x="0.214953" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="27" loop="0" name="Close" pingpong="0" repeatcount="1" repeatto="0" sid="773207188136245" speed="80">
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0001.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0002.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0003.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0004.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0005.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0006.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0007.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0008.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0009.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0010.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0011.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0012.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0013.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0014.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0015.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0016.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0017.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0018.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0019.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0020.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0021.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0022.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0023.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0024.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0025.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0026.png" />
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Close\navigation hamburger animé0027.png" />
-                    </animation>
-                </animation-folder>
             </object-type>
             <object-type name="BTN_SStitre" sid="540781942404653">
                 <plugin id="Sprite" />
@@ -438,6 +391,36 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="UI_BTN_Close" sid="496629064300574">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799307459878979" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_CLOSE_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_CLOSE_02.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UI_BTN_Son" sid="122201295665116">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228931690389254" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SON_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SON_02.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UI_BTN_Soustitre" sid="679266493159181">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="672950923436843" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SST_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SST_02.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UI_TXT_Titre" sid="809985609582750">
+                <plugin id="rex_bbcodeText" />
+            </object-type>
         </object-folder>
         <object-folder name="GR04">
             <object-type name="Sprite" sid="866510374567325">
@@ -481,15 +464,15 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Video_Background" sid="785672011992702">
+            <object-type name="COM_Video_Background" sid="785672011992702">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="411931630391520" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\VIDEO_Fond.png" />
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="BTN_Commencer" sid="790998860059136">
+            <object-type name="COM_BTN_Commencer" sid="790998860059136">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="495095320554556" speed="0">
@@ -518,7 +501,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Fond" sid="670287036531360">
+            <object-type name="COM_Fond" sid="670287036531360">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="546328303425091" speed="5">
@@ -530,19 +513,10 @@
         <object-type name="Intro_Text" sid="770778991214471">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Texte_chargement_video" sid="825242175367076">
-            <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="Sine" sid="802381759504814">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-        </object-type>
     </object-folder>
     <families>
         <family name="UI_Curseur" plugin-id="Sprite" sid="871919883988788">
             <members>
-                <member>Btn_Close</member>
                 <member>Btn_Lecture</member>
                 <member>Btn_Son</member>
                 <member>BTN_SStitre</member>
@@ -640,15 +614,15 @@
         </event-folder>
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="6" />
-        <global-instance type="Touch" uid="7">
+        <global-instance type="Mouse" uid="7" />
+        <global-instance type="Touch" uid="8">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="AJAX" uid="8" />
-        <global-instance type="Function" uid="10" />
-        <global-instance type="Audio" uid="11">
+        <global-instance type="AJAX" uid="10" />
+        <global-instance type="Function" uid="11" />
+        <global-instance type="Audio" uid="12">
             <properties>
                 <timescale-audio>On (sounds and music)</timescale-audio>
                 <saveload>All</saveload>
@@ -662,8 +636,8 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Browser" uid="12" />
-        <global-instance type="MM_Preloader" uid="24">
+        <global-instance type="Browser" uid="24" />
+        <global-instance type="MM_Preloader" uid="49">
             <properties>
                 <mm_preloader-version-14></mm_preloader-version-14>
                 <stabilizer>Disabled</stabilizer>
@@ -722,7 +696,11 @@
             <file name="G0101.xml" />
             <file name="GR04.xml" />
         </file-folder>
+<<<<<<< HEAD
         <file name="La Poste - Risques Routiers _ se garer toujours en marche arrière.mp4" />
         <file name="VIDEO_GR02.mp4" />
+=======
+        <file name="La Poste - Risques Routiers _ se garer toujours en marche arriere.mp4" />
+>>>>>>> 3b9ce6200a2a0218217901efce6f2b867fe2884f
     </files-folder>
 </c2project>
