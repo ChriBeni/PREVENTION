@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GR02_Fonctions</name>
+    <events>
+        <event-group description="" sid="305574666573296" title="GR02 - GESTION - LAYERS">
+            <sub-events>
+                <event-block sid="559977416967741">
+                    <conditions>
+                        <condition id="0" name="On function" sid="385005728569521" type="Function">
+                            <param id="0" name="Name">&quot;GR02_AllLayersInvisible&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="522086348499361" type="System">
+                            <param id="0" name="Layer">&quot;GR02_00_START&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="139551977350481" type="System">
+                            <param id="0" name="Layer">&quot;GR02_01_VIDEO&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="344255726272408" type="System">
+                            <param id="0" name="Layer">&quot;GR02_02_TRANSITION 01&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="918156324482531" type="System">
+                            <param id="0" name="Layer">&quot;GR02_03_JEU 01&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="265648621804215" type="System">
+                            <param id="0" name="Layer">&quot;GR02_04_TRANSITION 02&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="487577286147811" type="System">
+                            <param id="0" name="Layer">&quot;GR02_05_JEU 02&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="433422115181699" type="System">
+                            <param id="0" name="Layer">&quot;GR02_06_TRANSITION 03&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="325507679594548" type="System">
+                            <param id="0" name="Layer">&quot;GR02_07_FICHE&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="862495640953651" type="System">
+                            <param id="0" name="Layer">&quot;GR02_08_END&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" disabled="1" sid="665174894240059" title="GR02 - GESTION - PIN">
+            <sub-events>
+                <event-block disabled="1" sid="352067034276595">
+                    <conditions>
+                        <condition id="0" name="On function" sid="750290667016629" type="Function">
+                            <param id="0" name="Name">&quot;GR04_initPin&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="PinFamille" id="0" name="Pin to object" sid="514917870723848" type="GR04_Bulle_txt_02">
+                            <param id="0" name="Pin to">GR04_Bulle_img_02</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
