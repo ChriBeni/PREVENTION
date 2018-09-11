@@ -457,7 +457,7 @@
                                         <action id="5" name="Set frame" sid="321292812050104" type="Btn_Lecture">
                                             <param id="0" name="Frame number">0</param>
                                         </action>
-                                        <action id="-13" name="Set time scale" sid="944053499207993" type="System">
+                                        <action disabled="1" id="-13" name="Set time scale" sid="944053499207993" type="System">
                                             <param id="0" name="Time scale">0</param>
                                         </action>
                                     </actions>
@@ -481,7 +481,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set time scale" sid="219138176886209" type="System">
+                                <action disabled="1" id="-13" name="Set time scale" sid="219138176886209" type="System">
                                     <param id="0" name="Time scale">1</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="112106124581578" type="System">
@@ -574,7 +574,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set time scale" sid="263598466642140" type="System">
+                                        <action disabled="1" id="-13" name="Set time scale" sid="263598466642140" type="System">
                                             <param id="0" name="Time scale">1</param>
                                         </action>
                                     </actions>
@@ -1036,7 +1036,7 @@
                                             <param id="1" name="Value">PLAY</param>
                                         </action>
                                         <action id="-13" name="Set time scale" sid="357095530994872" type="System">
-                                            <param id="0" name="Time scale">1.0</param>
+                                            <param id="0" name="Time scale">1</param>
                                         </action>
                                     </actions>
                                     <sub-events>
