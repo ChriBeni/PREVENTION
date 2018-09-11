@@ -421,6 +421,15 @@
             <object-type name="UI_TXT_Titre" sid="809985609582750">
                 <plugin id="rex_bbcodeText" />
             </object-type>
+            <object-type name="UI_BTN_Skip" sid="249285225524657">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="158636843783577" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SKIP_01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SKIP_02.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="GR04">
             <object-type name="Sprite" sid="866510374567325">
@@ -696,11 +705,12 @@
             <file name="G0101.xml" />
             <file name="GR04.xml" />
         </file-folder>
-<<<<<<< HEAD
-        <file name="La Poste - Risques Routiers _ se garer toujours en marche arrière.mp4" />
-        <file name="VIDEO_GR02.mp4" />
-=======
-        <file name="La Poste - Risques Routiers _ se garer toujours en marche arriere.mp4" />
->>>>>>> 3b9ce6200a2a0218217901efce6f2b867fe2884f
+        <file-folder name="Videos">
+            <file name="VIDEO_GR01.mp4" />
+            <file name="VIDEO_GR03.mp4" />
+            <file name="VIDEO_GR04.mp4" />
+            <file name="VIDEO_GR05.mp4" />
+            <file name="VIDEO_GR02.mp4" />
+        </file-folder>
     </files-folder>
 </c2project>

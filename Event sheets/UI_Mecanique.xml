@@ -695,6 +695,7 @@
                 </event-group>
                 <event-group description="" sid="288024723145682" title="UI - INIT - XML">
                     <sub-events>
+                        <event-group description="" sid="641371026981657" title="UI - INIT - XML Chargement" />
                         <event-block sid="899837307559810">
                             <conditions>
                                 <condition id="0" name="On function" sid="111535344699776" type="Function">
@@ -702,22 +703,7 @@
                                 </condition>
                             </conditions>
                             <actions />
-                        </event-block>
-                        <event-group description="" sid="641371026981657" title="UI - INIT - XML Chargement">
                             <sub-events>
-                                <comment>Lorsque le xml est chargé on passe les données dans le plugin xml</comment>
-                                <event-block sid="942601895385029">
-                                    <conditions>
-                                        <condition id="0" name="On completed" sid="176788836130598" type="AJAX">
-                                            <param id="0" name="Tag">numeroGranule</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Load" sid="120773348772721" type="XML">
-                                            <param id="0" name="XML">AJAX.LastData</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
                                 <comment>On appelle la fonction qui va récupérer les données du xml dans un array et on active le groupe qui convient</comment>
                                 <event-block sid="418185081919871">
                                     <conditions />
@@ -733,7 +719,7 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-group>
+                        </event-block>
                         <event-group description="" sid="652056973681699" title="UI - INIT - XML Parse in Array">
                             <sub-events>
                                 <event-block sid="614314865949870">
@@ -1525,14 +1511,64 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="171306752182080" type="UI_BTN_Close">
-                                            <param id="0" name="Animation">&quot;Close&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
                                         <action id="-16" name="Wait" sid="347680877245455" type="System">
                                             <param id="0" name="Seconds">0.55</param>
                                         </action>
                                         <action id="1" name="Close" sid="257100494813287" type="Browser" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="521864746796179" title="UI - BOUTON SKIP VIDEO">
+                    <sub-events>
+                        <event-group description="" sid="196521421864077" title="UI - BOUTON SKIP VIDEO - SURVOL">
+                            <sub-events>
+                                <event-block sid="931646942290359">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="337249320640664" type="Mouse">
+                                            <param id="0" name="Object">UI_BTN_Skip</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set cursor style" sid="530789747943332" type="Mouse">
+                                            <param id="0" name="Cursor style">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="323126142471676" type="UI_BTN_Skip">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="137321462872028">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Cursor is over object" sid="565545461876609" type="Mouse">
+                                            <param id="0" name="Object">UI_BTN_Skip</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set cursor style" sid="154369490999255" type="Mouse">
+                                            <param id="0" name="Cursor style">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="651542065659333" type="UI_BTN_Skip">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="972589827548846" title="UI - BOUTON SKIP VIDEO - CLIC">
+                            <sub-events>
+                                <event-block sid="544113423262796">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="573030527262915" type="Touch">
+                                            <param id="0" name="Object">UI_BTN_Skip</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set playback time" sid="261465962630853" type="Media">
+                                            <param id="0" name="Time">80</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1638,9 +1674,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-41" name="Wait for signal" sid="302040727084619" type="System">
-                                            <param id="0" name="Tag">&quot;sonFini&quot;</param>
-                                        </action>
                                         <action id="-10" name="Add to" sid="691420255637186" type="System">
                                             <param id="0" name="Variable">numeroMarqueur</param>
                                             <param id="1" name="Value">1</param>
@@ -1658,6 +1691,18 @@
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="118846757050840">
+                                            <conditions>
+                                                <condition id="4" name="Is any playing" sid="328662097195885" type="Audio" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-41" name="Wait for signal" sid="302040727084619" type="System">
+                                                    <param id="0" name="Tag">&quot;sonFini&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="245626184111040">
                                     <conditions>
