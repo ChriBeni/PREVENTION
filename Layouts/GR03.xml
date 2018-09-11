@@ -110,86 +110,100 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GR04_Bulle_img_02" uid="56">
+                <instance type="Bulle_bleue" uid="44">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>0.5</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>0</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>960.387573242</x>
-                        <y>170.536849976</y>
+                        <x>419</x>
+                        <y>354</y>
                         <z>0</z>
-                        <width>927.87689209</width>
-                        <height>121.70148468</height>
+                        <width>522</width>
+                        <height>361</height>
                         <depth>0</depth>
-                        <hotspotX>0.500417709</hotspotX>
-                        <hotspotY>0.503184736</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501385033</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GR04_Bulle_txt_02" uid="57">
+                <instance type="GR03_D01_a_txt" uid="61">
                     <properties>
                         <text></text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Articulate,-35,400,0</font>
+                        <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
+                        <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="PinFamille">
-                            <properties>
-                                <x>Enabled</x>
-                                <y>Enabled</y>
-                                <zindex>Disabled</zindex>
-                                <angle>Disabled</angle>
-                                <width>Disabled</width>
-                                <height>Disabled</height>
-                                <opacity>Enabled</opacity>
-                                <visibility>Enabled</visibility>
-                                <collisions-enabled>Disabled</collisions-enabled>
-                                <timescale>Disabled</timescale>
-                                <hotspot-x>Disabled</hotspot-x>
-                                <hotspot-y>Disabled</hotspot-y>
-                                <imagepoint>0</imagepoint>
-                                <animation>Disabled</animation>
-                                <frame>Disabled</frame>
-                                <mirror>Disabled</mirror>
-                                <flip>Disabled</flip>
-                                <destroy>Disabled</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>579</x>
-                        <y>125</y>
+                        <x>411</x>
+                        <y>303</y>
                         <z>0</z>
-                        <width>829</width>
-                        <height>101</height>
+                        <width>382</width>
+                        <height>269</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bulle_orange" uid="56">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1492</x>
+                        <y>388</y>
+                        <z>0</z>
+                        <width>628</width>
+                        <height>631</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.500792384</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="GR03_D01_b_txt" uid="57">
+                    <properties>
+                        <text></text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1477</x>
+                        <y>270</y>
+                        <z>0</z>
+                        <width>382</width>
+                        <height>269</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -10,14 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="6">UI</layout>
-        <layout order="0">GR02</layout>
-        <event-sheet order="3">UI_Mecanique</event-sheet>
-        <event-sheet order="5">UI_Fonctions</event-sheet>
-        <event-sheet order="4">UI_Variables</event-sheet>
-        <event-sheet order="7">UI_Events</event-sheet>
-        <event-sheet active="1" order="1">GR02_Event</event-sheet>
-        <event-sheet order="2">GR02_Fonctions</event-sheet>
+        <layout active="1" order="0">GR03</layout>
+        <event-sheet order="1">GR03_03_Event</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -25,18 +19,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
+    <families-expanded root="0">
         <family expanded="0" name="UI_Curseur" />
         <family expanded="0" name="UI_Reglage_son_curseur" />
         <family expanded="0" name="UI_Reglage_son_general" />
         <family expanded="0" name="Media" />
-        <family expanded="1" name="COMMUN_Bulles_img" />
-        <family expanded="1" name="COMMUN_Bulles_txt" />
+        <family expanded="0" name="COMMUN_Bulles_img" />
+        <family expanded="0" name="COMMUN_Bulles_txt" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/Composants/" />
         <folder expanded="0" path="object-folder/UI/" />
+        <folder expanded="1" path="object-folder/UI/MOUCHARD/" />
         <folder expanded="0" path="object-folder/GR04/" />
         <folder expanded="1" path="object-folder/GR05/" />
         <folder expanded="1" path="object-folder/GR03/" />
@@ -46,30 +41,32 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="0" path="layout-folder/_OLD/" />
         <folder expanded="1" path="layout-folder/GR01/" />
-        <folder expanded="1" path="layout-folder/GR02/" />
         <folder expanded="1" path="layout-folder/GR03/" />
-        <folder expanded="0" path="layout-folder/GR04/" />
+        <folder expanded="1" path="layout-folder/GR02/" />
+        <folder expanded="1" path="layout-folder/GR04/" />
         <folder expanded="1" path="layout-folder/GR05/" />
         <folder expanded="0" path="layout-folder/UI/" />
-        <folder expanded="0" path="event-folder/" />
-        <folder expanded="0" path="event-folder/UI/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="event-folder/UI/" />
         <folder expanded="1" path="event-folder/GR01/" />
+        <folder expanded="0" path="event-folder/GR03/" />
         <folder expanded="0" path="event-folder/GR02/" />
-        <folder expanded="1" path="event-folder/GR03/" />
         <folder expanded="0" path="event-folder/GR04/" />
         <folder expanded="1" path="event-folder/GR05/" />
         <folder expanded="0" path="event-folder/_OLD/" />
-        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="file-folder/xml/" />
+        <folder expanded="0" path="file-folder/xml/" />
+        <folder expanded="0" path="file-folder/Videos/" />
         <folder expanded="0" path="sound-folder/TESTS/" />
         <folder expanded="1" path="sound-folder/GR01/" />
         <folder expanded="1" path="sound-folder/GR02/" />
-        <folder expanded="1" path="sound-folder/GR03/" />
-        <folder expanded="1" path="sound-folder/GR04/" />
+        <folder expanded="0" path="sound-folder/GR03/" />
+        <folder expanded="0" path="sound-folder/GR04/" />
         <folder expanded="1" path="sound-folder/GR05/" />
+        <folder expanded="1" path="animation-folder/MOUCHARD_Background/" />
         <folder expanded="1" path="animation-folder/Nav/" />
         <folder expanded="1" path="animation-folder/Btn_Lecture/" />
         <folder expanded="1" path="animation-folder/BTN_SStitre/" />
@@ -90,14 +87,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/UI_BTN_Close/" />
         <folder expanded="1" path="animation-folder/UI_BTN_Son/" />
         <folder expanded="1" path="animation-folder/UI_BTN_Soustitre/" />
+        <folder expanded="1" path="animation-folder/UI_BTN_Skip/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/GR04_Bulle_img_02/" />
         <folder expanded="1" path="animation-folder/GR04_FOND_perso_voiture/" />
-        <folder expanded="1" path="animation-folder/GR02_FOND_perso_voiture/" />
-        <folder expanded="1" path="animation-folder/GR02_Bulle_img_01_01/" />
+        <folder expanded="1" path="animation-folder/GR03_FOND_perso_voiture/" />
+        <folder expanded="1" path="animation-folder/Bulle_bleue/" />
         <folder expanded="1" path="animation-folder/Visuel/" />
         <folder expanded="1" path="animation-folder/COM_Video_Background/" />
         <folder expanded="1" path="animation-folder/COM_BTN_Commencer/" />
         <folder expanded="1" path="animation-folder/COM_Fond/" />
+        <folder expanded="1" path="animation-folder/Bulle_orange/" />
     </folders-expanded>
 </c2uistate>

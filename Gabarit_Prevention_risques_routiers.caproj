@@ -480,6 +480,31 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Bulle_bleue" sid="819733961471314">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="437642064446699" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501385" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_bleue.png">
+                            <collision-poly>
+                                <point x="0.108992" y="0.157687" />
+                                <point x="0.499546" y="0" />
+                                <point x="0.8901" y="0.159001" />
+                                <point x="0.990917" y="0.499343" />
+                                <point x="0.822888" y="0.743758" />
+                                <point x="0.499546" y="0.842313" />
+                                <point x="0.177112" y="0.743758" />
+                                <point x="0.00817439" y="0.499343" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D01_a_txt" sid="548929737180796">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR03_D01_b_txt" sid="573087302741216">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="GR02" />
         <object-folder name="GR01" />
@@ -540,6 +565,25 @@
         </object-folder>
         <object-type name="Intro_Text" sid="770778991214471">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="Bulle_orange" sid="509655364761445">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="324473385114992" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500792" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_orange.png">
+                        <collision-poly>
+                            <point x="0.164921" y="0.164063" />
+                            <point x="0.5" y="0.0607639" />
+                            <point x="0.823735" y="0.175347" />
+                            <point x="0.823735" y="0.5" />
+                            <point x="0.603839" y="0.605903" />
+                            <point x="0.5" y="0.616319" />
+                            <point x="0.39267" y="0.609375" />
+                            <point x="0.15096" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>

@@ -35,6 +35,12 @@
                             <param id="0" name="Name">&quot;initXML&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-15" name="Set visible" sid="192534407413497" type="UI_TXT_Titre">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="751962676227250" type="MOUCHARD_Background">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -64,12 +70,27 @@
                                     <param id="0" name="Name">&quot;initMarqueur&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="609323269018262" type="Bulle_bleue">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="896399770853941" type="Bulle_orange">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="639528609978796" type="GR03_D01_a_txt">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="201493370819302" type="GR03_D01_b_txt">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
                                 <action id="0" name="Set text" sid="513483321206815" type="GR04_Bulle_txt_02">
                                     <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
                                 </action>
                                 <action id="0" name="Call function" sid="923272081215760" type="Function">
                                     <param id="0" name="Name">&quot;passageAuto&quot;</param>
                                     <param id="1" name="Parameter {n}">NON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="812574989610774" type="GR03_D01_b_txt">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -87,9 +108,11 @@
                                     <param id="0" name="Name">&quot;initMarqueur&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="0" name="Call function" sid="795006500861311" type="Function">
-                                    <param id="0" name="Name">&quot;jouerSon&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
+                                <action id="-15" name="Set visible" sid="534315745883627" type="UI_TXT_Titre">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="801332332215112" type="MOUCHARD_Background">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="178231755185745" type="Function">
                                     <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
@@ -102,6 +125,19 @@
                                 <action id="-4" name="Set layer visible" sid="443986443484963" type="System">
                                     <param id="0" name="Layer">&quot;02_TRANSITION 01&quot;</param>
                                     <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="795006500861311" type="Function">
+                                    <param id="0" name="Name">&quot;jouerSon&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="911025768452372" type="Bulle_bleue">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="288494294511027" type="GR03_D01_a_txt">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="576890673594076" type="GR03_D01_a_txt">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="0" name="Set text" sid="621899073741175" type="GR04_Bulle_txt_02">
                                     <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
@@ -129,6 +165,12 @@
                                 <action id="0" name="Call function" sid="119686064522786" type="Function">
                                     <param id="0" name="Name">&quot;initMarqueur&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="171757426676939" type="UI_TXT_Titre">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="736607706422147" type="MOUCHARD_Background">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="153456538049660" type="Function">
                                     <param id="0" name="Name">&quot;GR03_AllLayersInvisible&quot;</param>
@@ -166,6 +208,12 @@
                                 <action id="0" name="Call function" sid="274105929790094" type="Function">
                                     <param id="0" name="Name">&quot;initMarqueur&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="624868558783689" type="UI_TXT_Titre">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="246471205901991" type="MOUCHARD_Background">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="829104924352411" type="Function">
                                     <param id="0" name="Name">&quot;GR03_AllLayersInvisible&quot;</param>
