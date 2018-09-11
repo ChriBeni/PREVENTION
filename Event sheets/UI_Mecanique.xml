@@ -695,15 +695,29 @@
                 </event-group>
                 <event-group description="" sid="288024723145682" title="UI - INIT - XML">
                     <sub-events>
-                        <event-group description="" sid="641371026981657" title="UI - INIT - XML Chargement" />
-                        <event-block sid="899837307559810">
+                        <event-block disabled="1" sid="899837307559810">
                             <conditions>
                                 <condition id="0" name="On function" sid="111535344699776" type="Function">
                                     <param id="0" name="Name">&quot;initXML&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
+                        </event-block>
+                        <event-group description="" sid="641371026981657" title="UI - INIT - XML Chargement">
                             <sub-events>
+                                <comment>Lorsque le xml est chargé on passe les données dans le plugin xml</comment>
+                                <event-block sid="942601895385029">
+                                    <conditions>
+                                        <condition id="0" name="On completed" sid="176788836130598" type="AJAX">
+                                            <param id="0" name="Tag">numeroGranule</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Load" sid="120773348772721" type="XML">
+                                            <param id="0" name="XML">AJAX.LastData</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <comment>On appelle la fonction qui va récupérer les données du xml dans un array et on active le groupe qui convient</comment>
                                 <event-block sid="418185081919871">
                                     <conditions />
@@ -719,7 +733,7 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
+                        </event-group>
                         <event-group description="" sid="652056973681699" title="UI - INIT - XML Parse in Array">
                             <sub-events>
                                 <event-block sid="614314865949870">
@@ -1673,32 +1687,62 @@
                                             <param id="2" name="Value">OUI</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-10" name="Add to" sid="691420255637186" type="System">
-                                            <param id="0" name="Variable">numeroMarqueur</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="352423484928655" type="UI_BTN_Suiv">
-                                            <param id="0" name="Animation">&quot;ETATS&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="538859125631280" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Value">PLAY</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="400119084185976" type="Function">
-                                            <param id="0" name="Name">&quot;initNavigation&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                     <sub-events>
-                                        <event-block sid="118846757050840">
+                                        <event-block sid="918285535732752">
                                             <conditions>
-                                                <condition id="4" name="Is any playing" sid="328662097195885" type="Audio" />
+                                                <condition id="-14" name="Compare variable" sid="235390281456974" type="System">
+                                                    <param id="0" name="Variable">etatLectureSon</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">END</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="691420255637186" type="System">
+                                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="352423484928655" type="UI_BTN_Suiv">
+                                                    <param id="0" name="Animation">&quot;ETATS&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="538859125631280" type="System">
+                                                    <param id="0" name="Variable">etatLecture</param>
+                                                    <param id="1" name="Value">PLAY</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="400119084185976" type="Function">
+                                                    <param id="0" name="Name">&quot;initNavigation&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="423136657271772">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="216222641049329" type="System">
+                                                    <param id="0" name="Variable">etatLectureSon</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">PLAY</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-41" name="Wait for signal" sid="302040727084619" type="System">
                                                     <param id="0" name="Tag">&quot;sonFini&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="492775776404232" type="System">
+                                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="172751707895356" type="UI_BTN_Suiv">
+                                                    <param id="0" name="Animation">&quot;ETATS&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="232833296974502" type="System">
+                                                    <param id="0" name="Variable">etatLecture</param>
+                                                    <param id="1" name="Value">PLAY</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="995825127612656" type="Function">
+                                                    <param id="0" name="Name">&quot;initNavigation&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1712,15 +1756,42 @@
                                             <param id="2" name="Value">NON</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-41" name="Wait for signal" sid="524166590220830" type="System">
-                                            <param id="0" name="Tag">&quot;sonFini&quot;</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="122414532743409" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Value">END</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="691145013279895">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="790789639332058" type="System">
+                                                    <param id="0" name="Variable">etatLectureSon</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">END</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="122414532743409" type="System">
+                                                    <param id="0" name="Variable">etatLecture</param>
+                                                    <param id="1" name="Value">END</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="519256751889347">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="592722558461380" type="System">
+                                                    <param id="0" name="Variable">etatLectureSon</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">PLAY</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-41" name="Wait for signal" sid="316257768822265" type="System">
+                                                    <param id="0" name="Tag">&quot;sonFini&quot;</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="696837618736373" type="System">
+                                                    <param id="0" name="Variable">etatLecture</param>
+                                                    <param id="1" name="Value">END</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -1781,6 +1852,10 @@
                                             <param id="4" name="Volume">0</param>
                                             <param id="2" name="Tag (optional)">xmlNomMP3</param>
                                         </action>
+                                        <action id="-9" name="Set value" sid="329746979487927" type="System">
+                                            <param id="0" name="Variable">etatLectureSon</param>
+                                            <param id="1" name="Value">PLAY</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1798,6 +1873,10 @@
                             <actions>
                                 <action id="-42" name="Signal" sid="326926027138068" type="System">
                                     <param id="0" name="Tag">&quot;sonFini&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="206978435060864" type="System">
+                                    <param id="0" name="Variable">etatLectureSon</param>
+                                    <param id="1" name="Value">END</param>
                                 </action>
                             </actions>
                         </event-block>
