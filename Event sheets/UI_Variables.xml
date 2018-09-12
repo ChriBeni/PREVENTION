@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI_Variables</name>
     <events>
+        <variable constant="0" name="Layer_OP" sid="387907044836283" static="0" type="number">0</variable>
         <comment>TEMPORAIRES ( à supprimer à l&apos;export)</comment>
         <variable constant="0" name="TEST" sid="967162037838578" static="0" type="number">0</variable>
         <comment>CONSTANTES</comment>

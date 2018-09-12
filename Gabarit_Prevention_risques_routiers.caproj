@@ -829,6 +829,50 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="GR03_D03_Bulle_orange" sid="729297239167202">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892763169516466" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500761" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\D02_Bulle_orange.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.655556" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_bleue.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D03_Homme_medaillon" sid="569673837955883">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="997388050299668">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="267843586252944" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\bulle_gars.png">
+                            <collision-poly>
+                                <point x="0.171533" y="0.171533" />
+                                <point x="0.5" y="0.00182482" />
+                                <point x="0.85219" y="0.14781" />
+                                <point x="1" y="0.5" />
+                                <point x="0.854015" y="0.854015" />
+                                <point x="0.5" y="1" />
+                                <point x="0.145985" y="0.854015" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\bulle_fille.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D03_a_txt" sid="372008812767223">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="GR02" />
         <object-folder name="GR01" />
@@ -890,27 +934,6 @@
         <object-type name="Intro_Text" sid="770778991214471">
             <plugin id="Text" />
         </object-type>
-<<<<<<< HEAD
-=======
-        <object-type name="Bulle_orange" sid="509655364761445">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="324473385114992" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500792" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_orange.png">
-                        <collision-poly>
-                            <point x="0.164921" y="0.164063" />
-                            <point x="0.5" y="0.0607639" />
-                            <point x="0.823735" y="0.175347" />
-                            <point x="0.823735" y="0.5" />
-                            <point x="0.603839" y="0.605903" />
-                            <point x="0.5" y="0.616319" />
-                            <point x="0.39267" y="0.609375" />
-                            <point x="0.15096" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="TEMP_Sprite" sid="866510374567325">
             <plugin id="Sprite" />
             <behaviors>
@@ -924,7 +947,21 @@
                 </animation>
             </animation-folder>
         </object-type>
->>>>>>> 7c3aca80efc8631b411d17a9818807d5a4619d52
+        <object-type name="GR03_D03_Fond" sid="340984376717349">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="753536246938775" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500671" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\GR03_03_D03_Fond.png">
+                        <collision-poly>
+                            <point x="0.00272232" y="0.00402685" />
+                            <point x="0.998185" y="0.00268456" />
+                            <point x="0.999093" y="0.998658" />
+                            <point x="0.000907441" y="0.998658" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="UI_HAND_Curseur" plugin-id="Sprite" sid="871919883988788">
@@ -1076,15 +1113,15 @@
         </event-folder>
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="10" />
-        <global-instance type="Touch" uid="11">
+        <global-instance type="Mouse" uid="80" />
+        <global-instance type="Touch" uid="81">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="AJAX" uid="12" />
-        <global-instance type="Function" uid="24" />
-        <global-instance type="Audio" uid="49">
+        <global-instance type="AJAX" uid="82" />
+        <global-instance type="Function" uid="83" />
+        <global-instance type="Audio" uid="84">
             <properties>
                 <timescale-audio>On (sounds and music)</timescale-audio>
                 <saveload>All</saveload>
@@ -1098,8 +1135,8 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Browser" uid="52" />
-        <global-instance type="MM_Preloader" uid="53">
+        <global-instance type="Browser" uid="85" />
+        <global-instance type="MM_Preloader" uid="86">
             <properties>
                 <mm_preloader-version-14></mm_preloader-version-14>
                 <stabilizer>Disabled</stabilizer>
@@ -1109,7 +1146,7 @@
                 <confirmations-required>3</confirmations-required>
             </properties>
         </global-instance>
-        <global-instance type="Keyboard" uid="25" />
+        <global-instance type="Keyboard" uid="87" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="TESTS">
