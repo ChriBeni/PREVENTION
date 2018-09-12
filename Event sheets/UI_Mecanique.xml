@@ -250,7 +250,7 @@
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="742854138701653" type="Curseur_son">
-                                            <param id="0" name="Instance variable">Actif</param>
+                                            <param id="0" name="Instance variable">handActif</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -268,7 +268,7 @@
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="142463364145267" type="Curseur_son">
-                                            <param id="0" name="Instance variable">Actif</param>
+                                            <param id="0" name="Instance variable">handActif</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
@@ -470,7 +470,7 @@
                                     <param id="0" name="Object">Btn_Lecture</param>
                                 </condition>
                                 <condition id="-7" name="Compare instance variable" sid="474347949073396" type="Btn_Lecture">
-                                    <param id="0" name="Instance variable">Actif</param>
+                                    <param id="0" name="Instance variable">handActif</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
@@ -516,7 +516,7 @@
                         <event-block any="1" sid="171575653455638">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="269714669520701" type="Btn_Lecture">
-                                    <param id="0" name="Instance variable">Actif</param>
+                                    <param id="0" name="Instance variable">handActif</param>
                                     <param id="1" name="Comparison">1</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
@@ -604,39 +604,6 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" disabled="1" sid="807299413571085" title="Curseur mouseover">
-            <sub-events>
-                <event-block disabled="1" sid="410643813549087">
-                    <conditions>
-                        <condition id="7" name="Cursor is over object" sid="505172108257580" type="Mouse">
-                            <param id="0" name="Object">UI_Curseur</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="770109228896178" type="UI_Curseur">
-                            <param id="0" name="Instance variable">Actif</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set cursor style" sid="650924288492994" type="Mouse">
-                            <param id="0" name="Cursor style">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="458871638558868">
-                    <conditions>
-                        <condition id="7" inverted="1" name="Cursor is over object" sid="485775385719483" type="Mouse">
-                            <param id="0" name="Object">UI_Curseur</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set cursor style" sid="959506928658359" type="Mouse">
-                            <param id="0" name="Cursor style">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="175469644476899" title="UI - INIT">
             <sub-events>
                 <event-group description="" sid="567236311982573" title="UI - INIT - INTERFACE">
@@ -676,6 +643,10 @@
                                 </action>
                                 <action id="0" name="Set text" sid="989883978873450" type="UI_TXT_Titre">
                                     <param id="0" name="Text">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="490337727000284" type="Function">
+                                    <param id="0" name="Name">&quot;initPinMouchard&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -839,7 +810,40 @@
         </event-group>
         <event-group description="" sid="890987078647250" title="UI - BOUTONS">
             <sub-events>
-                <event-group description="" sid="872279677155228" title="UI - BOUTONS ETAT">
+                <event-group description="" sid="807299413571085" title="UI - BOUTONS - Curseur mouseover">
+                    <sub-events>
+                        <event-block sid="410643813549087">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="505172108257580" type="Mouse">
+                                    <param id="0" name="Object">UI_HAND_Curseur</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="770109228896178" type="UI_HAND_Curseur">
+                                    <param id="0" name="Instance variable">handActif</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="650924288492994" type="Mouse">
+                                    <param id="0" name="Cursor style">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="458871638558868">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="485775385719483" type="Mouse">
+                                    <param id="0" name="Object">UI_HAND_Curseur</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="959506928658359" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="872279677155228" title="UI - BOUTONS - Etats">
                     <sub-events>
                         <event-block sid="737263385745129">
                             <conditions>
@@ -987,9 +991,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set cursor style" sid="376395427256649" type="Mouse">
-                                            <param id="0" name="Cursor style">1</param>
-                                        </action>
                                         <action id="5" name="Set frame" sid="688483184216502" type="UI_BTN_Play">
                                             <param id="0" name="Frame number">1</param>
                                         </action>
@@ -1007,9 +1008,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set cursor style" sid="682990001679635" type="Mouse">
-                                            <param id="0" name="Cursor style">0</param>
-                                        </action>
                                         <action id="5" name="Set frame" sid="155102664815648" type="UI_BTN_Play">
                                             <param id="0" name="Frame number">0</param>
                                         </action>
@@ -1544,60 +1542,6 @@
                         </event-group>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="521864746796179" title="UI - BOUTON SKIP VIDEO">
-                    <sub-events>
-                        <event-group description="" sid="196521421864077" title="UI - BOUTON SKIP VIDEO - SURVOL">
-                            <sub-events>
-                                <event-block sid="931646942290359">
-                                    <conditions>
-                                        <condition id="7" name="Cursor is over object" sid="337249320640664" type="Mouse">
-                                            <param id="0" name="Object">UI_BTN_Skip</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set cursor style" sid="530789747943332" type="Mouse">
-                                            <param id="0" name="Cursor style">1</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="323126142471676" type="UI_BTN_Skip">
-                                            <param id="0" name="Frame number">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="137321462872028">
-                                    <conditions>
-                                        <condition id="7" inverted="1" name="Cursor is over object" sid="565545461876609" type="Mouse">
-                                            <param id="0" name="Object">UI_BTN_Skip</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set cursor style" sid="154369490999255" type="Mouse">
-                                            <param id="0" name="Cursor style">0</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="651542065659333" type="UI_BTN_Skip">
-                                            <param id="0" name="Frame number">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="972589827548846" title="UI - BOUTON SKIP VIDEO - CLIC">
-                            <sub-events>
-                                <event-block sid="544113423262796">
-                                    <conditions>
-                                        <condition id="3" name="On touched object" sid="573030527262915" type="Touch">
-                                            <param id="0" name="Object">UI_BTN_Skip</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set playback time" sid="261465962630853" type="Media">
-                                            <param id="0" name="Time">82</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                    </sub-events>
-                </event-group>
                 <event-group description="" sid="170414474053171" title="COMMUN - BOUTON START">
                     <sub-events>
                         <event-group description="" sid="524753604765678" title="COMMUN - BOUTON START - SURVOL">
@@ -1688,9 +1632,6 @@
                                 </action>
                                 <action id="5" name="Set frame" sid="750419933993285" type="UI_BTN_Prec">
                                     <param id="0" name="Frame number">0</param>
-                                </action>
-                                <action disabled="1" id="-16" name="Set opacity" sid="408067002026417" type="UI_BTN_Pause">
-                                    <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -1988,19 +1929,338 @@
         </event-group>
         <event-group description="" sid="473200191276578" title="MOUCHARD">
             <sub-events>
-                <event-block sid="173186702251055">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="936467598461574" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="809599207199064" type="MOUCHARD_TXT_varTime">
-                            <param id="0" name="Text">zeropad(int(time/60% 60), 1) &amp; &quot;:&quot; &amp; zeropad(int(time%60), 2)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-group description="" sid="392468558348831" title="MOUCHARD - Visible">
+                <event-group description="" sid="328619012939023" title="MOUCHARD - INIT - Pin">
+                    <sub-events>
+                        <event-block sid="770007490564000">
+                            <conditions>
+                                <condition id="0" name="On function" sid="428443235818005" type="Function">
+                                    <param id="0" name="Name">&quot;initPinMouchard&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="196172525648530">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="661565605555676" type="System">
+                                            <param id="0" name="Object">UI_MOUCHARD_Txt</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="PinFamille" id="0" name="Pin to object" sid="641068822271642" type="UI_MOUCHARD_Txt">
+                                            <param id="0" name="Pin to">MOUCHARD_Fond</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="230594389094505">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="480479700133409" type="System">
+                                            <param id="0" name="Object">UI_MOUCHARD_Sprites</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="PinFamille" id="0" name="Pin to object" sid="821489667746490" type="UI_MOUCHARD_Sprites">
+                                            <param id="0" name="Pin to">MOUCHARD_Fond</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>On place le mouchard dynamiquement</comment>
+                                <event-block sid="340235929617601">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="814497883969266" type="MOUCHARD_Fond">
+                                            <param id="0" name="X">10</param>
+                                            <param id="1" name="Y">15</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="908780790977607" title="MOUCHARD - BOUTONS">
+                    <sub-events>
+                        <event-group description="" sid="145276862459502" title="MOUCHARD - BTN - Prec">
+                            <sub-events>
+                                <event-block sid="724475411690023">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="611515370603713" type="Mouse">
+                                            <param id="0" name="Object">MOUCH_BTN_Prec</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="290413779310715" type="MOUCH_BTN_Prec">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="742050404385623">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Cursor is over object" sid="790755934137240" type="Mouse">
+                                            <param id="0" name="Object">MOUCH_BTN_Prec</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="814318268899678" type="MOUCH_BTN_Prec">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="532565442833774">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="920696931351331" type="Touch">
+                                            <param id="0" name="Object">MOUCH_BTN_Prec</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="254169816154853" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="520012237470808" type="Function">
+                                            <param id="0" name="Name">&quot;initNavigation&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="767094426840916" title="MOUCHARD - BTN - Reload">
+                            <sub-events>
+                                <event-block sid="375423705275043">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="636320778433313" type="Mouse">
+                                            <param id="0" name="Object">MOUCH_BTN_Reload</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="789174652168887" type="MOUCH_BTN_Reload">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="709688993996162">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Cursor is over object" sid="680438829032595" type="Mouse">
+                                            <param id="0" name="Object">MOUCH_BTN_Reload</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="157399591200903" type="MOUCH_BTN_Reload">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="186884055330503">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="134059662818928" type="Touch">
+                                            <param id="0" name="Object">MOUCH_BTN_Reload</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="33" name="Stop all" sid="209648662724621" type="Audio" />
+                                        <action id="0" name="Call function" sid="878900372736875" type="Function">
+                                            <param id="0" name="Name">&quot;initNavigation&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="616292912579677">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="508443704801864" type="Media" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set playback time" sid="925140189296526" type="Media">
+                                                    <param id="0" name="Time">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="710215778240142" title="MOUCHARD - BTN - Skip">
+                            <sub-events>
+                                <event-block sid="413142419373723">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="991048354134115" type="Mouse">
+                                            <param id="0" name="Object">MOUCH_BTN_Skip</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="379240128000505" type="System">
+                                            <param id="0" name="Variable">etatBoutonSkip</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="328080580543542" type="MOUCH_BTN_Skip">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="876127796442586">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Cursor is over object" sid="556529335463271" type="Mouse">
+                                            <param id="0" name="Object">MOUCH_BTN_Skip</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="410791234334482" type="System">
+                                            <param id="0" name="Variable">etatBoutonSkip</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="467116651211551" type="MOUCH_BTN_Skip">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="584050956581913">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="730931440533584" type="Touch">
+                                            <param id="0" name="Object">MOUCH_BTN_Skip</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set playback time" sid="248986835996500" type="Media">
+                                            <param id="0" name="Time">82</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="860819609849942">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="234741345182807" type="System">
+                                            <param id="0" name="Variable">etatBoutonSkip</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="660919642071629" type="MOUCH_BTN_Skip">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="263281170738818">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="661631767899171" type="System">
+                                            <param id="0" name="Variable">etatBoutonSkip</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">INACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="104031992726346" type="MOUCH_BTN_Skip">
+                                            <param id="0" name="Opacity">20</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="630636048677044">
+                                    <conditions>
+                                        <condition id="0" name="Is playing" sid="392399026937100" type="Media" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="806844306562022" type="System">
+                                            <param id="0" name="Variable">etatBoutonSkip</param>
+                                            <param id="1" name="Value">ACTIF</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="730428147770070">
+                                    <conditions>
+                                        <condition id="0" inverted="1" name="Is playing" sid="819667672635533" type="Media" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="703544037664947" type="System">
+                                            <param id="0" name="Variable">etatBoutonSkip</param>
+                                            <param id="1" name="Value">INACTIF</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="212000079578798" title="MOUCHARD - BTN - Suiv">
+                            <sub-events>
+                                <event-block sid="816598862158216">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="641944098969412" type="Mouse">
+                                            <param id="0" name="Object">MOUCH_BTN_Suiv</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="233902963615327" type="MOUCH_BTN_Suiv">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="956020690439374">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Cursor is over object" sid="298850381820073" type="Mouse">
+                                            <param id="0" name="Object">MOUCH_BTN_Suiv</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="872805810820821" type="MOUCH_BTN_Suiv">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="562988824752211">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="416138895193877" type="Touch">
+                                            <param id="0" name="Object">MOUCH_BTN_Suiv</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="853357982906525" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="865553047582382" type="Function">
+                                            <param id="0" name="Name">&quot;initNavigation&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="434986517299357" title="MOUCHARD - BTN - Close">
+                            <sub-events>
+                                <event-block sid="933280190243747">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="408014922511965" type="Touch">
+                                            <param id="0" name="Object">MOUCH_BTN_Close</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="571340652223968" type="System">
+                                            <param id="0" name="Variable">modeDeveloppeur</param>
+                                            <param id="1" name="Value">NON</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="693852511099259" title="MOUCHARD - AFFICHAGE - Données">
+                    <sub-events>
+                        <event-block sid="173186702251055">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="936467598461574" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="809599207199064" type="MOUCHARD_TXT_varTime">
+                                    <param id="0" name="Text">zeropad(int(time/60% 60), 1) &amp; &quot;:&quot; &amp; zeropad(int(time%60), 2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="392468558348831" title="MOUCHARD - AFFICHAGE - Visible / invisible">
                     <sub-events>
                         <event-block sid="291927500946703">
                             <conditions>
@@ -2030,50 +2290,45 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="328619012939023" title="MOUCHARD - Pin">
-                    <sub-events>
-                        <event-block disabled="1" sid="770007490564000">
+                        <event-block sid="773694465154070">
                             <conditions>
-                                <condition id="0" name="On function" sid="428443235818005" type="Function">
-                                    <param id="0" name="Name">&quot;initPinMouchard&quot;</param>
+                                <condition id="4" name="On key code pressed" sid="589145232581879" type="Keyboard">
+                                    <param id="0" name="Keycode">77</param>
+                                </condition>
+                                <condition id="5" name="Key code is down" sid="536416798332767" type="Keyboard">
+                                    <param id="0" name="Keycode">17</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="PinFamille" id="0" name="Pin to object" sid="928055911834812" type="MOUCHARD_TXT_Marqueur">
-                                    <param id="0" name="Pin to">MOUCHARD_Fond</param>
-                                    <param id="1" name="Mode">0</param>
+                                <action id="-9" name="Set value" sid="459751853048558" type="System">
+                                    <param id="0" name="Variable">modeDeveloppeur</param>
+                                    <param id="1" name="Value">OUI</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block disabled="1" sid="196172525648530">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="661565605555676" type="System">
-                                            <param id="0" name="Object">UI_MOUCHARD_Txt</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="PinFamille" id="0" name="Pin to object" sid="641068822271642" type="UI_MOUCHARD_Txt">
-                                            <param id="0" name="Pin to">MOUCHARD_Fond</param>
-                                            <param id="1" name="Mode">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="595083699127838">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="942217488942663" type="System">
-                                            <param id="0" name="Object">UI_MOUCHARD_Sprites</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="PinFamille" id="0" name="Pin to object" sid="764531591450425" type="UI_MOUCHARD_Sprites">
-                                            <param id="0" name="Pin to">MOUCHARD_Fond</param>
-                                            <param id="1" name="Mode">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="567862981720550" title="MOUCHARD - EASTER EGG">
+                    <sub-events>
+                        <comment>EN faisaint &quot;shift + ctrl + F&quot; quand le mouchard est affiché, on valide la formation et mise à terminée ;)</comment>
+                        <event-block sid="608574530100213">
+                            <conditions>
+                                <condition id="4" name="On key code pressed" sid="540505302085810" type="Keyboard">
+                                    <param id="0" name="Keycode">70</param>
+                                </condition>
+                                <condition id="5" name="Key code is down" sid="668181145863791" type="Keyboard">
+                                    <param id="0" name="Keycode">16</param>
+                                </condition>
+                                <condition id="5" name="Key code is down" sid="596035106511022" type="Keyboard">
+                                    <param id="0" name="Keycode">17</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="936538502476211" type="System">
+                                    <param id="0" name="Variable">modeDeveloppeur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">OUI</param>
+                                </condition>
+                            </conditions>
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-group>

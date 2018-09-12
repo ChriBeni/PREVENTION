@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Toby R" id="MM_Preloader" version="1">MM_Preloader</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
@@ -91,12 +92,20 @@
             <object-type name="MM_Preloader" sid="241498756627469">
                 <plugin id="MM_Preloader" />
             </object-type>
+            <object-type name="Keyboard" sid="791203106656457">
+                <plugin id="Keyboard" />
+            </object-type>
         </object-folder>
         <object-folder name="UI">
             <object-folder name="MOUCHARD">
                 <object-type name="MOUCHARD_Fond" sid="257282565143307">
                     <plugin id="NinePatch" />
-                    <texture />
+                    <behaviors>
+                        <behavior-type name="DragDrop" sid="602712349606103">
+                            <behavior id="DragnDrop" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\FOND_Mouchard.png" />
                 </object-type>
                 <object-type name="MOUCHARD_TXT_Marqueur" sid="527356593391789">
                     <plugin id="Text" />
@@ -120,6 +129,53 @@
                     <plugin id="Text" />
                 </object-type>
                 <object-type name="MOUCHARD_TXT_varTime" sid="464641832230040">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="MOUCH_BTN_Close" sid="457690015459292">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="989878697737475" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_CLOSE.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MOUCH_BTN_Prec" sid="780980706113561">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="561017006843705" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_PREC_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_PREC_02.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MOUCH_BTN_Reload" sid="673006643472186">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="909196663940554" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_RELOAD_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_RELOAD_02.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MOUCH_BTN_Skip" sid="458127524852090">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493153336557418" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SKIP_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SKIP_02.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MOUCH_BTN_Suiv" sid="984990038215220">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="628675232632978" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SUIV_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SUIV_02.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MOUCHARD_TXT_Temps2" sid="946356964178695">
                     <plugin id="Text" />
                 </object-type>
             </object-folder>
@@ -174,15 +230,6 @@
                                     <point x="1" y="0" />
                                 </collision-poly>
                             </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="UI_BTN_Skip" sid="249285225524657">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="158636843783577" speed="0">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SKIP_01.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SKIP_02.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -459,14 +506,6 @@
             </object-type>
         </object-folder>
         <object-folder name="GR04">
-            <object-type name="Sprite" sid="866510374567325">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491651786540350" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="GR04_Bulle_img_02" sid="955631641453121">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -602,17 +641,35 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TEMP_Sprite" sid="866510374567325">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="288588580317907">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491651786540350" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
-        <family name="UI_Curseur" plugin-id="Sprite" sid="871919883988788">
+        <family name="UI_HAND_Curseur" plugin-id="Sprite" sid="871919883988788">
             <members>
                 <member>Btn_Lecture</member>
                 <member>Btn_Son</member>
                 <member>BTN_SStitre</member>
                 <member>Curseur_son</member>
+                <member>MOUCH_BTN_Close</member>
+                <member>MOUCH_BTN_Prec</member>
+                <member>MOUCH_BTN_Reload</member>
+                <member>MOUCH_BTN_Skip</member>
+                <member>MOUCH_BTN_Suiv</member>
             </members>
             <instance-variables>
-                <instance-variable name="Actif" sid="497264759155141" type="number" />
+                <instance-variable name="handActif" sid="497264759155141" type="number" />
             </instance-variables>
         </family>
         <family name="UI_Reglage_son_curseur" plugin-id="Sprite" sid="612686716617031">
@@ -660,6 +717,7 @@
                 <member>MOUCHARD_TXT_nomSon</member>
                 <member>MOUCHARD_TXT_repXml</member>
                 <member>MOUCHARD_TXT_Temps</member>
+                <member>MOUCHARD_TXT_Temps2</member>
                 <member>MOUCHARD_TXT_varMarqueur</member>
                 <member>MOUCHARD_TXT_varNomSon</member>
                 <member>MOUCHARD_TXT_varRepXml</member>
@@ -671,12 +729,16 @@
                 </behavior-type>
             </behaviors>
         </family>
-        <family name="UI_MOUCHARD_Sprites" plugin-id="Sprite" sid="399786954791929">
+        <family name="UI_MOUCHARD_Sprites" plugin-id="Sprite" sid="603965613605074">
             <members>
-                <member>UI_BTN_Skip</member>
+                <member>MOUCH_BTN_Close</member>
+                <member>MOUCH_BTN_Prec</member>
+                <member>MOUCH_BTN_Reload</member>
+                <member>MOUCH_BTN_Skip</member>
+                <member>MOUCH_BTN_Suiv</member>
             </members>
             <behaviors>
-                <behavior-type name="PinFamille" sid="539259356717987">
+                <behavior-type name="PinFamille" sid="489559476585200">
                     <behavior id="PinPlus" />
                 </behavior-type>
             </behaviors>
@@ -769,6 +831,7 @@
                 <confirmations-required>3</confirmations-required>
             </properties>
         </global-instance>
+        <global-instance type="Keyboard" uid="25" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="TESTS">

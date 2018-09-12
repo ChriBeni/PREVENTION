@@ -5,16 +5,5 @@
     <events>
         <include>UI_Fonctions</include>
         <include>UI_Mecanique</include>
-        <event-block disabled="1" sid="921779856846933">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="216145050817645" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="256856326140073" type="Function">
-                    <param id="0" name="Name">&quot;initPinMouchard&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

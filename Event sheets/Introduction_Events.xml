@@ -35,7 +35,7 @@
                         </action>
                         <action id="2" name="Start" sid="840240888654815" type="MM_Preloader" />
                         <action id="-10" name="Set value" sid="108767305614415" type="Btn_Lecture">
-                            <param id="0" name="Instance variable">Actif</param>
+                            <param id="0" name="Instance variable">handActif</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
