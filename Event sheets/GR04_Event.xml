@@ -276,6 +276,7 @@
                         <action id="1" name="Set playback time" sid="682213061991462" type="Media">
                             <param id="0" name="Time">0</param>
                         </action>
+                        <action id="5" name="Pause" sid="934414503233225" type="Media" />
                     </actions>
                 </event-block>
             </sub-events>

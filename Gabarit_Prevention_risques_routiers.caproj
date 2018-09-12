@@ -20,6 +20,7 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Chris Kent" id="SpriteFontPlus" version="1">SpriteFont+</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="XML" version="1">XML</plugin>
@@ -959,6 +960,10 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="SpriteFont" sid="822246249779980">
+            <plugin id="SpriteFontPlus" />
+            <texture original-source="C:\Users\nalek\ALEX\_BOULOTS\_POSTE\PREVENTION\SPRITESFONTS\Sprite Fonts libres de droits\SpriteFont_AmaticSC_Bold_(28)_[1,1,1,1]_18x36.png" />
         </object-type>
     </object-folder>
     <families>
