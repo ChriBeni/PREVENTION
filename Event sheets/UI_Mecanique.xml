@@ -2024,6 +2024,10 @@
                                 <action id="-42" name="Signal" sid="326926027138068" type="System">
                                     <param id="0" name="Tag">&quot;sonFini&quot;</param>
                                 </action>
+                                <action id="-10" name="Add to" sid="533535517460245" type="System">
+                                    <param id="0" name="Variable">TEST</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>

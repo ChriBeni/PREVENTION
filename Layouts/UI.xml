@@ -559,7 +559,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Maiandra GD,-35,400,0</font>
+                        <font>Arial,-35,700,0</font>
                         <color>0,153,204</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -672,7 +672,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>177</x>
+                        <x>117</x>
                         <y>298</y>
                         <z>0</z>
                         <width>87</width>
@@ -825,10 +825,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>177</x>
+                        <x>157</x>
                         <y>348</y>
                         <z>0</z>
-                        <width>91</width>
+                        <width>110.833557129</width>
                         <height>27</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -927,10 +927,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>177</x>
+                        <x>137</x>
                         <y>373</y>
                         <z>0</z>
-                        <width>92</width>
+                        <width>131.669616699</width>
                         <height>27</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -978,7 +978,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>177</x>
+                        <x>167</x>
                         <y>323</y>
                         <z>0</z>
                         <width>91</width>
@@ -1472,7 +1472,7 @@
                     <properties>
                         <text>00 / 00</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-24,400,0</font>
+                        <font>Arial,-24,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>

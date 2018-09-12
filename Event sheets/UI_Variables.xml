@@ -35,6 +35,7 @@
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlNombreNode" sid="221501204787963" static="0" type="number">0</variable>
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlRepereSon" sid="683468447894144" static="0" type="text"></variable>
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlNomMP3" sid="447684417290236" static="0" type="text"></variable>
+        <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlNomMP3Ended" sid="926340921044261" static="0" type="text"></variable>
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlSoustitreType" sid="466298164901798" static="0" type="text"></variable>
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlSoustitreTxt" sid="856109593531540" static="0" type="text"></variable>
         <comment>_OLD</comment>
