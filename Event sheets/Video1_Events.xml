@@ -31,7 +31,7 @@
                             <param id="0" name="X">830+(numeroMarqueur*Step)</param>
                         </action>
                         <action id="-10" name="Set value" sid="581937516256243" type="Btn_Lecture">
-                            <param id="0" name="Instance variable">Actif</param>
+                            <param id="0" name="Instance variable">handActif</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
@@ -91,7 +91,7 @@
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="667984999862307" type="Btn_Lecture">
-                            <param id="0" name="Instance variable">Actif</param>
+                            <param id="0" name="Instance variable">handActif</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="431067191240723" type="System">
