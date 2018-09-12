@@ -652,6 +652,10 @@
                                     <param id="0" name="Name">&quot;initPinMouchard&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
+                                <action id="-3" name="Set position" sid="790857994604511" type="COM_BTN_Commencer">
+                                    <param id="0" name="X">960</param>
+                                    <param id="1" name="Y">467</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="384199164081450">
@@ -1168,6 +1172,10 @@
                                         <action id="-16" name="Set opacity" sid="204792180919121" type="UI_BTN_Pause">
                                             <param id="0" name="Opacity">100</param>
                                         </action>
+                                        <action id="-10" name="Set value" sid="567091229639282" type="UI_BTN_Pause">
+                                            <param id="0" name="Instance variable">handActif</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="863575280956415">
@@ -1181,6 +1189,10 @@
                                     <actions>
                                         <action id="-16" name="Set opacity" sid="444389020363768" type="UI_BTN_Pause">
                                             <param id="0" name="Opacity">20</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="614230714204950" type="UI_BTN_Pause">
+                                            <param id="0" name="Instance variable">handActif</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1311,6 +1323,10 @@
                                         <action id="-16" name="Set opacity" sid="230201538158876" type="UI_BTN_Suiv">
                                             <param id="0" name="Opacity">100</param>
                                         </action>
+                                        <action id="-10" name="Set value" sid="799407515031099" type="UI_BTN_Suiv">
+                                            <param id="0" name="Instance variable">handActif</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="356681913865787">
@@ -1324,6 +1340,10 @@
                                     <actions>
                                         <action id="-16" name="Set opacity" sid="385232805645308" type="UI_BTN_Suiv">
                                             <param id="0" name="Opacity">20</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="341081969929728" type="UI_BTN_Suiv">
+                                            <param id="0" name="Instance variable">handActif</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1411,6 +1431,10 @@
                                         <action id="-16" name="Set opacity" sid="765476025658335" type="UI_BTN_Prec">
                                             <param id="0" name="Opacity">100</param>
                                         </action>
+                                        <action id="-10" name="Set value" sid="690856263420065" type="UI_BTN_Prec">
+                                            <param id="0" name="Instance variable">handActif</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="273376963585339">
@@ -1424,6 +1448,10 @@
                                     <actions>
                                         <action id="-16" name="Set opacity" sid="369513222788334" type="UI_BTN_Prec">
                                             <param id="0" name="Opacity">20</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="306943443550018" type="UI_BTN_Prec">
+                                            <param id="0" name="Instance variable">handActif</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1571,6 +1599,11 @@
                                         <condition id="7" name="Cursor is over object" sid="838645324665429" type="Mouse">
                                             <param id="0" name="Object">COM_BTN_Commencer</param>
                                         </condition>
+                                        <condition id="-14" name="Compare variable" sid="420268239535237" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="5" name="Set frame" sid="190709677385413" type="COM_BTN_Commencer">
@@ -1582,6 +1615,11 @@
                                     <conditions>
                                         <condition id="7" inverted="1" name="Cursor is over object" sid="754142700755129" type="Mouse">
                                             <param id="0" name="Object">COM_BTN_Commencer</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="899102537220064" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1598,6 +1636,11 @@
                                     <conditions>
                                         <condition id="3" name="On touched object" sid="551558730554277" type="Touch">
                                             <param id="0" name="Object">COM_BTN_Commencer</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="736808633831759" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1664,6 +1707,21 @@
                                         <action id="0" name="Call function" sid="433741699854410" type="Function">
                                             <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
                                             <param id="1" name="Parameter {n}">INACTIF</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="383444723789730">
+                                    <conditions>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="624982056061402" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="225143186979433" type="COM_BTN_Commencer">
+                                            <param id="0" name="Instance variable">handActif</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
