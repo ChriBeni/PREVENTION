@@ -924,12 +924,6 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-<<<<<<< HEAD
-        <object-type name="Intro_Text" sid="770778991214471">
-            <plugin id="Text" />
-        </object-type>
-=======
->>>>>>> fdd7ee62969c729eac6fd0ab071bdc76c840d041
         <object-type name="TEMP_Sprite" sid="866510374567325">
             <plugin id="Sprite" />
             <behaviors>
@@ -943,22 +937,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-<<<<<<< HEAD
-        <object-type name="GR03_D03_Fond" sid="340984376717349">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="753536246938775" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500671" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\GR03_03_D03_Fond.png">
-                        <collision-poly>
-                            <point x="0.00272232" y="0.00402685" />
-                            <point x="0.998185" y="0.00268456" />
-                            <point x="0.999093" y="0.998658" />
-                            <point x="0.000907441" y="0.998658" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-=======
         <object-type name="TEMP_Text" sid="572782527548304">
             <plugin id="Text" />
             <behaviors>
@@ -966,7 +944,21 @@
                     <behavior id="PinPlus" />
                 </behavior-type>
             </behaviors>
->>>>>>> fdd7ee62969c729eac6fd0ab071bdc76c840d041
+        </object-type>
+        <object-type name="GR03_D03_Fond" sid="930175859724497">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904999211403702" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500673" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\GR03_03_D03_Fond.png">
+                        <collision-poly>
+                            <point x="0.00181818" y="0.00269179" />
+                            <point x="0.999091" y="0.00134589" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -1214,7 +1206,6 @@
         </file-folder>
         <file-folder name="xml">
             <file name="GR04.xml" />
-            <file name="GR4.xml" />
             <file name="GR03.xml" />
         </file-folder>
         <file-folder name="Videos">

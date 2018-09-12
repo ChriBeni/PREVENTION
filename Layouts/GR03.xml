@@ -70,24 +70,24 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="GR03_D03_Fond" uid="88">
+                <instance type="GR03_D03_Fond" uid="15">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Disabled</collisions>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1156</x>
-                        <y>539</y>
+                        <x>1189</x>
+                        <y>530</y>
                         <z>0</z>
-                        <width>1102</width>
-                        <height>745</height>
+                        <width>1100</width>
+                        <height>743</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.500671148</hotspotY>
+                        <hotspotY>0.500672936</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -162,11 +162,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>351</x>
-                        <y>143</y>
+                        <x>327</x>
+                        <y>164</y>
                         <z>0</z>
-                        <width>430</width>
-                        <height>336</height>
+                        <width>443</width>
+                        <height>305</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -550,11 +550,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1268</x>
-                        <y>158</y>
+                        <x>1250</x>
+                        <y>129</y>
                         <z>0</z>
-                        <width>544</width>
-                        <height>305</height>
+                        <width>573</width>
+                        <height>348</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

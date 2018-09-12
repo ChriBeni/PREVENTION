@@ -157,81 +157,84 @@
                                     <param id="2" name="Value">6</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="861765717027469" type="Function">
-                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="637781760344944" type="System">
-                                    <param id="0" name="Layer">&quot;03_D02&quot;</param>
-                                    <param id="1" name="Visibility">1</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="913428942685566" type="D02_Homme_medaillon" />
-                                <action behavior="LiteTween" id="3" name="Set target" sid="980314169814107" type="D02_Homme_medaillon">
-                                    <param id="0" name="Target is">0</param>
-                                    <param id="1" name="Relativity">0</param>
-                                    <param id="2" name="Value">-554</param>
-                                </action>
-                                <action behavior="LiteTween" id="3" name="Set target" sid="328156829845396" type="D02_Homme_medaillon">
-                                    <param id="0" name="Target is">1</param>
-                                    <param id="1" name="Relativity">0</param>
-                                    <param id="2" name="Value">681</param>
-                                </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="149173053728556" type="D02_Homme_medaillon">
-                                    <param id="0" name="Start Mode">0</param>
-                                    <param id="1" name="Force use current">1</param>
-                                </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="423488970774894" type="D02_Fond">
-                                    <param id="0" name="Start Mode">0</param>
-                                    <param id="1" name="Force use current">1</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="941604030112656" type="COM_Fond">
-                                    <param id="0" name="Opacity">30</param>
-                                </action>
-                                <action id="0" name="Call function" sid="120787904900704" type="Function">
-                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="0" name="Call function" sid="657117801981650" type="Function">
-                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;&quot;</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="875838901308431" type="System">
-                                    <param id="0" name="Seconds">0.5</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="729493813736033" type="GR03_D02_Femme_medaillon">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action behavior="FadeIn" id="1" name="Start fade" sid="437761154224434" type="GR03_D02_Femme_medaillon" />
-                                <action id="-15" name="Set visible" sid="961607333985456" type="GR03_D02_Bulle_bleue">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action behavior="FadeIn" id="1" name="Start fade" sid="694073724925709" type="GR03_D02_Bulle_bleue" />
-                                <action id="-15" name="Set visible" sid="844871972937622" type="GR03_D02_b_txt">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="0" name="Set text" sid="291390168301786" type="GR03_D02_b_txt">
-                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
-                                </action>
-                                <action behavior="Sine" id="2" name="Set magnitude" sid="653775139868951" type="GR03_D02_passage">
-                                    <param id="0" name="Magnitude">0</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="458291466525985" type="System">
-                                    <param id="0" name="Seconds">6</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="411953259106119" type="GR03_D02_pietons">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action behavior="Flash" id="0" name="Flash" sid="618290768170727" type="GR03_D02_pietons">
-                                    <param id="0" name="&apos;On&apos; time">0.5</param>
-                                    <param id="1" name="&apos;Off&apos; time">0.2</param>
-                                    <param id="2" name="Duration">3</param>
-                                </action>
-                                <action id="0" name="Call function" sid="739710523193186" type="Function">
-                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
-                                    <param id="1" name="Parameter {n}">NON</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="120245352751030">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="861765717027469" type="Function">
+                                            <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="637781760344944" type="System">
+                                            <param id="0" name="Layer">&quot;03_D02&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="913428942685566" type="D02_Homme_medaillon" />
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="980314169814107" type="D02_Homme_medaillon">
+                                            <param id="0" name="Target is">0</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">-554</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="328156829845396" type="D02_Homme_medaillon">
+                                            <param id="0" name="Target is">1</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">681</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="149173053728556" type="D02_Homme_medaillon">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">1</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="423488970774894" type="D02_Fond">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="120787904900704" type="Function">
+                                            <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="657117801981650" type="Function">
+                                            <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="875838901308431" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="729493813736033" type="GR03_D02_Femme_medaillon">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action behavior="FadeIn" id="1" name="Start fade" sid="437761154224434" type="GR03_D02_Femme_medaillon" />
+                                        <action id="-15" name="Set visible" sid="961607333985456" type="GR03_D02_Bulle_bleue">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action behavior="FadeIn" id="1" name="Start fade" sid="694073724925709" type="GR03_D02_Bulle_bleue" />
+                                        <action id="-15" name="Set visible" sid="844871972937622" type="GR03_D02_b_txt">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="291390168301786" type="GR03_D02_b_txt">
+                                            <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                        </action>
+                                        <action behavior="Sine" id="2" name="Set magnitude" sid="653775139868951" type="GR03_D02_passage">
+                                            <param id="0" name="Magnitude">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="458291466525985" type="System">
+                                            <param id="0" name="Seconds">6</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="411953259106119" type="GR03_D02_pietons">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action behavior="Flash" id="0" name="Flash" sid="618290768170727" type="GR03_D02_pietons">
+                                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                                            <param id="2" name="Duration">3</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="739710523193186" type="Function">
+                                            <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                            <param id="1" name="Parameter {n}">NON</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>MARQUEUR 5 = Repère son D02</comment>
                         <event-block sid="703508913613194">
@@ -265,9 +268,6 @@
                                 <action id="-3" name="Set position" sid="720931955226770" type="D02_Fond">
                                     <param id="0" name="X">645</param>
                                     <param id="1" name="Y">-117</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="385730236147031" type="COM_Fond">
-                                    <param id="0" name="Opacity">30</param>
                                 </action>
                                 <action behavior="LiteTween" id="10" name="Start" sid="249847763324356" type="D02_Homme_medaillon">
                                     <param id="0" name="Start Mode">0</param>
@@ -659,6 +659,19 @@
                                             </actions>
                                         </event-block>
                                     </sub-events>
+                                </event-block>
+                                <event-block sid="947638872160912">
+                                    <conditions>
+                                        <condition id="-10" name="Compare opacity" sid="554677024470576" type="COM_Fond">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Opacity">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="137033636227427" type="COM_Fond">
+                                            <param id="0" name="Opacity">Self.Opacity-3</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
