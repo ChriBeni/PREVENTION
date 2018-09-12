@@ -28,9 +28,11 @@
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra, Alex Hanson-White" id="PinPlus" version="1">Pin+</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -522,6 +524,236 @@
             <object-type name="GR03_D01_b_txt" sid="573087302741216">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="D02_habitacle" sid="751801349415400">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="972144743446704">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="362288235997683" speed="5">
+                        <frame duration="1" hotspotX="0.00181488" hotspotY="0.00268456" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\interieur_voiture.png">
+                            <collision-poly>
+                                <point x="0.00296821" y="0.145706" />
+                                <point x="0.457962" y="0.00372236" />
+                                <point x="0.997481" y="0.0209727" />
+                                <point x="0.973203" y="0.996941" />
+                                <point x="0.457962" y="0.996941" />
+                                <point x="0.0025186" y="0.908699" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Bulle_orange" sid="509655364761445">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="324473385114992" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500792" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_orange.png">
+                            <collision-poly>
+                                <point x="0.164921" y="0.164063" />
+                                <point x="0.5" y="0.0607639" />
+                                <point x="0.823735" y="0.175347" />
+                                <point x="0.823735" y="0.5" />
+                                <point x="0.603839" y="0.605903" />
+                                <point x="0.5" y="0.616319" />
+                                <point x="0.39267" y="0.609375" />
+                                <point x="0.15096" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="D02_Fond" sid="695213951664048">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="871313448508125">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720565830945927" speed="5">
+                        <frame duration="1" hotspotX="0.00453721" hotspotY="-0.373154" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\decors_route_en_marche.png">
+                            <collision-poly>
+                                <point x="0.00527213" y="0.367971" />
+                                <point x="0.36546" y="0.00134228" />
+                                <point x="0.976317" y="0.00134228" />
+                                <point x="0.994728" y="0.375495" />
+                                <point x="0.954602" y="0.991239" />
+                                <point x="0.36546" y="0.991239" />
+                                <point x="0.00527213" y="0.384274" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="D02_Homme_medaillon" sid="959221612074463">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="800762906376797">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="849873465663199">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="288159473875290" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\bulle_gars.png">
+                            <collision-poly>
+                                <point x="0.171533" y="0.171533" />
+                                <point x="0.5" y="0.00182482" />
+                                <point x="0.85219" y="0.14781" />
+                                <point x="1" y="0.5" />
+                                <point x="0.854015" y="0.854015" />
+                                <point x="0.5" y="1" />
+                                <point x="0.145985" y="0.854015" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D02_Bulle_orange" sid="349740251659937">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin2" sid="849614895089226">
+                        <behavior id="PinPlus" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="112790250456569" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500761" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\D02_Bulle_orange.png">
+                            <collision-poly>
+                                <point x="0.84904" y="0.5" />
+                                <point x="0.60733" y="0.609375" />
+                                <point x="0.5" y="0.616319" />
+                                <point x="0.396161" y="0.605903" />
+                                <point x="0.176265" y="0.5" />
+                                <point x="0.176265" y="0.175347" />
+                                <point x="0.5" y="0.0607639" />
+                                <point x="0.835079" y="0.164063" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D02_a_txt" sid="576245735033280">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin2" sid="345567218426290">
+                        <behavior id="PinPlus" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="GR03_D02_passage" sid="681188509255754">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="194681764074275">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="436438218336448">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648677993980114" speed="5">
+                        <frame duration="1" hotspotX="0.500546" hotspotY="0.512821" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\D02_passage.png">
+                            <collision-poly>
+                                <point x="0.499341" y="0" />
+                                <point x="0.963109" y="0.823529" />
+                                <point x="0.893281" y="0.5" />
+                                <point x="0.499341" y="1" />
+                                <point x="0.158103" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D02_Bulle_bleue" sid="421559828048934">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="FadeIn" sid="909257105046849">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="563662203102732" speed="5">
+                        <frame duration="1" hotspotX="0.500782" hotspotY="0.501134" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_bleue.png">
+                            <collision-poly>
+                                <point x="0.108992" y="0.157687" />
+                                <point x="0.499546" y="0" />
+                                <point x="0.8901" y="0.159001" />
+                                <point x="0.990917" y="0.499343" />
+                                <point x="0.822888" y="0.743758" />
+                                <point x="0.499546" y="0.842313" />
+                                <point x="0.177112" y="0.743758" />
+                                <point x="0.00817439" y="0.499343" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D02_Femme_medaillon" sid="234779776566548">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="FadeIn" sid="131409446144760">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="827572883794208" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\bulle_fille.png">
+                            <collision-poly>
+                                <point x="0.171533" y="0.171533" />
+                                <point x="0.5" y="0" />
+                                <point x="0.854015" y="0.145985" />
+                                <point x="1" y="0.5" />
+                                <point x="0.854015" y="0.854015" />
+                                <point x="0.5" y="1" />
+                                <point x="0.145985" y="0.854015" />
+                                <point x="0.00182482" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D02_b_txt" sid="148337699244838">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="FadeIn" sid="482340601640764">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="GR03_D02_pietons" sid="525647842793685">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="836030486941499">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Flash" sid="452584287426370">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="204179235937772" speed="5">
+                        <frame duration="1" hotspotX="0.501887" hotspotY="0.502128" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\slide_6_pietons.png">
+                            <collision-poly>
+                                <point x="0.113208" y="0.12766" />
+                                <point x="0.498113" y="0.268085" />
+                                <point x="0.901887" y="0.110638" />
+                                <point x="0.981132" y="0.497872" />
+                                <point x="0.924528" y="0.914894" />
+                                <point x="0.498113" y="0.4" />
+                                <point x="0.0415094" y="0.953192" />
+                                <point x="0.116981" y="0.497872" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="GR02" />
         <object-folder name="GR01" />
@@ -582,25 +814,6 @@
         </object-folder>
         <object-type name="Intro_Text" sid="770778991214471">
             <plugin id="Text" />
-        </object-type>
-        <object-type name="Bulle_orange" sid="509655364761445">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="324473385114992" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500792" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_orange.png">
-                        <collision-poly>
-                            <point x="0.164921" y="0.164063" />
-                            <point x="0.5" y="0.0607639" />
-                            <point x="0.823735" y="0.175347" />
-                            <point x="0.823735" y="0.5" />
-                            <point x="0.603839" y="0.605903" />
-                            <point x="0.5" y="0.616319" />
-                            <point x="0.39267" y="0.609375" />
-                            <point x="0.15096" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
         </object-type>
     </object-folder>
     <families>
