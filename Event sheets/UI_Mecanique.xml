@@ -623,6 +623,10 @@
                                     <param id="0" name="Pin to">UI_FOND_Pause</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="312025244025294" type="UI_BARRE_popup_txt">
+                                    <param id="0" name="Pin to">UI_BARRE_Popup_img</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
                                 <action id="10" name="Request fullscreen" sid="468361807588941" type="Browser">
                                     <param id="0" name="Mode">0</param>
                                 </action>
@@ -650,6 +654,10 @@
                                 </action>
                                 <action id="0" name="Call function" sid="490337727000284" type="Function">
                                     <param id="0" name="Name">&quot;initPinMouchard&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="146930263618184" type="Function">
+                                    <param id="0" name="Name">&quot;initBarreProgression&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-3" name="Set position" sid="790857994604511" type="COM_BTN_Commencer">
@@ -967,6 +975,10 @@
                                         <action id="-15" name="Set visible" sid="366960944728592" type="UI_BTN_Play">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
+                                        <action id="-3" name="Set position" sid="364686695908466" type="UI_BTN_Play">
+                                            <param id="0" name="X">960</param>
+                                            <param id="1" name="Y">1022</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="872288074558577">
@@ -980,6 +992,10 @@
                                     <actions>
                                         <action id="-15" name="Set visible" sid="752801449658770" type="UI_BTN_Play">
                                             <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="422232715589105" type="UI_BTN_Play">
+                                            <param id="0" name="X">960</param>
+                                            <param id="1" name="Y">1300</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1108,6 +1124,10 @@
                                         <action id="-15" name="Set visible" sid="926152927692295" type="UI_BTN_Pause">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
+                                        <action id="-3" name="Set position" sid="586622685332155" type="UI_BTN_Pause">
+                                            <param id="0" name="X">960</param>
+                                            <param id="1" name="Y">1300</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="557269926614357">
@@ -1121,6 +1141,10 @@
                                     <actions>
                                         <action id="-15" name="Set visible" sid="439461173172123" type="UI_BTN_Pause">
                                             <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="288469991388864" type="UI_BTN_Pause">
+                                            <param id="0" name="X">960</param>
+                                            <param id="1" name="Y">1022</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -1678,6 +1702,10 @@
                                 </action>
                                 <action id="0" name="Call function" sid="737373393837597" type="Function">
                                     <param id="0" name="Name">&quot;jouerSon&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="657464561993535" type="Function">
+                                    <param id="0" name="Name">&quot;setBarreProgression&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="4" name="Set animation" sid="538581623796379" type="UI_BTN_Suiv">
@@ -2415,18 +2443,101 @@
         </event-group>
         <event-group description="" sid="914671205925691" title="BARRE PROGRESSION">
             <sub-events>
-                <event-block sid="661169456806822">
-                    <conditions>
-                        <condition id="0" name="On function" sid="187207690643390" type="Function">
-                            <param id="0" name="Name">&quot;initBarreProgression&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-5" name="Set width" sid="782043044033501" type="UI_BARRE_Progression">
-                            <param id="0" name="Width">1</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="" sid="354623880114806" title="BARRE PROGRESSION - FONCTION - Init">
+                    <sub-events>
+                        <event-block sid="661169456806822">
+                            <conditions>
+                                <condition id="0" name="On function" sid="187207690643390" type="Function">
+                                    <param id="0" name="Name">&quot;initBarreProgression&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="209148818444789" type="System">
+                                    <param id="0" name="Variable">barreProgTailleEcran</param>
+                                    <param id="1" name="Value">OriginalWindowWidth</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="141944522422207" type="System">
+                                    <param id="0" name="Variable">barreProgTailleEtape</param>
+                                    <param id="1" name="Value">round(OriginalWindowWidth/xmlNombreNode)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>On initialise une seule fois la taille de départ de la barre de progression et la position de la popup</comment>
+                                <event-block sid="440195860707196">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="725101884145339" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-5" name="Set width" sid="782043044033501" type="UI_BARRE_Progression">
+                                            <param id="0" name="Width">1</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="199726713091493" type="UI_BARRE_Popup_img">
+                                            <param id="0" name="X">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="261751782911185" title="BARRE PROGRESSION - FONCTION - Affiche Barre">
+                    <sub-events>
+                        <event-block sid="835158410947471">
+                            <conditions>
+                                <condition id="0" name="On function" sid="217721866036281" type="Function">
+                                    <param id="0" name="Name">&quot;setBarreProgression&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="611775984283805" type="System">
+                                    <param id="0" name="Variable">barreProgTailleBarre</param>
+                                    <param id="1" name="Value">numeroMarqueur*barreProgTailleEtape</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="812615838992693" type="UI_BARRE_Progression">
+                                    <param id="0" name="Width">barreProgTailleBarre</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="966645353397998" type="UI_BARRE_Popup_img">
+                                    <param id="0" name="X">barreProgTailleBarre</param>
+                                </action>
+                                <action id="0" name="Set text" sid="942566296251813" type="UI_BARRE_popup_txt">
+                                    <param id="0" name="Text">numeroMarqueur&amp;&quot; / &quot;&amp;xmlNombreNode</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="921197982567939" title="BARRE PROGRESSION - Affiche Popup">
+                    <sub-events>
+                        <event-block sid="557997198403439">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="640331124051852" type="Mouse">
+                                    <param id="0" name="Object">UI_BARRE_Progression</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="251243112945158" type="System">
+                                    <param id="0" name="Seconds">0.4</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="437061313070219" type="UI_BARRE_Popup_img">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="229703434536185" type="UI_BARRE_Popup_img" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="775156666912242">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="748785839595235" type="Mouse">
+                                    <param id="0" name="Object">UI_BARRE_Progression</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="762670435180573" type="UI_BARRE_Popup_img">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>

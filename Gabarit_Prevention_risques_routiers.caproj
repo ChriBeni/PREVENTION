@@ -542,6 +542,27 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="UI_BARRE_Popup_img" sid="887450495552860">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="809273670557888">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154970664651806" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.509434" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\FOND_Popup_Nav.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UI_BARRE_popup_txt" sid="668263465792902">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="209626466257113">
+                        <behavior id="PinPlus" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
         </object-folder>
         <object-folder name="GR04">
             <object-type name="GR04_Bulle_img_02" sid="955631641453121">
@@ -872,6 +893,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TEMP_Text" sid="572782527548304">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="147324773414595">
+                    <behavior id="PinPlus" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
     </object-folder>
     <families>
         <family name="UI_HAND_Curseur" plugin-id="Sprite" sid="871919883988788">
@@ -1093,10 +1122,16 @@
             <file name="GR03_D09_a.ogg" />
         </sound-folder>
         <sound-folder name="GR04">
-            <file name="GR04_D03.ogg" />
-            <file name="GR04_D03.m4a" />
-            <file name="GR04_D02.ogg" />
-            <file name="GR04_D02.m4a" />
+            <file name="GR04_D01_a.m4a" />
+            <file name="GR04_D01_a.ogg" />
+            <file name="GR04_D01_b.m4a" />
+            <file name="GR04_D01_b.ogg" />
+            <file name="GR04_D01_c.m4a" />
+            <file name="GR04_D01_c.ogg" />
+            <file name="GR04_D02_a.ogg" />
+            <file name="GR04_D02_b.m4a" />
+            <file name="GR04_D02_b.ogg" />
+            <file name="GR04_D02_a.m4a" />
         </sound-folder>
         <sound-folder name="GR05" />
     </sounds-folder>
