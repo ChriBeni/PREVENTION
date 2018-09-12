@@ -542,6 +542,27 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="UI_BARRE_Popup_img" sid="887450495552860">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="809273670557888">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154970664651806" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.509434" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\FOND_Popup_Nav.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UI_BARRE_popup_txt" sid="668263465792902">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="209626466257113">
+                        <behavior id="PinPlus" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
         </object-folder>
         <object-folder name="GR04">
             <object-type name="GR04_Bulle_img_02" sid="955631641453121">
@@ -877,14 +898,6 @@
         <object-folder name="GR02" />
         <object-folder name="GR01" />
         <object-folder name="Commun">
-            <object-type name="Visuel" sid="475769882177075">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="659464046923414" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Fond\Fond2.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="COM_Video_Background" sid="785672011992702">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -897,28 +910,8 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="495095320554556" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\BtnCommencer01.png">
-                            <collision-poly>
-                                <point x="0.230909" y="0.3175" />
-                                <point x="0.5" y="0.2975" />
-                                <point x="0.898182" y="0.5" />
-                                <point x="0.770909" y="0.685" />
-                                <point x="0.5" y="0.7025" />
-                                <point x="0.227273" y="0.6875" />
-                                <point x="0.1" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\BtnCommencer02.png">
-                            <collision-poly>
-                                <point x="0.221818" y="0.305" />
-                                <point x="0.5" y="0.2975" />
-                                <point x="0.778182" y="0.305" />
-                                <point x="0.898182" y="0.5" />
-                                <point x="0.78" y="0.6975" />
-                                <point x="0.218182" y="0.7" />
-                                <point x="0.1" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.501134" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_START_01.png" />
+                        <frame duration="1" hotspotX="0.501134" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_START_02.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -931,9 +924,12 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+<<<<<<< HEAD
         <object-type name="Intro_Text" sid="770778991214471">
             <plugin id="Text" />
         </object-type>
+=======
+>>>>>>> fdd7ee62969c729eac6fd0ab071bdc76c840d041
         <object-type name="TEMP_Sprite" sid="866510374567325">
             <plugin id="Sprite" />
             <behaviors>
@@ -947,6 +943,7 @@
                 </animation>
             </animation-folder>
         </object-type>
+<<<<<<< HEAD
         <object-type name="GR03_D03_Fond" sid="340984376717349">
             <plugin id="Sprite" />
             <animation-folder>
@@ -961,6 +958,15 @@
                     </frame>
                 </animation>
             </animation-folder>
+=======
+        <object-type name="TEMP_Text" sid="572782527548304">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="147324773414595">
+                    <behavior id="PinPlus" />
+                </behavior-type>
+            </behaviors>
+>>>>>>> fdd7ee62969c729eac6fd0ab071bdc76c840d041
         </object-type>
     </object-folder>
     <families>
@@ -969,6 +975,7 @@
                 <member>Btn_Lecture</member>
                 <member>Btn_Son</member>
                 <member>BTN_SStitre</member>
+                <member>COM_BTN_Commencer</member>
                 <member>Curseur_son</member>
                 <member>MOUCH_BTN_Close</member>
                 <member>MOUCH_BTN_Prec</member>
@@ -1060,12 +1067,6 @@
         </family>
     </families>
     <layout-folder>
-        <layout-folder name="_OLD">
-            <layout>Introduction.xml</layout>
-            <layout>Video1.xml</layout>
-            <layout>Transition1.xml</layout>
-            <layout>Jeux1.xml</layout>
-        </layout-folder>
         <layout-folder name="GR01" />
         <layout-folder name="GR03">
             <layout>GR03.xml</layout>
@@ -1105,12 +1106,6 @@
             <event-sheet>GR04_Variables.xml</event-sheet>
         </event-folder>
         <event-folder name="GR05" />
-        <event-folder name="_OLD">
-            <event-sheet>Introduction_Events.xml</event-sheet>
-            <event-sheet>Jeux1_Events.xml</event-sheet>
-            <event-sheet>Transition1_event.xml</event-sheet>
-            <event-sheet>Video1_Events.xml</event-sheet>
-        </event-folder>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="80" />
@@ -1149,28 +1144,6 @@
         <global-instance type="Keyboard" uid="87" />
     </global-instances>
     <sounds-folder>
-        <sound-folder name="TESTS">
-            <file name="G0101_D01_a.m4a" />
-            <file name="G0101_D01_a.ogg" />
-            <file name="G0101_D01_b.m4a" />
-            <file name="G0101_D01_b.ogg" />
-            <file name="G0101_D01_c.m4a" />
-            <file name="G0101_D01_c.ogg" />
-            <file name="G0101_D01_d.m4a" />
-            <file name="G0101_D01_d.ogg" />
-            <file name="G0101_D01_e.m4a" />
-            <file name="G0101_D01_e.ogg" />
-            <file name="G0101_D02_a.m4a" />
-            <file name="G0101_D02_a.ogg" />
-            <file name="G0101_D03_a.m4a" />
-            <file name="G0101_D03_a.ogg" />
-            <file name="G0101_D03_b.m4a" />
-            <file name="G0101_D03_b.ogg" />
-            <file name="G0101_D03_c.m4a" />
-            <file name="G0101_D03_c.ogg" />
-            <file name="G0101_D03_d.m4a" />
-            <file name="G0101_D03_d.ogg" />
-        </sound-folder>
         <sound-folder name="GR01" />
         <sound-folder name="GR02" />
         <sound-folder name="GR03">
@@ -1216,10 +1189,16 @@
             <file name="GR03_D09_a.ogg" />
         </sound-folder>
         <sound-folder name="GR04">
-            <file name="GR04_D03.ogg" />
-            <file name="GR04_D03.m4a" />
-            <file name="GR04_D02.ogg" />
-            <file name="GR04_D02.m4a" />
+            <file name="GR04_D01_a.m4a" />
+            <file name="GR04_D01_a.ogg" />
+            <file name="GR04_D01_b.m4a" />
+            <file name="GR04_D01_b.ogg" />
+            <file name="GR04_D01_c.m4a" />
+            <file name="GR04_D01_c.ogg" />
+            <file name="GR04_D02_a.ogg" />
+            <file name="GR04_D02_b.m4a" />
+            <file name="GR04_D02_b.ogg" />
+            <file name="GR04_D02_a.m4a" />
         </sound-folder>
         <sound-folder name="GR05" />
     </sounds-folder>
@@ -1234,7 +1213,6 @@
             <file name="loading-logo.png" />
         </file-folder>
         <file-folder name="xml">
-            <file name="G0101.xml" />
             <file name="GR04.xml" />
             <file name="GR4.xml" />
             <file name="GR03.xml" />
