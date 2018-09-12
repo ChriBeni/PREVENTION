@@ -485,7 +485,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="UI_Fond_Nav_Bas" sid="823739245288538">
+            <object-type name="UI_FOND_Nav_Bas" sid="823739245288538">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738145323954970" speed="5">
@@ -493,7 +493,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="UI_Fond_Nav_Haut" sid="373245587639142">
+            <object-type name="UI_FOND_Nav_Haut" sid="373245587639142">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="420866324537048" speed="5">
@@ -503,6 +503,42 @@
             </object-type>
             <object-type name="UI_TXT_Titre" sid="809985609582750">
                 <plugin id="rex_bbcodeText" />
+            </object-type>
+            <object-type name="UI_FOND_Pause" sid="253283592402505">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="164541485087228" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UI_ICON_Pause" sid="566870363366187">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="132861379458346">
+                        <behavior id="PinPlus" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399366297888031" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\TXT_PAUSE.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.56" />
+                                <point x="0.68985" y="0.496" />
+                                <point x="0.5" y="0.696" />
+                                <point x="0.308271" y="0.496" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UI_BARRE_Progression" sid="556141838275852">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="410536941947912" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="GR04">
@@ -667,6 +703,13 @@
                 <member>MOUCH_BTN_Reload</member>
                 <member>MOUCH_BTN_Skip</member>
                 <member>MOUCH_BTN_Suiv</member>
+                <member>UI_BTN_Close</member>
+                <member>UI_BTN_Pause</member>
+                <member>UI_BTN_Play</member>
+                <member>UI_BTN_Prec</member>
+                <member>UI_BTN_Son</member>
+                <member>UI_BTN_Soustitre</member>
+                <member>UI_BTN_Suiv</member>
             </members>
             <instance-variables>
                 <instance-variable name="handActif" sid="497264759155141" type="number" />

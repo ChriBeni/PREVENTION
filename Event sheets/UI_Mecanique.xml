@@ -619,6 +619,10 @@
                                     <param id="0" name="Pin to">Barre_progression_top</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="922224139267585" type="UI_ICON_Pause">
+                                    <param id="0" name="Pin to">UI_FOND_Pause</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
                                 <action id="10" name="Request fullscreen" sid="468361807588941" type="Browser">
                                     <param id="0" name="Mode">0</param>
                                 </action>
@@ -659,6 +663,34 @@
                             <actions>
                                 <action id="1" name="Append text" sid="582101072078237" type="UI_TXT_Titre">
                                     <param id="0" name="Text">newline&amp;Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="826616964531670">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="319021303097084" type="System">
+                                    <param id="0" name="Variable">etatLecture</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PAUSE</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="731010633318264" type="UI_FOND_Pause">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="389342752701350">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="194579884329268" type="System">
+                                    <param id="0" name="Variable">etatLecture</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PLAY</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="915371106847234" type="UI_FOND_Pause">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -797,6 +829,10 @@
                                                 <action id="-9" name="Set value" sid="525512074842392" type="System">
                                                     <param id="0" name="Variable">Step</param>
                                                     <param id="1" name="Value">round(300/xmlNombreNode)</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="321060389198414" type="Function">
+                                                    <param id="0" name="Name">&quot;initBarreProgression&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1077,21 +1113,29 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">PLAY</param>
                                         </condition>
-                                        <condition id="-14" inverted="1" name="Compare variable" sid="942218975781477" type="System">
-                                            <param id="0" name="Variable">numeroMarqueur</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-15" name="Set visible" sid="439461173172123" type="UI_BTN_Pause">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="757888332475954" type="System">
-                                            <param id="0" name="Variable">etatBoutonPause</param>
-                                            <param id="1" name="Value">ACTIF</param>
-                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="406990179267552">
+                                            <conditions>
+                                                <condition id="-14" inverted="1" name="Compare variable" sid="942218975781477" type="System">
+                                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="757888332475954" type="System">
+                                                    <param id="0" name="Variable">etatBoutonPause</param>
+                                                    <param id="1" name="Value">ACTIF</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="458608617111859">
                                     <conditions>
@@ -1156,9 +1200,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set cursor style" sid="331410047692937" type="Mouse">
-                                            <param id="0" name="Cursor style">1</param>
-                                        </action>
                                         <action id="5" name="Set frame" sid="470637374552599" type="UI_BTN_Pause">
                                             <param id="0" name="Frame number">1</param>
                                         </action>
@@ -1176,9 +1217,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set cursor style" sid="967608830153482" type="Mouse">
-                                            <param id="0" name="Cursor style">0</param>
-                                        </action>
                                         <action id="5" name="Set frame" sid="383420657838832" type="UI_BTN_Pause">
                                             <param id="0" name="Frame number">0</param>
                                         </action>
@@ -1305,9 +1343,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set cursor style" sid="861177611614445" type="Mouse">
-                                            <param id="0" name="Cursor style">1</param>
-                                        </action>
                                         <action id="5" name="Set frame" sid="268099703288349" type="UI_BTN_Suiv">
                                             <param id="0" name="Frame number">1</param>
                                         </action>
@@ -1325,9 +1360,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set cursor style" sid="595655974980942" type="Mouse">
-                                            <param id="0" name="Cursor style">0</param>
-                                        </action>
                                         <action id="5" name="Set frame" sid="260408529919738" type="UI_BTN_Suiv">
                                             <param id="0" name="Frame number">0</param>
                                         </action>
@@ -1411,9 +1443,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set cursor style" sid="287835579727137" type="Mouse">
-                                            <param id="0" name="Cursor style">1</param>
-                                        </action>
                                         <action id="5" name="Set frame" sid="969751411488990" type="UI_BTN_Prec">
                                             <param id="0" name="Frame number">1</param>
                                         </action>
@@ -1431,9 +1460,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set cursor style" sid="168813234422680" type="Mouse">
-                                            <param id="0" name="Cursor style">0</param>
-                                        </action>
                                         <action id="5" name="Set frame" sid="476525259781727" type="UI_BTN_Prec">
                                             <param id="0" name="Frame number">0</param>
                                         </action>
@@ -1498,9 +1524,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set cursor style" sid="300760762578195" type="Mouse">
-                                            <param id="0" name="Cursor style">1</param>
-                                        </action>
                                         <action id="5" name="Set frame" sid="102911320113770" type="UI_BTN_Close">
                                             <param id="0" name="Frame number">1</param>
                                         </action>
@@ -1513,9 +1536,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set cursor style" sid="655951035593074" type="Mouse">
-                                            <param id="0" name="Cursor style">0</param>
-                                        </action>
                                         <action id="5" name="Set frame" sid="841158958501158" type="UI_BTN_Close">
                                             <param id="0" name="Frame number">0</param>
                                         </action>
@@ -1556,9 +1576,6 @@
                                         <action id="5" name="Set frame" sid="190709677385413" type="COM_BTN_Commencer">
                                             <param id="0" name="Frame number">1</param>
                                         </action>
-                                        <action id="0" name="Set cursor style" sid="776823078785480" type="Mouse">
-                                            <param id="0" name="Cursor style">1</param>
-                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="780994406749386">
@@ -1570,9 +1587,6 @@
                                     <actions>
                                         <action id="5" name="Set frame" sid="689133656376387" type="COM_BTN_Commencer">
                                             <param id="0" name="Frame number">0</param>
-                                        </action>
-                                        <action id="0" name="Set cursor style" sid="852807410148371" type="Mouse">
-                                            <param id="0" name="Cursor style">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1632,6 +1646,9 @@
                                 </action>
                                 <action id="5" name="Set frame" sid="750419933993285" type="UI_BTN_Prec">
                                     <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="405886863912795" type="System">
+                                    <param id="0" name="Time scale">1</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -2328,10 +2345,30 @@
                                     <param id="2" name="Value">OUI</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="100528679407026" type="TEMP_Sprite">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="914671205925691" title="BARRE PROGRESSION">
+            <sub-events>
+                <event-block sid="661169456806822">
+                    <conditions>
+                        <condition id="0" name="On function" sid="187207690643390" type="Function">
+                            <param id="0" name="Name">&quot;initBarreProgression&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="782043044033501" type="UI_BARRE_Progression">
+                            <param id="0" name="Width">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

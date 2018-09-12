@@ -23,8 +23,8 @@
         <variable constant="0" name="etatLectureSon" sid="623438415449681" static="0" type="number">0</variable>
         <variable constant="0" name="etatLectureVideo" sid="294700568670965" static="0" type="number">0</variable>
         <comment>INFOS</comment>
+        <variable comment="Permet l&apos;affichage du mouchard" constant="0" name="modeDeveloppeur" sid="576439426941931" static="0" type="number">0</variable>
         <variable constant="0" name="numeroGranule" sid="199013896521894" static="0" type="text">GR..</variable>
-        <variable constant="0" name="modeDeveloppeur" sid="576439426941931" static="0" type="number">0</variable>
         <variable comment="n° de rang =&gt; permet d&apos;appeler les sons et ss-titres dans l&apos;array" constant="0" name="numeroMarqueur" sid="438890224343227" static="0" type="number">0</variable>
         <comment>BOUCLE XML</comment>
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlCompteurNode" sid="406283611126352" static="0" type="number">0</variable>
