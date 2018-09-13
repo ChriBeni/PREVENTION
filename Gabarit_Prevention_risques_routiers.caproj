@@ -29,10 +29,11 @@
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra, Alex Hanson-White" id="PinPlus" version="1">Pin+</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
     </used-behaviors>
     <used-effects />
@@ -598,7 +599,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="478077575212386" speed="5">
-                        <frame duration="1" hotspotX="0.505564" hotspotY="0.525641" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\RUBAN_HAUT.png">
+                        <frame duration="1" hotspotX="0.505703" hotspotY="0.522727" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\RUBAN_HAUT.png">
                             <collision-poly>
                                 <point x="0.00953895" y="0.0769231" />
                                 <point x="0.503975" y="0.0769231" />
@@ -873,33 +874,6 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
-            <object-type name="GR03_D02_pietons" sid="525647842793685">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="836030486941499">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                    <behavior-type name="Flash" sid="452584287426370">
-                        <behavior id="Flash" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="204179235937772" speed="5">
-                        <frame duration="1" hotspotX="0.501887" hotspotY="0.502128" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\slide_6_pietons.png">
-                            <collision-poly>
-                                <point x="0.113208" y="0.12766" />
-                                <point x="0.498113" y="0.268085" />
-                                <point x="0.901887" y="0.110638" />
-                                <point x="0.981132" y="0.497872" />
-                                <point x="0.924528" y="0.914894" />
-                                <point x="0.498113" y="0.4" />
-                                <point x="0.0415094" y="0.953192" />
-                                <point x="0.116981" y="0.497872" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="GR03_D03_Bulle_orange" sid="729297239167202">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -943,6 +917,61 @@
             </object-type>
             <object-type name="GR03_D03_a_txt" sid="372008812767223">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="GR03_Timer" sid="666760467506898">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Timer" sid="325939860949988">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="383668436498432" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505882" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D03_Fond" sid="930175859724497">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904999211403702" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500673" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\GR03_03_D03_Fond.png">
+                            <collision-poly>
+                                <point x="0.00181818" y="0.00269179" />
+                                <point x="0.999091" y="0.00134589" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D02_pietons" sid="820121327564460">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="899656597189250">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="945123250316335">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="150610938073849" speed="5">
+                        <frame duration="1" hotspotX="0.501887" hotspotY="0.502128" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\slide_6_pietons.png">
+                            <collision-poly>
+                                <point x="0.113208" y="0.12766" />
+                                <point x="0.498113" y="0.268085" />
+                                <point x="0.901887" y="0.110638" />
+                                <point x="0.981132" y="0.497872" />
+                                <point x="0.924528" y="0.914894" />
+                                <point x="0.498113" y="0.4" />
+                                <point x="0.0415094" y="0.953192" />
+                                <point x="0.116981" y="0.497872" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="GR02">
@@ -1031,21 +1060,6 @@
                     <behavior id="PinPlus" />
                 </behavior-type>
             </behaviors>
-        </object-type>
-        <object-type name="GR03_D03_Fond" sid="930175859724497">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904999211403702" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500673" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\GR03_03_D03_Fond.png">
-                        <collision-poly>
-                            <point x="0.00181818" y="0.00269179" />
-                            <point x="0.999091" y="0.00134589" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -1141,6 +1155,41 @@
             <behaviors>
                 <behavior-type name="PinFamille" sid="489559476585200">
                     <behavior id="PinPlus" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="GR03_Sprites_Persist" plugin-id="Sprite" sid="123775519643057">
+            <members>
+                <member>Bulle_bleue</member>
+                <member>Bulle_orange</member>
+                <member>D02_Homme_medaillon</member>
+                <member>GR03_D02_Bulle_bleue</member>
+                <member>GR03_D02_Bulle_orange</member>
+                <member>GR03_D02_Femme_medaillon</member>
+                <member>GR03_D02_passage</member>
+                <member>GR03_D02_pietons</member>
+                <member>GR03_D03_Bulle_orange</member>
+                <member>GR03_D03_Fond</member>
+                <member>GR03_D03_Homme_medaillon</member>
+                <member>GR03_FOND_perso_voiture</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Persist" sid="479789350959859">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="GR03_Textes_Persist" plugin-id="Text" sid="532421035723439">
+            <members>
+                <member>GR03_D01_a_txt</member>
+                <member>GR03_D01_b_txt</member>
+                <member>GR03_D02_a_txt</member>
+                <member>GR03_D02_b_txt</member>
+                <member>GR03_D03_a_txt</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Persist" sid="558619682410306">
+                    <behavior id="Persist" />
                 </behavior-type>
             </behaviors>
         </family>
