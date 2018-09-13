@@ -30,10 +30,11 @@
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra, Alex Hanson-White" id="PinPlus" version="1">Pin+</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
     </used-behaviors>
     <used-effects />
@@ -823,8 +824,8 @@
                     <behavior-type name="Pin" sid="836030486941499">
                         <behavior id="Pin" />
                     </behavior-type>
-                    <behavior-type name="Flash" sid="452584287426370">
-                        <behavior id="Flash" />
+                    <behavior-type name="Sine" sid="975660302356043">
+                        <behavior id="Sin" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -963,6 +964,19 @@
             </behaviors>
             <texture original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\SPRITESFONTS\SpriteFont_AmaticSC_Bold_(36)_[1,1,1,1]_22x45.png" />
         </object-type>
+        <object-type name="GR03_Timer" sid="119190620854040">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Timer" sid="315429285597367">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="606109176644271" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505882" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="UI_HAND_Curseur" plugin-id="Sprite" sid="871919883988788">
@@ -1059,6 +1073,35 @@
                     <behavior id="PinPlus" />
                 </behavior-type>
             </behaviors>
+        </family>
+        <family name="GR03_Sprites_Persist" plugin-id="Sprite" sid="619320663799511">
+            <members>
+                <member>Bulle_orange</member>
+                <member>D02_Homme_medaillon</member>
+                <member>GR03_D02_Bulle_bleue</member>
+                <member>GR03_D02_Bulle_orange</member>
+                <member>GR03_D02_Femme_medaillon</member>
+                <member>GR03_D02_passage</member>
+                <member>GR03_D02_pietons</member>
+                <member>GR03_D03_Bulle_orange</member>
+                <member>GR03_D03_Fond</member>
+                <member>GR03_D03_Homme_medaillon</member>
+                <member>GR03_FOND_perso_voiture</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Persist" sid="542894466946686">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="GR03_Textes_Persist" plugin-id="Text" sid="246478628081297">
+            <members>
+                <member>GR03_D01_a_txt</member>
+                <member>GR03_D01_b_txt</member>
+                <member>GR03_D02_a_txt</member>
+                <member>GR03_D02_b_txt</member>
+                <member>GR03_D03_a_txt</member>
+            </members>
         </family>
     </families>
     <layout-folder>
