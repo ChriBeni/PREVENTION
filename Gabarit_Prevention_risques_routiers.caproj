@@ -557,6 +557,15 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
+            <object-type name="UI_BARRE_popup_txt2" sid="822246249779980">
+                <plugin id="SpriteFontPlus" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="106589938811421">
+                        <behavior id="PinPlus" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\SPRITESFONTS\SpriteFont_AmaticSC_Bold_(36)_[1,1,1,1]_22x45.png" />
+            </object-type>
         </object-folder>
         <object-folder name="GR04">
             <object-type name="GR04_Bulle_img_02" sid="955631641453121">
@@ -990,15 +999,6 @@
                     </frame>
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="UI_BARRE_popup_txt2" sid="822246249779980">
-            <plugin id="SpriteFontPlus" />
-            <behaviors>
-                <behavior-type name="Pin" sid="106589938811421">
-                    <behavior id="PinPlus" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\SPRITESFONTS\SpriteFont_AmaticSC_Bold_(36)_[1,1,1,1]_22x45.png" />
         </object-type>
     </object-folder>
     <families>

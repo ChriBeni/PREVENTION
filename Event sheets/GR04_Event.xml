@@ -265,20 +265,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Si la vidéo n&apos;est pas à l&apos;écran, on la remet au début</comment>
-                <event-block sid="398217101595200">
-                    <conditions>
-                        <condition id="-9" inverted="1" name="Layer is visible" sid="642334630867380" type="System">
-                            <param id="0" name="Layer">&quot;01_VIDEO&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set playback time" sid="682213061991462" type="Media">
-                            <param id="0" name="Time">0</param>
-                        </action>
-                        <action id="5" name="Pause" sid="934414503233225" type="Media" />
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
     </events>
