@@ -51,6 +51,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="UI_BARRE_Ruban_img" uid="51">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>105</x>
+                        <y>112</y>
+                        <z>0</z>
+                        <width>263</width>
+                        <height>88</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="UI_FOND_Nav_Haut" uid="41">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -774,6 +796,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+<<<<<<< HEAD
                 <instance type="UI_BARRE_Ruban_img" uid="51">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -796,6 +819,8 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+=======
+>>>>>>> 833566a0b834fa39db0d19a7fe54c1de122734ed
                 <instance type="MOUCHARD_Fond" uid="62">
                     <properties>
                         <left-margin>50</left-margin>
