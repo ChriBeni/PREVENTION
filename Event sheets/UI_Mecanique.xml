@@ -623,7 +623,7 @@
                                     <param id="0" name="Pin to">UI_FOND_Pause</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="312025244025294" type="UI_BARRE_popup_txt">
+                                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="312025244025294" type="UI_BARRE_popup_txt">
                                     <param id="0" name="Pin to">UI_BARRE_Popup_img</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
@@ -2534,7 +2534,7 @@
                                 <action id="-1" name="Set X" sid="966645353397998" type="UI_BARRE_Popup_img">
                                     <param id="0" name="X">barreProgTailleBarre</param>
                                 </action>
-                                <action id="0" name="Set text" sid="942566296251813" type="UI_BARRE_popup_txt">
+                                <action disabled="1" id="0" name="Set text" sid="942566296251813" type="UI_BARRE_popup_txt">
                                     <param id="0" name="Text">numeroMarqueur&amp;&quot; / &quot;&amp;xmlNombreNode</param>
                                 </action>
                                 <action id="0" name="Set text" sid="232170289848636" type="UI_BARRE_popup_txt2">
