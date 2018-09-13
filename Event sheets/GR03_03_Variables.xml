@@ -2,7 +2,5 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GR03_03_Variables</name>
-    <events>
-        <variable constant="0" name="Goto" sid="241343450726484" static="0" type="number">0</variable>
-    </events>
+    <events />
 </c2eventsheet>

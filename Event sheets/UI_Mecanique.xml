@@ -623,12 +623,12 @@
                                     <param id="0" name="Pin to">UI_FOND_Pause</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="656843389368977" type="UI_BARRE_popup_txt">
+                                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="312025244025294" type="UI_BARRE_popup_txt">
                                     <param id="0" name="Pin to">UI_BARRE_Popup_img</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="358879814114024" type="UI_BARRE_Ruban_txt">
-                                    <param id="0" name="Pin to">UI_BARRE_Ruban_img</param>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="656843389368977" type="UI_BARRE_popup_txt2">
+                                    <param id="0" name="Pin to">UI_BARRE_Popup_img</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
                                 <action id="10" name="Request fullscreen" sid="468361807588941" type="Browser">
@@ -649,12 +649,12 @@
                                     <param id="0" name="Variable">etatLecture</param>
                                     <param id="1" name="Value">PLAY</param>
                                 </action>
-                                <action id="0" name="Set text" sid="914475451848160" type="UI_TXT_Titre_Granule">
-                                    <param id="0" name="Text">Function.Param(0)</param>
-                                </action>
                                 <action id="0" name="Call function" sid="954684266378883" type="Function">
                                     <param id="0" name="Name">&quot;Init_bouton_son&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Set text" sid="914475451848160" type="UI_TXT_Titre_Granule">
+                                    <param id="0" name="Text">Function.Param(0)</param>
                                 </action>
                                 <action id="0" name="Call function" sid="490337727000284" type="Function">
                                     <param id="0" name="Name">&quot;initPinMouchard&quot;</param>
@@ -668,6 +668,10 @@
                                     <param id="0" name="X">960</param>
                                     <param id="1" name="Y">467</param>
                                 </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="899364743778572" type="UI_BARRE_popup_txt2">
+                                    <param id="0" name="Pin to">UI_BARRE_Popup_img</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="384199164081450">
@@ -676,17 +680,7 @@
                                     <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="870514287258789" type="UI_BARRE_Ruban_img">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="0" name="Set text" sid="523939794506662" type="UI_BARRE_Ruban_txt">
-                                    <param id="0" name="Text">Function.Param(0)</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="184388367463743" type="UI_BARRE_Ruban_img">
-                                    <param id="0" name="Frame number">1</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="826616964531670">
                             <conditions>
@@ -1813,9 +1807,6 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-<<<<<<< HEAD
-                <event-group description="" disabled="1" sid="674647361912453" title="GRANULE - TIMELINE - Passage auto">
-=======
                 <event-group description="" sid="627418574110283" title="GRANULE - VIDEO - Stop hors écran">
                     <sub-events>
                         <comment>Si le layer vidéo n&apos;est pas à l&apos;écran, on remet au début la vidéo et on pause</comment>
@@ -1877,7 +1868,6 @@
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="674647361912453" title="GRANULE - TIMELINE - Passage auto">
->>>>>>> 413a1b505c7c7f3c6bd73e30026165c31be963e7
                     <sub-events>
                         <event-block sid="531008618808649">
                             <conditions>
@@ -2601,7 +2591,10 @@
                                 <action id="-1" name="Set X" sid="966645353397998" type="UI_BARRE_Popup_img">
                                     <param id="0" name="X">barreProgTailleBarre</param>
                                 </action>
-                                <action id="0" name="Set text" sid="232170289848636" type="UI_BARRE_popup_txt">
+                                <action disabled="1" id="0" name="Set text" sid="942566296251813" type="UI_BARRE_popup_txt">
+                                    <param id="0" name="Text">numeroMarqueur&amp;&quot; / &quot;&amp;xmlNombreNode</param>
+                                </action>
+                                <action id="0" name="Set text" sid="232170289848636" type="UI_BARRE_popup_txt2">
                                     <param id="0" name="Text">numeroMarqueur&amp;&quot; / &quot;&amp;xmlNombreNode</param>
                                 </action>
                             </actions>
