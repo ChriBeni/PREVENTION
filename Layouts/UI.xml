@@ -1131,10 +1131,10 @@
                         <y>438</y>
                         <z>0</z>
                         <width>38</width>
-                        <height>39</height>
+                        <height>38</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.512820542</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1180,10 +1180,10 @@
                         <y>438</y>
                         <z>0</z>
                         <width>38</width>
-                        <height>39</height>
+                        <height>38</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.512820542</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1229,10 +1229,10 @@
                         <y>438</y>
                         <z>0</z>
                         <width>38</width>
-                        <height>39</height>
+                        <height>38</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.512820542</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1278,10 +1278,10 @@
                         <y>438</y>
                         <z>0</z>
                         <width>38</width>
-                        <height>39</height>
+                        <height>38</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.512820542</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1405,10 +1405,10 @@
                         <y>487</y>
                         <z>0</z>
                         <width>532</width>
-                        <height>125</height>
+                        <height>139</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504000008</hotspotY>
+                        <hotspotY>0.50359714</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1507,8 +1507,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>253.547271729</x>
-                        <y>924.362792969</y>
+                        <x>257</x>
+                        <y>880</y>
                         <z>0</z>
                         <width>134.546508789</width>
                         <height>35.454223633</height>
@@ -1519,31 +1519,55 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpriteFont" uid="18">
+                <instance type="UI_BARRE_popup_txt2" uid="18">
                     <properties>
-                        <character-width>18</character-width>
-                        <character-height>36</character-height>
+                        <character-width>22</character-width>
+                        <character-height>45</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZaàâäbcçdeéèêëfghijklmnoôöpqrstuùûüvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;%œ</character-set>
-                        <text>Text 00 / 15</text>
+                        <text>00 / 15</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <character-spacing>0</character-spacing>
                         <line-height>0</line-height>
-                        <char-width-json>{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,14,1],&quot;&quot;data&quot;&quot;:[[[5],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13],[14],[15],[16]],[[&quot;&quot; &quot;&quot;],[&quot;&quot;.&apos;&quot;&quot;],[&quot;&quot;;|&quot;&quot;],[&quot;&quot;,:!\&quot;&quot;&quot;&quot;],[&quot;&quot;Fs?&quot;&quot;],[&quot;&quot;EIJLPXYZbcçeêfilpz4679()[]`&quot;&quot;],[&quot;&quot;BHRSTéëhjrtxy01258-\\/&lt;&gt;&quot;&quot;],[&quot;&quot;CDOVaàâdègoôöquûü3°+=$&quot;&quot;],[&quot;&quot;AGKNQUäkùv~&quot;&quot;],[&quot;&quot;Mn#£€&quot;&quot;],[&quot;&quot;wœ&quot;&quot;],[&quot;&quot;&amp;*&quot;&quot;],[&quot;&quot;Wm_&quot;&quot;],[&quot;&quot;@%&quot;&quot;]]]}</char-width-json>
+                        <char-width-json>{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,15,1],&quot;&quot;data&quot;&quot;:[[[6],[5],[6],[8],[9],[10],[11],[12],[13],[14],[15],[16],[17],[18],[20]],[[&quot;&quot; &quot;&quot;],[&quot;&quot;&apos;|&quot;&quot;],[&quot;&quot;.,;:!&quot;&quot;],[&quot;&quot;F?\&quot;&quot;&quot;&quot;],[&quot;&quot;EILZbelps()&quot;&quot;],[&quot;&quot;JPRTXYcçêfhirtxz456789[]`&quot;&quot;],[&quot;&quot;BHSdéëjy0123-\\/$&lt;&gt;&quot;&quot;],[&quot;&quot;KOaàâèk°&quot;&quot;],[&quot;&quot;ACDNQUVägoôöquûü+=&quot;&quot;],[&quot;&quot;GMùv&quot;&quot;],[&quot;&quot;nw~#£€&quot;&quot;],[&quot;&quot;*œ&quot;&quot;],[&quot;&quot;W&quot;&quot;],[&quot;&quot;m_&amp;&quot;&quot;],[&quot;&quot;@%&quot;&quot;]]]}</char-width-json>
                         <space-char-width>-1</space-char-width>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin">
+                            <properties>
+                                <x>Enabled</x>
+                                <y>Enabled</y>
+                                <zindex>Disabled</zindex>
+                                <angle>Disabled</angle>
+                                <width>Disabled</width>
+                                <height>Disabled</height>
+                                <opacity>Enabled</opacity>
+                                <visibility>Enabled</visibility>
+                                <collisions-enabled>Disabled</collisions-enabled>
+                                <timescale>Disabled</timescale>
+                                <hotspot-x>Disabled</hotspot-x>
+                                <hotspot-y>Disabled</hotspot-y>
+                                <imagepoint>0</imagepoint>
+                                <animation>Disabled</animation>
+                                <frame>Disabled</frame>
+                                <mirror>Disabled</mirror>
+                                <flip>Disabled</flip>
+                                <destroy>Disabled</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>154</x>
-                        <y>87</y>
+                        <x>188</x>
+                        <y>898</y>
                         <z>0</z>
-                        <width>212</width>
-                        <height>88</height>
+                        <width>129</width>
+                        <height>51</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

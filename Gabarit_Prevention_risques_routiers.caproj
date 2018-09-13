@@ -146,8 +146,8 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="561017006843705" speed="0">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_PREC_01.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_PREC_02.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_PREC_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_PREC_02.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -155,8 +155,8 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="909196663940554" speed="0">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_RELOAD_01.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_RELOAD_02.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_RELOAD_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_RELOAD_02.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -164,8 +164,8 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493153336557418" speed="0">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SKIP_01.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SKIP_02.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SKIP_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SKIP_02.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -173,8 +173,8 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="628675232632978" speed="0">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SUIV_01.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SUIV_02.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SUIV_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SUIV_02.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -524,14 +524,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399366297888031" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\TXT_PAUSE.png">
-                            <collision-poly>
-                                <point x="0.5" y="0.56" />
-                                <point x="0.68985" y="0.496" />
-                                <point x="0.5" y="0.696" />
-                                <point x="0.308271" y="0.496" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503597" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\TXT_PAUSE.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -911,8 +904,8 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="495095320554556" speed="0">
-                        <frame duration="1" hotspotX="0.501134" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_START_01.png" />
-                        <frame duration="1" hotspotX="0.501134" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_START_02.png" />
+                        <frame duration="1" hotspotX="0.501134" hotspotY="0.50303" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_START_01.png" />
+                        <frame duration="1" hotspotX="0.501134" hotspotY="0.50303" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_START_02.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -961,9 +954,14 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="SpriteFont" sid="822246249779980">
+        <object-type name="UI_BARRE_popup_txt2" sid="822246249779980">
             <plugin id="SpriteFontPlus" />
-            <texture original-source="C:\Users\nalek\ALEX\_BOULOTS\_POSTE\PREVENTION\SPRITESFONTS\Sprite Fonts libres de droits\SpriteFont_AmaticSC_Bold_(28)_[1,1,1,1]_18x36.png" />
+            <behaviors>
+                <behavior-type name="Pin" sid="106589938811421">
+                    <behavior id="PinPlus" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\SPRITESFONTS\SpriteFont_AmaticSC_Bold_(36)_[1,1,1,1]_22x45.png" />
         </object-type>
     </object-folder>
     <families>
