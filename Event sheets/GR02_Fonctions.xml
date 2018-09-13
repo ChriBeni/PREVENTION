@@ -41,7 +41,7 @@
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="325507679594548" type="System">
-                            <param id="0" name="Layer">&quot;GR02_07_FICHES&quot;</param>
+                            <param id="0" name="Layer">&quot;GR02_07_FICHE&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="862495640953651" type="System">
@@ -52,69 +52,22 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="291220270763163" title="GR02 - GESTION - PIN2">
+        <event-group description="" disabled="1" sid="665174894240059" title="GR02 - GESTION - PIN">
             <sub-events>
-                <event-block sid="408122851298004">
+                <event-block disabled="1" sid="352067034276595">
                     <conditions>
-                        <condition id="0" name="On function" sid="744002926153641" type="Function">
-                            <param id="0" name="Name">&quot;GR02_initPin&quot;</param>
+                        <condition id="0" name="On function" sid="750290667016629" type="Function">
+                            <param id="0" name="Name">&quot;GR04_initPin&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="PinFamille" id="0" name="Pin to object" sid="119668745916952" type="GR02_Bulle_txt_01_1">
-                            <param id="0" name="Pin to">GR02_Bulle_img_01_1</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="PinFamille" id="0" name="Pin to object" sid="616555559688112" type="GR02_Bulle_txt_01_2">
-                            <param id="0" name="Pin to">GR02_Bulle_img_01_2</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="PinFamille" id="0" name="Pin to object" sid="465277470000540" type="GR02_Bulle_txt_01_3">
-                            <param id="0" name="Pin to">GR02_Bulle_img_01_3</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="PinFamille" id="0" name="Pin to object" sid="382791231593013" type="GR02_Bulle_txt_02_1">
-                            <param id="0" name="Pin to">GR02_Bulle_img_02_1</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="PinFamille" id="0" name="Pin to object" sid="570782668393871" type="GR02_Bulle_txt_02_2">
-                            <param id="0" name="Pin to">GR02_Bulle_img_02_2</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="PinFamille" id="0" name="Pin to object" sid="416771431925007" type="GR02_Bulle_txt_03_1">
-                            <param id="0" name="Pin to">GR02_Bulle_img_03_1</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="PinFamille" id="0" name="Pin to object" sid="568219231401980" type="GR02_Bulle_txt_03_2">
-                            <param id="0" name="Pin to">GR02_Bulle_img_03_2</param>
+                        <action behavior="PinFamille" id="0" name="Pin to object" sid="514917870723848" type="GR04_Bulle_txt_02">
+                            <param id="0" name="Pin to">GR04_Bulle_img_02</param>
                             <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="377531339044152" title="GR02 - JEU 2" />
-        <event-block sid="232306725706004">
-            <conditions>
-                <condition id="0" name="On function" sid="184935953836009" type="Function">
-                    <param id="0" name="Name">&quot;GR02_animJeu2&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="970409407430097" type="GR02_03_JEU_02_txt_1">
-                    <param id="0" name="Text">&quot;Parmi les dispositifs audio ci-dessous, lesquels sont autorisés ou interdits en conduisant ?&quot;</param>
-                </action>
-                <action id="0" name="Set text" sid="267180420773765" type="GR02_03_JEU_02_txt_2">
-                    <param id="0" name="Text">&quot;Consigne : cliquer-glisser chaque illustration dans la case qui convient.&quot;</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="364335263199928" type="GR02_03_JEU_02_txtprop_1">
-                    <param id="0" name="Pin to">GR02_03_JEU_02_imgprop_1</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action behavior="DragDrop" id="0" name="Set enabled" sid="971826880874919" type="GR02_03_JEU_02_imgprop_1">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
