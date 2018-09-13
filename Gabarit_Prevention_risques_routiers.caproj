@@ -889,7 +889,44 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
-        <object-folder name="GR02" />
+        <object-folder name="GR02">
+            <object-type name="GR02_decor_ville" sid="281713168320204">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="324701799282817" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\Autres\batiment.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0.915104" y="0.849074" />
+                                <point x="0.5" y="0.950926" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR02_persos_debout" sid="472782187752421">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="867176087418433" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\PRR_GR03_02_CB\GR03_02_Transition_perso_debout.png">
+                            <collision-poly>
+                                <point x="0.111111" y="0.1025" />
+                                <point x="0.5" y="0.31875" />
+                                <point x="0.895664" y="0.09625" />
+                                <point x="0.936314" y="0.5" />
+                                <point x="0.867209" y="0.8775" />
+                                <point x="0.5" y="0.36875" />
+                                <point x="0.0650406" y="0.94" />
+                                <point x="0.0162602" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="GR01" />
         <object-folder name="Commun">
             <object-type name="COM_Video_Background" sid="785672011992702">
