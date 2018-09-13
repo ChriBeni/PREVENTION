@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Liste des medias pour le granule G0101 -->
+<medias code="GR02">
+  <media speaker="" url="" id="D00">
+    <soutitre/>
+  </media>
+  <media speaker="" url="" id="D01">
+    <soutitre/>
+  </media>
+  <media speaker="DIAL" url="GR02_D02" id="D02">
+    <soutitre>Oulah! Lorsque Paolo utilise son smartphone, il ne regarde plus la route !</soutitre>
+  </media>
+  <media speaker="DIAL" url="GR02_D03" id="D03">
+    <soutitre>Oui, c’est impossible de regarder simultanément la route et l’écran de son smartphone !</soutitre>
+  </media>
+  <media speaker="DIAL" url="GR02_D04" id="D04">
+    <soutitre>1/10 accident est dû à l’usage du téléphone au volant.</soutitre>
+  </media>
+  <media speaker="" url="" id="D05">
+    <soutitre/>
+  </media>
+  <media speaker="DIAL" url="GR02_D06" id="D06">
+    <soutitre>Et il n’y a pas un moyen de conduire en toute sécurité en téléphonant ?</soutitre>
+  </media>
+  <media speaker="DIAL" url="GR02_D07" id="D07">
+    <soutitre>Peut-être avec une oreillette ?</soutitre>
+  </media>
+  <media speaker="" url="" id="D08">
+    <soutitre/>
+  </media>
+  <media speaker="DIAL" url="GR02_D09" id="D09">
+    <soutitre>Il y a seulement le dispositif intégré à la voiture qui est autorisé.</soutitre>
+  </media>
+  <media speaker="DIAL" url="GR02_D10" id="D10">
+    <soutitre>Comme je n’en ai pas, lorsque je conduis, je vais dorénavant éteindre mon smartphone  ou le mettre en mode Hors Ligne !</soutitre>
+  </media>
+  <media speaker="" url="" id="D11">
+    <soutitre/>
+  </media>
+  <media speaker="" url="" id="D12">
+    <soutitre/>
+  </media>
+</medias>
