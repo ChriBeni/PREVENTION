@@ -1010,7 +1010,7 @@
                 </behavior-type>
             </behaviors>
             <texture original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\SPRITESFONTS\SpriteFont_AmaticSC_Bold_(36)_[1,1,1,1]_22x45.png" />
-        </object-type>
+        
         <object-type name="GR03_Timer" sid="119190620854040">
             <plugin id="Sprite" />
             <behaviors>
