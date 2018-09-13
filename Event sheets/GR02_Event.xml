@@ -2,5 +2,512 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GR02_Event</name>
-    <events />
+    <events>
+        <include>UI_Mecanique</include>
+        <include>UI_Fonctions</include>
+        <include>GR02_Variables</include>
+        <include>GR02_Fonctions</include>
+        <event-group description="" sid="418089306976071" title="GR02 - INIT">
+            <sub-events>
+                <comment>Chargement du titre + vidéo + fichier xml dans Ajax - Fichier à charger dans le répertoire xml du projet</comment>
+                <event-block sid="985922541592078">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="630908249920849" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="700286967636691" type="System">
+                            <param id="0" name="Variable">numeroGranule</param>
+                            <param id="1" name="Value">&quot;GR02&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="523465462930105" type="Function">
+                            <param id="0" name="Name">&quot;GR02_initPin&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="648580318472761" type="Function">
+                            <param id="0" name="Name">&quot;initUI&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Non utilisation du smartphone au volant&quot;</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="832693847347070" type="AJAX">
+                            <param id="0" name="Tag">numeroGranule</param>
+                            <param id="1" name="File">GR02.xml</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="887491893367615" type="Function">
+                            <param id="0" name="Name">&quot;initXML&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>IMPORTANT =&gt; Garder la nomenclature &quot;N°de granule - TIMELINE&quot;</comment>
+        <event-group description="" inactive="1" sid="119942974718947" title="GR02 - TIMELINE">
+            <sub-events>
+                <comment> le chiffre de &quot;numéroMarqueur&quot; doit correspondre à la ligne du xml </comment>
+                <event-block sid="249261199311307">
+                    <conditions>
+                        <condition id="0" name="On function" sid="568413725803963" type="Function">
+                            <param id="0" name="Name">&quot;initNavigation&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>MARQUEUR 12 = END</comment>
+                        <event-block sid="854356196250359">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="269014022063138" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="394949681646759" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="492371561162960" type="Function">
+                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Le bon geste !&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="402062490939978" type="Function">
+                                    <param id="0" name="Name">&quot;GR02_AllLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="303025857808181" type="System">
+                                    <param id="0" name="Layer">&quot;GR02_08_END&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="744383565301489" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">NON</param>
+                                </action>
+                                <action id="0" name="Call function" sid="809089574274407" type="Function">
+                                    <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
+                                    <param id="1" name="Parameter {n}">INACTIF</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 11 = Fiches</comment>
+                        <event-block sid="982150286958349">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="638383532942708" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">11</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="612029425598972" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="832034176402009" type="Function">
+                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;L&apos;essentiel&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="405690161397737" type="Function">
+                                    <param id="0" name="Name">&quot;GR02_AllLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="860429943949223" type="System">
+                                    <param id="0" name="Layer">&quot;GR02_07_FICHES&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="213165672934302" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">NON</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 10 = Transition 03 dialogue - Bulle 2</comment>
+                        <event-block sid="353794817200445">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="672472572222577" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="194030255388865" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Set text" sid="294905442152664" type="GR02_Bulle_txt_03_2">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="213676694841187" type="Function">
+                                    <param id="0" name="Name">&quot;bulleVisible&quot;</param>
+                                    <param id="1" name="Parameter {n}">GR02_Bulle_img_03_2.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="957479186697133" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">NON</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 9 = Transition 03 dialogue - Bulle 1</comment>
+                        <event-block sid="406426427583386">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="901647802532708" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="220490801779977" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="362612669426302" type="Function">
+                                    <param id="0" name="Name">&quot;GR02_AllLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="154992284804876" type="System">
+                                    <param id="0" name="Layer">&quot;GR02_06_TRANSITION 03&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="215120067050266" type="GR02_Bulle_txt_03_1">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="848953494333426" type="Function">
+                                    <param id="0" name="Name">&quot;bulleVisible&quot;</param>
+                                    <param id="1" name="Parameter {n}">GR02_Bulle_img_03_1.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="694917985923750" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">OUI</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 8 = JEU 02 Systèmes audio</comment>
+                        <event-block sid="845305989539440">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="187735810730299" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="620638434546988" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="422650471226928" type="Function">
+                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Je me teste&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="994212200168440" type="Function">
+                                    <param id="0" name="Name">&quot;GR02_AllLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="146348736644215" type="System">
+                                    <param id="0" name="Layer">&quot;GR02_05_JEU 02&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="444466674719544" type="Function">
+                                    <param id="0" name="Name">&quot;GR02_animJeu2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="315311767835423" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">NON</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 7 = Transition 02 dialogue - Bulle 2</comment>
+                        <event-block sid="647874428807511">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="396458734975390" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="668442145789520" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Set text" sid="677313103426019" type="GR02_Bulle_txt_02_2">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="689020224145155" type="Function">
+                                    <param id="0" name="Name">&quot;bulleVisible&quot;</param>
+                                    <param id="1" name="Parameter {n}">GR02_Bulle_img_02_2.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="445205340499377" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">NON</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 6 = Transition 02 dialogue - Bulle 1</comment>
+                        <event-block sid="966376391155882">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="713496555020883" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="903931795436632" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="573296193357834" type="Function">
+                                    <param id="0" name="Name">&quot;GR02_AllLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="327973323171530" type="System">
+                                    <param id="0" name="Layer">&quot;GR02_04_TRANSITION 02&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="892387055925524" type="GR02_Bulle_txt_02_1">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="884337017411297" type="Function">
+                                    <param id="0" name="Name">&quot;bulleVisible&quot;</param>
+                                    <param id="1" name="Parameter {n}">GR02_Bulle_img_02_1.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="970748780925325" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">OUI</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 5 = JEU 01 Voiture</comment>
+                        <event-block sid="676786614623970">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="117679947701526" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="428073913157262" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="237185345349159" type="Function">
+                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Je me teste&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="755433864550442" type="Function">
+                                    <param id="0" name="Name">&quot;GR02_AllLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="187007246314413" type="System">
+                                    <param id="0" name="Layer">&quot;GR02_03_JEU 01&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="409671783395169" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">NON</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 4 = Transition 01 dialogue - Bulle 3</comment>
+                        <event-block sid="435624417568091">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="148810439300362" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="419554527810364" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Set text" sid="210511677382843" type="GR02_Bulle_txt_01_3">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="568032371908434" type="Function">
+                                    <param id="0" name="Name">&quot;bulleVisible&quot;</param>
+                                    <param id="1" name="Parameter {n}">GR02_Bulle_img_01_3.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="892202285325964" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">NON</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 3 = Transition 01 dialogue - Bulle 2</comment>
+                        <event-block sid="558796374312718">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="142122071747975" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="629163090768682" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Set text" sid="279580265773736" type="GR02_Bulle_txt_01_2">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="270528774645876" type="Function">
+                                    <param id="0" name="Name">&quot;bulleVisible&quot;</param>
+                                    <param id="1" name="Parameter {n}">GR02_Bulle_img_01_2.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="727036292724108" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">OUI</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 2 = Transition 01 dialogue - Bulle 1</comment>
+                        <event-block sid="133627120710556">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="205723537765254" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="426687425619765" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="118660774367109" type="Function">
+                                    <param id="0" name="Name">&quot;GR02_AllLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="201936292751160" type="System">
+                                    <param id="0" name="Layer">&quot;GR02_02_TRANSITION 01&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="816732723011601" type="GR02_Bulle_txt_01_1">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="110654369708541" type="Function">
+                                    <param id="0" name="Name">&quot;bulleVisible&quot;</param>
+                                    <param id="1" name="Parameter {n}">GR02_Bulle_img_01_1.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="945078955403501" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">OUI</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 1 = Vidéo</comment>
+                        <event-block sid="906706592529633">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="509251748070944" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="434035007687825" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="318023529372065" type="Function">
+                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Mise en situation&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="905679491889139" type="Function">
+                                    <param id="0" name="Name">&quot;GR02_AllLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="916043150264138" type="System">
+                                    <param id="0" name="Layer">&quot;GR02_01_VIDEO&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="330176385366792" type="Function">
+                                    <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
+                                    <param id="1" name="Parameter {n}">ACTIF</param>
+                                </action>
+                                <action id="6" name="Play" sid="953906949150188" type="Media" />
+                                <action id="-12" name="Set group active" sid="906858078868078" type="System">
+                                    <param id="0" name="Group name">&quot;GR02 - Fin lecture vidéo&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action disabled="1" id="-9" name="Set value" sid="740073193097213" type="System">
+                                    <param id="0" name="Variable">etatBoutonSuiv</param>
+                                    <param id="1" name="Value">INACTIF</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 0 = Page avec bouton START</comment>
+                        <event-block sid="492062256304759">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="919350529480358" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="358814225562268" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="849595588158542" type="Function">
+                                    <param id="0" name="Name">&quot;GR02_AllLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="225741250551537" type="System">
+                                    <param id="0" name="Layer">&quot;GR02_00_START&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="539072713782553" type="Function">
+                                    <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
+                                    <param id="1" name="Parameter {n}">INACTIF</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="802054230143485" title="GR02 - Fin lecture vidéo">
+            <sub-events>
+                <comment>A la fin de la video, on rend le bouton suiv actif, qui clignotera automatiquement car la lecture est à END (grâce au passage auto = NON)</comment>
+                <event-block sid="744904124836471">
+                    <conditions>
+                        <condition id="2" name="Has ended" sid="302254950851688" type="Video" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="773012894046329" type="System">
+                            <param id="0" name="Variable">etatBoutonSuiv</param>
+                            <param id="1" name="Value">ACTIF</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="216681989672546" type="System">
+                            <param id="0" name="Variable">etatLectureVideo</param>
+                            <param id="1" name="Value">END</param>
+                        </action>
+                        <action id="0" name="Call function" sid="321456825063344" type="Function">
+                            <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                            <param id="1" name="Parameter {n}">NON</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="258234024191869">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="158300424258165" type="System">
+                            <param id="0" name="Layer">&quot;GR02_01_VIDEO&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set playback time" sid="117439672687473" type="Media">
+                            <param id="0" name="Time">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
 </c2eventsheet>
