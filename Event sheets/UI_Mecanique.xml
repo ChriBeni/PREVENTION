@@ -623,7 +623,7 @@
                                     <param id="0" name="Pin to">UI_FOND_Pause</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="312025244025294" type="UI_BARRE_popup_txt">
+                                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="312025244025294" type="UI_BARRE_popup_txt">
                                     <param id="0" name="Pin to">UI_BARRE_Popup_img</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
@@ -1719,6 +1719,10 @@
                                     <param id="0" name="Name">&quot;setSousTitres&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
+                                <action id="0" name="Call function" sid="455189137839799" type="Function">
+                                    <param id="0" name="Name">&quot;checkIndexLayerUI&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="4" name="Set animation" sid="538581623796379" type="UI_BTN_Suiv">
                                     <param id="0" name="Animation">&quot;ETATS&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -1806,7 +1810,71 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+<<<<<<< HEAD
                 <event-group description="" disabled="1" sid="674647361912453" title="GRANULE - TIMELINE - Passage auto">
+=======
+                <event-group description="" sid="627418574110283" title="GRANULE - VIDEO - Stop hors écran">
+                    <sub-events>
+                        <comment>Si le layer vidéo n&apos;est pas à l&apos;écran, on remet au début la vidéo et on pause</comment>
+                        <event-block sid="208749001888451">
+                            <conditions>
+                                <condition id="-9" inverted="1" name="Layer is visible" sid="377978719473905" type="System">
+                                    <param id="0" name="Layer">indexLayerUI</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set playback time" sid="538953683105698" type="Media">
+                                    <param id="0" name="Time">0</param>
+                                </action>
+                                <action id="5" name="Pause" sid="343075157179113" type="Media" />
+                            </actions>
+                        </event-block>
+                        <comment>On cherche à connaitre l&apos;index du calque UI (calque le plus haut) pour ensuite retrouver le calque VIDEO</comment>
+                        <event-block sid="561749242207184">
+                            <conditions>
+                                <condition id="0" name="On function" sid="699309267561971" type="Function">
+                                    <param id="0" name="Name">&quot;checkIndexLayerUI&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="695370744671284" type="System">
+                                    <param id="0" name="Variable">indexLayerUI</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>On ajoute 1 chaque qu&apos;on trouve un calque invisible</comment>
+                                <event-block sid="870116235432614">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="415229675829360" type="System">
+                                            <param id="0" name="Name">&quot;layers&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="112934799428571">
+                                            <conditions>
+                                                <condition id="-9" inverted="1" name="Layer is visible" sid="150523772676325" type="System">
+                                                    <param id="0" name="Layer">LayerIndex(loopindex)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="862892959347146" type="System">
+                                                    <param id="0" name="Variable">indexLayerUI</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="674647361912453" title="GRANULE - TIMELINE - Passage auto">
+>>>>>>> 413a1b505c7c7f3c6bd73e30026165c31be963e7
                     <sub-events>
                         <event-block sid="531008618808649">
                             <conditions>
@@ -2034,10 +2102,6 @@
                             <actions>
                                 <action id="-42" name="Signal" sid="326926027138068" type="System">
                                     <param id="0" name="Tag">&quot;sonFini&quot;</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="533535517460245" type="System">
-                                    <param id="0" name="Variable">TEST</param>
-                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2534,7 +2598,7 @@
                                 <action id="-1" name="Set X" sid="966645353397998" type="UI_BARRE_Popup_img">
                                     <param id="0" name="X">barreProgTailleBarre</param>
                                 </action>
-                                <action id="0" name="Set text" sid="942566296251813" type="UI_BARRE_popup_txt">
+                                <action disabled="1" id="0" name="Set text" sid="942566296251813" type="UI_BARRE_popup_txt">
                                     <param id="0" name="Text">numeroMarqueur&amp;&quot; / &quot;&amp;xmlNombreNode</param>
                                 </action>
                                 <action id="0" name="Set text" sid="232170289848636" type="UI_BARRE_popup_txt2">
@@ -2578,5 +2642,13 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <event-block sid="449751751270276">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="701191010415119">
+            <conditions />
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>

@@ -558,6 +558,15 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
+            <object-type name="UI_BARRE_popup_txt2" sid="822246249779980">
+                <plugin id="SpriteFontPlus" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="106589938811421">
+                        <behavior id="PinPlus" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\SPRITESFONTS\SpriteFont_AmaticSC_Bold_(36)_[1,1,1,1]_22x45.png" />
+            </object-type>
         </object-folder>
         <object-folder name="GR04">
             <object-type name="GR04_Bulle_img_02" sid="955631641453121">
@@ -890,7 +899,44 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
-        <object-folder name="GR02" />
+        <object-folder name="GR02">
+            <object-type name="GR02_decor_ville" sid="281713168320204">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="324701799282817" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\Autres\batiment.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0.915104" y="0.849074" />
+                                <point x="0.5" y="0.950926" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR02_persos_debout" sid="472782187752421">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="867176087418433" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\PRR_GR03_02_CB\GR03_02_Transition_perso_debout.png">
+                            <collision-poly>
+                                <point x="0.111111" y="0.1025" />
+                                <point x="0.5" y="0.31875" />
+                                <point x="0.895664" y="0.09625" />
+                                <point x="0.936314" y="0.5" />
+                                <point x="0.867209" y="0.8775" />
+                                <point x="0.5" y="0.36875" />
+                                <point x="0.0650406" y="0.94" />
+                                <point x="0.0162602" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="GR01" />
         <object-folder name="Commun">
             <object-type name="COM_Video_Background" sid="785672011992702">
@@ -955,6 +1001,7 @@
                 </animation>
             </animation-folder>
         </object-type>
+<<<<<<< HEAD
         <object-type name="UI_BARRE_popup_txt2" sid="822246249779980">
             <plugin id="SpriteFontPlus" />
             <behaviors>
@@ -977,6 +1024,8 @@
                 </animation>
             </animation-folder>
         </object-type>
+=======
+>>>>>>> 413a1b505c7c7f3c6bd73e30026165c31be963e7
     </object-folder>
     <families>
         <family name="UI_HAND_Curseur" plugin-id="Sprite" sid="871919883988788">

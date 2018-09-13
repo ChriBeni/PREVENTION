@@ -6,6 +6,7 @@
         <variable constant="0" name="Layer_OP" sid="387907044836283" static="0" type="number">0</variable>
         <comment>TEMPORAIRES ( à supprimer à l&apos;export)</comment>
         <variable constant="0" name="TEST" sid="967162037838578" static="0" type="number">0</variable>
+        <variable constant="0" name="TEST_txt" sid="267059901747998" static="0" type="text"></variable>
         <comment>CONSTANTES</comment>
         <variable constant="1" name="END" sid="670004296417267" static="0" type="number">2</variable>
         <variable constant="1" name="PLAY" sid="769012328197548" static="0" type="number">1</variable>
@@ -27,6 +28,7 @@
         <variable comment="Permet l&apos;affichage du mouchard" constant="0" name="modeDeveloppeur" sid="576439426941931" static="0" type="number">0</variable>
         <variable constant="0" name="numeroGranule" sid="199013896521894" static="0" type="text">GR..</variable>
         <variable comment="n° de rang =&gt; permet d&apos;appeler les sons et ss-titres dans l&apos;array" constant="0" name="numeroMarqueur" sid="438890224343227" static="0" type="number">0</variable>
+        <variable comment="Donne l&apos;index du layer UI" constant="0" name="indexLayerUI" sid="193091633676437" static="0" type="number">0</variable>
         <comment>BARRE PROGRESSION</comment>
         <variable constant="0" name="barreProgTailleEcran" sid="776461225620739" static="0" type="number">1</variable>
         <variable constant="0" name="barreProgTailleEtape" sid="232240074597358" static="0" type="number">1</variable>

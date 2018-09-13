@@ -1468,57 +1468,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_BARRE_popup_txt" uid="22">
-                    <properties>
-                        <text>00 / 00</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-24,400,0</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin">
-                            <properties>
-                                <x>Enabled</x>
-                                <y>Enabled</y>
-                                <zindex>Disabled</zindex>
-                                <angle>Disabled</angle>
-                                <width>Disabled</width>
-                                <height>Disabled</height>
-                                <opacity>Enabled</opacity>
-                                <visibility>Enabled</visibility>
-                                <collisions-enabled>Disabled</collisions-enabled>
-                                <timescale>Disabled</timescale>
-                                <hotspot-x>Disabled</hotspot-x>
-                                <hotspot-y>Disabled</hotspot-y>
-                                <imagepoint>0</imagepoint>
-                                <animation>Disabled</animation>
-                                <frame>Disabled</frame>
-                                <mirror>Disabled</mirror>
-                                <flip>Disabled</flip>
-                                <destroy>Disabled</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>257</x>
-                        <y>880</y>
-                        <z>0</z>
-                        <width>134.546508789</width>
-                        <height>35.454223633</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="UI_BARRE_popup_txt2" uid="18">
                     <properties>
                         <character-width>22</character-width>
