@@ -15,9 +15,12 @@
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Toby R" id="MM_Preloader" version="1">MM_Preloader</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Chris Kent" id="SpriteFontPlus" version="1">SpriteFont+</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="XML" version="1">XML</plugin>
@@ -27,9 +30,11 @@
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra, Alex Hanson-White" id="PinPlus" version="1">Pin+</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -54,7 +59,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Internet Explorer</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -90,14 +95,174 @@
             <object-type name="MM_Preloader" sid="241498756627469">
                 <plugin id="MM_Preloader" />
             </object-type>
+            <object-type name="Keyboard" sid="791203106656457">
+                <plugin id="Keyboard" />
+            </object-type>
         </object-folder>
         <object-folder name="UI">
             <object-folder name="MOUCHARD">
-                <object-type name="MOUCHARD_Background" sid="490378462867301">
+                <object-type name="MOUCHARD_Fond" sid="257282565143307">
+                    <plugin id="NinePatch" />
+                    <behaviors>
+                        <behavior-type name="DragDrop" sid="602712349606103">
+                            <behavior id="DragnDrop" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\FOND_Mouchard.png" />
+                </object-type>
+                <object-type name="MOUCHARD_TXT_Marqueur" sid="527356593391789">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="MOUCHARD_TXT_nomSon" sid="367890275385985">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="MOUCHARD_TXT_repXml" sid="601347936483514">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="MOUCHARD_TXT_Temps" sid="794609273107177">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="MOUCHARD_TXT_varMarqueur" sid="576631024044413">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="MOUCHARD_TXT_varNomSon" sid="926722788089667">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="MOUCHARD_TXT_varRepXml" sid="963963119473238">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="MOUCHARD_TXT_varTime" sid="464641832230040">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="MOUCH_BTN_Close" sid="457690015459292">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="540870216340868" speed="0">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="989878697737475" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_CLOSE.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MOUCH_BTN_Prec" sid="780980706113561">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="561017006843705" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_PREC_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_PREC_02.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MOUCH_BTN_Reload" sid="673006643472186">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="909196663940554" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_RELOAD_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_RELOAD_02.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MOUCH_BTN_Skip" sid="458127524852090">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493153336557418" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SKIP_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SKIP_02.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MOUCH_BTN_Suiv" sid="984990038215220">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="628675232632978" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SUIV_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_M_SUIV_02.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MOUCHARD_TXT_Temps2" sid="946356964178695">
+                    <plugin id="Text" />
+                </object-type>
+            </object-folder>
+            <object-folder name="BOUTONS">
+                <object-type name="UI_BTN_Close" sid="496629064300574">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799307459878979" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_CLOSE_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_CLOSE_02.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="UI_BTN_Pause" sid="310546075109503">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="595166312884138" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_PAUSE_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_PAUSE_02.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="UI_BTN_Play" sid="716467068838185">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="ETATS" pingpong="0" repeatcount="1" repeatto="0" sid="309641880757156" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_PLAY_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_PLAY_02.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="CLIGNOTE" pingpong="0" repeatcount="1" repeatto="0" sid="592044107538759" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.507463" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="UI_BTN_Prec" sid="377860655934960">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="421904229705015" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_01.png">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_02.png">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="UI_BTN_Son" sid="122201295665116">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228931690389254" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SON_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SON_02.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="UI_BTN_Soustitre" sid="679266493159181">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="672950923436843" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SST_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SST_02.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="UI_BTN_Suiv" sid="259027369140347">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="ETATS" pingpong="0" repeatcount="1" repeatto="0" sid="285292633665263" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_02.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="CLIGNOTE" pingpong="0" repeatcount="1" repeatto="0" sid="787622472059880" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.509804" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -194,9 +359,6 @@
                 </animation-folder>
             </object-type>
             <object-type name="Soustitre" sid="823188800130217">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="Repere_son" sid="495821545326751">
                 <plugin id="Text" />
             </object-type>
             <object-type name="BTN_SStitre" sid="540781942404653">
@@ -326,63 +488,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="UI_BTN_Pause" sid="310546075109503">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="595166312884138" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_PAUSE_01.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_PAUSE_02.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="UI_BTN_Play" sid="716467068838185">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="2" loop="0" name="ETATS" pingpong="0" repeatcount="1" repeatto="0" sid="309641880757156" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_PLAY_01.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_PLAY_02.png" />
-                    </animation>
-                    <animation framecount="1" loop="0" name="CLIGNOTE" pingpong="0" repeatcount="1" repeatto="0" sid="592044107538759" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.507463" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="UI_BTN_Prec" sid="377860655934960">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="421904229705015" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_01.png">
-                            <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_02.png">
-                            <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="UI_BTN_Suiv" sid="259027369140347">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="2" loop="0" name="ETATS" pingpong="0" repeatcount="1" repeatto="0" sid="285292633665263" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_01.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_02.png" />
-                    </animation>
-                    <animation framecount="1" loop="0" name="CLIGNOTE" pingpong="0" repeatcount="1" repeatto="0" sid="787622472059880" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.509804" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="UI_Fond_Nav_Bas" sid="823739245288538">
+            <object-type name="UI_FOND_Nav_Bas" sid="823739245288538">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738145323954970" speed="5">
@@ -390,10 +496,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="UI_Titre" sid="986530450245778">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="UI_Fond_Nav_Haut" sid="373245587639142">
+            <object-type name="UI_FOND_Nav_Haut" sid="373245587639142">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="420866324537048" speed="5">
@@ -401,52 +504,66 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="UI_BTN_Close" sid="496629064300574">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799307459878979" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_CLOSE_01.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_CLOSE_02.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="UI_BTN_Son" sid="122201295665116">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228931690389254" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SON_01.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SON_02.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="UI_BTN_Soustitre" sid="679266493159181">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="672950923436843" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SST_01.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SST_02.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="UI_TXT_Titre" sid="809985609582750">
                 <plugin id="rex_bbcodeText" />
             </object-type>
-            <object-type name="UI_BTN_Skip" sid="249285225524657">
+            <object-type name="UI_FOND_Pause" sid="253283592402505">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="158636843783577" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SKIP_01.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SKIP_02.png" />
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="164541485087228" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
-        </object-folder>
-        <object-folder name="GR04">
-            <object-type name="Sprite" sid="866510374567325">
+            <object-type name="UI_ICON_Pause" sid="566870363366187">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="132861379458346">
+                        <behavior id="PinPlus" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399366297888031" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503597" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\TXT_PAUSE.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UI_BARRE_Progression" sid="556141838275852">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491651786540350" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="410536941947912" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UI_BARRE_Popup_img" sid="887450495552860">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="809273670557888">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154970664651806" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.509434" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\FOND_Popup_Nav.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UI_BARRE_popup_txt" sid="668263465792902">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="209626466257113">
+                        <behavior id="PinPlus" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder name="GR04">
+            <object-type name="GR04_Bulle_img_02" sid="955631641453121">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780053539850913" speed="5">
+                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -461,14 +578,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="GR04_Bulle_img_02" sid="955631641453121">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780053539850913" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
         </object-folder>
         <object-folder name="GR05" />
         <object-folder name="GR03">
@@ -480,376 +589,309 @@
                     </animation>
                 </animation-folder>
             </object-type>
-        </object-folder>
-        <object-folder name="GR02">
-            <object-type name="GR02_FOND_perso_voiture" sid="408417815761068">
+            <object-type name="Bulle_bleue" sid="819733961471314">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="452757144242106" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\PERSO voiture.png" />
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="437642064446699" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501385" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_bleue.png">
+                            <collision-poly>
+                                <point x="0.108992" y="0.157687" />
+                                <point x="0.499546" y="0" />
+                                <point x="0.8901" y="0.159001" />
+                                <point x="0.990917" y="0.499343" />
+                                <point x="0.822888" y="0.743758" />
+                                <point x="0.499546" y="0.842313" />
+                                <point x="0.177112" y="0.743758" />
+                                <point x="0.00817439" y="0.499343" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="GR02_Bulle_img_01_1" sid="617289781030061">
+            <object-type name="GR03_D01_a_txt" sid="548929737180796">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR03_D01_b_txt" sid="573087302741216">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="D02_habitacle" sid="751801349415400">
                 <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="375297544266313" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_txt_01_1" sid="591959980258480">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_03_JEU_02_txt_1" sid="134885929397148">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_03_JEU_01_txt" sid="793150222338932">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_Bulle_img_01_2" sid="748263721277548">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="453649801209037" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_txt_01_2" sid="335777143603699">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_Bulle_img_01_3" sid="169462430334548">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="442472731001961" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_txt_01_3" sid="849507410338750">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_Bulle_img_02_1" sid="899048495124697">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="733311459384463" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_img_02_2" sid="984257363460914">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="571225136040935" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_txt_02_1" sid="899825214845809">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_Bulle_txt_02_2" sid="644844706312501">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_Bulle_img_03_1" sid="351340825473876">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="665455665101987" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_txt_03_1" sid="156026859431547">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_Bulle_img_03_2" sid="811147689257826">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="475486281433169" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_txt_03_2" sid="682668278324592">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_03_FICHES_txt" sid="361171763868251">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_03_END_txt" sid="809786077477943">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_03_JEU_02_txt_2" sid="705270482684509">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_03_JEU_02_txtprop_1" sid="480424880173368">
-                <plugin id="Text" />
                 <behaviors>
-                    <behavior-type name="Pin" sid="890191659073664">
+                    <behavior-type name="Pin" sid="972144743446704">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="362288235997683" speed="5">
+                        <frame duration="1" hotspotX="0.00181488" hotspotY="0.00268456" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\interieur_voiture.png">
+                            <collision-poly>
+                                <point x="0.00296821" y="0.145706" />
+                                <point x="0.457962" y="0.00372236" />
+                                <point x="0.997481" y="0.0209727" />
+                                <point x="0.973203" y="0.996941" />
+                                <point x="0.457962" y="0.996941" />
+                                <point x="0.0025186" y="0.908699" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Bulle_orange" sid="509655364761445">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="324473385114992" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500792" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_orange.png">
+                            <collision-poly>
+                                <point x="0.164921" y="0.164063" />
+                                <point x="0.5" y="0.0607639" />
+                                <point x="0.823735" y="0.175347" />
+                                <point x="0.823735" y="0.5" />
+                                <point x="0.603839" y="0.605903" />
+                                <point x="0.5" y="0.616319" />
+                                <point x="0.39267" y="0.609375" />
+                                <point x="0.15096" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="D02_Fond" sid="695213951664048">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="871313448508125">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720565830945927" speed="5">
+                        <frame duration="1" hotspotX="0.00453721" hotspotY="-0.373154" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\decors_route_en_marche.png">
+                            <collision-poly>
+                                <point x="0.00527213" y="0.367971" />
+                                <point x="0.36546" y="0.00134228" />
+                                <point x="0.976317" y="0.00134228" />
+                                <point x="0.994728" y="0.375495" />
+                                <point x="0.954602" y="0.991239" />
+                                <point x="0.36546" y="0.991239" />
+                                <point x="0.00527213" y="0.384274" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="D02_Homme_medaillon" sid="959221612074463">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="800762906376797">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="849873465663199">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="288159473875290" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\bulle_gars.png">
+                            <collision-poly>
+                                <point x="0.171533" y="0.171533" />
+                                <point x="0.5" y="0.00182482" />
+                                <point x="0.85219" y="0.14781" />
+                                <point x="1" y="0.5" />
+                                <point x="0.854015" y="0.854015" />
+                                <point x="0.5" y="1" />
+                                <point x="0.145985" y="0.854015" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D02_Bulle_orange" sid="349740251659937">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin2" sid="849614895089226">
                         <behavior id="PinPlus" />
                     </behavior-type>
                 </behaviors>
-                <container>
-                    <type>GR02_03_JEU_02_txtprop_1</type>
-                    <type>GR02_03_JEU_02_imgprop_1</type>
-                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="112790250456569" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500761" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\D02_Bulle_orange.png">
+                            <collision-poly>
+                                <point x="0.84904" y="0.5" />
+                                <point x="0.60733" y="0.609375" />
+                                <point x="0.5" y="0.616319" />
+                                <point x="0.396161" y="0.605903" />
+                                <point x="0.176265" y="0.5" />
+                                <point x="0.176265" y="0.175347" />
+                                <point x="0.5" y="0.0607639" />
+                                <point x="0.835079" y="0.164063" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
-            <object-type name="GR02_03_JEU_02_txtprop_2" sid="402543539936615">
+            <object-type name="GR03_D02_a_txt" sid="576245735033280">
                 <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_03_JEU_02_txtprop_4" sid="638315889773245">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_03_JEU_02_txtprop_5" sid="862759294827731">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_03_JEU_02_txtprop_3" sid="947745022462650">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_03_JEU_02_imgprop_1" sid="854968036755982">
-                <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="DragDrop" sid="851031085163337">
-                        <behavior id="DragnDrop" />
+                    <behavior-type name="Pin2" sid="345567218426290">
+                        <behavior id="PinPlus" />
                     </behavior-type>
                 </behaviors>
-                <container>
-                    <type>GR02_03_JEU_02_txtprop_1</type>
-                    <type>GR02_03_JEU_02_imgprop_1</type>
-                </container>
+            </object-type>
+            <object-type name="GR03_D02_passage" sid="681188509255754">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="194681764074275">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="436438218336448">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="173869723596976" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\PRR_GR03_02_CB\GR03_02_Jeu_Perso_1.png">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648677993980114" speed="5">
+                        <frame duration="1" hotspotX="0.500546" hotspotY="0.512821" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\D02_passage.png">
                             <collision-poly>
-                                <point x="0.19" y="0.19" />
-                                <point x="0.5" y="0.025" />
-                                <point x="0.835" y="0.165" />
-                                <point x="0.975" y="0.5" />
-                                <point x="0.835" y="0.835" />
-                                <point x="0.5" y="0.97" />
-                                <point x="0.165" y="0.835" />
-                                <point x="0.025" y="0.5" />
+                                <point x="0.499341" y="0" />
+                                <point x="0.963109" y="0.823529" />
+                                <point x="0.893281" y="0.5" />
+                                <point x="0.499341" y="1" />
+                                <point x="0.158103" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="GR02_03_JEU_02_imgprop_2" sid="406229612342420">
+            <object-type name="GR03_D02_Bulle_bleue" sid="421559828048934">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="FadeIn" sid="909257105046849">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="509618445023294" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\PRR_GR03_02_CB\GR03_02_Jeu_Perso_2.png">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="563662203102732" speed="5">
+                        <frame duration="1" hotspotX="0.500782" hotspotY="0.501134" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_bleue.png">
                             <collision-poly>
-                                <point x="0.18" y="0.18" />
-                                <point x="0.5" y="0.01" />
-                                <point x="0.845" y="0.155" />
-                                <point x="0.99" y="0.5" />
-                                <point x="0.845" y="0.845" />
-                                <point x="0.5" y="0.99" />
-                                <point x="0.155" y="0.845" />
-                                <point x="0.01" y="0.5" />
+                                <point x="0.108992" y="0.157687" />
+                                <point x="0.499546" y="0" />
+                                <point x="0.8901" y="0.159001" />
+                                <point x="0.990917" y="0.499343" />
+                                <point x="0.822888" y="0.743758" />
+                                <point x="0.499546" y="0.842313" />
+                                <point x="0.177112" y="0.743758" />
+                                <point x="0.00817439" y="0.499343" />
                             </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="GR02_03_JEU_02_imgprop_3" sid="504065322513017">
+            <object-type name="GR03_D02_Femme_medaillon" sid="234779776566548">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="FadeIn" sid="131409446144760">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="834179281409201" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\PRR_GR03_02_CB\GR03_02_Jeu_Perso_3.png">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="827572883794208" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\bulle_fille.png">
                             <collision-poly>
-                                <point x="0.18" y="0.18" />
-                                <point x="0.5" y="0.01" />
-                                <point x="0.845" y="0.155" />
-                                <point x="0.99" y="0.5" />
-                                <point x="0.845" y="0.845" />
-                                <point x="0.5" y="0.99" />
-                                <point x="0.155" y="0.845" />
-                                <point x="0.01" y="0.5" />
+                                <point x="0.171533" y="0.171533" />
+                                <point x="0.5" y="0" />
+                                <point x="0.854015" y="0.145985" />
+                                <point x="1" y="0.5" />
+                                <point x="0.854015" y="0.854015" />
+                                <point x="0.5" y="1" />
+                                <point x="0.145985" y="0.854015" />
+                                <point x="0.00182482" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="GR02_03_JEU_02_imgprop_4" sid="789825576410929">
+            <object-type name="GR03_D02_b_txt" sid="148337699244838">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="FadeIn" sid="482340601640764">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="GR03_D02_pietons" sid="525647842793685">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="836030486941499">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Flash" sid="452584287426370">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="858369477013166" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\PRR_GR03_02_CB\GR03_02_Jeu_Perso_4.png">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="204179235937772" speed="5">
+                        <frame duration="1" hotspotX="0.501887" hotspotY="0.502128" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\slide_6_pietons.png">
                             <collision-poly>
-                                <point x="0.18" y="0.165138" />
-                                <point x="0.5" y="0.00917431" />
-                                <point x="0.845" y="0.142202" />
-                                <point x="0.985" y="0.5" />
-                                <point x="0.855" y="0.866973" />
-                                <point x="0.5" y="0.986239" />
-                                <point x="0.175" y="0.83945" />
-                                <point x="0.015" y="0.5" />
+                                <point x="0.113208" y="0.12766" />
+                                <point x="0.498113" y="0.268085" />
+                                <point x="0.901887" y="0.110638" />
+                                <point x="0.981132" y="0.497872" />
+                                <point x="0.924528" y="0.914894" />
+                                <point x="0.498113" y="0.4" />
+                                <point x="0.0415094" y="0.953192" />
+                                <point x="0.116981" y="0.497872" />
                             </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="GR02_03_JEU_02_imgprop_5" sid="185729693116319">
+            <object-type name="GR03_D03_Bulle_orange" sid="729297239167202">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890326393021414" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\PRR_GR03_02_CB\GR03_02_Jeu_Perso_5.png">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892763169516466" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500761" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\D02_Bulle_orange.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.655556" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_bleue.png">
                             <collision-poly>
-                                <point x="0.18" y="0.18" />
-                                <point x="0.5" y="0.01" />
-                                <point x="0.845" y="0.155" />
-                                <point x="0.99" y="0.5" />
-                                <point x="0.845" y="0.845" />
-                                <point x="0.5" y="0.99" />
-                                <point x="0.155" y="0.845" />
-                                <point x="0.01" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_03_JEU_02_imgprop_6" sid="703919548659153">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="694841884985536" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\PRR_GR03_02_CB\GR03_02_Jeu_Perso_4.png">
-                            <collision-poly>
-                                <point x="0.18" y="0.18" />
-                                <point x="0.5" y="0.01" />
-                                <point x="0.845" y="0.155" />
-                                <point x="0.99" y="0.5" />
-                                <point x="0.845" y="0.845" />
-                                <point x="0.5" y="0.99" />
-                                <point x="0.155" y="0.845" />
-                                <point x="0.01" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_perso_debout" sid="278309371759768">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="825826613598821" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\PRR_GR03_02_CB\GR03_02_Transition_perso_debout.png">
-                            <collision-poly>
-                                <point x="0.111111" y="0.1025" />
-                                <point x="0.5" y="0.31875" />
-                                <point x="0.895664" y="0.09625" />
-                                <point x="0.936314" y="0.5" />
-                                <point x="0.867209" y="0.8775" />
-                                <point x="0.5" y="0.36875" />
-                                <point x="0.0650406" y="0.94" />
-                                <point x="0.0162602" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_decor_ville" sid="644809068704237">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="784442533213535" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\Autres\batiment.png">
-                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
                                 <point x="0" y="0" />
                                 <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D03_Homme_medaillon" sid="569673837955883">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="997388050299668">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="267843586252944" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\bulle_gars.png">
+                            <collision-poly>
+                                <point x="0.171533" y="0.171533" />
+                                <point x="0.5" y="0.00182482" />
+                                <point x="0.85219" y="0.14781" />
                                 <point x="1" y="0.5" />
-                                <point x="0.915104" y="0.849074" />
-                                <point x="0.5" y="0.950926" />
-                                <point x="0" y="1" />
+                                <point x="0.854015" y="0.854015" />
+                                <point x="0.5" y="1" />
+                                <point x="0.145985" y="0.854015" />
+                                <point x="0" y="0.5" />
                             </collision-poly>
                         </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\bulle_fille.png" />
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="GR02_03_JEU_02_interdit" sid="780278819357924">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="674818394948706" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\PRR_GR03_02_CB\GR03_02_Jeu_interdit.png">
-                            <collision-poly>
-                                <point x="0.18" y="0.18" />
-                                <point x="0.5" y="0.05" />
-                                <point x="0.82" y="0.18" />
-                                <point x="0.95" y="0.5" />
-                                <point x="0.82" y="0.82" />
-                                <point x="0.5" y="0.95" />
-                                <point x="0.18" y="0.82" />
-                                <point x="0.05" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_03_JEU_02_autorise" sid="715848518275865">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="524073840184587" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\PRR_GR03_02_CB\GR03_02_Jeu_autorise.png">
-                            <collision-poly>
-                                <point x="0.18" y="0.18" />
-                                <point x="0.5" y="0.05" />
-                                <point x="0.82" y="0.18" />
-                                <point x="0.95" y="0.5" />
-                                <point x="0.82" y="0.82" />
-                                <point x="0.5" y="0.95" />
-                                <point x="0.18" y="0.82" />
-                                <point x="0.05" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_03_JEU_02_socle_autorise" sid="803723870480055">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="876534436308632" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\PRR_GR03_02_CB\socle_gris.png">
-                            <collision-poly>
-                                <point x="0.0195578" y="0.028536" />
-                                <point x="0.5" y="0" />
-                                <point x="0.988095" y="0.0173697" />
-                                <point x="1" y="0.5" />
-                                <point x="0.982143" y="0.973945" />
-                                <point x="0.5" y="0.98263" />
-                                <point x="0.0246599" y="0.96402" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_03_JEU_02_socle_interdit" sid="931883397591561">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="605028421261117" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pyjx163\Documents\_MesDossiers\_TRAVAIL\_Prevention_Risques_Routiers_CB\Dev\Sources\Graphisme\PRR_GR03_02_CB\socle_gris.png">
-                            <collision-poly>
-                                <point x="0.0195578" y="0.028536" />
-                                <point x="0.5" y="0" />
-                                <point x="0.988095" y="0.0173697" />
-                                <point x="1" y="0.5" />
-                                <point x="0.982143" y="0.973945" />
-                                <point x="0.5" y="0.98263" />
-                                <point x="0.0246599" y="0.96402" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
+            <object-type name="GR03_D03_a_txt" sid="372008812767223">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
+        <object-folder name="GR02" />
         <object-folder name="GR01" />
         <object-folder name="Commun">
-            <object-type name="Visuel" sid="475769882177075">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="659464046923414" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Fond\Fond2.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="COM_Video_Background" sid="785672011992702">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -862,28 +904,8 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="495095320554556" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\BtnCommencer01.png">
-                            <collision-poly>
-                                <point x="0.230909" y="0.3175" />
-                                <point x="0.5" y="0.2975" />
-                                <point x="0.898182" y="0.5" />
-                                <point x="0.770909" y="0.685" />
-                                <point x="0.5" y="0.7025" />
-                                <point x="0.227273" y="0.6875" />
-                                <point x="0.1" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\BtnCommencer02.png">
-                            <collision-poly>
-                                <point x="0.221818" y="0.305" />
-                                <point x="0.5" y="0.2975" />
-                                <point x="0.778182" y="0.305" />
-                                <point x="0.898182" y="0.5" />
-                                <point x="0.78" y="0.6975" />
-                                <point x="0.218182" y="0.7" />
-                                <point x="0.1" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.501134" hotspotY="0.50303" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_START_01.png" />
+                        <frame duration="1" hotspotX="0.501134" hotspotY="0.50303" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_START_02.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -896,20 +918,75 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-type name="Intro_Text" sid="770778991214471">
+        <object-type name="TEMP_Sprite" sid="866510374567325">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="288588580317907">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491651786540350" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TEMP_Text" sid="572782527548304">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="147324773414595">
+                    <behavior id="PinPlus" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="GR03_D03_Fond" sid="930175859724497">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904999211403702" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500673" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\GR03_03_D03_Fond.png">
+                        <collision-poly>
+                            <point x="0.00181818" y="0.00269179" />
+                            <point x="0.999091" y="0.00134589" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="UI_BARRE_popup_txt2" sid="822246249779980">
+            <plugin id="SpriteFontPlus" />
+            <behaviors>
+                <behavior-type name="Pin" sid="106589938811421">
+                    <behavior id="PinPlus" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\SPRITESFONTS\SpriteFont_AmaticSC_Bold_(36)_[1,1,1,1]_22x45.png" />
         </object-type>
     </object-folder>
     <families>
-        <family name="UI_Curseur" plugin-id="Sprite" sid="871919883988788">
+        <family name="UI_HAND_Curseur" plugin-id="Sprite" sid="871919883988788">
             <members>
                 <member>Btn_Lecture</member>
                 <member>Btn_Son</member>
                 <member>BTN_SStitre</member>
+                <member>COM_BTN_Commencer</member>
                 <member>Curseur_son</member>
+                <member>MOUCH_BTN_Close</member>
+                <member>MOUCH_BTN_Prec</member>
+                <member>MOUCH_BTN_Reload</member>
+                <member>MOUCH_BTN_Skip</member>
+                <member>MOUCH_BTN_Suiv</member>
+                <member>UI_BTN_Close</member>
+                <member>UI_BTN_Pause</member>
+                <member>UI_BTN_Play</member>
+                <member>UI_BTN_Prec</member>
+                <member>UI_BTN_Son</member>
+                <member>UI_BTN_Soustitre</member>
+                <member>UI_BTN_Suiv</member>
             </members>
             <instance-variables>
-                <instance-variable name="Actif" sid="497264759155141" type="number" />
+                <instance-variable name="handActif" sid="497264759155141" type="number" />
             </instance-variables>
         </family>
         <family name="UI_Reglage_son_curseur" plugin-id="Sprite" sid="612686716617031">
@@ -933,13 +1010,6 @@
         </family>
         <family name="COMMUN_Bulles_img" plugin-id="Sprite" sid="604228847572226">
             <members>
-                <member>GR02_Bulle_img_01_1</member>
-                <member>GR02_Bulle_img_01_2</member>
-                <member>GR02_Bulle_img_01_3</member>
-                <member>GR02_Bulle_img_02_1</member>
-                <member>GR02_Bulle_img_02_2</member>
-                <member>GR02_Bulle_img_03_1</member>
-                <member>GR02_Bulle_img_03_2</member>
                 <member>GR04_Bulle_img_02</member>
             </members>
             <behaviors>
@@ -950,13 +1020,6 @@
         </family>
         <family name="COMMUN_Bulles_txt" plugin-id="Text" sid="323993993325509">
             <members>
-                <member>GR02_Bulle_txt_01_1</member>
-                <member>GR02_Bulle_txt_01_2</member>
-                <member>GR02_Bulle_txt_01_3</member>
-                <member>GR02_Bulle_txt_02_1</member>
-                <member>GR02_Bulle_txt_02_2</member>
-                <member>GR02_Bulle_txt_03_1</member>
-                <member>GR02_Bulle_txt_03_2</member>
                 <member>GR04_Bulle_txt_02</member>
             </members>
             <behaviors>
@@ -965,14 +1028,40 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="UI_MOUCHARD_Txt" plugin-id="Text" sid="654474619265476">
+            <members>
+                <member>MOUCHARD_TXT_Marqueur</member>
+                <member>MOUCHARD_TXT_nomSon</member>
+                <member>MOUCHARD_TXT_repXml</member>
+                <member>MOUCHARD_TXT_Temps</member>
+                <member>MOUCHARD_TXT_Temps2</member>
+                <member>MOUCHARD_TXT_varMarqueur</member>
+                <member>MOUCHARD_TXT_varNomSon</member>
+                <member>MOUCHARD_TXT_varRepXml</member>
+                <member>MOUCHARD_TXT_varTime</member>
+            </members>
+            <behaviors>
+                <behavior-type name="PinFamille" sid="146333147358978">
+                    <behavior id="PinPlus" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="UI_MOUCHARD_Sprites" plugin-id="Sprite" sid="603965613605074">
+            <members>
+                <member>MOUCH_BTN_Close</member>
+                <member>MOUCH_BTN_Prec</member>
+                <member>MOUCH_BTN_Reload</member>
+                <member>MOUCH_BTN_Skip</member>
+                <member>MOUCH_BTN_Suiv</member>
+            </members>
+            <behaviors>
+                <behavior-type name="PinFamille" sid="489559476585200">
+                    <behavior id="PinPlus" />
+                </behavior-type>
+            </behaviors>
+        </family>
     </families>
     <layout-folder>
-        <layout-folder name="_OLD">
-            <layout>Introduction.xml</layout>
-            <layout>Video1.xml</layout>
-            <layout>Transition1.xml</layout>
-            <layout>Jeux1.xml</layout>
-        </layout-folder>
         <layout-folder name="GR01" />
         <layout-folder name="GR03">
             <layout>GR03.xml</layout>
@@ -1012,23 +1101,17 @@
             <event-sheet>GR04_Variables.xml</event-sheet>
         </event-folder>
         <event-folder name="GR05" />
-        <event-folder name="_OLD">
-            <event-sheet>Introduction_Events.xml</event-sheet>
-            <event-sheet>Jeux1_Events.xml</event-sheet>
-            <event-sheet>Transition1_event.xml</event-sheet>
-            <event-sheet>Video1_Events.xml</event-sheet>
-        </event-folder>
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="10" />
-        <global-instance type="Touch" uid="11">
+        <global-instance type="Mouse" uid="80" />
+        <global-instance type="Touch" uid="81">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="AJAX" uid="12" />
-        <global-instance type="Function" uid="24" />
-        <global-instance type="Audio" uid="49">
+        <global-instance type="AJAX" uid="82" />
+        <global-instance type="Function" uid="83" />
+        <global-instance type="Audio" uid="84">
             <properties>
                 <timescale-audio>On (sounds and music)</timescale-audio>
                 <saveload>All</saveload>
@@ -1042,8 +1125,8 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Browser" uid="52" />
-        <global-instance type="MM_Preloader" uid="53">
+        <global-instance type="Browser" uid="85" />
+        <global-instance type="MM_Preloader" uid="86">
             <properties>
                 <mm_preloader-version-14></mm_preloader-version-14>
                 <stabilizer>Disabled</stabilizer>
@@ -1053,30 +1136,9 @@
                 <confirmations-required>3</confirmations-required>
             </properties>
         </global-instance>
+        <global-instance type="Keyboard" uid="87" />
     </global-instances>
     <sounds-folder>
-        <sound-folder name="TESTS">
-            <file name="G0101_D01_a.m4a" />
-            <file name="G0101_D01_a.ogg" />
-            <file name="G0101_D01_b.m4a" />
-            <file name="G0101_D01_b.ogg" />
-            <file name="G0101_D01_c.m4a" />
-            <file name="G0101_D01_c.ogg" />
-            <file name="G0101_D01_d.m4a" />
-            <file name="G0101_D01_d.ogg" />
-            <file name="G0101_D01_e.m4a" />
-            <file name="G0101_D01_e.ogg" />
-            <file name="G0101_D02_a.m4a" />
-            <file name="G0101_D02_a.ogg" />
-            <file name="G0101_D03_a.m4a" />
-            <file name="G0101_D03_a.ogg" />
-            <file name="G0101_D03_b.m4a" />
-            <file name="G0101_D03_b.ogg" />
-            <file name="G0101_D03_c.m4a" />
-            <file name="G0101_D03_c.ogg" />
-            <file name="G0101_D03_d.m4a" />
-            <file name="G0101_D03_d.ogg" />
-        </sound-folder>
         <sound-folder name="GR01" />
         <sound-folder name="GR02" />
         <sound-folder name="GR03">
@@ -1122,10 +1184,16 @@
             <file name="GR03_D09_a.ogg" />
         </sound-folder>
         <sound-folder name="GR04">
-            <file name="GR04_D03.ogg" />
-            <file name="GR04_D03.m4a" />
-            <file name="GR04_D02.ogg" />
-            <file name="GR04_D02.m4a" />
+            <file name="GR04_D01_a.m4a" />
+            <file name="GR04_D01_a.ogg" />
+            <file name="GR04_D01_b.m4a" />
+            <file name="GR04_D01_b.ogg" />
+            <file name="GR04_D01_c.m4a" />
+            <file name="GR04_D01_c.ogg" />
+            <file name="GR04_D02_a.ogg" />
+            <file name="GR04_D02_b.m4a" />
+            <file name="GR04_D02_b.ogg" />
+            <file name="GR04_D02_a.m4a" />
         </sound-folder>
         <sound-folder name="GR05" />
     </sounds-folder>
@@ -1140,14 +1208,8 @@
             <file name="loading-logo.png" />
         </file-folder>
         <file-folder name="xml">
-            <file name="G0101.xml" />
             <file name="GR04.xml" />
-            <file name="GR4.xml" />
             <file name="GR03.xml" />
-            <file name="GR3.xml" />
-            <file name="GR5.xml" />
-            <file name="GR6.xml" />
-            <file name="GR02.xml" />
         </file-folder>
         <file-folder name="Videos">
             <file name="VIDEO_GR01.mp4" />
