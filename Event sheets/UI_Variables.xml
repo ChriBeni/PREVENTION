@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI_Variables</name>
     <events>
+        <variable constant="0" name="Layer_OP" sid="387907044836283" static="0" type="number">0</variable>
         <comment>TEMPORAIRES ( à supprimer à l&apos;export)</comment>
         <variable constant="0" name="TEST" sid="967162037838578" static="0" type="number">0</variable>
         <comment>CONSTANTES</comment>
@@ -18,18 +19,24 @@
         <variable constant="0" name="etatBoutonPlay" sid="784501278322801" static="0" type="number">0</variable>
         <variable constant="0" name="etatBoutonPrec" sid="549999754225550" static="0" type="number">0</variable>
         <variable constant="0" name="etatBoutonSuiv" sid="714751088380995" static="0" type="number">0</variable>
+        <variable constant="0" name="etatBoutonSkip" sid="387004436205656" static="0" type="number">0</variable>
         <variable constant="0" name="etatLecture" sid="424636579015896" static="0" type="number">0</variable>
         <variable constant="0" name="etatLectureSon" sid="623438415449681" static="0" type="number">0</variable>
         <variable constant="0" name="etatLectureVideo" sid="294700568670965" static="0" type="number">0</variable>
         <comment>INFOS</comment>
+        <variable comment="Permet l&apos;affichage du mouchard" constant="0" name="modeDeveloppeur" sid="576439426941931" static="0" type="number">0</variable>
         <variable constant="0" name="numeroGranule" sid="199013896521894" static="0" type="text">GR..</variable>
-        <variable constant="0" name="modeDeveloppeur" sid="576439426941931" static="0" type="number">0</variable>
         <variable comment="n° de rang =&gt; permet d&apos;appeler les sons et ss-titres dans l&apos;array" constant="0" name="numeroMarqueur" sid="438890224343227" static="0" type="number">0</variable>
+        <comment>BARRE PROGRESSION</comment>
+        <variable constant="0" name="barreProgTailleEcran" sid="776461225620739" static="0" type="number">1</variable>
+        <variable constant="0" name="barreProgTailleEtape" sid="232240074597358" static="0" type="number">1</variable>
+        <variable constant="0" name="barreProgTailleBarre" sid="194111320101742" static="0" type="number">1</variable>
         <comment>BOUCLE XML</comment>
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlCompteurNode" sid="406283611126352" static="0" type="number">0</variable>
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlNombreNode" sid="221501204787963" static="0" type="number">0</variable>
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlRepereSon" sid="683468447894144" static="0" type="text"></variable>
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlNomMP3" sid="447684417290236" static="0" type="text"></variable>
+        <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlNomMP3Ended" sid="926340921044261" static="0" type="text"></variable>
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlSoustitreType" sid="466298164901798" static="0" type="text"></variable>
         <variable comment="Variable utilisée dans la boucle de fonction du xml" constant="0" name="xmlSoustitreTxt" sid="856109593531540" static="0" type="text"></variable>
         <comment>_OLD</comment>

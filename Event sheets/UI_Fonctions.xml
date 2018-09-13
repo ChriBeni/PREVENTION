@@ -20,7 +20,7 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-10" name="Set value" sid="318856912424853" type="Curseur_son">
-                            <param id="0" name="Instance variable">Actif</param>
+                            <param id="0" name="Instance variable">handActif</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="10" name="Set master volume" sid="395558482827729" type="Audio">
@@ -33,7 +33,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="990746182170465" title="TRANSITIONS">
+        <event-group description="" sid="990746182170465" title="GRANULE - TRANSITIONS">
             <sub-events>
                 <event-block sid="686500918100143">
                     <conditions>

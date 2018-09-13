@@ -120,7 +120,7 @@
                     <behavior-instances>
                         <behavior-instance type="Fade">
                             <properties>
-                                <active-at-start>No</active-at-start>
+                                <active-at-start>Yes</active-at-start>
                                 <fade-in-time>0.5</fade-in-time>
                                 <wait-time>0</wait-time>
                                 <fade-out-time>0</fade-out-time>
@@ -284,16 +284,19 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <handActif>1</handActif>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>983</x>
-                        <y>417</y>
+                        <x>960</x>
+                        <y>467</y>
                         <z>0</z>
-                        <width>550</width>
-                        <height>400</height>
+                        <width>441</width>
+                        <height>170</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.5011338</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

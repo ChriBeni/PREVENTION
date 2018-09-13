@@ -51,13 +51,13 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <comment>MARQUEUR 3 = Transition dialogue - Bulle 02</comment>
+                        <comment>MARQUEUR 6 = Transition dialogue - Bulle 02</comment>
                         <event-block sid="385396112244740">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="351448674230608" type="System">
                                     <param id="0" name="Variable">numeroMarqueur</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">6</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -74,6 +74,75 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>MARQUEUR 5 = Transition dialogue - Bulle 02</comment>
+                        <event-block sid="256198782246609">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="406939868186806" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="983187214327282" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Set text" sid="391759812743852" type="GR04_Bulle_txt_02">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="559707152899625" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">NON</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 4 = Transition dialogue - Bulle 02</comment>
+                        <event-block sid="931447940386078">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="259767793008753" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="815198171703940" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Set text" sid="618985902344042" type="GR04_Bulle_txt_02">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="194777509060789" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">NON</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>MARQUEUR 3 = Transition dialogue - Bulle 02</comment>
+                        <event-block sid="892463458399205">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="154893342998460" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="499038008286120" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Set text" sid="170784114311421" type="GR04_Bulle_txt_02">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="248968177864969" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">NON</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>MARQUEUR 2 = Transition dialogue - Bulle 01</comment>
                         <event-block sid="335514801706985">
                             <conditions>
@@ -84,9 +153,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="958227795846881" type="UI_BTN_Skip">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
                                 <action id="0" name="Call function" sid="960580639256279" type="Function">
                                     <param id="0" name="Name">&quot;initMarqueur&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -96,7 +162,7 @@
                                     <param id="1" name="Parameter {n}">&quot;Je me teste&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="506806523661746" type="Function">
-                                    <param id="0" name="Name">&quot;GR04_AllLayersInvisible&quot;</param>
+                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="128434627892219" type="System">
@@ -131,7 +197,7 @@
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="0" name="Call function" sid="980494513870746" type="Function">
-                                    <param id="0" name="Name">&quot;GR04_AllLayersInvisible&quot;</param>
+                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="740469303832917" type="System">
@@ -151,9 +217,6 @@
                                     <param id="0" name="Group name">&quot;GR04 - VIDEO - Fin lecture&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="729614675130289" type="UI_BTN_Skip">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
                             </actions>
                         </event-block>
                         <comment>MARQUEUR 0 = Page avec bouton START</comment>
@@ -171,16 +234,12 @@
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="0" name="Call function" sid="335385302699462" type="Function">
-                                    <param id="0" name="Name">&quot;GR04_AllLayersInvisible&quot;</param>
+                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="627156430669977" type="System">
                                     <param id="0" name="Layer">&quot;00_START&quot;</param>
                                     <param id="1" name="Visibility">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="723877744060632" type="Function">
-                                    <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
-                                    <param id="1" name="Parameter {n}">INACTIF</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -191,20 +250,16 @@
         <event-group description="" inactive="1" sid="869848450081363" title="GR04 - VIDEO - Fin lecture">
             <sub-events>
                 <comment>A la fin de la video, on rend le bouton suiv actif, qui clignotera automatiquement car la lecture est à END (grâce au passage auto = NON)</comment>
-                <event-block sid="961962410628541">
+                <event-block sid="174840569971699">
                     <conditions>
-                        <condition id="2" name="Has ended" sid="808982727716463" type="Video" />
+                        <condition id="2" name="Has ended" sid="709857941702509" type="Video" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="799476954262673" type="System">
+                        <action id="-9" name="Set value" sid="128194216949024" type="System">
                             <param id="0" name="Variable">etatBoutonSuiv</param>
                             <param id="1" name="Value">ACTIF</param>
                         </action>
-                        <action id="-9" name="Set value" sid="513587555056497" type="System">
-                            <param id="0" name="Variable">etatLectureVideo</param>
-                            <param id="1" name="Value">END</param>
-                        </action>
-                        <action id="0" name="Call function" sid="775298513616033" type="Function">
+                        <action id="0" name="Call function" sid="225805953509702" type="Function">
                             <param id="0" name="Name">&quot;passageAuto&quot;</param>
                             <param id="1" name="Parameter {n}">NON</param>
                         </action>
@@ -221,6 +276,7 @@
                         <action id="1" name="Set playback time" sid="682213061991462" type="Media">
                             <param id="0" name="Time">0</param>
                         </action>
+                        <action id="5" name="Pause" sid="934414503233225" type="Media" />
                     </actions>
                 </event-block>
             </sub-events>
