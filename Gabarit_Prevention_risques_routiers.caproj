@@ -1145,27 +1145,9 @@
                 </behavior-type>
             </behaviors>
         </object-type>
-<<<<<<< HEAD
-        <object-type name="GR03_D03_Fond" sid="930175859724497">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904999211403702" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500673" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\GR03_03_D03_Fond.png">
-                        <collision-poly>
-                            <point x="0.00181818" y="0.00269179" />
-                            <point x="0.999091" y="0.00134589" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="GR02_08_END" sid="866496594142830">
             <plugin id="Text" />
         </object-type>
-=======
->>>>>>> 6a8af67f6429091ae47970b06c32669821d57a39
     </object-folder>
     <families>
         <family name="UI_HAND_Curseur" plugin-id="Sprite" sid="871919883988788">
