@@ -49,35 +49,52 @@
                                     <param id="0" name="Unique ID">Function.Param(0)</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="508187426425345" type="COMMUN_Bulles_img">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="512361741565925" type="COMMUN_Bulles_img" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="746628414798161">
-                    <conditions>
-                        <condition id="0" name="On function" sid="299001335521865" type="Function">
-                            <param id="0" name="Name">&quot;bulleRestartVisible&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="329208580695437">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="669127818159306" type="COMMUN_Bulles_img">
-                                    <param id="0" name="Unique ID">Function.Param(0)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="126796290372782" type="COMMUN_Bulles_img">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action behavior="Fade" id="0" name="Restart fade" sid="236103550042282" type="COMMUN_Bulles_img" />
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="724081133639235">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="541516533171004" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="508187426425345" type="COMMUN_Bulles_img">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="629047002684655" type="COMMUN_Bulles_img">
+                                            <param id="0" name="Frame number">Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="804738849467252">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="388638777964351" type="COMMUN_Bulles_img">
+                                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Fade" id="0" name="Restart fade" sid="884996046602338" type="COMMUN_Bulles_img" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="381947335329243">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="184972382945004" type="COMMUN_Bulles_img">
+                                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Fade" id="1" name="Start fade" sid="512361741565925" type="COMMUN_Bulles_img" />
+                                                <action id="-11" name="Add to" sid="269532323515631" type="COMMUN_Bulles_img">
+                                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
