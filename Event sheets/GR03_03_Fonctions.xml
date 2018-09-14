@@ -46,6 +46,18 @@
                             <param id="0" name="Pin to">GR03_D04_Bulle_bleue</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="908461748129617" type="GR03_D04_a_txt">
+                            <param id="0" name="Pin to">GR03_D04_Bulle_orange</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="221335715513768" type="GR03_D04_Bulle_orange">
+                            <param id="0" name="Pin to">GR03_D04_Homme_medaillon</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="944271713125336" type="GR03_D04_Bulle_bleue">
+                            <param id="0" name="Pin to">GR03_D04_Femme_medaillon</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

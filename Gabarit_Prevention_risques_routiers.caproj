@@ -1379,6 +1379,14 @@
             </object-type>
             <object-type name="GR03_D04_Bulle_orange" sid="248731465254156">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="884069313884240">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="911696881099055">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="322299436346860" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.500761" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\D02_Bulle_orange.png" />
@@ -1395,9 +1403,25 @@
             </object-type>
             <object-type name="GR03_D04_a_txt" sid="378790240908763">
                 <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="914071135471158">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="177565208628076">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
             <object-type name="GR03_D04_Homme_medaillon" sid="451699580410135">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="659217187412324">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="251239658734945">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="531198505666418" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\bulle_gars.png">
@@ -1686,7 +1710,7 @@
                 </behavior-type>
             </behaviors>
         </family>
-        <family name="Trash" plugin-id="Sprite" sid="931413068959717">
+        <family name="GR03_Trash" plugin-id="Sprite" sid="931413068959717">
             <members>
                 <member>Arbre_L</member>
                 <member>Arbre_R</member>
@@ -1698,7 +1722,7 @@
                 <member>Piquet_R</member>
             </members>
         </family>
-        <family name="Piquets_lateraux_R" plugin-id="Sprite" sid="338869995275274">
+        <family name="GR03_Piquets_lateraux_R" plugin-id="Sprite" sid="338869995275274">
             <members>
                 <member>Piquet_R</member>
             </members>
@@ -1706,7 +1730,7 @@
                 <instance-variable name="Scale" sid="987831689060062" type="number" />
             </instance-variables>
         </family>
-        <family name="Piquets_lateraux_L" plugin-id="Sprite" sid="202440176249386">
+        <family name="GR03_Piquets_lateraux_L" plugin-id="Sprite" sid="202440176249386">
             <members>
                 <member>Piquet_L</member>
             </members>
@@ -1714,7 +1738,7 @@
                 <instance-variable name="Scale" sid="672932424779741" type="number" />
             </instance-variables>
         </family>
-        <family name="Lignes_separation" plugin-id="Sprite" sid="602662714679604">
+        <family name="GR03_Lignes_separation" plugin-id="Sprite" sid="602662714679604">
             <members>
                 <member>Ligne_separation</member>
             </members>
@@ -1722,7 +1746,7 @@
                 <instance-variable name="Scale" sid="691076586855693" type="number" />
             </instance-variables>
         </family>
-        <family name="Arbres" plugin-id="Sprite" sid="651434874845129">
+        <family name="GR03_Arbres" plugin-id="Sprite" sid="651434874845129">
             <members>
                 <member>Arbre_L</member>
                 <member>Arbre_R</member>

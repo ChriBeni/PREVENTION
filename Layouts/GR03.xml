@@ -104,6 +104,16 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.5</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -123,7 +133,7 @@
                 <instance type="GR03_D04_a_txt" uid="167">
                     <properties>
                         <text></text>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -134,6 +144,16 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.5</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -155,10 +175,30 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>EaseInQuart</function>
+                                <target>912, 709</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0.4</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.5</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -180,15 +220,15 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
                         <behavior-instance type="LiteTween">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <tweened-property>Position</tweened-property>
-                                <function>EaseOutBounce</function>
+                                <function>EaseOutElastic</function>
                                 <target>332, 709</target>
                                 <target-mode>Absolute</target-mode>
                                 <duration>0.4</duration>
@@ -199,7 +239,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-316</x>
+                        <x>-465</x>
                         <y>709</y>
                         <z>0</z>
                         <width>490</width>
@@ -225,7 +265,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-148</x>
+                        <x>-297</x>
                         <y>365</y>
                         <z>0</z>
                         <width>522</width>
@@ -240,7 +280,7 @@
                 <instance type="GR03_D04_b_txt" uid="170">
                     <properties>
                         <text></text>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -256,10 +296,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-388</x>
+                        <x>-516</x>
                         <y>180</y>
                         <z>0</z>
-                        <width>469</width>
+                        <width>448</width>
                         <height>305</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
