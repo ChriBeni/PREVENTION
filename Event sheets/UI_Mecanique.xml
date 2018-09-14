@@ -404,12 +404,12 @@
                                     <param id="0" name="Pin to">UI_FOND_Pause</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="656843389368977" type="UI_BARRE_popup_txt2">
+                                <action behavior="Pin" id="0" name="Pin to object" sid="656843389368977" type="UI_BARRE_popup_txt">
                                     <param id="0" name="Pin to">UI_BARRE_Popup_img</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="899364743778572" type="UI_BARRE_popup_txt2">
-                                    <param id="0" name="Pin to">UI_BARRE_Popup_img</param>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="525413618963318" type="UI_BARRE_Ruban_txt">
+                                    <param id="0" name="Pin to">UI_BARRE_Ruban_img</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="796052843960624" type="UI_SUBTITLE_txt">
@@ -492,10 +492,52 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="914475451848160" type="UI_TXT_Titre_Granule">
+                                <action id="0" name="Set text" sid="633424495014643" type="UI_BARRE_Ruban_txt">
                                     <param id="0" name="Text">Function.Param(0)</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="271544449526787" type="System">
+                                    <param id="0" name="Variable">etatSecondTitre</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="334139293316545">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="942545430366346" type="System">
+                                            <param id="0" name="Variable">etatSecondTitre</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="199741385340341" type="UI_BARRE_Ruban_img">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="257701082664302">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="740514335959513" type="System">
+                                            <param id="0" name="Variable">etatSecondTitre</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="518571611108453" type="System">
+                                            <param id="0" name="Variable">etatSecondTitre</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="662109099370219" type="UI_BARRE_Ruban_img">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="275023525677761" type="UI_BARRE_Ruban_img">
+                                            <param id="0" name="Frame number">etatSecondTitre-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -1554,7 +1596,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-16" name="Wait" sid="615569496385583" type="System">
-                                            <param id="0" name="Seconds">0.4</param>
+                                            <param id="0" name="Seconds">delaiApparitionObjetsUI</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="943779819681169" type="UI_SUBTITLE_Consigne_txt">
                                             <param id="0" name="Visibility">1</param>
@@ -2572,7 +2614,7 @@
                                 <action id="-1" name="Set X" sid="966645353397998" type="UI_BARRE_Popup_img">
                                     <param id="0" name="X">barreProgTailleBarre</param>
                                 </action>
-                                <action id="0" name="Set text" sid="232170289848636" type="UI_BARRE_popup_txt2">
+                                <action id="0" name="Set text" sid="232170289848636" type="UI_BARRE_popup_txt">
                                     <param id="0" name="Text">numeroMarqueur&amp;&quot; / &quot;&amp;xmlNombreNode</param>
                                 </action>
                             </actions>
@@ -2595,7 +2637,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-16" name="Wait" sid="251243112945158" type="System">
-                                            <param id="0" name="Seconds">0.4</param>
+                                            <param id="0" name="Seconds">delaiApparitionObjetsUI</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="437061313070219" type="UI_BARRE_Popup_img">
                                             <param id="0" name="Visibility">1</param>

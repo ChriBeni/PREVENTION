@@ -55,28 +55,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_FOND_Pause" uid="3">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>960</x>
-                        <y>540</y>
-                        <z>0</z>
-                        <width>1920</width>
-                        <height>1080</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="UI_BARRE_Ruban_img" uid="51">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -94,6 +72,84 @@
                         <height>88</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="UI_BARRE_Ruban_txt" uid="88">
+                    <properties>
+                        <character-width>22</character-width>
+                        <character-height>45</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZaàâäbcçdeéèêëfghijklmnoôöpqrstuùûüvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;%œ</character-set>
+                        <text>Sous titre</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                        <char-width-json>{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,15,1],&quot;&quot;data&quot;&quot;:[[[6],[5],[6],[8],[9],[10],[11],[12],[13],[14],[15],[16],[17],[18],[20]],[[&quot;&quot; &quot;&quot;],[&quot;&quot;&apos;|&quot;&quot;],[&quot;&quot;.,;:!&quot;&quot;],[&quot;&quot;F?\&quot;&quot;&quot;&quot;],[&quot;&quot;EILZbelps()&quot;&quot;],[&quot;&quot;JPRTXYcçêfhirtxz456789[]`&quot;&quot;],[&quot;&quot;BHSdéëjy0123-\\/$&lt;&gt;&quot;&quot;],[&quot;&quot;KOaàâèk°&quot;&quot;],[&quot;&quot;ACDNQUVägoôöquûü+=&quot;&quot;],[&quot;&quot;GMùv&quot;&quot;],[&quot;&quot;nw~#£€&quot;&quot;],[&quot;&quot;*œ&quot;&quot;],[&quot;&quot;W&quot;&quot;],[&quot;&quot;m_&amp;&quot;&quot;],[&quot;&quot;@%&quot;&quot;]]]}</char-width-json>
+                        <space-char-width>-1</space-char-width>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin">
+                            <properties>
+                                <x>Enabled</x>
+                                <y>Enabled</y>
+                                <zindex>Disabled</zindex>
+                                <angle>Disabled</angle>
+                                <width>Disabled</width>
+                                <height>Disabled</height>
+                                <opacity>Enabled</opacity>
+                                <visibility>Enabled</visibility>
+                                <collisions-enabled>Disabled</collisions-enabled>
+                                <timescale>Disabled</timescale>
+                                <hotspot-x>Disabled</hotspot-x>
+                                <hotspot-y>Disabled</hotspot-y>
+                                <imagepoint>0</imagepoint>
+                                <animation>Disabled</animation>
+                                <frame>Disabled</frame>
+                                <mirror>Disabled</mirror>
+                                <flip>Disabled</flip>
+                                <destroy>Disabled</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>209</x>
+                        <y>81</y>
+                        <z>0</z>
+                        <width>481</width>
+                        <height>45</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="UI_FOND_Pause" uid="3">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>960</x>
+                        <y>540</y>
+                        <z>0</z>
+                        <width>1920</width>
+                        <height>1080</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -667,7 +723,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_BARRE_popup_txt2" uid="18">
+                <instance type="UI_BARRE_popup_txt" uid="18">
                     <properties>
                         <character-width>22</character-width>
                         <character-height>45</character-height>
@@ -748,62 +804,6 @@
                         <z>0</z>
                         <width>1304</width>
                         <height>77</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="UI_BARRE_Ruban_txt" uid="88">
-                    <properties>
-                        <character-width>22</character-width>
-                        <character-height>45</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZaàâäbcçdeéèêëfghijklmnoôöpqrstuùûüvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;%œ</character-set>
-                        <text>Sous titre</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                        <char-width-json>{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,15,1],&quot;&quot;data&quot;&quot;:[[[6],[5],[6],[8],[9],[10],[11],[12],[13],[14],[15],[16],[17],[18],[20]],[[&quot;&quot; &quot;&quot;],[&quot;&quot;&apos;|&quot;&quot;],[&quot;&quot;.,;:!&quot;&quot;],[&quot;&quot;F?\&quot;&quot;&quot;&quot;],[&quot;&quot;EILZbelps()&quot;&quot;],[&quot;&quot;JPRTXYcçêfhirtxz456789[]`&quot;&quot;],[&quot;&quot;BHSdéëjy0123-\\/$&lt;&gt;&quot;&quot;],[&quot;&quot;KOaàâèk°&quot;&quot;],[&quot;&quot;ACDNQUVägoôöquûü+=&quot;&quot;],[&quot;&quot;GMùv&quot;&quot;],[&quot;&quot;nw~#£€&quot;&quot;],[&quot;&quot;*œ&quot;&quot;],[&quot;&quot;W&quot;&quot;],[&quot;&quot;m_&amp;&quot;&quot;],[&quot;&quot;@%&quot;&quot;]]]}</char-width-json>
-                        <space-char-width>-1</space-char-width>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin">
-                            <properties>
-                                <x>Enabled</x>
-                                <y>Enabled</y>
-                                <zindex>Disabled</zindex>
-                                <angle>Disabled</angle>
-                                <width>Disabled</width>
-                                <height>Disabled</height>
-                                <opacity>Enabled</opacity>
-                                <visibility>Enabled</visibility>
-                                <collisions-enabled>Disabled</collisions-enabled>
-                                <timescale>Disabled</timescale>
-                                <hotspot-x>Disabled</hotspot-x>
-                                <hotspot-y>Disabled</hotspot-y>
-                                <imagepoint>0</imagepoint>
-                                <animation>Disabled</animation>
-                                <frame>Disabled</frame>
-                                <mirror>Disabled</mirror>
-                                <flip>Disabled</flip>
-                                <destroy>Disabled</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>209</x>
-                        <y>81</y>
-                        <z>0</z>
-                        <width>481</width>
-                        <height>45</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
