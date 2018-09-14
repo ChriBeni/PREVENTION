@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="UI_SUBTITLE_img" uid="5">
+                <instance type="UI_SUBTITLE_img" uid="6">
                     <properties>
                         <left-margin>16</left-margin>
                         <right-margin>16</right-margin>
@@ -77,7 +77,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_BARRE_Ruban_txt" uid="6">
+                <instance type="UI_BARRE_Ruban_txt" uid="7">
                     <properties>
                         <character-width>22</character-width>
                         <character-height>45</character-height>
@@ -133,7 +133,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_FOND_Pause" uid="7">
+                <instance type="UI_FOND_Pause" uid="8">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -177,7 +177,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_LOGO" uid="3">
+                <instance type="UI_LOGO" uid="10">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -199,7 +199,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_SUBTITLE_txt" uid="8">
+                <instance type="UI_SUBTITLE_txt" uid="11">
                     <properties>
                         <text>Ceci est la zone des sous-titres</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -250,7 +250,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_FOND_Nav_Bas" uid="10">
+                <instance type="UI_FOND_Nav_Bas" uid="12">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -272,7 +272,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Btn_Lecture" uid="11">
+                <instance type="Btn_Lecture" uid="13">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -536,7 +536,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_BTN_Close" uid="12">
+                <instance type="UI_BTN_Close" uid="14">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -561,7 +561,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_BTN_Son" uid="13">
+                <instance type="UI_BTN_Son" uid="18">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -709,7 +709,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_BARRE_Popup_img" uid="14">
+                <instance type="UI_BARRE_Popup_img" uid="24">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -745,7 +745,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_BARRE_popup_txt" uid="18">
+                <instance type="UI_BARRE_popup_txt" uid="25">
                     <properties>
                         <character-width>22</character-width>
                         <character-height>45</character-height>
@@ -801,7 +801,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_TXT_Titre_Granule" uid="24">
+                <instance type="UI_TXT_Titre_Granule" uid="40">
                     <properties>
                         <character-width>29</character-width>
                         <character-height>58</character-height>
@@ -867,7 +867,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MOUCHARD_TXT_varTime" uid="40">
+                <instance type="MOUCHARD_TXT_varTime" uid="42">
                     <properties>
                         <text>0:00</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -918,7 +918,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MOUCHARD_TXT_Marqueur" uid="42">
+                <instance type="MOUCHARD_TXT_Marqueur" uid="43">
                     <properties>
                         <text>N° Marqueur :</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1275,7 +1275,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MOUCH_BTN_Close" uid="25">
+                <instance type="MOUCH_BTN_Close" uid="49">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1324,7 +1324,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MOUCH_BTN_Prec" uid="43">
+                <instance type="MOUCH_BTN_Prec" uid="52">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1373,7 +1373,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MOUCH_BTN_Reload" uid="49">
+                <instance type="MOUCH_BTN_Reload" uid="80">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1422,7 +1422,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MOUCH_BTN_Skip" uid="52">
+                <instance type="MOUCH_BTN_Skip" uid="81">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1471,7 +1471,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MOUCH_BTN_Suiv" uid="80">
+                <instance type="MOUCH_BTN_Suiv" uid="82">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1520,7 +1520,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MOUCHARD_TXT_Temps2" uid="81">
+                <instance type="MOUCHARD_TXT_Temps2" uid="83">
                     <properties>
                         <text>DRAG ME</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1571,7 +1571,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MOUCHARD_TXT_typeSubtitle" uid="82">
+                <instance type="MOUCHARD_TXT_typeSubtitle" uid="84">
                     <properties>
                         <text>Type Sub :</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1622,7 +1622,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MOUCHARD_TXT_varTypeSubtitle" uid="83">
+                <instance type="MOUCHARD_TXT_varTypeSubtitle" uid="85">
                     <properties>
                         <text>none</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1673,7 +1673,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_SUBTITLE_Consigne_txt" uid="84">
+                <instance type="UI_SUBTITLE_Consigne_txt" uid="86">
                     <properties>
                         <character-width>18</character-width>
                         <character-height>36</character-height>
@@ -1712,6 +1712,28 @@
                         <z>0</z>
                         <width>545</width>
                         <height>52</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="179">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1162</x>
+                        <y>717</y>
+                        <z>0</z>
+                        <width>102</width>
+                        <height>102</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
