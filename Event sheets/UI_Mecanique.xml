@@ -1613,7 +1613,6 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
-                                                <condition disabled="1" id="-4" name="Trigger once while true" sid="790476934209318" type="System" />
                                             </conditions>
                                             <actions>
                                                 <action behavior="Fade" id="0" name="Restart fade" sid="446446753725030" type="UI_SUBTITLE_Consigne_txt" />
@@ -1742,6 +1741,7 @@
                             </conditions>
                             <actions>
                                 <action id="33" name="Stop all" sid="101258421572030" type="Audio" />
+                                <action id="-45" name="Reset persisted objects" sid="695951649493307" type="System" />
                                 <action id="-9" name="Set value" sid="134878377963387" type="System">
                                     <param id="0" name="Variable">etatLecture</param>
                                     <param id="1" name="Value">PLAY</param>
