@@ -33,7 +33,7 @@
                         </action>
                         <action id="1" name="Request project file" sid="424430137030153" type="AJAX">
                             <param id="0" name="Tag">numeroGranule</param>
-                            <param id="1" name="File">GR02.xml</param>
+                            <param id="1" name="File">GR04.xml</param>
                         </action>
                     </actions>
                 </event-block>
