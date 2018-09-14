@@ -935,6 +935,100 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="GR02_Bulle_img_01_1" sid="664091508512301">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="309835206801553" speed="5">
+                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR02_Bulle_txt_01_1" sid="194631446036154">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR02_Bulle_img_01_2" sid="341770919613375">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682421965001182" speed="5">
+                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR02_Bulle_img_01_3" sid="190318149558332">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="130516597218507" speed="5">
+                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR02_Bulle_txt_01_2" sid="598162258063718">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR02_Bulle_txt_01_3" sid="917311018766308">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR02_Bulle_img_02_1" sid="209777732218442">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="700163800538350" speed="5">
+                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR02_Bulle_txt_01_4" sid="280466506450700">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR02_Bulle_txt_02_1" sid="111903440632962">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR02_03_JEU_01_txt" sid="568921003929978">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR02_FOND_persos_voiture" sid="915155602660232">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="253988094907718" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\PERSO voiture.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR02_Bulle_img_02_2" sid="281506295881895">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="169569156629071" speed="5">
+                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR02_Bulle_txt_02_2" sid="794432444072716">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR02_Bulle_img_03_1" sid="858886370342741">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="288408284959063" speed="5">
+                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR02_Bulle_txt_03_1" sid="221088720878158">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR02_Bulle_img_03_2" sid="590982034789685">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118072511005615" speed="5">
+                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR02_Bulle_txt_03_2" sid="644298954109550">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR02_03_FICHES_txt" sid="820144194815846">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="GR01" />
         <object-folder name="Commun">
@@ -1000,6 +1094,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="GR02_08_END" sid="866496594142830">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="UI_HAND_Curseur" plugin-id="Sprite" sid="871919883988788">
@@ -1047,6 +1144,13 @@
         </family>
         <family name="COMMUN_Bulles_img" plugin-id="Sprite" sid="604228847572226">
             <members>
+                <member>GR02_Bulle_img_01_1</member>
+                <member>GR02_Bulle_img_01_2</member>
+                <member>GR02_Bulle_img_01_3</member>
+                <member>GR02_Bulle_img_02_1</member>
+                <member>GR02_Bulle_img_02_2</member>
+                <member>GR02_Bulle_img_03_1</member>
+                <member>GR02_Bulle_img_03_2</member>
                 <member>GR04_Bulle_img_02</member>
             </members>
             <behaviors>
@@ -1057,6 +1161,14 @@
         </family>
         <family name="COMMUN_Bulles_txt" plugin-id="Text" sid="323993993325509">
             <members>
+                <member>GR02_Bulle_txt_01_1</member>
+                <member>GR02_Bulle_txt_01_2</member>
+                <member>GR02_Bulle_txt_01_3</member>
+                <member>GR02_Bulle_txt_01_4</member>
+                <member>GR02_Bulle_txt_02_1</member>
+                <member>GR02_Bulle_txt_02_2</member>
+                <member>GR02_Bulle_txt_03_1</member>
+                <member>GR02_Bulle_txt_03_2</member>
                 <member>GR04_Bulle_txt_02</member>
             </members>
             <behaviors>
@@ -1247,6 +1359,7 @@
         <file-folder name="xml">
             <file name="GR04.xml" />
             <file name="GR03.xml" />
+            <file name="GR02.xml" />
         </file-folder>
         <file-folder name="Videos">
             <file name="VIDEO_GR01.mp4" />
