@@ -1503,6 +1503,79 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
+            <object-type name="GR03_FOND_perso_voiture2" sid="674671711030707">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="302056947024268" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\PERSO voiture.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D05_Bulle_bleue" sid="190910752498977">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="379793922146856" speed="0">
+                        <frame duration="1" hotspotX="0.500778" hotspotY="0.502463" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\Bulle_bleue2.png">
+                            <collision-poly>
+                                <point x="0.110484" y="0.159573" />
+                                <point x="0.499548" y="0.00275482" />
+                                <point x="0.888611" y="0.16088" />
+                                <point x="0.989044" y="0.499347" />
+                                <point x="0.821656" y="0.742415" />
+                                <point x="0.499548" y="0.840427" />
+                                <point x="0.178344" y="0.742415" />
+                                <point x="0.0100512" y="0.499347" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.655556" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_bleue.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D05_a_txt" sid="285845725701133">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR03_D05_Tableau_distances" sid="682874650110569">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="589853842696021" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\tableau_slide9.png">
+                            <collision-poly>
+                                <point x="0.0109409" y="0.0219298" />
+                                <point x="0.499635" y="0.00146199" />
+                                <point x="0.983953" y="0.0321637" />
+                                <point x="0.978848" y="0.957602" />
+                                <point x="0.0160467" y="0.967836" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D05_Bulle_orange" sid="246173181955997">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="729888831517027" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500761" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\D02_Bulle_orange.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.655556" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_bleue.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D05_b_txt" sid="684412314831249">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="GR02">
             <object-type name="GR02_decor_ville" sid="281713168320204">
@@ -1686,6 +1759,8 @@
                 <member>GR03_D04_Femme_medaillon</member>
                 <member>GR03_D04_Fond</member>
                 <member>GR03_D04_Homme_medaillon</member>
+                <member>GR03_D05_Bulle_bleue</member>
+                <member>GR03_D05_Bulle_orange</member>
                 <member>GR03_FOND_perso_voiture</member>
             </members>
             <behaviors>
@@ -1703,6 +1778,8 @@
                 <member>GR03_D03_a_txt</member>
                 <member>GR03_D04_a_txt</member>
                 <member>GR03_D04_b_txt</member>
+                <member>GR03_D05_a_txt</member>
+                <member>GR03_D05_b_txt</member>
             </members>
             <behaviors>
                 <behavior-type name="Persist" sid="558619682410306">

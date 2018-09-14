@@ -58,6 +58,99 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="264999997557377">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="358749577853185" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-45" name="Reset persisted objects" sid="273689829032748" type="System" />
+                                <action id="-15" name="Set visible" sid="383252905840859" type="GR03_D05_Bulle_bleue">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="776709037255083" type="GR03_D05_a_txt">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="335490506875803" type="GR03_D05_b_txt">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="965571298687006" type="GR03_D05_b_txt">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="794087081106595" type="GR03_D05_Bulle_orange">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="300130838111599" type="Function">
+                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="528377695613909" type="System">
+                                    <param id="0" name="Layer">&quot;06_D05&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="273490806812827" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="254411633668195" type="System">
+                                    <param id="0" name="Variable">Goto</param>
+                                    <param id="1" name="Value">13</param>
+                                </action>
+                                <action id="0" name="Call function" sid="757550040080834" type="Function">
+                                    <param id="0" name="Name">&quot;GR03_passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">OUI</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="863644306570376">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="817281994059628" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">11</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-45" name="Reset persisted objects" sid="779951438222041" type="System" />
+                                <action id="0" name="Call function" sid="994161005174808" type="Function">
+                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Set text" sid="368964358344259" type="GR03_D05_a_txt">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="831582549260420" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="683684091144864" type="Function">
+                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;&quot;</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="768377969994174" type="System">
+                                    <param id="0" name="Layer">&quot;06_D05&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="457234297967349" type="System">
+                                    <param id="0" name="Layer">&quot;06_D05&quot;</param>
+                                    <param id="1" name="Opacity">0</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="222668261755421" type="System">
+                                    <param id="0" name="Tag">&quot;marqueur11suite&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="179323150149673" type="System">
+                                    <param id="0" name="Variable">Goto</param>
+                                    <param id="1" name="Value">12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="249383682585326" type="Function">
+                                    <param id="0" name="Name">&quot;GR03_passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">OUI</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="661934639448945">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="369689310925914" type="System">
@@ -94,17 +187,16 @@
                                 <action behavior="Fade" id="1" name="Start fade" sid="264799045513742" type="GR03_D04_Homme_medaillon" />
                                 <action behavior="Fade" id="1" name="Start fade" sid="824929297527815" type="GR03_D04_a_txt" />
                                 <action behavior="Fade" id="1" name="Start fade" sid="165025765565474" type="GR03_D04_Bulle_orange" />
+                                <action id="-16" name="Wait" sid="921568652681200" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
                                 <action behavior="LiteTween" id="10" name="Start" sid="710965153695061" type="GR03_D04_Femme_medaillon">
                                     <param id="0" name="Start Mode">0</param>
                                     <param id="1" name="Force use current">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="777798242012697" type="System">
-                                    <param id="0" name="Variable">Goto</param>
-                                    <param id="1" name="Value">11</param>
-                                </action>
                                 <action id="0" name="Call function" sid="793459368671757" type="Function">
                                     <param id="0" name="Name">&quot;GR03_passageAuto&quot;</param>
-                                    <param id="1" name="Parameter {n}">OUI</param>
+                                    <param id="1" name="Parameter {n}">NON</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -118,6 +210,23 @@
                             </conditions>
                             <actions>
                                 <action id="-45" name="Reset persisted objects" sid="411157301147891" type="System" />
+                                <action id="-3" name="Set position" sid="586282869049754" type="GR03_D04_Femme_medaillon">
+                                    <param id="0" name="X">-465</param>
+                                    <param id="1" name="Y">709</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="135656618141350" type="GR03_D04_Homme_medaillon">
+                                    <param id="0" name="X">332</param>
+                                    <param id="1" name="Y">709</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="972442668638972" type="GR03_D04_Homme_medaillon">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="980546254035840" type="GR03_D04_Bulle_orange">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="425097184161012" type="GR03_D04_a_txt">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
                                 <action id="0" name="Call function" sid="920910908534758" type="Function">
                                     <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -984,6 +1093,64 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-9" name="Set value" sid="560154346515172" type="System">
+                                                    <param id="0" name="Variable">Layer_OP</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="588582553670163" title="Marqueur10">
+                    <sub-events>
+                        <event-block sid="128056762007601">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="655348954623152" type="System" />
+                                <condition id="-14" name="Compare variable" sid="964027238789053" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">11</param>
+                                </condition>
+                                <condition id="-17" name="Compare opacity" sid="899189780683830" type="System">
+                                    <param id="0" name="Layer">&quot;06_D05&quot;</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Opacity">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="301583002166866" type="System">
+                                    <param id="0" name="Variable">Layer_OP</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="534511860509738" type="System">
+                                    <param id="0" name="Layer">&quot;06_D05&quot;</param>
+                                    <param id="1" name="Opacity">Layer_OP</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="172665874197995">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="297245837685744" type="System">
+                                            <param id="0" name="Variable">Layer_OP</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-42" name="Signal" sid="129641273917885" type="System">
+                                            <param id="0" name="Tag">&quot;marqueur11suite&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="453778161433734">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="330024147039525" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="923734414614237" type="System">
                                                     <param id="0" name="Variable">Layer_OP</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
