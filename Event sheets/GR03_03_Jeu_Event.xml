@@ -806,5 +806,46 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="247560402852111" title="GTR03_03_Jeu TIMELINE">
+            <sub-events>
+                <event-block sid="430662053542223">
+                    <conditions>
+                        <condition id="0" name="On function" sid="550440670663535" type="Function">
+                            <param id="0" name="Name">&quot;initNavigation&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="922901355044660">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="388696306385851" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">15</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="385960541240647" type="System">
+                                    <param id="0" name="Variable">etatBoutonSuiv</param>
+                                    <param id="1" name="Value">INACTIF</param>
+                                </action>
+                                <action id="0" name="Call function" sid="957837385689226" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="347413862277133" type="System">
+                                    <param id="0" name="Variable">Goto</param>
+                                    <param id="1" name="Value">15</param>
+                                </action>
+                                <action id="0" name="Call function" sid="512418786188092" type="Function">
+                                    <param id="0" name="Name">&quot;GR03_passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">OUI</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

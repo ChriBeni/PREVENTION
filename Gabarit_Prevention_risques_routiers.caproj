@@ -1930,15 +1930,15 @@
         <event-folder name="GR05" />
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="85" />
-        <global-instance type="Touch" uid="86">
+        <global-instance type="Mouse" uid="87" />
+        <global-instance type="Touch" uid="88">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="AJAX" uid="87" />
-        <global-instance type="Function" uid="88" />
-        <global-instance type="Audio" uid="93">
+        <global-instance type="AJAX" uid="93" />
+        <global-instance type="Function" uid="94" />
+        <global-instance type="Audio" uid="95">
             <properties>
                 <timescale-audio>On (sounds and music)</timescale-audio>
                 <saveload>All</saveload>
@@ -1952,8 +1952,8 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Browser" uid="94" />
-        <global-instance type="MM_Preloader" uid="95">
+        <global-instance type="Browser" uid="163" />
+        <global-instance type="MM_Preloader" uid="177">
             <properties>
                 <mm_preloader-version-14></mm_preloader-version-14>
                 <stabilizer>Disabled</stabilizer>
@@ -1963,7 +1963,7 @@
                 <confirmations-required>3</confirmations-required>
             </properties>
         </global-instance>
-        <global-instance type="Keyboard" uid="163" />
+        <global-instance type="Keyboard" uid="178" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="GR01" />
