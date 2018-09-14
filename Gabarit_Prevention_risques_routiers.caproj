@@ -1362,6 +1362,123 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="GR03_D04_Fond" sid="779887564942519">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="157749933861500" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500673" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\GR03_03_D04_Fond.png">
+                            <collision-poly>
+                                <point x="0.00181818" y="0.00269179" />
+                                <point x="0.999091" y="0.00134589" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D04_Bulle_orange" sid="248731465254156">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="322299436346860" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500761" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\D02_Bulle_orange.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.655556" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_bleue.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D04_a_txt" sid="378790240908763">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GR03_D04_Homme_medaillon" sid="451699580410135">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="531198505666418" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\bulle_gars.png">
+                            <collision-poly>
+                                <point x="0.14781" y="0.14781" />
+                                <point x="0.5" y="0.00182482" />
+                                <point x="0.85219" y="0.14781" />
+                                <point x="1" y="0.5" />
+                                <point x="0.854015" y="0.854015" />
+                                <point x="0.5" y="1" />
+                                <point x="0.145985" y="0.854015" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D04_Femme_medaillon" sid="580542263840069">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="505103793694763">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="450817744713366" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\GR03_03\bulle_fille.png">
+                            <collision-poly>
+                                <point x="0.14781" y="0.14781" />
+                                <point x="0.5" y="0.00182482" />
+                                <point x="0.85219" y="0.14781" />
+                                <point x="1" y="0.5" />
+                                <point x="0.854015" y="0.854015" />
+                                <point x="0.5" y="1" />
+                                <point x="0.145985" y="0.854015" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D04_Bulle_bleue" sid="969415740678886">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="701604725511734">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="848112889402139" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501385" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_bleue.png">
+                            <collision-poly>
+                                <point x="0.991826" y="0.499343" />
+                                <point x="0.822888" y="0.743758" />
+                                <point x="0.500454" y="0.842313" />
+                                <point x="0.177112" y="0.743758" />
+                                <point x="0.00908267" y="0.499343" />
+                                <point x="0.1099" y="0.159001" />
+                                <point x="0.500454" y="0" />
+                                <point x="0.891008" y="0.157687" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.655556" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Bulles\bulle_bleue.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GR03_D04_b_txt" sid="917816394814254">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="287221429965646">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
         </object-folder>
         <object-folder name="GR02">
             <object-type name="GR02_decor_ville" sid="281713168320204">
@@ -1540,6 +1657,11 @@
                 <member>GR03_D03_Bulle_orange</member>
                 <member>GR03_D03_Fond</member>
                 <member>GR03_D03_Homme_medaillon</member>
+                <member>GR03_D04_Bulle_bleue</member>
+                <member>GR03_D04_Bulle_orange</member>
+                <member>GR03_D04_Femme_medaillon</member>
+                <member>GR03_D04_Fond</member>
+                <member>GR03_D04_Homme_medaillon</member>
                 <member>GR03_FOND_perso_voiture</member>
             </members>
             <behaviors>
@@ -1555,6 +1677,8 @@
                 <member>GR03_D02_a_txt</member>
                 <member>GR03_D02_b_txt</member>
                 <member>GR03_D03_a_txt</member>
+                <member>GR03_D04_a_txt</member>
+                <member>GR03_D04_b_txt</member>
             </members>
             <behaviors>
                 <behavior-type name="Persist" sid="558619682410306">
@@ -1657,15 +1781,15 @@
         <event-folder name="GR05" />
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="83" />
-        <global-instance type="Touch" uid="84">
+        <global-instance type="Mouse" uid="85" />
+        <global-instance type="Touch" uid="86">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="AJAX" uid="85" />
-        <global-instance type="Function" uid="86" />
-        <global-instance type="Audio" uid="87">
+        <global-instance type="AJAX" uid="87" />
+        <global-instance type="Function" uid="88" />
+        <global-instance type="Audio" uid="93">
             <properties>
                 <timescale-audio>On (sounds and music)</timescale-audio>
                 <saveload>All</saveload>
@@ -1679,8 +1803,8 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Browser" uid="110" />
-        <global-instance type="MM_Preloader" uid="111">
+        <global-instance type="Browser" uid="94" />
+        <global-instance type="MM_Preloader" uid="95">
             <properties>
                 <mm_preloader-version-14></mm_preloader-version-14>
                 <stabilizer>Disabled</stabilizer>
@@ -1690,7 +1814,7 @@
                 <confirmations-required>3</confirmations-required>
             </properties>
         </global-instance>
-        <global-instance type="Keyboard" uid="112" />
+        <global-instance type="Keyboard" uid="163" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="GR01" />

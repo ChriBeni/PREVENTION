@@ -35,6 +35,14 @@
                             <param id="0" name="Name">&quot;initXML&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Call function" sid="271304555080751" type="Function">
+                            <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="117830486266177" type="System">
+                            <param id="0" name="Layer">&quot;00_START&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -50,6 +58,59 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="397741366954188">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="459988999895726" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-45" name="Reset persisted objects" sid="411157301147891" type="System" />
+                                <action id="0" name="Call function" sid="920910908534758" type="Function">
+                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="140450443612962" type="System">
+                                    <param id="0" name="Layer">&quot;05_D04&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="138057284104036" type="GR03_D04_a_txt">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="290939928878276" type="GR03_D04_a_txt">
+                                    <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="683597216995989" type="Function">
+                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="383427028480501" type="Function">
+                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;&quot;</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="514732659060853" type="System">
+                                    <param id="0" name="Layer">&quot;05_D04&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="186421768379072" type="System">
+                                    <param id="0" name="Layer">&quot;05_D04&quot;</param>
+                                    <param id="1" name="Opacity">0</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="474855514236842" type="System">
+                                    <param id="0" name="Tag">&quot;marqueur9 suite&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="636312098862919" type="System">
+                                    <param id="0" name="Variable">Goto</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                                <action id="0" name="Call function" sid="651931651805211" type="Function">
+                                    <param id="0" name="Name">&quot;GR03_passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">OUI</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="769665911430967">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="614370480788304" type="System">
@@ -89,7 +150,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="252239175803144" type="Function">
                                     <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot; &quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="861924509914909" type="Function">
                                     <param id="0" name="Name">&quot;GR03_passageAuto&quot;</param>
@@ -117,7 +178,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="867257189065209" type="Function">
                                     <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot; &quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="967655712812950" type="Function">
                                     <param id="0" name="Name">&quot;initMarqueur&quot;</param>
@@ -356,7 +417,7 @@
                                         </action>
                                         <action id="0" name="Call function" sid="826732027493682" type="Function">
                                             <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot; &quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&quot;</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="240309145900539" type="GR03_D02_a_txt">
                                             <param id="0" name="Visibility">1</param>
@@ -445,6 +506,10 @@
                                     <param id="0" name="Name">&quot;initMarqueur&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
+                                <action id="0" name="Call function" sid="887188506334493" type="Function">
+                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;&quot;</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="643839798891069" type="Bulle_bleue">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
@@ -492,6 +557,10 @@
                                 <action id="0" name="Call function" sid="568835735224990" type="Function">
                                     <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="613478764533948" type="Function">
+                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Nous retrouvons nos deux collègues&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="201116544831722" type="Function">
                                     <param id="0" name="Name">&quot;initMarqueur&quot;</param>
@@ -566,10 +635,6 @@
                                     <param id="0" name="Group name">&quot;GR03 - Fin lecture vidéo&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
-                                <action disabled="1" id="-9" name="Set value" sid="482552277168680" type="System">
-                                    <param id="0" name="Variable">etatBoutonSuiv</param>
-                                    <param id="1" name="Value">INACTIF</param>
-                                </action>
                             </actions>
                         </event-block>
                         <comment>MARQUEUR 0 = Page avec bouton START</comment>
@@ -582,22 +647,17 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-45" name="Reset persisted objects" sid="857123076404899" type="System" />
                                 <action id="0" name="Call function" sid="404083228714165" type="Function">
                                     <param id="0" name="Name">&quot;initMarqueur&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="0" name="Call function" sid="357625286612849" type="Function">
-                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="869305045007278" type="System">
-                                    <param id="0" name="Layer">&quot;00_START&quot;</param>
-                                    <param id="1" name="Visibility">1</param>
-                                </action>
                                 <action id="0" name="Call function" sid="778793063480899" type="Function">
                                     <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
                                     <param id="1" name="Parameter {n}">INACTIF</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="891955293395638" type="System">
+                                    <param id="0" name="Group name">&quot;VIDEO - Stop hors écran&quot;</param>
+                                    <param id="1" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -819,6 +879,64 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-9" name="Set value" sid="700853960064166" type="System">
+                                                    <param id="0" name="Variable">Layer_OP</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="996254307133824" title="Marqueur9">
+                    <sub-events>
+                        <event-block sid="986788763066450">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="621560781334521" type="System" />
+                                <condition id="-14" name="Compare variable" sid="493476210703501" type="System">
+                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                                <condition id="-17" name="Compare opacity" sid="585409234681295" type="System">
+                                    <param id="0" name="Layer">&quot;05_D04&quot;</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Opacity">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="699714258297588" type="System">
+                                    <param id="0" name="Variable">Layer_OP</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="747075163698937" type="System">
+                                    <param id="0" name="Layer">&quot;05_D04&quot;</param>
+                                    <param id="1" name="Opacity">Layer_OP</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="560091937420183">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="410751070187949" type="System">
+                                            <param id="0" name="Variable">Layer_OP</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-42" name="Signal" sid="530767275475556" type="System">
+                                            <param id="0" name="Tag">&quot;marqueur9 suite&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="973189251720470">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="490610481226355" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="560154346515172" type="System">
                                                     <param id="0" name="Variable">Layer_OP</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>

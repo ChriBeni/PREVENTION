@@ -42,6 +42,10 @@
                             <param id="0" name="Pin to">D02_Fond</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="400783196091261" type="GR03_D04_b_txt">
+                            <param id="0" name="Pin to">GR03_D04_Bulle_bleue</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
