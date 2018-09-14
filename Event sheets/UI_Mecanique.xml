@@ -447,6 +447,9 @@
                                     <param id="0" name="X">960</param>
                                     <param id="1" name="Y">467</param>
                                 </action>
+                                <action id="0" name="Set text" sid="899472718235670" type="UI_TXT_Titre_Granule">
+                                    <param id="0" name="Text">Function.Param(0)</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
