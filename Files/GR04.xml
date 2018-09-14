@@ -7,15 +7,15 @@
 	</media>	<media  id="D00_b" url="GR04_D00_b" speaker="">
 		<soutitre>
 					</soutitre>
-	</media>	<media  id="D01_a" url="GR04_D01_a" speaker="Dial">
-		<soutitre>
-			Il n’avait pas vu le piéton ! Comme quoi il faut vraiment adopter une conduite attentive pour anticiper les arrêts !		</soutitre>
-	</media>	<media  id="D01_b" url="GR04_D01_b" speaker="Dial">
-		<soutitre>
-			Ok, mais il ne faut pas dramatiser ! Il n’y a pas eu d’accident !		</soutitre>
-	</media>	<media  id="D01_c" url="GR04_D01_c" speaker="Dial">
-		<soutitre>
-			J’ai lu quelque part qu’il y a les arrêts que tu dois impérativement respecter, et d’autres où tu peux passer mais tu dois décider quand même si tu ralentis ou pas.		</soutitre>
+	</media>
+		<media  id="D01_a" url="GR04_D01_a" speaker="Off">
+			<soutitre>Il n’avait pas vu le piéton ! Comme quoi il faut vraiment adopter une conduite attentive pour anticiper les arrêts !</soutitre>
+	</media>	
+	<media  id="D01_b" url="GR04_D01_b" speaker="Dial">
+		<soutitre>Ok, mais il ne faut pas dramatiser ! Il n’y a pas eu d’accident !</soutitre>
+	</media>	
+	<media  id="D01_c" url="GR04_D01_c" speaker="Off">
+		<soutitre>J’ai lu quelque part qu’il y a les arrêts que tu dois impérativement respecter, et d’autres où tu peux passer mais tu dois décider quand même si tu ralentis ou pas.</soutitre>
 	</media>	<media  id="D02_a" url="GR04_D02_a" speaker="Dial">
 		<soutitre>
 			Les passages piétons sont facultatifs j’espère ? Honnêtement, s’il n’y a personne, je n’ai pas de raison de ralentir et de m’arrêter.<br/>On fait tous ça !		</soutitre>

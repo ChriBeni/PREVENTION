@@ -3,190 +3,196 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI_Mecanique</name>
     <events>
-        <event-group description="" sid="414963927129591" title="Barre de progression déplacement">
+        <event-group description="" sid="760408828082165" title="_OLD">
             <sub-events>
-                <event-block sid="463864090297531">
-                    <conditions>
-                        <condition id="5" name="Is tag playing" sid="942826101450441" type="Audio">
-                            <param id="0" name="Tag">xmlNomMP3</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="487694366642364" type="System">
-                            <param id="0" name="Variable">Lecture</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="166215498842573" type="System">
-                            <param id="0" name="Seconds">0.02</param>
-                        </action>
-                    </actions>
+                <event-group description="" sid="178029998945584" title="Boutons">
                     <sub-events>
-                        <event-block sid="479585955511250">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="224448049105995" type="Barre_progression_top">
-                                    <param id="0" name="Comparison">1</param>
-                                    <param id="1" name="X co-ordinate">Cible</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-1" name="Set X" sid="590100604692283" type="Barre_progression_top">
-                                    <param id="0" name="X">round((830+(numeroMarqueur*Step))+(Step/Audio.Duration(xmlNomMP3)*Audio.PlaybackTime(xmlNomMP3)))</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="862405602109517">
-                    <conditions>
-                        <condition id="0" name="Is playing" sid="405983815477164" type="Video" />
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="489189097880128" type="System">
-                            <param id="0" name="Seconds">0.02</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="971376670812941">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="945725434728813" type="Barre_progression_top">
-                                    <param id="0" name="Comparison">1</param>
-                                    <param id="1" name="X co-ordinate">Cible</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-1" name="Set X" sid="359043897300520" type="Barre_progression_top">
-                                    <param id="0" name="X">round((830+(numeroMarqueur*Step))+(Step/Video.Duration*Video.PlaybackTime))</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="682691322503969" title="Barre de progression cible">
-            <sub-events>
-                <comment>On détermine la cible à atteindre (sa position en x) pour le bouton de progression - 830 est sa position de départ, la cible est sa position actuelle +1 - Le Step est la longueur de la barre de progression divisée par le nombre total de sons dans le xml</comment>
-                <event-block sid="985839992015518">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="562566988250951" type="Touch">
-                            <param id="0" name="Object">Btn_Lecture</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="181531498142113" type="System">
-                            <param id="0" name="Variable">Cible</param>
-                            <param id="1" name="Value">round(830+((numeroMarqueur+1)*Step))</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="178029998945584" title="Boutons">
-            <sub-events>
-                <event-group description="" sid="133628918510779" title="Bouton de réglage du son">
-                    <sub-events>
-                        <event-group description="" sid="246445390139880" title="Volume">
+                        <event-group description="" sid="133628918510779" title="Bouton de réglage du son">
                             <sub-events>
-                                <event-block sid="771885024388315">
-                                    <conditions>
-                                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="632576268966603" type="Curseur_son" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="283408230216426" type="System">
-                                            <param id="0" name="Variable">Volume_son</param>
-                                            <param id="1" name="Value">0-round((172/Curseur_son.X)*10)</param>
-                                        </action>
-                                        <action id="10" name="Set master volume" sid="888917407356835" type="Audio">
-                                            <param id="0" name="dB">Volume_son</param>
-                                        </action>
-                                        <action id="4" name="Set volume" sid="332799996632843" type="Video">
-                                            <param id="0" name="Volume">Volume_son</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="401308134070459">
-                                    <conditions>
-                                        <condition behavior="DragDrop" id="2" name="On drop" sid="480744016439649" type="Curseur_son" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="10" name="Set master volume" sid="577135463867434" type="Audio">
-                                            <param id="0" name="dB">Volume_son</param>
-                                        </action>
-                                        <action id="4" name="Set volume" sid="983370235526020" type="Video">
-                                            <param id="0" name="Volume">Volume_son</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="731273225336363" title="Comportement du bouton de réglage du son">
-                            <sub-events>
-                                <event-group description="" sid="909119025639819" title="Limites">
+                                <event-group description="" sid="246445390139880" title="Volume">
                                     <sub-events>
-                                        <event-block sid="841568078697109">
+                                        <event-block sid="771885024388315">
                                             <conditions>
-                                                <condition id="-1" name="Compare X" sid="794827956751485" type="Curseur_son">
-                                                    <param id="0" name="Comparison">3</param>
-                                                    <param id="1" name="X co-ordinate">88</param>
-                                                </condition>
+                                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="632576268966603" type="Curseur_son" />
                                             </conditions>
                                             <actions>
-                                                <action id="-1" name="Set X" sid="617031418848301" type="Curseur_son">
-                                                    <param id="0" name="X">88</param>
+                                                <action id="-9" name="Set value" sid="283408230216426" type="System">
+                                                    <param id="0" name="Variable">Volume_son</param>
+                                                    <param id="1" name="Value">0-round((172/Curseur_son.X)*10)</param>
                                                 </action>
-                                                <action id="10" name="Set master volume" sid="943357131069133" type="Audio">
-                                                    <param id="0" name="dB">-48</param>
+                                                <action id="10" name="Set master volume" sid="888917407356835" type="Audio">
+                                                    <param id="0" name="dB">Volume_son</param>
                                                 </action>
-                                                <action id="4" name="Set volume" sid="680390266061312" type="Media">
-                                                    <param id="0" name="Volume">-48</param>
-                                                </action>
-                                                <action id="-15" name="Set visible" sid="209508889327916" type="Son_off">
-                                                    <param id="0" name="Visibility">1</param>
+                                                <action id="4" name="Set volume" sid="332799996632843" type="Video">
+                                                    <param id="0" name="Volume">Volume_son</param>
                                                 </action>
                                             </actions>
+                                        </event-block>
+                                        <event-block sid="401308134070459">
+                                            <conditions>
+                                                <condition behavior="DragDrop" id="2" name="On drop" sid="480744016439649" type="Curseur_son" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="10" name="Set master volume" sid="577135463867434" type="Audio">
+                                                    <param id="0" name="dB">Volume_son</param>
+                                                </action>
+                                                <action id="4" name="Set volume" sid="983370235526020" type="Video">
+                                                    <param id="0" name="Volume">Volume_son</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                                <event-group description="" sid="731273225336363" title="Comportement du bouton de réglage du son">
+                                    <sub-events>
+                                        <event-group description="" sid="909119025639819" title="Limites">
                                             <sub-events>
-                                                <event-block sid="352917958935616">
+                                                <event-block sid="841568078697109">
                                                     <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="202003502844192" type="System">
-                                                            <param id="0" name="Variable">SST</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">0</param>
+                                                        <condition id="-1" name="Compare X" sid="794827956751485" type="Curseur_son">
+                                                            <param id="0" name="Comparison">3</param>
+                                                            <param id="1" name="X co-ordinate">88</param>
                                                         </condition>
-                                                        <condition id="-4" name="Trigger once while true" sid="226443461511732" type="System" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-10" name="Add to" sid="597156077599748" type="System">
-                                                            <param id="0" name="Variable">SST</param>
-                                                            <param id="1" name="Value">1</param>
+                                                        <action id="-1" name="Set X" sid="617031418848301" type="Curseur_son">
+                                                            <param id="0" name="X">88</param>
+                                                        </action>
+                                                        <action id="10" name="Set master volume" sid="943357131069133" type="Audio">
+                                                            <param id="0" name="dB">-48</param>
+                                                        </action>
+                                                        <action id="4" name="Set volume" sid="680390266061312" type="Media">
+                                                            <param id="0" name="Volume">-48</param>
+                                                        </action>
+                                                        <action id="-15" name="Set visible" sid="209508889327916" type="Son_off">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="352917958935616">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="202003502844192" type="System">
+                                                                    <param id="0" name="Variable">SST</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                                <condition id="-4" name="Trigger once while true" sid="226443461511732" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Add to" sid="597156077599748" type="System">
+                                                                    <param id="0" name="Variable">SST</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="944089901533888">
+                                                    <conditions>
+                                                        <condition id="-1" name="Compare X" sid="273237331818018" type="Curseur_son">
+                                                            <param id="0" name="Comparison">4</param>
+                                                            <param id="1" name="X co-ordinate">88</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="343570548921667" type="Son_off">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="391380298874499">
+                                                    <conditions>
+                                                        <condition id="-1" name="Compare X" sid="604337476107212" type="Curseur_son">
+                                                            <param id="0" name="Comparison">5</param>
+                                                            <param id="1" name="X co-ordinate">260</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-1" name="Set X" sid="549626441471045" type="Curseur_son">
+                                                            <param id="0" name="X">260</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
-                                        </event-block>
-                                        <event-block sid="944089901533888">
+                                        </event-group>
+                                    </sub-events>
+                                </event-group>
+                                <event-group description="" sid="758776623184169" title="Gestion de la variable associée au bouton de réglage">
+                                    <sub-events>
+                                        <event-block sid="859850695723907">
                                             <conditions>
-                                                <condition id="-1" name="Compare X" sid="273237331818018" type="Curseur_son">
-                                                    <param id="0" name="Comparison">4</param>
-                                                    <param id="1" name="X co-ordinate">88</param>
+                                                <condition id="3" name="On touched object" sid="250327910238798" type="Touch">
+                                                    <param id="0" name="Object">Btn_Son</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-15" name="Set visible" sid="343570548921667" type="Son_off">
-                                                    <param id="0" name="Visibility">0</param>
+                                                <action id="-9" name="Set value" sid="768935436383973" type="System">
+                                                    <param id="0" name="Variable">Reglage_son</param>
+                                                    <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="391380298874499">
+                                        <event-block sid="989195522335718">
                                             <conditions>
-                                                <condition id="-1" name="Compare X" sid="604337476107212" type="Curseur_son">
-                                                    <param id="0" name="Comparison">5</param>
-                                                    <param id="1" name="X co-ordinate">260</param>
+                                                <condition id="-14" name="Compare variable" sid="806103024494018" type="System">
+                                                    <param id="0" name="Variable">Reglage_son</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="4" inverted="1" name="Is touching object" sid="573689453080747" type="Touch">
+                                                    <param id="0" name="Object">UI_Reglage_son_general</param>
+                                                </condition>
+                                                <condition id="7" inverted="1" name="Cursor is over object" sid="552536654983882" type="Mouse">
+                                                    <param id="0" name="Object">UI_Reglage_son_general</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-1" name="Set X" sid="549626441471045" type="Curseur_son">
-                                                    <param id="0" name="X">260</param>
+                                                <action id="-16" name="Wait" sid="186487677409792" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="975235069977258" type="System">
+                                                    <param id="0" name="Variable">Reglage_son</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                                <event-group description="" sid="914449371183697" title="Visibilité du slider">
+                                    <sub-events>
+                                        <event-block sid="685219693852633">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="959383329554380" type="System">
+                                                    <param id="0" name="Variable">Reglage_son</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="582765218794578" type="UI_Reglage_son_curseur">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="742854138701653" type="Curseur_son">
+                                                    <param id="0" name="Instance variable">handActif</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="283629534290662">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="767068939740461" type="System">
+                                                    <param id="0" name="Variable">Reglage_son</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="443446286963768" type="UI_Reglage_son_curseur">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="142463364145267" type="Curseur_son">
+                                                    <param id="0" name="Instance variable">handActif</param>
+                                                    <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -194,405 +200,184 @@
                                 </event-group>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="758776623184169" title="Gestion de la variable associée au bouton de réglage">
+                        <event-group description="" sid="854295312078682" title="Bouton play/pause">
                             <sub-events>
-                                <event-block sid="859850695723907">
+                                <comment>Gestion de la lecture et de la pause - Les propriétés de la pause sont activées pour le composant audio afin qu&apos;il soit pris en compte quand le time scale est à 0</comment>
+                                <event-block sid="288716451202844">
                                     <conditions>
-                                        <condition id="3" name="On touched object" sid="250327910238798" type="Touch">
-                                            <param id="0" name="Object">Btn_Son</param>
+                                        <condition id="3" name="On touched object" sid="274383296845679" type="Touch">
+                                            <param id="0" name="Object">Btn_Lecture</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="866826608446426" type="System">
+                                            <param id="0" name="Variable">Lecture</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">NON</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="566090640271077" type="System">
+                                            <param id="0" name="Variable">etatBoutonPlay</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ACTIF</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="768935436383973" type="System">
-                                            <param id="0" name="Variable">Reglage_son</param>
+                                        <action id="-16" name="Wait" sid="494388565897373" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="224407284254158" type="System">
+                                            <param id="0" name="Variable">Lecture</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="989195522335718">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="806103024494018" type="System">
-                                            <param id="0" name="Variable">Reglage_son</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                        <condition id="4" inverted="1" name="Is touching object" sid="573689453080747" type="Touch">
-                                            <param id="0" name="Object">UI_Reglage_son_general</param>
-                                        </condition>
-                                        <condition id="7" inverted="1" name="Cursor is over object" sid="552536654983882" type="Mouse">
-                                            <param id="0" name="Object">UI_Reglage_son_general</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-16" name="Wait" sid="186487677409792" type="System">
-                                            <param id="0" name="Seconds">1.0</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="975235069977258" type="System">
-                                            <param id="0" name="Variable">Reglage_son</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="914449371183697" title="Visibilité du slider">
-                            <sub-events>
-                                <event-block sid="685219693852633">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="959383329554380" type="System">
-                                            <param id="0" name="Variable">Reglage_son</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="582765218794578" type="UI_Reglage_son_curseur">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="742854138701653" type="Curseur_son">
-                                            <param id="0" name="Instance variable">handActif</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="283629534290662">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="767068939740461" type="System">
-                                            <param id="0" name="Variable">Reglage_son</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="443446286963768" type="UI_Reglage_son_curseur">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="142463364145267" type="Curseur_son">
-                                            <param id="0" name="Instance variable">handActif</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="871036822794519" title="Bouton sous-titres">
-                    <sub-events>
-                        <event-group description="" sid="571192993514636" title="Gestion de la variable associée au bouton des sous-titres">
-                            <sub-events>
-                                <comment>Tourniquet : on incrément toujours la variable qui est remise à 0 quand elle est strictement supérieure à 1</comment>
-                                <event-block sid="720135510731902">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="536435246446156" type="System">
-                                            <param id="0" name="Variable">SST</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="340921094561627" type="System">
-                                            <param id="0" name="Variable">SST</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="182751608257610">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="503552495848711" type="System">
-                                            <param id="0" name="Variable">SST</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="5" name="Set frame" sid="861119373024954" type="BTN_SStitre">
-                                            <param id="0" name="Frame number">SST</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="139260393527539" title="Comportement du bouton des sous-titres">
-                            <sub-events>
-                                <event-block sid="364853329410799">
-                                    <conditions>
-                                        <condition id="3" name="On touched object" sid="325688966242307" type="Touch">
-                                            <param id="0" name="Object">BTN_SStitre</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Add to" sid="142584011348908" type="System">
-                                            <param id="0" name="Variable">SST</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="455097019110070" title="Visibilité des sous-titres">
-                            <sub-events>
-                                <event-block sid="460281030970459">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="805652441114314" type="System">
-                                            <param id="0" name="Variable">SST</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="246633890719279" type="Soustitre">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="655344405357607">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="760882302467095" type="System">
-                                            <param id="0" name="Variable">SST</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="675187940809638" type="Soustitre">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="854295312078682" title="Bouton play/pause">
-                    <sub-events>
-                        <comment>Gestion de la lecture et de la pause - Les propriétés de la pause sont activées pour le composant audio afin qu&apos;il soit pris en compte quand le time scale est à 0</comment>
-                        <event-block sid="288716451202844">
-                            <conditions>
-                                <condition id="3" name="On touched object" sid="274383296845679" type="Touch">
-                                    <param id="0" name="Object">Btn_Lecture</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="866826608446426" type="System">
-                                    <param id="0" name="Variable">Lecture</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">NON</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="566090640271077" type="System">
-                                    <param id="0" name="Variable">etatBoutonPlay</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">ACTIF</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="494388565897373" type="System">
-                                    <param id="0" name="Seconds">0.05</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="224407284254158" type="System">
-                                    <param id="0" name="Variable">Lecture</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="410623874854565" type="Btn_Lecture">
-                                    <param id="0" name="Animation">&quot;PlayToPause&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action behavior="Sine" id="0" name="Set active" sid="314719949647059" type="Btn_Lecture">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="264877341260244" type="Btn_Lecture">
-                                    <param id="0" name="Opacity">100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="983856715079929">
-                            <conditions>
-                                <condition id="3" name="On touched object" sid="963591137474086" type="Touch">
-                                    <param id="0" name="Object">Btn_Lecture</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="517143520269183" type="System">
-                                    <param id="0" name="Variable">Lecture</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">OUI</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="299509192665474" type="System">
-                                    <param id="0" name="Variable">etatBoutonPlay</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">ACTIF</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="986355538425020" type="System">
-                                    <param id="0" name="Seconds">0.05</param>
-                                </action>
-                                <action behavior="Sine" id="0" name="Set active" sid="864160676716636" type="Btn_Lecture">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="528302727886095" type="Btn_Lecture">
-                                    <param id="0" name="Opacity">100</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="889928534415219" type="Btn_Lecture">
-                                    <param id="0" name="Animation">&quot;PauseToPlay&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="718855955300253" type="System">
-                                    <param id="0" name="Seconds">0.55</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="120812121178645" type="System">
-                                    <param id="0" name="Variable">Lecture</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="728171009551521">
-                                    <conditions>
-                                        <condition id="3" name="Compare frame" sid="833203613565088" type="Btn_Lecture">
-                                            <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Number">23</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="256356554404296" type="Btn_Lecture">
-                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                        <action id="4" name="Set animation" sid="410623874854565" type="Btn_Lecture">
+                                            <param id="0" name="Animation">&quot;PlayToPause&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
-                                        <action id="5" name="Set frame" sid="321292812050104" type="Btn_Lecture">
-                                            <param id="0" name="Frame number">0</param>
+                                        <action behavior="Sine" id="0" name="Set active" sid="314719949647059" type="Btn_Lecture">
+                                            <param id="0" name="State">0</param>
                                         </action>
-                                        <action disabled="1" id="-13" name="Set time scale" sid="944053499207993" type="System">
-                                            <param id="0" name="Time scale">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="412168771846524">
-                            <conditions>
-                                <condition id="3" name="On touched object" sid="496237154589056" type="Touch">
-                                    <param id="0" name="Object">Btn_Lecture</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="474347949073396" type="Btn_Lecture">
-                                    <param id="0" name="Instance variable">handActif</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="250127397483401" type="System">
-                                    <param id="0" name="Variable">Lecture</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action disabled="1" id="-13" name="Set time scale" sid="219138176886209" type="System">
-                                    <param id="0" name="Time scale">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="112106124581578" type="System">
-                                    <param id="0" name="Variable">Lecture</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="308680920191746" type="Btn_Lecture">
-                                    <param id="0" name="Animation">&quot;PlayToPause&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>Cas du bouton inactif</comment>
-                        <event-block sid="423224857636454">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="686245142438608" type="System">
-                                    <param id="0" name="Variable">etatBoutonPlay</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">INACTIF</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Sine" id="0" name="Set active" sid="644795175319579" type="Btn_Lecture">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="447060090992408" type="Btn_Lecture">
-                                    <param id="0" name="Opacity">30</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>Cas du bouton qui redevient actif</comment>
-                        <event-block any="1" sid="171575653455638">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="269714669520701" type="Btn_Lecture">
-                                    <param id="0" name="Instance variable">handActif</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="430849938057557" type="System">
-                                    <param id="0" name="Variable">etatBoutonPlay</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">ACTIF</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="186195091668631">
-                                    <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="947857128368926" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="168629677445820" type="Btn_Lecture">
-                                            <param id="0" name="Animation">&quot;PauseToPlay&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action behavior="Sine" id="0" name="Set active" sid="192401758173689" type="Btn_Lecture">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="401238188146067" type="Btn_Lecture">
+                                        <action id="-16" name="Set opacity" sid="264877341260244" type="Btn_Lecture">
                                             <param id="0" name="Opacity">100</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-group description="" sid="386820594641963" title="Clignotement">
-                            <sub-events>
-                                <event-block sid="156278885291525">
+                                <event-block sid="983856715079929">
                                     <conditions>
-                                        <condition id="5" inverted="1" name="Is tag playing" sid="969061449552473" type="Audio">
-                                            <param id="0" name="Tag">xmlNomMP3</param>
+                                        <condition id="3" name="On touched object" sid="963591137474086" type="Touch">
+                                            <param id="0" name="Object">Btn_Lecture</param>
                                         </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="974719612467161" type="System">
-                                            <param id="0" name="Variable">Lecture</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="0" name="Set text" sid="714465679733941" type="Soustitre">
-                                            <param id="0" name="Text">&quot;&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="166653322850662">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="877573202368729" type="System">
+                                        <condition id="-14" name="Compare variable" sid="517143520269183" type="System">
                                             <param id="0" name="Variable">Lecture</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
+                                            <param id="2" name="Value">OUI</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="299509192665474" type="System">
+                                            <param id="0" name="Variable">etatBoutonPlay</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ACTIF</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action disabled="1" id="-13" name="Set time scale" sid="263598466642140" type="System">
-                                            <param id="0" name="Time scale">1</param>
+                                        <action id="-16" name="Wait" sid="986355538425020" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="864160676716636" type="Btn_Lecture">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="528302727886095" type="Btn_Lecture">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="889928534415219" type="Btn_Lecture">
+                                            <param id="0" name="Animation">&quot;PauseToPlay&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="718855955300253" type="System">
+                                            <param id="0" name="Seconds">0.55</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="120812121178645" type="System">
+                                            <param id="0" name="Variable">Lecture</param>
+                                            <param id="1" name="Value">2</param>
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="313169417233614">
+                                        <event-block sid="728171009551521">
                                             <conditions>
-                                                <condition id="-4" name="Trigger once while true" sid="284626585687679" type="System" />
+                                                <condition id="3" name="Compare frame" sid="833203613565088" type="Btn_Lecture">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">23</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="4" name="Set animation" sid="389507197953553" type="Btn_Lecture">
+                                                <action id="4" name="Set animation" sid="256356554404296" type="Btn_Lecture">
+                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="321292812050104" type="Btn_Lecture">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                                <action disabled="1" id="-13" name="Set time scale" sid="944053499207993" type="System">
+                                                    <param id="0" name="Time scale">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="412168771846524">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="496237154589056" type="Touch">
+                                            <param id="0" name="Object">Btn_Lecture</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="474347949073396" type="Btn_Lecture">
+                                            <param id="0" name="Instance variable">handActif</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="250127397483401" type="System">
+                                            <param id="0" name="Variable">Lecture</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="-13" name="Set time scale" sid="219138176886209" type="System">
+                                            <param id="0" name="Time scale">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="112106124581578" type="System">
+                                            <param id="0" name="Variable">Lecture</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="308680920191746" type="Btn_Lecture">
+                                            <param id="0" name="Animation">&quot;PlayToPause&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Cas du bouton inactif</comment>
+                                <event-block sid="423224857636454">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="686245142438608" type="System">
+                                            <param id="0" name="Variable">etatBoutonPlay</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">INACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="644795175319579" type="Btn_Lecture">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="447060090992408" type="Btn_Lecture">
+                                            <param id="0" name="Opacity">30</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Cas du bouton qui redevient actif</comment>
+                                <event-block any="1" sid="171575653455638">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="269714669520701" type="Btn_Lecture">
+                                            <param id="0" name="Instance variable">handActif</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="430849938057557" type="System">
+                                            <param id="0" name="Variable">etatBoutonPlay</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="186195091668631">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="947857128368926" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="168629677445820" type="Btn_Lecture">
                                                     <param id="0" name="Animation">&quot;PauseToPlay&quot;</param>
                                                     <param id="1" name="From">1</param>
                                                 </action>
-                                                <action id="-16" name="Wait" sid="615745966467297" type="System">
-                                                    <param id="0" name="Seconds">0.05</param>
-                                                </action>
-                                                <action behavior="Sine" id="0" name="Set active" sid="357647236594206" type="Btn_Lecture">
+                                                <action behavior="Sine" id="0" name="Set active" sid="192401758173689" type="Btn_Lecture">
                                                     <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="-16" name="Set opacity" sid="401238188146067" type="Btn_Lecture">
+                                                    <param id="0" name="Opacity">100</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -604,9 +389,9 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="175469644476899" title="UI - INIT">
+        <event-group description="" sid="175469644476899" title="UI - INTERFACE">
             <sub-events>
-                <event-group description="" sid="567236311982573" title="UI - INIT - INTERFACE">
+                <event-group description="" sid="567236311982573" title="UI - INTERFACE - Init">
                     <sub-events>
                         <event-block sid="974409860546311">
                             <conditions>
@@ -615,20 +400,20 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="292528243616651" type="Barre_progression_masque">
-                                    <param id="0" name="Pin to">Barre_progression_top</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="922224139267585" type="UI_ICON_Pause">
                                     <param id="0" name="Pin to">UI_FOND_Pause</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
-                                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="312025244025294" type="UI_BARRE_popup_txt">
+                                <action behavior="Pin" id="0" name="Pin to object" sid="656843389368977" type="UI_BARRE_popup_txt">
                                     <param id="0" name="Pin to">UI_BARRE_Popup_img</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="656843389368977" type="UI_BARRE_popup_txt2">
-                                    <param id="0" name="Pin to">UI_BARRE_Popup_img</param>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="525413618963318" type="UI_BARRE_Ruban_txt">
+                                    <param id="0" name="Pin to">UI_BARRE_Ruban_img</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="796052843960624" type="UI_SUBTITLE_txt">
+                                    <param id="0" name="Pin to">UI_SUBTITLE_img</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
                                 <action id="10" name="Request fullscreen" sid="468361807588941" type="Browser">
@@ -637,9 +422,6 @@
                                 <action id="-9" name="Set value" sid="853942139132214" type="System">
                                     <param id="0" name="Variable">numeroMarqueur</param>
                                     <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-1" name="Set X" sid="964829320314840" type="Barre_progression_top">
-                                    <param id="0" name="X">830+(numeroMarqueur*Step)</param>
                                 </action>
                                 <action disabled="1" id="4" name="Add object" sid="640470138348603" type="MM_Preloader">
                                     <param id="0" name="Object">Media</param>
@@ -652,12 +434,6 @@
                                 <action id="0" name="Call function" sid="954684266378883" type="Function">
                                     <param id="0" name="Name">&quot;Init_bouton_son&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="0" name="Set text" sid="989883978873450" type="UI_TXT_Titre">
-                                    <param id="0" name="Text">Function.Param(0)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="914475451848160" type="UI_BARRE_popup_txt2">
-                                    <param id="0" name="Text">Function.Param(0)</param>
                                 </action>
                                 <action id="0" name="Call function" sid="490337727000284" type="Function">
                                     <param id="0" name="Name">&quot;initPinMouchard&quot;</param>
@@ -673,18 +449,10 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="384199164081450">
-                            <conditions>
-                                <condition id="0" name="On function" sid="117551612817288" type="Function">
-                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Append text" sid="582101072078237" type="UI_TXT_Titre">
-                                    <param id="0" name="Text">newline&amp;Function.Param(0)</param>
-                                </action>
-                            </actions>
-                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="549389503197539" title="UI - INTERFACE - Effet Pause">
+                    <sub-events>
                         <event-block sid="826616964531670">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="319021303097084" type="System">
@@ -715,150 +483,208 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="288024723145682" title="UI - INIT - XML">
+                <event-group description="" sid="821482652298746" title="UI - INTERFACE - Second Titre">
                     <sub-events>
-                        <event-group description="" sid="641371026981657" title="UI - INIT - XML Chargement">
+                        <event-block sid="384199164081450">
+                            <conditions>
+                                <condition id="0" name="On function" sid="117551612817288" type="Function">
+                                    <param id="0" name="Name">&quot;afficheSecondTitre&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="633424495014643" type="UI_BARRE_Ruban_txt">
+                                    <param id="0" name="Text">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="271544449526787" type="System">
+                                    <param id="0" name="Variable">etatSecondTitre</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <comment>Lorsque le xml est chargé on passe les données dans le plugin xml</comment>
-                                <event-block sid="942601895385029">
+                                <event-block sid="334139293316545">
                                     <conditions>
-                                        <condition id="0" name="On completed" sid="176788836130598" type="AJAX">
-                                            <param id="0" name="Tag">numeroGranule</param>
+                                        <condition id="-14" name="Compare variable" sid="942545430366346" type="System">
+                                            <param id="0" name="Variable">etatSecondTitre</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Load" sid="120773348772721" type="XML">
-                                            <param id="0" name="XML">AJAX.LastData</param>
+                                        <action id="-15" name="Set visible" sid="199741385340341" type="UI_BARRE_Ruban_img">
+                                            <param id="0" name="Visibility">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <comment>On appelle la fonction qui va récupérer les données du xml dans un array et on active le groupe qui convient</comment>
-                                <event-block sid="418185081919871">
+                                <event-block sid="257701082664302">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="740514335959513" type="System">
+                                            <param id="0" name="Variable">etatSecondTitre</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="518571611108453" type="System">
+                                            <param id="0" name="Variable">etatSecondTitre</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="662109099370219" type="UI_BARRE_Ruban_img">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="275023525677761" type="UI_BARRE_Ruban_img">
+                                            <param id="0" name="Frame number">etatSecondTitre-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="288024723145682" title="UI - XML">
+            <sub-events>
+                <event-group description="" sid="641371026981657" title="UI - XML - Chargement">
+                    <sub-events>
+                        <comment>Lorsque le xml est chargé on passe les données dans le plugin xml</comment>
+                        <event-block sid="942601895385029">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="176788836130598" type="AJAX">
+                                    <param id="0" name="Tag">numeroGranule</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Load" sid="120773348772721" type="XML">
+                                    <param id="0" name="XML">AJAX.LastData</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>On appelle la fonction qui va récupérer les données du xml dans un array et on active le groupe qui convient</comment>
+                        <event-block sid="418185081919871">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="489361597322175" type="Function">
+                                    <param id="0" name="Name">&quot;Parse_xml&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="357756585762034" type="System">
+                                    <param id="0" name="Group name">numeroGranule&amp;&quot; - TIMELINE&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="652056973681699" title="UI - XML - Parse in Array">
+                    <sub-events>
+                        <event-block sid="614314865949870">
+                            <conditions>
+                                <condition id="0" name="On function" sid="300621988179438" type="Function">
+                                    <param id="0" name="Name">&quot;Parse_xml&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>On réinitialise l&apos;array</comment>
+                                <event-block sid="426666291236574">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="592926144753810" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Clear" sid="615655850132881" type="ARRAY_reperesSon" />
+                                    </actions>
+                                </event-block>
+                                <comment>On dimensionne l&apos;array en fonction du nombre de noeuds du xml (balise &quot;media&quot;)</comment>
+                                <event-block sid="380366830146135">
                                     <conditions />
                                     <actions>
-                                        <action id="0" name="Call function" sid="489361597322175" type="Function">
-                                            <param id="0" name="Name">&quot;Parse_xml&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                        <action id="-9" name="Set value" sid="709379100411803" type="System">
+                                            <param id="0" name="Variable">xmlNombreNode</param>
+                                            <param id="1" name="Value">XML.NodeCount(&quot;media&quot;)</param>
                                         </action>
-                                        <action id="-12" name="Set group active" sid="357756585762034" type="System">
-                                            <param id="0" name="Group name">numeroGranule&amp;&quot; - TIMELINE&quot;</param>
-                                            <param id="1" name="State">1</param>
+                                        <action id="1" name="Set size" sid="267790106166369" type="ARRAY_reperesSon">
+                                            <param id="0" name="Width">xmlNombreNode</param>
+                                            <param id="1" name="Height">4</param>
+                                            <param id="2" name="Depth">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>On alimente l&apos;array avec les valeurs récupérées dans le xml, dans une boucle</comment>
+                                <event-block sid="275187497189806">
+                                    <conditions>
+                                        <condition id="0" name="For each node" sid="787862541304088" type="XML">
+                                            <param id="0" name="XPath">&quot;media&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="853158756806049" type="System">
+                                            <param id="0" name="Variable">xmlCompteurNode</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">xmlNombreNode</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="163744466539961" type="System">
+                                            <param id="0" name="Variable">xmlRepereSon</param>
+                                            <param id="1" name="Value">XML.StringValue(&quot;@id&quot;)</param>
+                                        </action>
+                                        <action disabled="1" id="-9" name="Set value" sid="119927706501527" type="System">
+                                            <param id="0" name="Variable">xmlNomMP3</param>
+                                            <param id="1" name="Value">numeroGranule&amp;&quot;_&quot;&amp;XML.StringValue(&quot;@id&quot;)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="597017690675150" type="System">
+                                            <param id="0" name="Variable">xmlNomMP3</param>
+                                            <param id="1" name="Value">XML.StringValue(&quot;@url&quot;)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="128535410016796" type="System">
+                                            <param id="0" name="Variable">xmlSubtitleType</param>
+                                            <param id="1" name="Value">XML.StringValue(&quot;@speaker&quot;)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="316473416655596" type="System">
+                                            <param id="0" name="Variable">xmlSubtitleTxt</param>
+                                            <param id="1" name="Value">XML.StringValue(&quot;node()/text()&quot;)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="279182088960581" type="ARRAY_reperesSon">
+                                            <param id="0" name="X">xmlCompteurNode</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">xmlRepereSon</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="354283727150959" type="ARRAY_reperesSon">
+                                            <param id="0" name="X">xmlCompteurNode</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">xmlNomMP3</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="178479833510578" type="ARRAY_reperesSon">
+                                            <param id="0" name="X">xmlCompteurNode</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">xmlSubtitleType</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="795005420169392" type="ARRAY_reperesSon">
+                                            <param id="0" name="X">xmlCompteurNode</param>
+                                            <param id="1" name="Y">3</param>
+                                            <param id="2" name="Value">xmlSubtitleTxt</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="670870164943076" type="System">
+                                            <param id="0" name="Variable">xmlCompteurNode</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>On calcule la valeur de la variable pour le déplacement de la barre de progression</comment>
+                                <event-block sid="350785264309227">
+                                    <conditions />
+                                    <actions>
+                                        <action disabled="1" id="-9" name="Set value" sid="525512074842392" type="System">
+                                            <param id="0" name="Variable">Step</param>
+                                            <param id="1" name="Value">round(300/xmlNombreNode)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="321060389198414" type="Function">
+                                            <param id="0" name="Name">&quot;initBarreProgression&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-group>
-                        <event-group description="" sid="652056973681699" title="UI - INIT - XML Parse in Array">
-                            <sub-events>
-                                <event-block sid="614314865949870">
-                                    <conditions>
-                                        <condition id="0" name="On function" sid="300621988179438" type="Function">
-                                            <param id="0" name="Name">&quot;Parse_xml&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <comment>On réinitialise l&apos;array</comment>
-                                        <event-block sid="426666291236574">
-                                            <conditions>
-                                                <condition id="-4" name="Trigger once while true" sid="592926144753810" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Clear" sid="615655850132881" type="ARRAY_reperesSon" />
-                                            </actions>
-                                        </event-block>
-                                        <comment>On dimensionne l&apos;array en fonction du nombre de noeuds du xml (balise &quot;media&quot;)</comment>
-                                        <event-block sid="380366830146135">
-                                            <conditions />
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="709379100411803" type="System">
-                                                    <param id="0" name="Variable">xmlNombreNode</param>
-                                                    <param id="1" name="Value">XML.NodeCount(&quot;media&quot;)</param>
-                                                </action>
-                                                <action id="1" name="Set size" sid="267790106166369" type="ARRAY_reperesSon">
-                                                    <param id="0" name="Width">xmlNombreNode</param>
-                                                    <param id="1" name="Height">4</param>
-                                                    <param id="2" name="Depth">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <comment>On alimente l&apos;array avec les valeurs récupérées dans le xml, dans une boucle</comment>
-                                        <event-block sid="275187497189806">
-                                            <conditions>
-                                                <condition id="0" name="For each node" sid="787862541304088" type="XML">
-                                                    <param id="0" name="XPath">&quot;media&quot;</param>
-                                                </condition>
-                                                <condition id="-14" name="Compare variable" sid="853158756806049" type="System">
-                                                    <param id="0" name="Variable">xmlCompteurNode</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Value">xmlNombreNode</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="163744466539961" type="System">
-                                                    <param id="0" name="Variable">xmlRepereSon</param>
-                                                    <param id="1" name="Value">XML.StringValue(&quot;@id&quot;)</param>
-                                                </action>
-                                                <action disabled="1" id="-9" name="Set value" sid="119927706501527" type="System">
-                                                    <param id="0" name="Variable">xmlNomMP3</param>
-                                                    <param id="1" name="Value">numeroGranule&amp;&quot;_&quot;&amp;XML.StringValue(&quot;@id&quot;)</param>
-                                                </action>
-                                                <action id="-9" name="Set value" sid="597017690675150" type="System">
-                                                    <param id="0" name="Variable">xmlNomMP3</param>
-                                                    <param id="1" name="Value">XML.StringValue(&quot;@url&quot;)</param>
-                                                </action>
-                                                <action id="-9" name="Set value" sid="128535410016796" type="System">
-                                                    <param id="0" name="Variable">xmlSoustitreType</param>
-                                                    <param id="1" name="Value">XML.StringValue(&quot;@speaker&quot;)</param>
-                                                </action>
-                                                <action id="-9" name="Set value" sid="316473416655596" type="System">
-                                                    <param id="0" name="Variable">xmlSoustitreTxt</param>
-                                                    <param id="1" name="Value">XML.StringValue(&quot;node()/text()&quot;)</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="279182088960581" type="ARRAY_reperesSon">
-                                                    <param id="0" name="X">xmlCompteurNode</param>
-                                                    <param id="1" name="Y">0</param>
-                                                    <param id="2" name="Value">xmlRepereSon</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="354283727150959" type="ARRAY_reperesSon">
-                                                    <param id="0" name="X">xmlCompteurNode</param>
-                                                    <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">xmlNomMP3</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="178479833510578" type="ARRAY_reperesSon">
-                                                    <param id="0" name="X">xmlCompteurNode</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">xmlSoustitreType</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="795005420169392" type="ARRAY_reperesSon">
-                                                    <param id="0" name="X">xmlCompteurNode</param>
-                                                    <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">xmlSoustitreTxt</param>
-                                                </action>
-                                                <action id="-10" name="Add to" sid="670870164943076" type="System">
-                                                    <param id="0" name="Variable">xmlCompteurNode</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <comment>On calcule la valeur de la variable pour le déplacement de la barre de progression</comment>
-                                        <event-block sid="350785264309227">
-                                            <conditions />
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="525512074842392" type="System">
-                                                    <param id="0" name="Variable">Step</param>
-                                                    <param id="1" name="Value">round(300/xmlNombreNode)</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="321060389198414" type="Function">
-                                                    <param id="0" name="Name">&quot;initBarreProgression&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
+                        </event-block>
                     </sub-events>
                 </event-group>
             </sub-events>
@@ -966,9 +792,77 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-group description="" sid="170414474053171" title="UI - BOUTON START">
+                    <sub-events>
+                        <event-group description="" sid="524753604765678" title="UI - BOUTON START - Survol">
+                            <sub-events>
+                                <event-block sid="833633112586450">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="838645324665429" type="Mouse">
+                                            <param id="0" name="Object">COM_BTN_Commencer</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="420268239535237" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="190709677385413" type="COM_BTN_Commencer">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="780994406749386">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Cursor is over object" sid="754142700755129" type="Mouse">
+                                            <param id="0" name="Object">COM_BTN_Commencer</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="899102537220064" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="689133656376387" type="COM_BTN_Commencer">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="664479751934779" title="UI - BOUTON START - Clic">
+                            <sub-events>
+                                <event-block sid="163029473501515">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="551558730554277" type="Touch">
+                                            <param id="0" name="Object">COM_BTN_Commencer</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="736808633831759" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="966858228612445" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="264334061191685" type="Function">
+                                            <param id="0" name="Name">&quot;initNavigation&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="517280039736602" title="UI - BOUTON PLAY">
                     <sub-events>
-                        <event-group description="" sid="120132341500851" title="UI - BOUTON PLAY - VISIBLE">
+                        <event-group description="" sid="120132341500851" title="UI - BOUTON PLAY - Visible">
                             <sub-events>
                                 <event-block sid="454190050486448">
                                     <conditions>
@@ -984,7 +878,7 @@
                                         </action>
                                         <action id="-3" name="Set position" sid="364686695908466" type="UI_BTN_Play">
                                             <param id="0" name="X">960</param>
-                                            <param id="1" name="Y">1022</param>
+                                            <param id="1" name="Y">1035</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1008,7 +902,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="285891867873064" title="UI - BOUTON PLAY - ACTIF">
+                        <event-group description="" sid="285891867873064" title="UI - BOUTON PLAY - Actif">
                             <sub-events>
                                 <event-block sid="388667145129611">
                                     <conditions>
@@ -1040,7 +934,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="787421547067421" title="UI - BOUTON PLAY - SURVOL">
+                        <event-group description="" sid="787421547067421" title="UI - BOUTON PLAY - Survol">
                             <sub-events>
                                 <event-block sid="344841123978262">
                                     <conditions>
@@ -1078,7 +972,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="517091563761658" title="UI - BOUTON PLAY - CLIC">
+                        <event-group description="" sid="517091563761658" title="UI - BOUTON PLAY - Clic">
                             <sub-events>
                                 <event-block sid="463099387105252">
                                     <conditions>
@@ -1117,7 +1011,7 @@
                 </event-group>
                 <event-group description="" sid="550338938828181" title="UI - BOUTON PAUSE">
                     <sub-events>
-                        <event-group description="" sid="214096055261900" title="UI - BOUTON PAUSE - VISIBLE">
+                        <event-group description="" sid="214096055261900" title="UI - BOUTON PAUSE - Visible">
                             <sub-events>
                                 <event-block sid="937343500755643">
                                     <conditions>
@@ -1151,7 +1045,7 @@
                                         </action>
                                         <action id="-3" name="Set position" sid="288469991388864" type="UI_BTN_Pause">
                                             <param id="0" name="X">960</param>
-                                            <param id="1" name="Y">1022</param>
+                                            <param id="1" name="Y">1035</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -1189,7 +1083,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="653251668747669" title="UI - BOUTON PAUSE - ACTIF">
+                        <event-group description="" sid="653251668747669" title="UI - BOUTON PAUSE - Actif">
                             <sub-events>
                                 <event-block sid="873116781037443">
                                     <conditions>
@@ -1229,7 +1123,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="622716832322100" title="UI - BOUTON PAUSE - SURVOL">
+                        <event-group description="" sid="622716832322100" title="UI - BOUTON PAUSE - Survol">
                             <sub-events>
                                 <event-block sid="344960761376688">
                                     <conditions>
@@ -1267,7 +1161,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="509433774104392" title="UI - BOUTON PAUSE - CLIC">
+                        <event-group description="" sid="509433774104392" title="UI - BOUTON PAUSE - Clic">
                             <sub-events>
                                 <event-block sid="678443434645403">
                                     <conditions>
@@ -1306,7 +1200,7 @@
                 </event-group>
                 <event-group description="" sid="771990199942662" title="UI - BOUTON SUIVANT">
                     <sub-events>
-                        <event-group description="" sid="921941853215660" title="UI - BOUTON SUIVANT - VISIBLE">
+                        <event-group description="" sid="921941853215660" title="UI - BOUTON SUIVANT - Visible">
                             <sub-events>
                                 <event-block sid="792769656603128">
                                     <conditions>
@@ -1340,7 +1234,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="775092008171368" title="UI - BOUTON SUIVANT - ACTIF">
+                        <event-group description="" sid="775092008171368" title="UI - BOUTON SUIVANT - Actif">
                             <sub-events>
                                 <event-block sid="163801444079845">
                                     <conditions>
@@ -1380,7 +1274,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="157575542543488" title="UI - BOUTON SUIVANT - SURVOL">
+                        <event-group description="" sid="157575542543488" title="UI - BOUTON SUIVANT - Survol">
                             <sub-events>
                                 <event-block sid="840037936968391">
                                     <conditions>
@@ -1418,7 +1312,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="609669975949041" title="UI - BOUTON SUIVANT - CLIC">
+                        <event-group description="" sid="609669975949041" title="UI - BOUTON SUIVANT - Clic">
                             <sub-events>
                                 <event-block sid="293184902573210">
                                     <conditions>
@@ -1448,7 +1342,7 @@
                 </event-group>
                 <event-group description="" sid="750522784006392" title="UI - BOUTON PRECEDENT">
                     <sub-events>
-                        <event-group description="" sid="129315657833596" title="UI - BOUTON PRECEDENT - ACTIF">
+                        <event-group description="" sid="129315657833596" title="UI - BOUTON PRECEDENT - Actif">
                             <sub-events>
                                 <event-block sid="265390494134236">
                                     <conditions>
@@ -1488,7 +1382,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="369242983210820" title="UI - BOUTON PRECEDENT - SURVOL">
+                        <event-group description="" sid="369242983210820" title="UI - BOUTON PRECEDENT - Survol">
                             <sub-events>
                                 <event-block sid="274955810913789">
                                     <conditions>
@@ -1544,7 +1438,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="759513410317170" title="UI - BOUTON PRECEDENT - CLIC">
+                        <event-group description="" sid="759513410317170" title="UI - BOUTON PRECEDENT - Clic">
                             <sub-events>
                                 <event-block sid="530027548254228">
                                     <conditions>
@@ -1572,9 +1466,181 @@
                         </event-group>
                     </sub-events>
                 </event-group>
+                <event-group description="" sid="961430763810099" title="UI - BOUTON SUBTITLE">
+                    <sub-events>
+                        <event-group description="" sid="103683722028066" title="UI - BOUTON SUBTITLE - Survol">
+                            <sub-events>
+                                <event-block sid="717633844750329">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="608471379632041" type="Mouse">
+                                            <param id="0" name="Object">UI_BTN_Soustitre</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="567854574285428">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="509203351882263" type="System">
+                                                    <param id="0" name="Variable">subtitleVisible</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">OUI</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="293349206678324" type="UI_BTN_Soustitre">
+                                                    <param id="0" name="Frame number">3</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="580649251062287" type="UI_SUBTITLE_Consigne_txt">
+                                                    <param id="0" name="Text">&quot;Cacher les sous-titres&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="985974112637237">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="651449404525248" type="System">
+                                                    <param id="0" name="Variable">subtitleVisible</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">NON</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="942282953782735" type="UI_BTN_Soustitre">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="389343557763565" type="UI_SUBTITLE_Consigne_txt">
+                                                    <param id="0" name="Text">&quot;Afficher les sous-titres&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="631430600366376">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="139800304710798" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="562107597280046" type="Function">
+                                                    <param id="0" name="Name">&quot;afficheSubtitleConsigne&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="754926397982346">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Cursor is over object" sid="337504277049829" type="Mouse">
+                                            <param id="0" name="Object">UI_BTN_Soustitre</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="929057730108452" type="UI_SUBTITLE_Consigne_txt">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="834103785876515">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="648504359819641" type="System">
+                                                    <param id="0" name="Variable">subtitleVisible</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">OUI</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="345060783550925" type="UI_BTN_Soustitre">
+                                                    <param id="0" name="Frame number">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="818440315330867">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="445321356078788" type="System">
+                                                    <param id="0" name="Variable">subtitleVisible</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">NON</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="534612590999999" type="UI_BTN_Soustitre">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="766203611551297" title="UI - BOUTON SUBTITLE - Clic">
+                            <sub-events>
+                                <event-block sid="844494057198249">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="670993956808904" type="Touch">
+                                            <param id="0" name="Object">UI_BTN_Soustitre</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="735409643106860" type="System">
+                                            <param id="0" name="Variable">subtitleVisible</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="859890378736126" title="UI - BOUTON SUBTITLE - Apparition Consigne">
+                            <sub-events>
+                                <event-block sid="305545624650112">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="131195043648060" type="Function">
+                                            <param id="0" name="Name">&quot;afficheSubtitleConsigne&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="615569496385583" type="System">
+                                            <param id="0" name="Seconds">delaiApparitionObjetsUI</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="943779819681169" type="UI_SUBTITLE_Consigne_txt">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="757226541573882">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="598755831631753" type="UI_SUBTITLE_Consigne_txt">
+                                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition disabled="1" id="-4" name="Trigger once while true" sid="790476934209318" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Fade" id="0" name="Restart fade" sid="446446753725030" type="UI_SUBTITLE_Consigne_txt" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="212316241092621">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="527263037873075" type="UI_SUBTITLE_Consigne_txt">
+                                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Fade" id="1" name="Start fade" sid="152304926941894" type="UI_SUBTITLE_Consigne_txt" />
+                                                <action id="-11" name="Add to" sid="751510244993025" type="UI_SUBTITLE_Consigne_txt">
+                                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="870444445922573" title="UI - BOUTON CLOSE">
                     <sub-events>
-                        <event-group description="" sid="386414546526528" title="UI - BOUTON CLOSE - SURVOL">
+                        <event-group description="" sid="386414546526528" title="UI - BOUTON CLOSE - Survol">
                             <sub-events>
                                 <event-block sid="745066185592811">
                                     <conditions>
@@ -1602,7 +1668,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="787876601856726" title="UI - BOUTON CLOSE - CLIC">
+                        <event-group description="" sid="787876601856726" title="UI - BOUTON CLOSE - Clic">
                             <sub-events>
                                 <event-block sid="486981999449118">
                                     <conditions>
@@ -1621,79 +1687,49 @@
                         </event-group>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="170414474053171" title="COMMUN - BOUTON START">
-                    <sub-events>
-                        <event-group description="" sid="524753604765678" title="COMMUN - BOUTON START - SURVOL">
-                            <sub-events>
-                                <event-block sid="833633112586450">
-                                    <conditions>
-                                        <condition id="7" name="Cursor is over object" sid="838645324665429" type="Mouse">
-                                            <param id="0" name="Object">COM_BTN_Commencer</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="420268239535237" type="System">
-                                            <param id="0" name="Variable">numeroMarqueur</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="5" name="Set frame" sid="190709677385413" type="COM_BTN_Commencer">
-                                            <param id="0" name="Frame number">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="780994406749386">
-                                    <conditions>
-                                        <condition id="7" inverted="1" name="Cursor is over object" sid="754142700755129" type="Mouse">
-                                            <param id="0" name="Object">COM_BTN_Commencer</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="899102537220064" type="System">
-                                            <param id="0" name="Variable">numeroMarqueur</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="5" name="Set frame" sid="689133656376387" type="COM_BTN_Commencer">
-                                            <param id="0" name="Frame number">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="664479751934779" title="COMMUN - BOUTON START - CLIC">
-                            <sub-events>
-                                <event-block sid="163029473501515">
-                                    <conditions>
-                                        <condition id="3" name="On touched object" sid="551558730554277" type="Touch">
-                                            <param id="0" name="Object">COM_BTN_Commencer</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="736808633831759" type="System">
-                                            <param id="0" name="Variable">numeroMarqueur</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Add to" sid="966858228612445" type="System">
-                                            <param id="0" name="Variable">numeroMarqueur</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="264334061191685" type="Function">
-                                            <param id="0" name="Name">&quot;initNavigation&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                    </sub-events>
-                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="360022428233402" title="GRANULE">
             <sub-events>
-                <event-group description="" sid="893989250346459" title="GRANULE - INIT - Marqueur">
+                <event-group description="" sid="919483992424364" title="GRANULE - AFFICHAGE - Fonction Invisible Layers">
+                    <sub-events>
+                        <event-block sid="440668960547322">
+                            <conditions>
+                                <condition id="0" name="On function" sid="639318582429781" type="Function">
+                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="573421059760768">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="946144073392759" type="System">
+                                            <param id="0" name="Name">&quot;layers&quot;</param>
+                                            <param id="1" name="Start index">1</param>
+                                            <param id="2" name="End index">20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="113139386613931" type="System">
+                                            <param id="0" name="Layer">LayerIndex(loopindex)</param>
+                                            <param id="1" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="619756257120312">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="251820857343577" type="System">
+                                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="893989250346459" title="GRANULE - TIMELINE - Init Marqueur">
                     <sub-events>
                         <event-block sid="707617344309180">
                             <conditions>
@@ -1713,10 +1749,6 @@
                                 </action>
                                 <action id="0" name="Call function" sid="657464561993535" type="Function">
                                     <param id="0" name="Name">&quot;setBarreProgression&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="0" name="Call function" sid="720156124596989" type="Function">
-                                    <param id="0" name="Name">&quot;setSousTitres&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="0" name="Call function" sid="455189137839799" type="Function">
@@ -1767,104 +1799,6 @@
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="919483992424364" title="GRANULE - INIT - Layers">
-                    <sub-events>
-                        <event-block sid="440668960547322">
-                            <conditions>
-                                <condition id="0" name="On function" sid="639318582429781" type="Function">
-                                    <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="573421059760768">
-                                    <conditions>
-                                        <condition id="-10" name="For" sid="946144073392759" type="System">
-                                            <param id="0" name="Name">&quot;layers&quot;</param>
-                                            <param id="1" name="Start index">1</param>
-                                            <param id="2" name="End index">20</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-4" name="Set layer visible" sid="113139386613931" type="System">
-                                            <param id="0" name="Layer">LayerIndex(loopindex)</param>
-                                            <param id="1" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="619756257120312">
-                                    <conditions />
-                                    <actions>
-                                        <action id="-4" name="Set layer visible" sid="251820857343577" type="System">
-                                            <param id="0" name="Layer">&quot;UI&quot;</param>
-                                            <param id="1" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="627418574110283" title="GRANULE - VIDEO - Stop hors écran">
-                    <sub-events>
-                        <comment>Si le layer vidéo n&apos;est pas à l&apos;écran, on remet au début la vidéo et on pause</comment>
-                        <event-block sid="208749001888451">
-                            <conditions>
-                                <condition id="-9" inverted="1" name="Layer is visible" sid="377978719473905" type="System">
-                                    <param id="0" name="Layer">indexLayerUI</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set playback time" sid="538953683105698" type="Media">
-                                    <param id="0" name="Time">0</param>
-                                </action>
-                                <action id="5" name="Pause" sid="343075157179113" type="Media" />
-                            </actions>
-                        </event-block>
-                        <comment>On cherche à connaitre l&apos;index du calque UI (calque le plus haut) pour ensuite retrouver le calque VIDEO</comment>
-                        <event-block sid="561749242207184">
-                            <conditions>
-                                <condition id="0" name="On function" sid="699309267561971" type="Function">
-                                    <param id="0" name="Name">&quot;checkIndexLayerUI&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="695370744671284" type="System">
-                                    <param id="0" name="Variable">indexLayerUI</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <comment>On ajoute 1 chaque qu&apos;on trouve un calque invisible</comment>
-                                <event-block sid="870116235432614">
-                                    <conditions>
-                                        <condition id="-10" name="For" sid="415229675829360" type="System">
-                                            <param id="0" name="Name">&quot;layers&quot;</param>
-                                            <param id="1" name="Start index">0</param>
-                                            <param id="2" name="End index">20</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="112934799428571">
-                                            <conditions>
-                                                <condition id="-9" inverted="1" name="Layer is visible" sid="150523772676325" type="System">
-                                                    <param id="0" name="Layer">LayerIndex(loopindex)</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Add to" sid="862892959347146" type="System">
-                                                    <param id="0" name="Variable">indexLayerUI</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -1986,9 +1920,73 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <event-group description="" sid="755945581296954" title="VIDEO">
+            <sub-events>
+                <event-group description="" sid="627418574110283" title="VIDEO - Stop hors écran">
+                    <sub-events>
+                        <comment>Si le layer vidéo n&apos;est pas à l&apos;écran, on remet au début la vidéo et on pause</comment>
+                        <event-block sid="208749001888451">
+                            <conditions>
+                                <condition id="-9" inverted="1" name="Layer is visible" sid="377978719473905" type="System">
+                                    <param id="0" name="Layer">indexLayerUI</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set playback time" sid="538953683105698" type="Media">
+                                    <param id="0" name="Time">0</param>
+                                </action>
+                                <action id="5" name="Pause" sid="343075157179113" type="Media" />
+                            </actions>
+                        </event-block>
+                        <comment>On cherche à connaitre l&apos;index du calque UI (calque le plus haut) pour ensuite retrouver le calque VIDEO</comment>
+                        <event-block sid="561749242207184">
+                            <conditions>
+                                <condition id="0" name="On function" sid="699309267561971" type="Function">
+                                    <param id="0" name="Name">&quot;checkIndexLayerUI&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="695370744671284" type="System">
+                                    <param id="0" name="Variable">indexLayerUI</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>On ajoute 1 chaque qu&apos;on trouve un calque invisible</comment>
+                                <event-block sid="870116235432614">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="415229675829360" type="System">
+                                            <param id="0" name="Name">&quot;layers&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="112934799428571">
+                                            <conditions>
+                                                <condition id="-9" inverted="1" name="Layer is visible" sid="150523772676325" type="System">
+                                                    <param id="0" name="Layer">LayerIndex(loopindex)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="862892959347146" type="System">
+                                                    <param id="0" name="Variable">indexLayerUI</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="358034852886250" title="SON">
             <sub-events>
-                <event-group description="" sid="230683028407671" title="SON - PLAY + ALIMENTATION MOUCHARD">
+                <event-group description="" sid="230683028407671" title="SON - Alimentation Mouchard + Play Son">
                     <sub-events>
                         <comment>On affiche le n° de repère (pour le mouchard) et le sous-titre</comment>
                         <event-block sid="603372953909695">
@@ -2007,26 +2005,32 @@
                                     <param id="1" name="Value">ARRAY_reperesSon.At(numeroMarqueur,1)</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="788628162303139" type="System">
-                                    <param id="0" name="Variable">xmlSoustitreType</param>
+                                    <param id="0" name="Variable">xmlSubtitleType</param>
                                     <param id="1" name="Value">ARRAY_reperesSon.At(numeroMarqueur,2)</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="658463205802953" type="System">
-                                    <param id="0" name="Variable">xmlSoustitreTxt</param>
+                                    <param id="0" name="Variable">xmlSubtitleTxt</param>
                                     <param id="1" name="Value">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="614475302948527" type="Soustitre">
-                                    <param id="0" name="Text">xmlSoustitreTxt</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <comment>Alimentation du Mouchard</comment>
+                                <comment>Alimentation du champ text Subtitle</comment>
                                 <event-block sid="669311352511701">
                                     <conditions />
                                     <actions>
-                                        <action id="0" name="Set text" sid="180161259573066" type="MOUCHARD_TXT_varRepXml">
+                                        <action id="0" name="Set text" sid="614475302948527" type="UI_SUBTITLE_txt">
+                                            <param id="0" name="Text">ARRAY_reperesSon.At(numeroMarqueur,3)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Alimentation du Mouchard</comment>
+                                <event-block sid="900073707679927">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="169678478844110" type="MOUCHARD_TXT_varRepXml">
                                             <param id="0" name="Text">xmlRepereSon</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="202577792390240" type="MOUCHARD_TXT_varMarqueur">
+                                        <action id="0" name="Set text" sid="271905962048004" type="MOUCHARD_TXT_varMarqueur">
                                             <param id="0" name="Text">numeroMarqueur</param>
                                         </action>
                                     </actions>
@@ -2034,27 +2038,55 @@
                                 <event-block sid="367964245153082">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="509776530924691" type="System">
-                                            <param id="0" name="Variable">xmlNomMP3</param>
+                                            <param id="0" name="Variable">xmlSubtitleType</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set text" sid="672281839663093" type="MOUCHARD_TXT_varNomSon">
+                                        <action id="0" name="Set text" sid="976294028962047" type="MOUCHARD_TXT_varTypeSubtitle">
                                             <param id="0" name="Text">&quot;none&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="289475105567443">
                                     <conditions>
-                                        <condition id="-14" inverted="1" name="Compare variable" sid="648768332271302" type="System">
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="499961439111285" type="System">
+                                            <param id="0" name="Variable">xmlSubtitleType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="295838766827718" type="MOUCHARD_TXT_varTypeSubtitle">
+                                            <param id="0" name="Text">xmlSubtitleType</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="427336334256669">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="664511829232937" type="System">
                                             <param id="0" name="Variable">xmlNomMP3</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set text" sid="199539635953163" type="MOUCHARD_TXT_varNomSon">
+                                        <action id="0" name="Set text" sid="216764637228044" type="MOUCHARD_TXT_varNomSon">
+                                            <param id="0" name="Text">&quot;none&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="368657647572204">
+                                    <conditions>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="124917999751323" type="System">
+                                            <param id="0" name="Variable">xmlNomMP3</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="747535847694480" type="MOUCHARD_TXT_varNomSon">
                                             <param id="0" name="Text">xmlNomMP3</param>
                                         </action>
                                     </actions>
@@ -2087,7 +2119,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="820665292828732" title="SON - DETECTION FIN">
+                <event-group description="" sid="820665292828732" title="SON - Detection Fin">
                     <sub-events>
                         <event-block sid="676311699032630">
                             <conditions>
@@ -2100,18 +2132,6 @@
                                     <param id="0" name="Tag">&quot;sonFini&quot;</param>
                                 </action>
                             </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="343701281009094" title="SON - SOUS-TITRES">
-                    <sub-events>
-                        <event-block sid="878064955490653">
-                            <conditions>
-                                <condition id="0" name="On function" sid="177871743388388" type="Function">
-                                    <param id="0" name="Name">&quot;setSousTitres&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -2594,10 +2614,7 @@
                                 <action id="-1" name="Set X" sid="966645353397998" type="UI_BARRE_Popup_img">
                                     <param id="0" name="X">barreProgTailleBarre</param>
                                 </action>
-                                <action disabled="1" id="0" name="Set text" sid="942566296251813" type="UI_BARRE_popup_txt">
-                                    <param id="0" name="Text">numeroMarqueur&amp;&quot; / &quot;&amp;xmlNombreNode</param>
-                                </action>
-                                <action id="0" name="Set text" sid="232170289848636" type="UI_BARRE_popup_txt2">
+                                <action id="0" name="Set text" sid="232170289848636" type="UI_BARRE_popup_txt">
                                     <param id="0" name="Text">numeroMarqueur&amp;&quot; / &quot;&amp;xmlNombreNode</param>
                                 </action>
                             </actions>
@@ -2612,15 +2629,52 @@
                                     <param id="0" name="Object">UI_BARRE_Progression</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="251243112945158" type="System">
-                                    <param id="0" name="Seconds">0.4</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="437061313070219" type="UI_BARRE_Popup_img">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="229703434536185" type="UI_BARRE_Popup_img" />
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="657449688795459">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="704139417077336" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="251243112945158" type="System">
+                                            <param id="0" name="Seconds">delaiApparitionObjetsUI</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="437061313070219" type="UI_BARRE_Popup_img">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="161204684586420">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="466019344813013" type="UI_BARRE_Popup_img">
+                                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Fade" id="0" name="Restart fade" sid="536102596718899" type="UI_BARRE_Popup_img" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="359970057548714">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="111469214822205" type="UI_BARRE_Popup_img">
+                                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Fade" id="1" name="Start fade" sid="229703434536185" type="UI_BARRE_Popup_img" />
+                                                <action id="-11" name="Add to" sid="381611641270648" type="UI_BARRE_Popup_img">
+                                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="775156666912242">
                             <conditions>
@@ -2638,11 +2692,141 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-block sid="449751751270276">
-            <conditions />
+        <event-group description="" sid="295148819645471" title="SUBTITLES">
+            <sub-events>
+                <event-group description="" sid="470205632677955" title="SUBTITLES - Tourniquet Variable d&apos;affichage">
+                    <sub-events>
+                        <comment>Tourniquet : on incrément toujours la variable (à chaque clique du bouton) qui est remise à 0 (donc invisible) quand elle est strictement supérieure à 1</comment>
+                        <event-block sid="720135510731902">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="536435246446156" type="System">
+                                    <param id="0" name="Variable">subtitleVisible</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="340921094561627" type="System">
+                                    <param id="0" name="Variable">subtitleVisible</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="455097019110070" title="SUBTITLES - Affichage">
+                    <sub-events>
+                        <event-block sid="460281030970459">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="805652441114314" type="System">
+                                    <param id="0" name="Variable">subtitleVisible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">NON</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="562620947392446">
+                                    <conditions>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="253867322180282" type="System">
+                                            <param id="0" name="Variable">xmlSubtitleType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Off&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="639419483541377" type="UI_SUBTITLE_img">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="964764311033822">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="647218318134639" type="System">
+                                            <param id="0" name="Variable">xmlSubtitleType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Off&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="461814677181252" type="UI_SUBTITLE_img">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="655344405357607">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="760882302467095" type="System">
+                                    <param id="0" name="Variable">subtitleVisible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">OUI</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="949281266604666">
+                                    <conditions>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="411268457130196" type="System">
+                                            <param id="0" name="Variable">xmlSubtitleType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Off&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="624561057029152" type="UI_SUBTITLE_img">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="463675562425574">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="399934962499532" type="System">
+                                            <param id="0" name="Variable">xmlSubtitleType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Off&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="945834896445121" type="UI_SUBTITLE_img">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="449751751270276">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="386820594641963" title="SUBTITLES - Disparition Son Fini">
+                    <sub-events>
+                        <event-block sid="156278885291525">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="969061449552473" type="Audio">
+                                    <param id="0" name="Tag">xmlNomMP3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="325552763767267" type="UI_SUBTITLE_img">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-block sid="816504911223010">
+            <conditions>
+                <condition id="-4" name="Trigger once while true" sid="266869384530877" type="System" />
+            </conditions>
             <actions />
         </event-block>
-        <event-block sid="701191010415119">
+        <event-block sid="732238464497090">
             <conditions />
             <actions />
         </event-block>
