@@ -4,5 +4,10 @@
     <name>GR03_03_Variables</name>
     <events>
         <variable constant="0" name="Goto" sid="444413094720285" static="0" type="number">0</variable>
+        <variable constant="0" name="ElapsedTime" sid="175795712734511" static="0" type="number">0</variable>
+        <variable constant="0" name="Freinage_en_cours" sid="696068323103672" static="0" type="number">0</variable>
+        <variable constant="0" name="Facteur_Freinage" sid="478500220369413" static="0" type="number">1</variable>
+        <variable constant="0" name="Distance_entre_vehicules" sid="288416168057595" static="0" type="number">0</variable>
+        <variable constant="0" name="Piquet_scale" sid="169994529550282" static="0" type="number">0</variable>
     </events>
 </c2eventsheet>

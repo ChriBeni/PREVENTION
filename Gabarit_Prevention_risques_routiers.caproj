@@ -27,13 +27,16 @@
         <plugin author="Scirra" id="video" version="1">Video</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra, Alex Hanson-White" id="PinPlus" version="1">Pin+</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
     </used-behaviors>
     <used-effects />
@@ -628,6 +631,383 @@
         </object-folder>
         <object-folder name="GR05" />
         <object-folder name="GR03">
+            <object-folder name="Jeu">
+                <object-type name="Arbre_L" sid="828108623076654">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="DestroyOutsideLayout" sid="451981730869716">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="367666407246159" speed="0">
+                            <frame duration="1" hotspotX="0.465" hotspotY="0.95941" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\Arbre1.png" />
+                            <frame duration="1" hotspotX="0.465" hotspotY="0.972325" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\Arbre2.png" />
+                            <frame duration="1" hotspotX="0.4875" hotspotY="0.97048" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\Arbre3.png" />
+                            <frame duration="1" hotspotX="0.49" hotspotY="0.9631" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\Arbre4.png" />
+                            <frame duration="1" hotspotX="0.4775" hotspotY="0.964945" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\Arbre5.png" />
+                            <frame duration="1" hotspotX="0.5075" hotspotY="0.939114" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\Arbre6.png" />
+                            <frame duration="1" hotspotX="0.501408" hotspotY="0.500935" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\arbre_01.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Arbre_R" sid="400340175952921">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="DestroyOutsideLayout" sid="309954344230760">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="203934096938506" speed="0">
+                            <frame duration="1" hotspotX="0.5325" hotspotY="0.95941" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\Arbre1.png" />
+                            <frame duration="1" hotspotX="0.5325" hotspotY="0.968635" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\Arbre2.png" />
+                            <frame duration="1" hotspotX="0.5125" hotspotY="0.97048" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\Arbre3.png" />
+                            <frame duration="1" hotspotX="0.51" hotspotY="0.96679" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\Arbre4.png" />
+                            <frame duration="1" hotspotX="0.5275" hotspotY="0.9631" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\Arbre5.png" />
+                            <frame duration="1" hotspotX="0.49" hotspotY="0.940959" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\Arbre6.png" />
+                            <frame duration="1" hotspotX="0.501408" hotspotY="0.500935" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Arbres\arbre_01.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Cache" sid="937748266281135">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="316981827291694" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Cache_haut" sid="633918067228684">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="994134019440190" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Chrono_Text" sid="109227104464752">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="Cockpit" sid="338121198520980">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="282252900734696" speed="5">
+                            <frame duration="1" hotspotX="0.50046" hotspotY="0.502439" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Voiture\Intérieur\Interieur_voiture.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="0.205915" y="0.499062" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Contour" sid="590409072773547">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="319029801153965" speed="5">
+                            <frame duration="1" hotspotX="0.500667" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Contour2" sid="436061494257580">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="387361239016196" speed="5">
+                            <frame duration="1" hotspotX="0.500667" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Destructeur" sid="284348156681578">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="479429310576810" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Effet_vitesse_R" sid="202760500432540">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="DestroyOutsideLayout" sid="446211363644798">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                        <behavior-type name="Bullet" sid="576185404411227">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                        <behavior-type name="Fade" sid="584869740020611">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="761197127186199" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0.666667" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Feux_stop" sid="486216699211827">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="238137749619678" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="-0.176471" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Fond_decor" sid="404842342442946">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="756460735528716" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.429523" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Fond\decors_fond4.png">
+                                <collision-poly>
+                                    <point x="0.00615385" y="0.0109051" />
+                                    <point x="0.499692" y="0" />
+                                    <point x="0.990769" y="0.0163577" />
+                                    <point x="0.989538" y="0.981461" />
+                                    <point x="0.0104615" y="0.981461" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="FondChrono" sid="224688285234872">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="320027817107980" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Ligne_blanche" sid="483050746242472">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="937399439943556" speed="5">
+                            <frame duration="1" hotspotX="1" hotspotY="0.666667" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Ligne_separation" sid="575386652661949">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="503517800707600" speed="5">
+                            <frame duration="1" hotspotX="0.436667" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Panneau80" sid="805932936715570">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="372277141825828" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Panneau\80.png">
+                                <collision-poly>
+                                    <point x="0.14" y="0.14" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.86" y="0.14" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.86" y="0.86" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.14" y="0.86" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Parebrise" sid="632074749286511">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662022032128033" speed="5">
+                            <frame duration="1" hotspotX="0.50046" hotspotY="0.500813" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Voiture\Intérieur\Parebrise.png">
+                                <collision-poly>
+                                    <point x="0.0975161" y="0.172358" />
+                                    <point x="0.49954" y="0.0373984" />
+                                    <point x="0.888684" y="0.196748" />
+                                    <point x="0.832567" y="0.499187" />
+                                    <point x="0.770009" y="0.593496" />
+                                    <point x="0.49954" y="0.531707" />
+                                    <point x="0.121435" y="0.785366" />
+                                    <point x="0.0873965" y="0.499187" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Piquet_haut" sid="341170148089614">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802979022816940" speed="5">
+                            <frame duration="1" hotspotX="0.6" hotspotY="0.55" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Piquet_R" sid="259165343199244">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="DestroyOutsideLayout" sid="280875188653213">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                        <behavior-type name="LiteTween" sid="456479650436209">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="622498415636803" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Route" sid="383190865875790">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="checkit" sid="163376150666435" type="number" />
+                        <instance-variable name="Debut_Chrono" sid="906519866397064" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="556583246518794" speed="5">
+                            <frame duration="1" hotspotX="0.500369" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TEMP_Sprite" sid="866510374567325">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="DragDrop" sid="288588580317907">
+                            <behavior id="DragnDrop" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491651786540350" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TEMP_Text" sid="572782527548304">
+                    <plugin id="Text" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="147324773414595">
+                            <behavior id="PinPlus" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="Vehicule_suivi" sid="504722639901491">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="791556274615897" speed="5">
+                            <frame duration="1" hotspotX="0.0121951" hotspotY="0.488372" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Voiture\car-307714_641.png">
+                                <collision-poly>
+                                    <point x="0.987805" y="0.484754" />
+                                    <point x="0.929358" y="0.882688" />
+                                    <point x="0.502248" y="0.904393" />
+                                    <point x="0.120097" y="0.803101" />
+                                    <point x="0.0886254" y="0.484754" />
+                                    <point x="0.115601" y="0.166408" />
+                                    <point x="0.502248" y="0.0651163" />
+                                    <point x="0.929358" y="0.0940569" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Voiture_arriere" sid="293685120987247">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="644098936797511" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.200422" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Voiture\Voiture_arriere_rouge.png">
+                                <collision-poly>
+                                    <point x="0" y="0.0636767" />
+                                    <point x="0.493334" y="0" />
+                                    <point x="1" y="0.0636767" />
+                                    <point x="1" y="0.468043" />
+                                    <point x="1" y="1" />
+                                    <point x="0.493334" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.468043" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Voiture_curseur" sid="948314193632830">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="DragDrop" sid="771561515954136">
+                            <behavior id="DragnDrop" />
+                        </behavior-type>
+                        <behavior-type name="8Direction" sid="254696519837425">
+                            <behavior id="EightDir" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="570541937788841" speed="5">
+                            <frame duration="1" hotspotX="0.926471" hotspotY="0.5" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Voiture\Voiture1_dessus.png">
+                                <collision-poly>
+                                    <point x="0.0599078" y="0.0962963" />
+                                    <point x="0.497696" y="0.0666667" />
+                                    <point x="0.894009" y="0.17037" />
+                                    <point x="0.921659" y="0.496296" />
+                                    <point x="0.889401" y="0.822222" />
+                                    <point x="0.497696" y="0.925926" />
+                                    <point x="0.0599078" y="0.903704" />
+                                    <point x="0" y="0.496296" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Volant" sid="949744745727886">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="432981072655588" speed="5">
+                            <frame duration="1" hotspotX="0.501044" hotspotY="1" original-source="D:\Projets\Prevention risques routiers\Graphisme\Sprites\Voiture\Intérieur\Volant.png">
+                                <collision-poly>
+                                    <point x="0.129436" y="0.364706" />
+                                    <point x="0.498956" y="0.0764706" />
+                                    <point x="0.862213" y="0.388235" />
+                                    <point x="0.941545" y="0.5" />
+                                    <point x="0.970772" y="0.917647" />
+                                    <point x="0.498956" y="1" />
+                                    <point x="0.11691" y="0.670588" />
+                                    <point x="0.0960334" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Effet_vitesse_L" sid="966265917148823">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="DestroyOutsideLayout" sid="917326447171903">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                        <behavior-type name="Bullet" sid="176116212253907">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                        <behavior-type name="Fade" sid="649246938225367">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="728381657361035" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0.666667" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Piquet_L" sid="730609474301032">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="DestroyOutsideLayout" sid="233399072270135">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894111091354095" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-type name="GR03_FOND_perso_voiture" sid="569268001455767">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -1001,100 +1381,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="GR02_Bulle_img_01_1" sid="664091508512301">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="309835206801553" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_txt_01_1" sid="194631446036154">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_Bulle_img_01_2" sid="341770919613375">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682421965001182" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_img_01_3" sid="190318149558332">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="130516597218507" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_txt_01_2" sid="598162258063718">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_Bulle_txt_01_3" sid="917311018766308">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_Bulle_img_02_1" sid="209777732218442">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="700163800538350" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_txt_01_4" sid="280466506450700">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_Bulle_txt_02_1" sid="111903440632962">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_03_JEU_01_txt" sid="568921003929978">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_FOND_persos_voiture" sid="915155602660232">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="253988094907718" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\PERSO voiture.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_img_02_2" sid="281506295881895">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="169569156629071" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_txt_02_2" sid="794432444072716">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_Bulle_img_03_1" sid="858886370342741">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="288408284959063" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_txt_03_1" sid="221088720878158">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_Bulle_img_03_2" sid="590982034789685">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118072511005615" speed="5">
-                        <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="GR02_Bulle_txt_03_2" sid="644298954109550">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="GR02_03_FICHES_txt" sid="820144194815846">
-                <plugin id="Text" />
-            </object-type>
         </object-folder>
         <object-folder name="GR01" />
         <object-folder name="Commun">
@@ -1124,30 +1410,6 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-type name="TEMP_Sprite" sid="866510374567325">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="DragDrop" sid="288588580317907">
-                    <behavior id="DragnDrop" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491651786540350" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TEMP_Text" sid="572782527548304">
-            <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="Pin" sid="147324773414595">
-                    <behavior id="PinPlus" />
-                </behavior-type>
-            </behaviors>
-        </object-type>
-        <object-type name="GR02_08_END" sid="866496594142830">
-            <plugin id="Text" />
-        </object-type>
     </object-folder>
     <families>
         <family name="UI_HAND_Curseur" plugin-id="Sprite" sid="871919883988788">
@@ -1194,13 +1456,6 @@
         </family>
         <family name="COMMUN_Bulles_img" plugin-id="Sprite" sid="604228847572226">
             <members>
-                <member>GR02_Bulle_img_01_1</member>
-                <member>GR02_Bulle_img_01_2</member>
-                <member>GR02_Bulle_img_01_3</member>
-                <member>GR02_Bulle_img_02_1</member>
-                <member>GR02_Bulle_img_02_2</member>
-                <member>GR02_Bulle_img_03_1</member>
-                <member>GR02_Bulle_img_03_2</member>
                 <member>GR04_Bulle_img_02</member>
             </members>
             <behaviors>
@@ -1211,14 +1466,6 @@
         </family>
         <family name="COMMUN_Bulles_txt" plugin-id="Text" sid="323993993325509">
             <members>
-                <member>GR02_Bulle_txt_01_1</member>
-                <member>GR02_Bulle_txt_01_2</member>
-                <member>GR02_Bulle_txt_01_3</member>
-                <member>GR02_Bulle_txt_01_4</member>
-                <member>GR02_Bulle_txt_02_1</member>
-                <member>GR02_Bulle_txt_02_2</member>
-                <member>GR02_Bulle_txt_03_1</member>
-                <member>GR02_Bulle_txt_03_2</member>
                 <member>GR04_Bulle_txt_02</member>
             </members>
             <behaviors>
@@ -1296,11 +1543,62 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="Trash" plugin-id="Sprite" sid="931413068959717">
+            <members>
+                <member>Arbre_L</member>
+                <member>Arbre_R</member>
+                <member>Effet_vitesse_L</member>
+                <member>Effet_vitesse_R</member>
+                <member>Ligne_separation</member>
+                <member>Piquet_haut</member>
+                <member>Piquet_L</member>
+                <member>Piquet_R</member>
+            </members>
+        </family>
+        <family name="Piquets_lateraux_R" plugin-id="Sprite" sid="338869995275274">
+            <members>
+                <member>Piquet_R</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Scale" sid="987831689060062" type="number" />
+            </instance-variables>
+        </family>
+        <family name="Piquets_lateraux_L" plugin-id="Sprite" sid="202440176249386">
+            <members>
+                <member>Piquet_L</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Scale" sid="672932424779741" type="number" />
+            </instance-variables>
+        </family>
+        <family name="Lignes_separation" plugin-id="Sprite" sid="602662714679604">
+            <members>
+                <member>Ligne_separation</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Scale" sid="691076586855693" type="number" />
+            </instance-variables>
+        </family>
+        <family name="Arbres" plugin-id="Sprite" sid="651434874845129">
+            <members>
+                <member>Arbre_L</member>
+                <member>Arbre_R</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Scale" sid="787975769496466" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Fade" sid="278855694884121">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </family>
     </families>
     <layout-folder>
         <layout-folder name="GR01" />
         <layout-folder name="GR03">
             <layout>GR03.xml</layout>
+            <layout>GR03_jeu.xml</layout>
         </layout-folder>
         <layout-folder name="GR02">
             <layout>GR02.xml</layout>
@@ -1325,6 +1623,7 @@
             <event-sheet>GR03_03_Event.xml</event-sheet>
             <event-sheet>GR03_03_Variables.xml</event-sheet>
             <event-sheet>GR03_03_Fonctions.xml</event-sheet>
+            <event-sheet>GR03_03_Jeu_Event.xml</event-sheet>
         </event-folder>
         <event-folder name="GR02">
             <event-sheet>GR02_Event.xml</event-sheet>
@@ -1418,6 +1717,10 @@
             <file name="GR03_D08_b.ogg" />
             <file name="GR03_D09_a.m4a" />
             <file name="GR03_D09_a.ogg" />
+            <file name="Choc.m4a" />
+            <file name="Choc.ogg" />
+            <file name="Freinage.m4a" />
+            <file name="Freinage.ogg" />
         </sound-folder>
         <sound-folder name="GR04">
             <file name="GR04_D01_a.m4a" />
@@ -1446,7 +1749,6 @@
         <file-folder name="xml">
             <file name="GR04.xml" />
             <file name="GR03.xml" />
-            <file name="GR02.xml" />
         </file-folder>
         <file-folder name="Videos">
             <file name="VIDEO_GR01.mp4" />

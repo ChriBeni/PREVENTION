@@ -164,5 +164,58 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="698088104076089" title="Génération d&apos;arbres">
+            <sub-events>
+                <event-block sid="738704975634993">
+                    <conditions>
+                        <condition id="0" name="On function" sid="379830673107747" type="Function">
+                            <param id="0" name="Name">&quot;TreeGen&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="510252702676088">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="433786654830874" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="592538110892591" type="System">
+                                    <param id="0" name="Object to create">Arbre_L</param>
+                                    <param id="1" name="Layer">&quot;Arbres fond&quot;</param>
+                                    <param id="2" name="X">round(random(290,500))</param>
+                                    <param id="3" name="Y">513</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="507895008464195" type="System">
+                                    <param id="0" name="Object to create">Arbre_L</param>
+                                    <param id="1" name="Layer">&quot;Arbres proches&quot;</param>
+                                    <param id="2" name="X">round(random(500,912))</param>
+                                    <param id="3" name="Y">513</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="291351601277642" type="System">
+                                    <param id="0" name="Object to create">Arbre_R</param>
+                                    <param id="1" name="Layer">&quot;Arbres fond&quot;</param>
+                                    <param id="2" name="X">round(random(1400,1600))</param>
+                                    <param id="3" name="Y">513</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="520562825763584" type="System">
+                                    <param id="0" name="Object to create">Arbre_R</param>
+                                    <param id="1" name="Layer">&quot;Arbres proches&quot;</param>
+                                    <param id="2" name="X">round(random(1120,1420))</param>
+                                    <param id="3" name="Y">513</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="111878166980987" type="Arbre_R">
+                                    <param id="0" name="Frame number">round(random(0,5))</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="591521676392691" type="Arbre_L">
+                                    <param id="0" name="Frame number">round(random(0,5))</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="713566335289116" type="Arbre_L" />
+                                <action id="-25" name="Move to bottom" sid="732910246158810" type="Arbre_R" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

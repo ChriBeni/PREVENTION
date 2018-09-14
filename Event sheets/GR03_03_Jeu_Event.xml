@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GR03_03_Jeu_Event</name>
+    <events>
+        <include>UI_Fonctions</include>
+        <include>UI_Mecanique</include>
+        <include>UI_Events</include>
+        <include>GR03_03_Fonctions</include>
+        <event-group description="" sid="545032251087660" title="Chargement Layout">
+            <sub-events>
+                <event-block sid="401802768636803">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="291888280479874" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Request fullscreen" sid="381555276393953" type="Browser">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="591028068654798" type="Function">
+                            <param id="0" name="Name">&quot;GR03_initPin&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="491383882350467" type="Function">
+                            <param id="0" name="Name">&quot;initUI&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Conduire de façon attentive&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="307368568802901" type="System">
+                            <param id="0" name="Object to create">Piquet_haut</param>
+                            <param id="1" name="Layer">&quot;Cockpit&quot;</param>
+                            <param id="2" name="X">720</param>
+                            <param id="3" name="Y">128</param>
+                        </action>
+                        <action id="0" name="Call function" sid="672285089857337" type="Function">
+                            <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="956074380664187" title="Jeu voiture">
+            <sub-events>
+                <event-group description="" sid="588305593553730" title="Création lignes">
+                    <sub-events>
+                        <event-block sid="902285735660867">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="245351001233359" type="System">
+                                    <param id="0" name="Interval (seconds)">0.2*(1+Facteur_Freinage)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="689200897355068" type="System">
+                                    <param id="0" name="Object to create">Ligne_separation</param>
+                                    <param id="1" name="Layer">&quot;Voiture&quot;</param>
+                                    <param id="2" name="X">1065</param>
+                                    <param id="3" name="Y">513</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="893062961634321" type="Cache" />
+                            </actions>
+                            <sub-events>
+                                <event-block sid="999284562829811">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="366340244861857" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="476662916890754" type="Lignes_separation">
+                                            <param id="0" name="Scale">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="280104658396635">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="807333779318154" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="374060280695204" type="Lignes_separation">
+                                    <param id="0" name="Instance variable">Scale</param>
+                                    <param id="1" name="Value">0.03*Facteur_Freinage</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="816446841707007" type="Lignes_separation">
+                                    <param id="0" name="Scale">Lignes_separation.Scale</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="706953621496087">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="559938182841890" type="System">
+                                    <param id="0" name="Interval (seconds)">0.025</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="626250744088600" type="Ligne_separation">
+                                    <param id="0" name="X">Self.X-(22.5*Facteur_Freinage)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="718575913227770" type="Ligne_separation">
+                                    <param id="0" name="Y">Self.Y+(13*Facteur_Freinage)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="982690037837688" title="Création arbres">
+                    <sub-events>
+                        <event-block sid="772914961741285">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="892237864545051" type="System">
+                                    <param id="0" name="Interval (seconds)">random(0.1,0.2)</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="370833192755858" type="System">
+                                    <param id="0" name="Variable">Facteur_Freinage</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="520282045881618">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="543516570997600" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="492293736450495" type="Function">
+                                            <param id="0" name="Name">&quot;TreeGen&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="375541721518961" type="Cache" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="733636916750823">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="385319766405943" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="329566744667939" type="Arbres">
+                                    <param id="0" name="Instance variable">Scale</param>
+                                    <param id="1" name="Value">0.01*Facteur_Freinage</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="806237706283780" type="Arbres">
+                                    <param id="0" name="Scale">Arbres.Scale</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="598409645288161" type="Arbre_R">
+                                    <param id="0" name="X">Self.X+(7*Facteur_Freinage)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="717245804920353" type="Arbre_R">
+                                    <param id="0" name="Y">Self.Y+(1.5*Facteur_Freinage)</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="908671609342299" type="Arbre_L">
+                                    <param id="0" name="X">Self.X-(7*Facteur_Freinage)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="884336662760368" type="Arbre_L">
+                                    <param id="0" name="Y">Self.Y+(0.6*Facteur_Freinage)</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="361425801195547" type="Cache" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="561474471156418" title="Création piquets">
+                    <sub-events>
+                        <event-block sid="830919351212042">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="246599855727235" type="Piquet_haut">
+                                    <param id="0" name="Object">Voiture_curseur</param>
+                                    <param id="1" name="Offset X">290</param>
+                                    <param id="2" name="Offset Y">-30</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="217579056969271">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="475075267772606" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="576632073945586" type="Piquets_lateraux_L">
+                                            <param id="0" name="Scale">0</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="722695594472837" type="System">
+                                            <param id="0" name="Object to create">Piquet_R</param>
+                                            <param id="1" name="Layer">&quot;Piquets&quot;</param>
+                                            <param id="2" name="X">1144</param>
+                                            <param id="3" name="Y">513</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="716461978104433" type="System">
+                                            <param id="0" name="Object to create">Piquet_L</param>
+                                            <param id="1" name="Layer">&quot;Piquets&quot;</param>
+                                            <param id="2" name="X">975</param>
+                                            <param id="3" name="Y">513</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="522344678526682" type="Cache" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="611509514138237">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="873195229920238" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="221562129790512">
+                                    <conditions>
+                                        <condition id="-34" name="Pick by evaluate" sid="878510509662065" type="System">
+                                            <param id="0" name="Object">Piquets_lateraux_L</param>
+                                            <param id="1" name="Expression">Piquets_lateraux_L.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="370921350807792" type="Piquets_lateraux_L">
+                                            <param id="0" name="Instance variable">Scale</param>
+                                            <param id="1" name="Value">0.01*Facteur_Freinage</param>
+                                        </action>
+                                        <action id="9" name="Set scale" sid="916962309022346" type="Piquets_lateraux_L">
+                                            <param id="0" name="Scale">Piquets_lateraux_L.Scale</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="948453323389029" type="Piquets_lateraux_R">
+                                            <param id="0" name="Instance variable">Scale</param>
+                                            <param id="1" name="Value">0.022*Facteur_Freinage</param>
+                                        </action>
+                                        <action id="9" name="Set scale" sid="317939580047503" type="Piquets_lateraux_R">
+                                            <param id="0" name="Scale">Piquets_lateraux_R.Scale</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="162549435988509">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="220349892960644" type="System">
+                                    <param id="0" name="Interval (seconds)">0.035</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="138695111495755" type="Piquet_L">
+                                    <param id="0" name="X">Self.X-(28*Facteur_Freinage)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="509204750062538" type="Piquet_L">
+                                    <param id="0" name="Y">Self.Y+(5*Facteur_Freinage)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="959024516399456">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="344869503829458" type="System">
+                                    <param id="0" name="Interval (seconds)">0.04</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="804696293352241" type="Piquet_R">
+                                    <param id="0" name="X">Self.X+(21*Facteur_Freinage)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="872874475081963" type="Piquet_R">
+                                    <param id="0" name="Y">Self.Y+(11*Facteur_Freinage)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="483192971243618" title="Création effets vitesse">
+                    <sub-events>
+                        <event-block sid="537350658435315">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="236517164110189" type="System">
+                                    <param id="0" name="Interval (seconds)">random(0.1,0.3)</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="871059751765796" type="System">
+                                    <param id="0" name="Variable">Facteur_Freinage</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="127396046345489" type="System">
+                                    <param id="0" name="Object to create">Effet_vitesse_L</param>
+                                    <param id="1" name="Layer">&quot;Piquets&quot;</param>
+                                    <param id="2" name="X">787</param>
+                                    <param id="3" name="Y">513</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="232608132353647" type="System">
+                                    <param id="0" name="Object to create">Effet_vitesse_R</param>
+                                    <param id="1" name="Layer">&quot;Piquets&quot;</param>
+                                    <param id="2" name="X">1167</param>
+                                    <param id="3" name="Y">513</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="763397926733790" type="Effet_vitesse_L" />
+                                <action id="-24" name="Move to top" sid="864978873963632" type="Effet_vitesse_R" />
+                                <action id="-24" name="Move to top" sid="501247561320822" type="Cache" />
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="176227924609463" type="Effet_vitesse_L">
+                                    <param id="0" name="Angle">random(200,160)</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="918033679942722" type="Effet_vitesse_R">
+                                    <param id="0" name="Angle">random(330,420)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="842794645196631">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="628738798644369" type="System">
+                                    <param id="0" name="Interval (seconds)">0.05</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="554081509471936" type="System">
+                                    <param id="0" name="Variable">Facteur_Freinage</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="879960747395671" type="Voiture_arriere">
+                                    <param id="0" name="X">lerp(Self.X,Self.X+random(-5,5),0.05)</param>
+                                    <param id="1" name="Y">lerp(Self.Y,Self.Y+random(-5,5),0.05)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="468173365799399">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="778694945014273" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="528044829725477" type="Feux_stop">
+                                            <param id="0" name="Object">Voiture_arriere</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="677305895646383" title="Destruction des objets">
+                    <sub-events>
+                        <event-block sid="863366847446553">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="481396457242833" type="Trash">
+                                    <param id="0" name="Object">Destructeur</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="272114789630587" type="Trash" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="769575859536364" title="Volant">
+                    <sub-events>
+                        <event-block sid="849834178901079">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="834194835379809" type="System">
+                                    <param id="0" name="Interval (seconds)">0.05</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="905272042868231" type="System">
+                                    <param id="0" name="Variable">Facteur_Freinage</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="103024209850986" type="Volant">
+                                    <param id="0" name="Angle">random(-0.3,0.5)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="502308046333593" title="Curseur du haut pour la distance des véhicules">
+                    <sub-events>
+                        <event-block sid="512713378526586">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="403107900376297" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="320781498453146" type="System">
+                                    <param id="0" name="Variable">Distance_entre_vehicules</param>
+                                    <param id="1" name="Value">round(distance(Voiture_curseur.X,Voiture_curseur.Y,Vehicule_suivi.X,Vehicule_suivi.Y)*3)/100</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="549163180325688">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="237255937347428" type="Voiture_curseur">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="X co-ordinate">1383</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="200084216213522" type="Voiture_curseur">
+                                            <param id="0" name="X">1383</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="750316389048736">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="631307151111443" type="Voiture_curseur">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">520</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="826151659651262" type="Voiture_curseur">
+                                            <param id="0" name="X">520</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="852117123570801">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="416234337781378" type="System">
+                                            <param id="0" name="Variable">Distance_entre_vehicules</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">0.5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="112687505885997" type="Voiture_arriere">
+                                            <param id="0" name="Scale">abs(0.5/Distance_entre_vehicules)*2.5</param>
+                                        </action>
+                                        <action id="9" name="Set scale" sid="308639868872276" type="Feux_stop">
+                                            <param id="0" name="Scale">abs(0.5/Distance_entre_vehicules)*2.5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="485590598770268">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="474829653478114" type="Keyboard">
+                                    <param id="0" name="Key">37</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="595387562512252" type="Voiture_curseur">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="541274411240644">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="291043565805154" type="Keyboard">
+                                    <param id="0" name="Key">39</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="446095493219912" type="Voiture_curseur">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="613432851103480" title="Défilement horizontal">
+                    <sub-events>
+                        <event-block sid="125819917652645">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="261860576191515" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="474092288329372" type="Ligne_blanche">
+                                    <param id="0" name="X">Self.X-(6.3*Facteur_Freinage)</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="263528755673864" type="Piquet_haut">
+                                    <param id="0" name="X">Self.X-(6.3*Facteur_Freinage)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="883874315923031">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="327565674360660" type="Ligne_blanche">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">405</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="637164270773748" type="Ligne_blanche">
+                                    <param id="0" name="X">1600</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="540087310269595">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="592678315637879" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0+Facteur_Freinage</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="715873477712616" type="System">
+                                    <param id="0" name="Object to create">Piquet_haut</param>
+                                    <param id="1" name="Layer">&quot;Curseur vehicules&quot;</param>
+                                    <param id="2" name="X">1545</param>
+                                    <param id="3" name="Y">170</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="438427011604310" type="Piquet_haut" />
+                                <action id="-24" name="Move to top" sid="262464802868506" type="Cache_haut" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="769261887279965" title="Frein">
+                    <sub-events>
+                        <event-block sid="447136480174873">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="284245557100087" type="Keyboard">
+                                    <param id="0" name="Key">32</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="322684486195242" type="System">
+                                    <param id="0" name="Variable">Facteur_Freinage</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="1" name="Set duration" sid="663011590131684" type="Piquet_R">
+                                    <param id="0" name="Duration">7.5*Facteur_Freinage</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="263129009561767">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="435772027155705" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="876243871722840" type="Route">
+                                            <param id="0" name="Instance variable">checkit</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="630216338350836" type="Route">
+                                            <param id="0" name="Instance variable">Debut_Chrono</param>
+                                            <param id="1" name="Value">time-ElapsedTime</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="752119853637915">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="433052235755277" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="718589043423732" type="System">
+                                            <param id="0" name="Variable">Facteur_Freinage</param>
+                                            <param id="1" name="Value">0.01</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="484624932410873" title="Phase de freinage">
+                    <sub-events>
+                        <event-group description="" sid="309092405228700" title="Sons">
+                            <sub-events>
+                                <event-block sid="809336700512475">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="517468863519994" type="System">
+                                            <param id="0" name="Variable">Freinage_en_cours</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="656016679017237" type="System">
+                                            <param id="0" name="Variable">Distance_entre_vehicules</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="442605378689753" type="Keyboard">
+                                            <param id="0" name="Key">32</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="711565998538315">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="354015532858090" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Play" sid="973669609384067" type="Audio">
+                                                    <param id="0" name="Audio file">Freinage</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">-5</param>
+                                                    <param id="1" name="Tag (optional)">&quot;Freinage&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="590637761532407" title="Freinage du véhicule suivi">
+                            <sub-events>
+                                <event-block sid="874974613559847">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="862807568055801" type="System">
+                                            <param id="0" name="Variable">Freinage_en_cours</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="458690601698824" type="Vehicule_suivi">
+                                            <param id="0" name="X">Self.X-(6.3*Facteur_Freinage)</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="802958759307133" type="Voiture_curseur">
+                                            <param id="0" name="X">Self.X-(Facteur_Freinage/4)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="259017364572915" title="Réussite">
+                            <sub-events>
+                                <event-block sid="210805530155479">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="599145894272650" type="System">
+                                            <param id="0" name="Variable">Freinage_en_cours</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="454628279901572" type="System">
+                                            <param id="0" name="Variable">Facteur_Freinage</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="926007964058811" type="System">
+                                            <param id="0" name="Variable">Distance_entre_vehicules</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="901857423903506" type="FondChrono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="610330708631143" type="Chrono_Text">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="364921427963971" title="Collision">
+                            <sub-events>
+                                <event-block sid="319994334355102">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="643028217747073" type="Vehicule_suivi">
+                                            <param id="0" name="Object">Voiture_curseur</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="733880031097264" type="System">
+                                            <param id="0" name="Variable">Freinage_en_cours</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="952958821384324">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="154800868410309" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="346378822869224" type="Vehicule_suivi">
+                                                    <param id="0" name="X">Voiture_curseur.X+10</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="337758150977143" type="System">
+                                                    <param id="0" name="Variable">Freinage_en_cours</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="429970935003628" type="System">
+                                                    <param id="0" name="Variable">Facteur_Freinage</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="280234305941760" type="Parebrise">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="933216785125864">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="211133317820307" type="Route">
+                                                            <param id="0" name="Instance variable">checkit</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="607688685994862" type="FondChrono">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                        <action id="-15" name="Set visible" sid="720156815876842" type="Chrono_Text">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="443679677934279">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="413453770165661" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="643195560521238" type="Audio">
+                                                            <param id="0" name="Audio file">Choc</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-5</param>
+                                                            <param id="1" name="Tag (optional)">&quot;Choc&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="812223819311156">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="480091897613105" type="Vehicule_suivi">
+                                            <param id="0" name="Object">Voiture_curseur</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="839768372151438" type="System">
+                                            <param id="0" name="Variable">Freinage_en_cours</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="218810766799059" type="System">
+                                            <param id="0" name="Variable">Facteur_Freinage</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="982018821122835">
+                                            <conditions>
+                                                <condition id="-1" name="Every tick" sid="835044296403485" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Subtract from" sid="653194407597118" type="System">
+                                                    <param id="0" name="Variable">Facteur_Freinage</param>
+                                                    <param id="1" name="Value">0.1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-block sid="524902781951299">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="788774673037786" type="Keyboard">
+                            <param id="0" name="Key">97</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="763594045092292" type="System">
+                            <param id="0" name="Variable">Freinage_en_cours</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="466188381914757" type="Feux_stop">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="753775529021118" type="Voiture_curseur">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="846063057330331">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="857579366115351" type="Route">
+                                    <param id="0" name="Instance variable">checkit</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="679896487397066" type="System">
+                                    <param id="0" name="Variable">ElapsedTime</param>
+                                    <param id="1" name="Value">time-Route.Debut_Chrono</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="347752183280977" type="Route">
+                                    <param id="0" name="Instance variable">checkit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="290112343091344">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="892819980489393" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="432105230657782">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="278345327702339" type="Route">
+                                    <param id="0" name="Instance variable">checkit</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="190782641136780" type="Chrono_Text">
+                                    <param id="0" name="Text">&quot;Votre temps de réaction a été de  &quot; &amp; round(((time-ElapsedTime)%1000/10)*100)/100 &amp; &quot; s&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
