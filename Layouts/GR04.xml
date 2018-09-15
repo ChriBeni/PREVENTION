@@ -198,7 +198,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GR04_Bulle_Gabarit_Orange" uid="171">
+                <instance type="GR04_Bulle_Gabarit_Orange" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -235,7 +235,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GR04_Bulle_Gabarit_Bleu" uid="172">
+                <instance type="GR04_Bulle_Gabarit_Bleu" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

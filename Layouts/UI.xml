@@ -140,14 +140,28 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <firstStartFade>1</firstStartFade>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>960</x>
-                        <y>540</y>
+                        <y>528.5</y>
                         <z>0</z>
                         <width>1920</width>
-                        <height>1080</height>
+                        <height>909</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -265,6 +279,28 @@
                         <z>0</z>
                         <width>1920</width>
                         <height>98</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="UI_EFFET_BTN_Suiv" uid="180">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1050</x>
+                        <y>1035</y>
+                        <z>0</z>
+                        <width>102</width>
+                        <height>102</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -511,6 +547,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="UI_EFFET_BTN_Play" uid="179">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>960</x>
+                        <y>1035</y>
+                        <z>0</z>
+                        <width>102</width>
+                        <height>102</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="UI_BTN_Prec" uid="37">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -643,32 +701,22 @@
                 </instance>
                 <instance type="UI_ICON_Pause" uid="78">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <firstStartFade>1</firstStartFade>
+                    </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Pin">
+                        <behavior-instance type="Fade">
                             <properties>
-                                <x>Disabled</x>
-                                <y>Disabled</y>
-                                <zindex>Disabled</zindex>
-                                <angle>Disabled</angle>
-                                <width>Disabled</width>
-                                <height>Disabled</height>
-                                <opacity>Enabled</opacity>
-                                <visibility>Enabled</visibility>
-                                <collisions-enabled>Disabled</collisions-enabled>
-                                <timescale>Disabled</timescale>
-                                <hotspot-x>Disabled</hotspot-x>
-                                <hotspot-y>Disabled</hotspot-y>
-                                <imagepoint>0</imagepoint>
-                                <animation>Disabled</animation>
-                                <frame>Disabled</frame>
-                                <mirror>Disabled</mirror>
-                                <flip>Disabled</flip>
-                                <destroy>Disabled</destroy>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>No</destroy>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -676,7 +724,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>960</x>
-                        <y>487</y>
+                        <y>540.5</y>
                         <z>0</z>
                         <width>532</width>
                         <height>139</height>
@@ -806,7 +854,7 @@
                         <character-width>29</character-width>
                         <character-height>58</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZaàâäbcçdeéèêëfghijklmnoôöpqrstuùûüvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;%œ</character-set>
-                        <text>Text</text>
+                        <text>TITRE</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -1678,7 +1726,7 @@
                         <character-width>18</character-width>
                         <character-height>36</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZaàâäbcçdeéèêëfghijklmnoôöpqrstuùûüvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;%œ</character-set>
-                        <text>Sous titre</text>
+                        <text>Label</text>
                         <scale>1</scale>
                         <initial-visibility>Invisible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -1712,28 +1760,6 @@
                         <z>0</z>
                         <width>545</width>
                         <height>52</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite" uid="179">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1162</x>
-                        <y>717</y>
-                        <z>0</z>
-                        <width>102</width>
-                        <height>102</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

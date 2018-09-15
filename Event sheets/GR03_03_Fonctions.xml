@@ -147,7 +147,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Set value" sid="488071718897678" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
+                                            <param id="0" name="Variable">etatTimeline</param>
                                             <param id="1" name="Value">END</param>
                                         </action>
                                     </actions>
@@ -165,7 +165,7 @@
                                             <param id="0" name="Tag">&quot;sonFini&quot;</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="120612285762997" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
+                                            <param id="0" name="Variable">etatTimeline</param>
                                             <param id="1" name="Value">END</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="422998922142196" type="System">

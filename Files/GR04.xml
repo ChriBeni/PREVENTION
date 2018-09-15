@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Liste des medias pour le granule GR04 -->
 <medias code="GR04">
-	<media  id="D00_a" url="GR04_D00_a" speaker="">
+	<media  id="D00_a" url="" speaker="">
 		<soutitre>
 					</soutitre>
-	</media>	<media  id="D00_b" url="GR04_D00_b" speaker="">
+	</media>	<media  id="D00_b" url="" speaker="">
 		<soutitre>
 					</soutitre>
 	</media>

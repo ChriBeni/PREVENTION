@@ -400,10 +400,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="922224139267585" type="UI_ICON_Pause">
-                                    <param id="0" name="Pin to">UI_FOND_Pause</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="656843389368977" type="UI_BARRE_popup_txt">
                                     <param id="0" name="Pin to">UI_BARRE_Popup_img</param>
                                     <param id="1" name="Mode">0</param>
@@ -428,7 +424,7 @@
                                 </action>
                                 <action disabled="1" id="2" name="Start" sid="824931471893229" type="MM_Preloader" />
                                 <action id="-9" name="Set value" sid="933175666864270" type="System">
-                                    <param id="0" name="Variable">etatLecture</param>
+                                    <param id="0" name="Variable">etatTimeline</param>
                                     <param id="1" name="Value">PLAY</param>
                                 </action>
                                 <action id="0" name="Call function" sid="954684266378883" type="Function">
@@ -443,6 +439,10 @@
                                     <param id="0" name="Name">&quot;initBarreProgression&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
+                                <action id="0" name="Call function" sid="565161872672271" type="Function">
+                                    <param id="0" name="Name">&quot;setNoTimescale&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="-3" name="Set position" sid="790857994604511" type="COM_BTN_Commencer">
                                     <param id="0" name="X">960</param>
                                     <param id="1" name="Y">467</param>
@@ -454,33 +454,137 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="549389503197539" title="UI - INTERFACE - Effet Pause">
+                <event-group description="" sid="549389503197539" title="UI - INTERFACE - Etat Lecture">
                     <sub-events>
+                        <comment>ETAT LECTURE - PAUSE</comment>
                         <event-block sid="826616964531670">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="319021303097084" type="System">
-                                    <param id="0" name="Variable">etatLecture</param>
+                                    <param id="0" name="Variable">etatTimeline</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">PAUSE</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="155436976112162" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="731010633318264" type="UI_FOND_Pause">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="0" name="Call function" sid="963094546812785" type="Function">
+                                    <param id="0" name="Name">&quot;affichageBoutonPlay&quot;</param>
+                                    <param id="1" name="Parameter {n}">AFFICHE</param>
+                                </action>
+                                <action id="0" name="Call function" sid="338528364228360" type="Function">
+                                    <param id="0" name="Name">&quot;affichageEffetBoutonPause&quot;</param>
+                                    <param id="1" name="Parameter {n}">AFFICHE</param>
+                                </action>
+                                <action id="0" name="Call function" sid="283433488562022" type="Function">
+                                    <param id="0" name="Name">&quot;affichageBoutonPause&quot;</param>
+                                    <param id="1" name="Parameter {n}">CACHE</param>
+                                </action>
+                                <action id="0" name="Call function" sid="153826221965824" type="Function">
+                                    <param id="0" name="Name">&quot;affichageEffetBoutonSuiv&quot;</param>
+                                    <param id="1" name="Parameter {n}">CACHE</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>ETAT LECTURE - PLAY</comment>
                         <event-block sid="389342752701350">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="194579884329268" type="System">
-                                    <param id="0" name="Variable">etatLecture</param>
+                                    <param id="0" name="Variable">etatTimeline</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">PLAY</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="500549274518494" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="915371106847234" type="UI_FOND_Pause">
-                                    <param id="0" name="Visibility">0</param>
+                                <action id="0" name="Call function" sid="564101776965793" type="Function">
+                                    <param id="0" name="Name">&quot;affichageBoutonPause&quot;</param>
+                                    <param id="1" name="Parameter {n}">AFFICHE</param>
+                                </action>
+                                <action id="0" name="Call function" sid="690741587020526" type="Function">
+                                    <param id="0" name="Name">&quot;affichageBoutonPlay&quot;</param>
+                                    <param id="1" name="Parameter {n}">CACHE</param>
+                                </action>
+                                <action id="0" name="Call function" sid="960086308901689" type="Function">
+                                    <param id="0" name="Name">&quot;affichageEffetBoutonSuiv&quot;</param>
+                                    <param id="1" name="Parameter {n}">CACHE</param>
+                                </action>
+                                <action id="0" name="Call function" sid="237724608026881" type="Function">
+                                    <param id="0" name="Name">&quot;affichageEffetBoutonPause&quot;</param>
+                                    <param id="1" name="Parameter {n}">CACHE</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="782010430327858">
+                                    <conditions>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="579583985889500" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="253972057948598" type="System">
+                                            <param id="0" name="Variable">etatBoutonPause</param>
+                                            <param id="1" name="Value">ACTIF</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>ETAT LECTURE - END</comment>
+                        <event-block sid="140875803801748">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="135990875275620" type="System">
+                                    <param id="0" name="Variable">etatTimeline</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">END</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="482794682877722" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="439876827714063" type="UI_BTN_Pause">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="440534998781654" type="System">
+                                    <param id="0" name="Variable">etatBoutonPause</param>
+                                    <param id="1" name="Value">INACTIF</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="655915216295997">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="572527121688311" type="System">
+                                            <param id="0" name="Variable">etatBoutonSuiv</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="519567384696283" type="Function">
+                                            <param id="0" name="Name">&quot;affichageEffetBoutonSuiv&quot;</param>
+                                            <param id="1" name="Parameter {n}">AFFICHE</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>ETAT LECTURE - FINAL</comment>
+                        <event-block sid="349569172396161">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="900519525625035" type="System">
+                                    <param id="0" name="Variable">etatTimeline</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">FINAL</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="789550508927970" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="296408636616794" type="UI_BTN_Suiv">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="507215375781826" type="System">
+                                    <param id="0" name="Variable">etatBoutonSuiv</param>
+                                    <param id="1" name="Value">INACTIF</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -727,7 +831,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="872279677155228" title="UI - BOUTONS - Etats">
+                <event-group description="" sid="872279677155228" title="UI - BOUTONS - Etats ACTIF / INACTIF">
                     <sub-events>
                         <event-block sid="737263385745129">
                             <conditions>
@@ -865,46 +969,6 @@
                 </event-group>
                 <event-group description="" sid="517280039736602" title="UI - BOUTON PLAY">
                     <sub-events>
-                        <event-group description="" sid="120132341500851" title="UI - BOUTON PLAY - Visible">
-                            <sub-events>
-                                <event-block sid="454190050486448">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="548353061567615" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">PAUSE</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="366960944728592" type="UI_BTN_Play">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="364686695908466" type="UI_BTN_Play">
-                                            <param id="0" name="X">960</param>
-                                            <param id="1" name="Y">1035</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="872288074558577">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="644495012538286" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">PLAY</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="752801449658770" type="UI_BTN_Play">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="422232715589105" type="UI_BTN_Play">
-                                            <param id="0" name="X">960</param>
-                                            <param id="1" name="Y">1300</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
                         <event-group description="" sid="285891867873064" title="UI - BOUTON PLAY - Actif">
                             <sub-events>
                                 <event-block sid="388667145129611">
@@ -989,8 +1053,20 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="447232964116026" type="Function">
+                                            <param id="0" name="Name">&quot;affichageEffetBoutonPlay&quot;</param>
+                                            <param id="1" name="Parameter {n}">CACHE</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="159188965603251" type="System">
+                                            <param id="0" name="Variable">etatBoutonPrec</param>
+                                            <param id="1" name="Value">ACTIF</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="581574899608294" type="System">
+                                            <param id="0" name="Variable">etatBoutonSuiv</param>
+                                            <param id="1" name="Value">ACTIF</param>
+                                        </action>
                                         <action id="-9" name="Set value" sid="665650259880354" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
+                                            <param id="0" name="Variable">etatTimeline</param>
                                             <param id="1" name="Value">PLAY</param>
                                         </action>
                                         <action id="-13" name="Set time scale" sid="357095530994872" type="System">
@@ -1006,6 +1082,67 @@
                                                 <action id="6" name="Play" sid="485517757305437" type="Media" />
                                             </actions>
                                         </event-block>
+                                        <comment>Obligatoire pour firefox : il n&apos;arrête pas les sons avec simplement le timescale</comment>
+                                        <event-block sid="835671210975377">
+                                            <conditions>
+                                                <condition id="5" inverted="1" name="Is tag playing" sid="123062449175118" type="Audio">
+                                                    <param id="0" name="Tag">xmlNomMP3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="22" name="Set paused" sid="678786734326579" type="Audio">
+                                                    <param id="0" name="Tag">xmlNomMP3</param>
+                                                    <param id="1" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="961269259670781" title="UI - BOUTON EFFET PAUSE">
+                    <sub-events>
+                        <event-group description="" sid="871491787651688" title="UI - BOUTON EFFET PAUSE - Clic">
+                            <sub-events>
+                                <event-block sid="844314688080069">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="717976174878384" type="Touch">
+                                            <param id="0" name="Object">UI_FOND_Pause</param>
+                                        </condition>
+                                        <condition id="-9" name="Is visible" sid="796571926078953" type="UI_FOND_Pause" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="709640703511369" type="System">
+                                            <param id="0" name="Variable">etatBoutonPrec</param>
+                                            <param id="1" name="Value">ACTIF</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="394727773356299" type="System">
+                                            <param id="0" name="Variable">etatBoutonSuiv</param>
+                                            <param id="1" name="Value">ACTIF</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="739497767113806" type="System">
+                                            <param id="0" name="Variable">etatTimeline</param>
+                                            <param id="1" name="Value">PLAY</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="734383393567165" type="UI_EFFET_BTN_Play">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="2" name="Stop" sid="157793596115976" type="UI_EFFET_BTN_Play" />
+                                        <action id="-13" name="Set time scale" sid="667226143631463" type="System">
+                                            <param id="0" name="Time scale">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="209232874698053">
+                                            <conditions>
+                                                <condition id="1" name="Is paused" sid="502613836020397" type="Media" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="6" name="Play" sid="681422464164117" type="Media" />
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
@@ -1014,78 +1151,6 @@
                 </event-group>
                 <event-group description="" sid="550338938828181" title="UI - BOUTON PAUSE">
                     <sub-events>
-                        <event-group description="" sid="214096055261900" title="UI - BOUTON PAUSE - Visible">
-                            <sub-events>
-                                <event-block sid="937343500755643">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="507204430437243" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">PAUSE</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="926152927692295" type="UI_BTN_Pause">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="586622685332155" type="UI_BTN_Pause">
-                                            <param id="0" name="X">960</param>
-                                            <param id="1" name="Y">1300</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="557269926614357">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="253881813246130" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">PLAY</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="439461173172123" type="UI_BTN_Pause">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="288469991388864" type="UI_BTN_Pause">
-                                            <param id="0" name="X">960</param>
-                                            <param id="1" name="Y">1035</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="406990179267552">
-                                            <conditions>
-                                                <condition id="-14" inverted="1" name="Compare variable" sid="942218975781477" type="System">
-                                                    <param id="0" name="Variable">numeroMarqueur</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="757888332475954" type="System">
-                                                    <param id="0" name="Variable">etatBoutonPause</param>
-                                                    <param id="1" name="Value">ACTIF</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="458608617111859">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="368581231920323" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">END</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="752465402009435" type="System">
-                                            <param id="0" name="Variable">etatBoutonPause</param>
-                                            <param id="1" name="Value">INACTIF</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
                         <event-group description="" sid="653251668747669" title="UI - BOUTON PAUSE - Actif">
                             <sub-events>
                                 <event-block sid="873116781037443">
@@ -1178,8 +1243,24 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="648620343511346" type="Function">
+                                            <param id="0" name="Name">&quot;setNoTimescale&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="327055535955931" type="Function">
+                                            <param id="0" name="Name">&quot;affichageEffetBoutonPlay&quot;</param>
+                                            <param id="1" name="Parameter {n}">AFFICHE</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="420642600231694" type="System">
+                                            <param id="0" name="Variable">etatBoutonPrec</param>
+                                            <param id="1" name="Value">INACTIF</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="942560144595302" type="System">
+                                            <param id="0" name="Variable">etatBoutonSuiv</param>
+                                            <param id="1" name="Value">INACTIF</param>
+                                        </action>
                                         <action id="-9" name="Set value" sid="847796347445140" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
+                                            <param id="0" name="Variable">etatTimeline</param>
                                             <param id="1" name="Value">PAUSE</param>
                                         </action>
                                         <action id="-13" name="Set time scale" sid="810343230698017" type="System">
@@ -1195,6 +1276,20 @@
                                                 <action id="5" name="Pause" sid="575711957312653" type="Media" />
                                             </actions>
                                         </event-block>
+                                        <comment>Obligatoire pour firefox : il n&apos;arrête pas les sons avec simplement le timescale</comment>
+                                        <event-block sid="143385664949628">
+                                            <conditions>
+                                                <condition id="5" name="Is tag playing" sid="476738776542222" type="Audio">
+                                                    <param id="0" name="Tag">xmlNomMP3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="22" name="Set paused" sid="136189601715494" type="Audio">
+                                                    <param id="0" name="Tag">xmlNomMP3</param>
+                                                    <param id="1" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
@@ -1203,40 +1298,6 @@
                 </event-group>
                 <event-group description="" sid="771990199942662" title="UI - BOUTON SUIVANT">
                     <sub-events>
-                        <event-group description="" sid="921941853215660" title="UI - BOUTON SUIVANT - Visible">
-                            <sub-events>
-                                <event-block sid="792769656603128">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="185913523473136" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">END</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="140684399603207" type="UI_BTN_Suiv">
-                                            <param id="0" name="Animation">&quot;CLIGNOTE&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="822621385021238">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="209565029511536" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">PLAY</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="787525383465441" type="UI_BTN_Suiv">
-                                            <param id="0" name="Animation">&quot;ETATS&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
                         <event-group description="" sid="775092008171368" title="UI - BOUTON SUIVANT - Actif">
                             <sub-events>
                                 <event-block sid="163801444079845">
@@ -1253,7 +1314,7 @@
                                         </action>
                                         <action id="-10" name="Set value" sid="799407515031099" type="UI_BTN_Suiv">
                                             <param id="0" name="Instance variable">handActif</param>
-                                            <param id="1" name="Value">1</param>
+                                            <param id="1" name="Value">OUI</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1271,7 +1332,7 @@
                                         </action>
                                         <action id="-10" name="Set value" sid="341081969929728" type="UI_BTN_Suiv">
                                             <param id="0" name="Instance variable">handActif</param>
-                                            <param id="1" name="Value">0</param>
+                                            <param id="1" name="Value">NON</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1598,9 +1659,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-16" name="Wait" sid="615569496385583" type="System">
-                                            <param id="0" name="Seconds">delaiApparitionObjetsUI</param>
-                                        </action>
                                         <action id="-15" name="Set visible" sid="943779819681169" type="UI_SUBTITLE_Consigne_txt">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
@@ -1743,7 +1801,11 @@
                                 <action id="33" name="Stop all" sid="101258421572030" type="Audio" />
                                 <action id="-45" name="Reset persisted objects" sid="695951649493307" type="System" />
                                 <action id="-9" name="Set value" sid="134878377963387" type="System">
-                                    <param id="0" name="Variable">etatLecture</param>
+                                    <param id="0" name="Variable">etatTimeline</param>
+                                    <param id="1" name="Value">PLAY</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="219348200179422" type="System">
+                                    <param id="0" name="Variable">etatLectureAnim</param>
                                     <param id="1" name="Value">PLAY</param>
                                 </action>
                                 <action id="0" name="Call function" sid="737373393837597" type="Function">
@@ -1757,10 +1819,6 @@
                                 <action id="0" name="Call function" sid="455189137839799" type="Function">
                                     <param id="0" name="Name">&quot;checkIndexLayerUI&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="4" name="Set animation" sid="538581623796379" type="UI_BTN_Suiv">
-                                    <param id="0" name="Animation">&quot;ETATS&quot;</param>
-                                    <param id="1" name="From">1</param>
                                 </action>
                                 <action id="5" name="Set frame" sid="177489120417340" type="UI_BTN_Suiv">
                                     <param id="0" name="Frame number">0</param>
@@ -1786,6 +1844,10 @@
                                             <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
                                             <param id="1" name="Parameter {n}">INACTIF</param>
                                         </action>
+                                        <action id="-10" name="Set value" sid="723260407449439" type="COM_BTN_Commencer">
+                                            <param id="0" name="Instance variable">handActif</param>
+                                            <param id="1" name="Value">OUI</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="383444723789730">
@@ -1799,7 +1861,7 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="225143186979433" type="COM_BTN_Commencer">
                                             <param id="0" name="Instance variable">handActif</param>
-                                            <param id="1" name="Value">0</param>
+                                            <param id="1" name="Value">NON</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1815,62 +1877,13 @@
                                     <param id="0" name="Name">&quot;passageAuto&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="356402220065081" type="System">
+                                    <param id="0" name="Variable">etatLectureAnim</param>
+                                    <param id="1" name="Value">END</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="405456043791354">
-                                    <conditions>
-                                        <condition id="1" name="Compare parameter" sid="358251475964474" type="Function">
-                                            <param id="0" name="Index">0</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">OUI</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="120601839756344" type="System" />
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="819481654076402">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="202839913691821" type="System">
-                                                    <param id="0" name="Variable">numeroMarqueur</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Add to" sid="153538294085402" type="System">
-                                                    <param id="0" name="Variable">numeroMarqueur</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="585558219936153" type="Function">
-                                                    <param id="0" name="Name">&quot;initNavigation&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="490904190921755">
-                                            <conditions>
-                                                <condition id="-14" inverted="1" name="Compare variable" sid="734598084409637" type="System">
-                                                    <param id="0" name="Variable">numeroMarqueur</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-41" name="Wait for signal" sid="348202959831736" type="System">
-                                                    <param id="0" name="Tag">&quot;sonFini&quot;</param>
-                                                </action>
-                                                <action id="-10" name="Add to" sid="326556120861779" type="System">
-                                                    <param id="0" name="Variable">numeroMarqueur</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="890608615315945" type="Function">
-                                                    <param id="0" name="Name">&quot;initNavigation&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
                                 <event-block sid="245626184111040">
                                     <conditions>
                                         <condition id="1" name="Compare parameter" sid="934253195016410" type="Function">
@@ -1878,46 +1891,64 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">NON</param>
                                         </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="512996096221618" type="System" />
                                     </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="404344903742013">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="986384969282153" type="System">
-                                                    <param id="0" name="Variable">numeroMarqueur</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="409095564085741" type="System">
-                                                    <param id="0" name="Variable">etatLecture</param>
-                                                    <param id="1" name="Value">END</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="331429528883729">
-                                            <conditions>
-                                                <condition id="-14" inverted="1" name="Compare variable" sid="896034916605223" type="System">
-                                                    <param id="0" name="Variable">numeroMarqueur</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-41" name="Wait for signal" sid="671767889712258" type="System">
-                                                    <param id="0" name="Tag">&quot;sonFini&quot;</param>
-                                                </action>
-                                                <action id="-9" name="Set value" sid="586478023930033" type="System">
-                                                    <param id="0" name="Variable">etatLecture</param>
-                                                    <param id="1" name="Value">END</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
+                                    <actions>
+                                        <action id="-41" name="Wait for signal" sid="478983073109406" type="System">
+                                            <param id="0" name="Tag">&quot;finMarqueur&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="566727794139084" type="System">
+                                            <param id="0" name="Variable">etatTimeline</param>
+                                            <param id="1" name="Value">END</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="405456043791354">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="358251475964474" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">OUI</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-41" name="Wait for signal" sid="605102795014477" type="System">
+                                            <param id="0" name="Tag">&quot;finMarqueur&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="938277828208893" type="System">
+                                            <param id="0" name="Variable">numeroMarqueur</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="794844399888490" type="Function">
+                                            <param id="0" name="Name">&quot;initNavigation&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="320108959322528" title="GRANULE - TIMELINE - Détection fin marqueur">
+                    <sub-events>
+                        <comment>Si les 2 conditions sont remplies, on indique la fin du marqueur (pour la fonction passage auto)</comment>
+                        <event-block sid="800479258620805">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="884547208928804" type="System">
+                                    <param id="0" name="Variable">etatLectureAnim</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">END</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="935371295128229" type="System">
+                                    <param id="0" name="Variable">etatLectureSon</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">END</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-42" name="Signal" sid="118836851635519" type="System">
+                                    <param id="0" name="Tag">&quot;finMarqueur&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -2066,6 +2097,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <comment>On joue le son</comment>
                                 <event-block sid="427336334256669">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="664511829232937" type="System">
@@ -2073,10 +2105,18 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
+                                        <condition disabled="1" id="-4" name="Trigger once while true" sid="275146652128013" type="System" />
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="216764637228044" type="MOUCHARD_TXT_varNomSon">
                                             <param id="0" name="Text">&quot;none&quot;</param>
+                                        </action>
+                                        <action id="-42" name="Signal" sid="574388453367988" type="System">
+                                            <param id="0" name="Tag">&quot;sonFini&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="630512424533965" type="System">
+                                            <param id="0" name="Variable">etatLectureSon</param>
+                                            <param id="1" name="Value">END</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2087,32 +2127,20 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
+                                        <condition disabled="1" id="-4" name="Trigger once while true" sid="120031504899928" type="System" />
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="747535847694480" type="MOUCHARD_TXT_varNomSon">
                                             <param id="0" name="Text">xmlNomMP3</param>
                                         </action>
-                                    </actions>
-                                </event-block>
-                                <comment>On joue le son</comment>
-                                <event-block sid="364952411107282">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="860967825798131" type="System">
-                                            <param id="0" name="Variable">etatLecture</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">PLAY</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="128927646234748" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="7" name="Play (by name)" sid="643466447082652" type="Audio">
+                                        <action id="7" name="Play (by name)" sid="344430178168847" type="Audio">
                                             <param id="0" name="Folder">0</param>
                                             <param id="1" name="Audio file name">xmlNomMP3</param>
                                             <param id="3" name="Loop">0</param>
                                             <param id="4" name="Volume">0</param>
                                             <param id="2" name="Tag (optional)">xmlNomMP3</param>
                                         </action>
-                                        <action disabled="1" id="-9" name="Set value" sid="329217762800355" type="System">
+                                        <action id="-9" name="Set value" sid="780110482298714" type="System">
                                             <param id="0" name="Variable">etatLectureSon</param>
                                             <param id="1" name="Value">PLAY</param>
                                         </action>
@@ -2133,6 +2161,10 @@
                             <actions>
                                 <action id="-42" name="Signal" sid="326926027138068" type="System">
                                     <param id="0" name="Tag">&quot;sonFini&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="431013167227827" type="System">
+                                    <param id="0" name="Variable">etatLectureSon</param>
+                                    <param id="1" name="Value">END</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2183,8 +2215,8 @@
                                     <conditions />
                                     <actions>
                                         <action id="-3" name="Set position" sid="814497883969266" type="MOUCHARD_Fond">
-                                            <param id="0" name="X">10</param>
-                                            <param id="1" name="Y">15</param>
+                                            <param id="0" name="X">36</param>
+                                            <param id="1" name="Y">155</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2561,7 +2593,7 @@
         </event-group>
         <event-group description="" sid="914671205925691" title="BARRE PROGRESSION">
             <sub-events>
-                <event-group description="" sid="354623880114806" title="BARRE PROGRESSION - FONCTION - Init">
+                <event-group description="" sid="354623880114806" title="BARRE PROGRESSION - Init">
                     <sub-events>
                         <event-block sid="661169456806822">
                             <conditions>
@@ -2598,7 +2630,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="261751782911185" title="BARRE PROGRESSION - FONCTION - Affiche Barre">
+                <event-group description="" sid="261751782911185" title="BARRE PROGRESSION - Affiche Barre">
                     <sub-events>
                         <event-block sid="835158410947471">
                             <conditions>
@@ -2639,9 +2671,6 @@
                                         <condition id="-4" name="Trigger once while true" sid="704139417077336" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-16" name="Wait" sid="251243112945158" type="System">
-                                            <param id="0" name="Seconds">delaiApparitionObjetsUI</param>
-                                        </action>
                                         <action id="-15" name="Set visible" sid="437061313070219" type="UI_BARRE_Popup_img">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
@@ -2824,12 +2853,6 @@
             </sub-events>
         </event-group>
         <event-block sid="816504911223010">
-            <conditions>
-                <condition id="-4" name="Trigger once while true" sid="266869384530877" type="System" />
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="732238464497090">
             <conditions />
             <actions />
         </event-block>

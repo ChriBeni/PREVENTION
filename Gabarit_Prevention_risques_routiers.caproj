@@ -62,7 +62,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Firefox</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -272,8 +272,35 @@
                             <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_01.png" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_SUIV_02.png" />
                         </animation>
-                        <animation framecount="1" loop="0" name="CLIGNOTE" pingpong="0" repeatcount="1" repeatto="0" sid="787622472059880" speed="0">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.509804" />
+                    </animation-folder>
+                </object-type>
+                <object-type name="UI_EFFET_BTN_Play" sid="607102187542669">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="8" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="444341639611389" speed="8">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\EffetPLAY\EFFET_PLAY0002.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="UI_EFFET_BTN_Suiv" sid="306546759229805">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="910229842307893" speed="8">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\EffetPLAY\EFFET_PLAY0002.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -448,6 +475,11 @@
             </object-type>
             <object-type name="UI_FOND_Pause" sid="253283592402505">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="391673798216589">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="164541485087228" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -457,13 +489,14 @@
             <object-type name="UI_ICON_Pause" sid="566870363366187">
                 <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="Pin" sid="132861379458346">
-                        <behavior id="PinPlus" />
+                    <behavior-type name="Fade" sid="289364845364714">
+                        <behavior id="Fade" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399366297888031" speed="0">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399366297888031" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.503597" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\TXT_PAUSE.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503597" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -928,27 +961,6 @@
                             <frame duration="1" hotspotX="0.500369" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
-                </object-type>
-                <object-type name="TEMP_Sprite" sid="866510374567325">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="DragDrop" sid="288588580317907">
-                            <behavior id="DragnDrop" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491651786540350" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="TEMP_Text" sid="572782527548304">
-                    <plugin id="Text" />
-                    <behaviors>
-                        <behavior-type name="Pin" sid="147324773414595">
-                            <behavior id="PinPlus" />
-                        </behavior-type>
-                    </behaviors>
                 </object-type>
                 <object-type name="Vehicule_suivi" sid="504722639901491">
                     <plugin id="Sprite" />
@@ -1682,16 +1694,28 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="TEMP_Sprite" sid="866510374567325">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="288588580317907">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491651786540350" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TEMP_Text" sid="572782527548304">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="147324773414595">
+                        <behavior id="PinPlus" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
         </object-folder>
-        <object-type name="Sprite" sid="607102187542669">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="444341639611389" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\EffetPLAY\EFFET_PLAY0002.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="UI_HAND_Curseur" plugin-id="Sprite" sid="871919883988788">
@@ -1893,6 +1917,15 @@
                     <behavior id="Fade" />
                 </behavior-type>
             </behaviors>
+        </family>
+        <family name="UI_SPRITES" plugin-id="Sprite" sid="937611797831057">
+            <members>
+                <member>UI_FOND_Pause</member>
+                <member>UI_ICON_Pause</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="firstStartFade" sid="101725322258352" type="number" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>
