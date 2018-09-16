@@ -659,6 +659,25 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="UI_VIDEO_reload" sid="338285772931307">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689945013896077" speed="5">
+                        <frame duration="1" hotspotX="0.502959" hotspotY="0.503226" original-source="C:\Users\nalek\ALEX\_BOULOTS\_POSTE\PREVENTION\GRAPHISME\UI\btn reload.png">
+                            <collision-poly>
+                                <point x="0.0946746" y="0.103226" />
+                                <point x="0.497041" y="0.0258065" />
+                                <point x="0.846154" y="0.167742" />
+                                <point x="1" y="0.496774" />
+                                <point x="0.857988" y="0.845161" />
+                                <point x="0.497041" y="1" />
+                                <point x="0.118343" y="0.870968" />
+                                <point x="0.00591716" y="0.496774" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="GR04">
             <object-type name="GR04_Bulle_img_02" sid="955631641453121">
