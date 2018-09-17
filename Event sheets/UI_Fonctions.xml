@@ -384,6 +384,11 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">NON</param>
                                                 </condition>
+                                                <condition id="-14" inverted="1" name="Compare variable" sid="633630889270072" type="System">
+                                                    <param id="0" name="Variable">etatTimeline</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">START</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-9" name="Set value" sid="491724741712899" type="System">
