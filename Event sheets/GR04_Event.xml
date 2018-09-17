@@ -39,9 +39,6 @@
                             <param id="0" name="Tag">numeroGranule</param>
                             <param id="1" name="File">GR04.xml</param>
                         </action>
-                        <action disabled="1" id="-41" name="Wait for signal" sid="926652955807443" type="System">
-                            <param id="0" name="Tag">&quot;UI_OK&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="831009761671843">
@@ -194,15 +191,9 @@
                                     <param id="0" name="Name">&quot;afficheBulleXml&quot;</param>
                                     <param id="1" name="Parameter {n}">GR04_Bulle_img_02.UID{###}GR04_Bulle_txt_02.UID{###}1</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <comment>Obligatoire (FIN)</comment>
-                        <event-block sid="650599548820028">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="934194540750917" type="Function">
+                                <action id="0" name="Call function" sid="571139934386847" type="Function">
                                     <param id="0" name="Name">&quot;passageAuto&quot;</param>
-                                    <param id="1" name="Parameter {n}">OUI</param>
+                                    <param id="1" name="Parameter {n}">NON</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -263,19 +254,19 @@
                             <param id="0" name="Layer">&quot;00_START&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="0" name="Call function" sid="571139934386847" type="Function">
-                            <param id="0" name="Name">&quot;passageAuto&quot;</param>
-                            <param id="1" name="Parameter {n}">NON</param>
-                        </action>
                     </actions>
-                </event-block>
-                <event-block disabled="1" sid="845664971260577">
-                    <conditions>
-                        <condition id="0" name="On function" sid="512169596267994" type="Function">
-                            <param id="0" name="Name">&quot;initNavigation&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
+                    <sub-events>
+                        <comment>Obligatoire à chaque fin de marqueur</comment>
+                        <event-block sid="650599548820028">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="934194540750917" type="Function">
+                                    <param id="0" name="Name">&quot;passageAuto&quot;</param>
+                                    <param id="1" name="Parameter {n}">OUI</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
