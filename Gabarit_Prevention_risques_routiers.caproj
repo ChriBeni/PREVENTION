@@ -1734,6 +1734,42 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
+            <object-type name="COM_BTN_Valider" sid="820752172790310">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Persist" sid="312092449569795">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="353464299894266" speed="0">
+                        <frame duration="1" hotspotX="0.501887" hotspotY="0.504132" original-source="C:\Users\nalek\ALEX\_BOULOTS\_POSTE\PREVENTION\GRAPHISME\UI\BTN_VALIDER_01.png">
+                            <collision-poly>
+                                <point x="0.101887" y="0.22314" />
+                                <point x="0.498113" y="0.0909091" />
+                                <point x="0.898113" y="0.22314" />
+                                <point x="0.935849" y="0.495868" />
+                                <point x="0.879245" y="0.735537" />
+                                <point x="0.498113" y="0.859504" />
+                                <point x="0.109434" y="0.760331" />
+                                <point x="0.0339623" y="0.495868" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.501887" hotspotY="0.504132" original-source="C:\Users\nalek\ALEX\_BOULOTS\_POSTE\PREVENTION\GRAPHISME\UI\BTN_VALIDER_02.png">
+                            <collision-poly>
+                                <point x="0.113208" y="0.247934" />
+                                <point x="0.498113" y="0.132231" />
+                                <point x="0.883019" y="0.256198" />
+                                <point x="0.916981" y="0.495868" />
+                                <point x="0.864151" y="0.702479" />
+                                <point x="0.498113" y="0.818182" />
+                                <point x="0.124528" y="0.727273" />
+                                <point x="0.0566038" y="0.495868" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
     </object-folder>
     <families>
@@ -1742,6 +1778,7 @@
                 <member>Btn_Lecture</member>
                 <member>Btn_Son</member>
                 <member>COM_BTN_Commencer</member>
+                <member>COM_BTN_Valider</member>
                 <member>Curseur_son</member>
                 <member>MOUCH_BTN_Close</member>
                 <member>MOUCH_BTN_Prec</member>
@@ -1789,7 +1826,7 @@
                 <instance-variable name="firstStartFade" sid="447639856294047" type="number" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="Fade" sid="686787345422105">
+                <behavior-type name="fadeVisible" sid="686787345422105">
                     <behavior id="Fade" />
                 </behavior-type>
                 <behavior-type name="Persist" sid="858927922849952">
@@ -1945,6 +1982,23 @@
             <instance-variables>
                 <instance-variable name="firstStartFade" sid="101725322258352" type="number" />
             </instance-variables>
+        </family>
+        <family name="COMMUN_Sprites" plugin-id="Sprite" sid="334155843800404">
+            <members>
+                <member>COM_BTN_Commencer</member>
+                <member>COM_BTN_Valider</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="firstStartFade" sid="774229370419962" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="fadeVisible" sid="681488523434444">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="fadeInvisible" sid="189503208833155">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>

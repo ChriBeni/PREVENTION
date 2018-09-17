@@ -33,6 +33,124 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="438918317555574" title="GRANULE - BOUTONS">
+            <sub-events>
+                <event-block sid="418742695750898">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="112568847766269" type="System">
+                            <param id="0" name="Variable">etatBoutonValider</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">ACTIF</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="396632999986898">
+                    <conditions>
+                        <condition id="0" name="On function" sid="267796646301853" type="Function">
+                            <param id="0" name="Name">&quot;afficheBoutonValider&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="339530105910004" type="System">
+                            <param id="0" name="Variable">etatBoutonValider</param>
+                            <param id="1" name="Value">ACTIF</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="550421481359471" type="COM_BTN_Valider">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="608869867476771" type="COM_BTN_Valider">
+                            <param id="0" name="X">Function.Param(0)</param>
+                            <param id="1" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="709512892436822">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="448679447237272" type="COM_BTN_Valider">
+                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">OUI</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="fadeVisible" id="0" name="Restart fade" sid="393259653257876" type="COM_BTN_Valider" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="384959580816921">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="933901092109289" type="COM_BTN_Valider">
+                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">NON</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="fadeVisible" id="1" name="Start fade" sid="591261803214919" type="COM_BTN_Valider" />
+                                <action id="-11" name="Add to" sid="717941046021366" type="COM_BTN_Valider">
+                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="561540042411770">
+                    <conditions>
+                        <condition id="0" name="On function" sid="462613829663331" type="Function">
+                            <param id="0" name="Name">&quot;cacheBoutonValider&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="616310528126286" type="System">
+                            <param id="0" name="Variable">etatBoutonValider</param>
+                            <param id="1" name="Value">INACTIF</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="507125677159832" type="COM_BTN_Valider">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="588086637528560" type="COM_BTN_Valider">
+                            <param id="0" name="X">-300</param>
+                            <param id="1" name="Y">-300</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="504158289695957">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="876315732892382" type="COM_BTN_Valider">
+                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">OUI</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="fadeInvisible" id="0" name="Restart fade" sid="759789054654033" type="COM_BTN_Valider" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="729851357139578">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="469332518598557" type="COM_BTN_Valider">
+                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">NON</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="fadeInvisible" id="1" name="Start fade" sid="216702993286206" type="COM_BTN_Valider" />
+                                <action id="-11" name="Add to" sid="542051146040592" type="COM_BTN_Valider">
+                                    <param id="0" name="Instance variable">firstStartFade</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="477816043970644">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="990746182170465" title="GRANULE - TRANSITIONS">
             <sub-events>
                 <event-block sid="686500918100143">
@@ -43,6 +161,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <comment>Param 0 : UID Bulle | Param 1 : UID Text | Param 2 : N° frame</comment>
                         <event-block sid="764197115806938">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="906593050320030" type="COMMUN_Bulles_txt">
@@ -85,7 +204,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="Fade" id="0" name="Restart fade" sid="884996046602338" type="COMMUN_Bulles_img" />
+                                                <action behavior="fadeVisible" id="0" name="Restart fade" sid="884996046602338" type="COMMUN_Bulles_img" />
                                             </actions>
                                         </event-block>
                                         <event-block sid="381947335329243">
@@ -97,7 +216,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="Fade" id="1" name="Start fade" sid="512361741565925" type="COMMUN_Bulles_img" />
+                                                <action behavior="fadeVisible" id="1" name="Start fade" sid="512361741565925" type="COMMUN_Bulles_img" />
                                                 <action id="-11" name="Add to" sid="269532323515631" type="COMMUN_Bulles_img">
                                                     <param id="0" name="Instance variable">firstStartFade</param>
                                                     <param id="1" name="Value">1</param>
@@ -148,7 +267,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="Fade" id="0" name="Restart fade" sid="644878133342685" type="COMMUN_Bulles_img" />
+                                                <action behavior="fadeVisible" id="0" name="Restart fade" sid="644878133342685" type="COMMUN_Bulles_img" />
                                             </actions>
                                         </event-block>
                                         <event-block sid="143027199602318">
@@ -160,7 +279,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="Fade" id="1" name="Start fade" sid="541712083581302" type="COMMUN_Bulles_img" />
+                                                <action behavior="fadeVisible" id="1" name="Start fade" sid="541712083581302" type="COMMUN_Bulles_img" />
                                                 <action id="-11" name="Add to" sid="309859883479882" type="COMMUN_Bulles_img">
                                                     <param id="0" name="Instance variable">firstStartFade</param>
                                                     <param id="1" name="Value">1</param>
@@ -170,6 +289,29 @@
                                     </sub-events>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="544597726289739">
+                    <conditions>
+                        <condition id="0" name="On function" sid="234340633344651" type="Function">
+                            <param id="0" name="Name">&quot;cacheBulle&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="521023288146499">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="477204010247828" type="COMMUN_Bulles_img">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="279290910675434" type="COMMUN_Bulles_img">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action behavior="fadeVisible" disabled="1" id="1" name="Start fade" sid="392883140789922" type="COMMUN_Bulles_img" />
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -212,7 +354,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="Fade" id="0" name="Restart fade" sid="374698187797283" type="COMMUN_Bulles_img" />
+                                                <action behavior="fadeVisible" id="0" name="Restart fade" sid="374698187797283" type="COMMUN_Bulles_img" />
                                             </actions>
                                         </event-block>
                                         <event-block sid="700119728738546">
@@ -224,7 +366,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="Fade" id="1" name="Start fade" sid="656519177809959" type="COMMUN_Bulles_img" />
+                                                <action behavior="fadeVisible" id="1" name="Start fade" sid="656519177809959" type="COMMUN_Bulles_img" />
                                                 <action id="-11" name="Add to" sid="696459351605487" type="COMMUN_Bulles_img">
                                                     <param id="0" name="Instance variable">firstStartFade</param>
                                                     <param id="1" name="Value">1</param>
@@ -234,30 +376,6 @@
                                     </sub-events>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>_OLD</comment>
-                <event-block sid="544597726289739">
-                    <conditions>
-                        <condition id="0" name="On function" sid="234340633344651" type="Function">
-                            <param id="0" name="Name">&quot;bulleInvisible&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="521023288146499">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="477204010247828" type="COMMUN_Bulles_img">
-                                    <param id="0" name="Unique ID">Function.Param(0)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="279290910675434" type="COMMUN_Bulles_img">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action behavior="Fade" disabled="1" id="1" name="Start fade" sid="392883140789922" type="COMMUN_Bulles_img" />
-                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

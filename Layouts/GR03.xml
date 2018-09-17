@@ -1290,7 +1290,28 @@
                     </properties>
                     <instance-variables>
                         <handActif>1</handActif>
+                        <firstStartFade>0</firstStartFade>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="fadeVisible">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0.4</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="fadeInvisible">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.4</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

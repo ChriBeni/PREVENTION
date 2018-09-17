@@ -51,6 +51,53 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="COM_BTN_Valider" uid="182">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <handActif>1</handActif>
+                        <firstStartFade>0</firstStartFade>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="fadeVisible">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0.4</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="fadeInvisible">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.4</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1463</x>
+                        <y>876</y>
+                        <z>0</z>
+                        <width>265</width>
+                        <height>121</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501886785</hotspotX>
+                        <hotspotY>0.504132211</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -121,7 +168,7 @@
                         <firstStartFade>0</firstStartFade>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Fade">
+                        <behavior-instance type="fadeVisible">
                             <properties>
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0.5</fade-in-time>
@@ -209,7 +256,7 @@
                         <firstStartFade>0</firstStartFade>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Fade">
+                        <behavior-instance type="fadeVisible">
                             <properties>
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0.5</fade-in-time>
@@ -237,7 +284,7 @@
                 </instance>
                 <instance type="GR04_Bulle_Gabarit_Bleu" uid="5">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -246,7 +293,7 @@
                         <firstStartFade>0</firstStartFade>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Fade">
+                        <behavior-instance type="fadeVisible">
                             <properties>
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0.5</fade-in-time>
@@ -364,7 +411,28 @@
                     </properties>
                     <instance-variables>
                         <handActif>1</handActif>
+                        <firstStartFade>0</firstStartFade>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="fadeVisible">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0.4</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="fadeInvisible">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.4</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
