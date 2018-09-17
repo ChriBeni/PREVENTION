@@ -62,7 +62,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Firefox</prop>
+        <prop name="Preview browser">Internet Explorer</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -2034,16 +2034,12 @@
             <file name="GR03_D01_a.ogg" />
             <file name="GR03_D01_b.m4a" />
             <file name="GR03_D01_b.ogg" />
-            <file name="GR03_D01_c.m4a" />
-            <file name="GR03_D01_c.ogg" />
             <file name="GR03_D02_a.m4a" />
             <file name="GR03_D02_a.ogg" />
             <file name="GR03_D02_b.m4a" />
             <file name="GR03_D02_b.ogg" />
             <file name="GR03_D03_a.m4a" />
             <file name="GR03_D03_a.ogg" />
-            <file name="GR03_D03_b.m4a" />
-            <file name="GR03_D03_b.ogg" />
             <file name="GR03_D04_a.m4a" />
             <file name="GR03_D04_a.ogg" />
             <file name="GR03_D04_b.m4a" />
@@ -2074,6 +2070,10 @@
             <file name="Choc.ogg" />
             <file name="Freinage.m4a" />
             <file name="Freinage.ogg" />
+            <file name="GR03_D03_b.m4a" />
+            <file name="GR03_D03_b.ogg" />
+            <file name="GR03_D01_c.m4a" />
+            <file name="GR03_D01_c.ogg" />
         </sound-folder>
         <sound-folder name="GR04">
             <file name="GR04_D01_a.m4a" />
