@@ -51,6 +51,10 @@
         <variable comment="OUI ou NON" constant="0" name="initUiOk" sid="720025042564693" static="0" type="number">0</variable>
         <variable comment="OUI ou NON" constant="0" name="initXmlOk" sid="201053515577092" static="0" type="number">0</variable>
         <variable comment="OUI ou NON" constant="0" name="initChargementOk" sid="451162791285441" static="0" type="number">0</variable>
+        <variable comment="OUI ou NON" constant="0" name="initSonOk" sid="202969349233104" static="0" type="number">0</variable>
+        <variable comment="OUI ou NON" constant="0" name="initValuesMouchardOk" sid="809681447576052" static="0" type="number">0</variable>
+        <variable comment="OUI ou NON" constant="0" name="initSubtitlesOk" sid="419802643050657" static="0" type="number">0</variable>
+        <variable comment="OUI ou NON" constant="0" name="initSonPlayOk" sid="989702857760659" static="0" type="number">0</variable>
         <comment>CALCULS</comment>
         <variable comment="Donne l&apos;index du layer UI" constant="0" name="indexLayerUI" sid="193091633676437" static="0" type="number">0</variable>
         <comment>BARRE PROGRESSION</comment>
