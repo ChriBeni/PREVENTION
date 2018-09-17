@@ -43,36 +43,26 @@
                             <param id="0" name="Tag">&quot;UI_OK&quot;</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="831009761671843">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="148353858948955" type="System">
-                                    <param id="0" name="Variable">initUiOk</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">OUI</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="101850649937350" type="System">
-                                    <param id="0" name="Variable">initXmlOk</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">OUI</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="345281258250898" type="Function">
-                                    <param id="0" name="Name">&quot;GR04_initPin&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="0" name="Call function" sid="964781309794903" type="Function">
-                                    <param id="0" name="Name">&quot;goToMarqueur&quot;</param>
-                                    <param id="1" name="Parameter {n}">START</param>
-                                </action>
-                                <action disabled="1" id="-9" name="Set value" sid="218499179356876" type="System">
-                                    <param id="0" name="Variable">marqueurInit</param>
-                                    <param id="1" name="Value">START</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                </event-block>
+                <event-block sid="831009761671843">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="148353858948955" type="System">
+                            <param id="0" name="Variable">initChargementOk</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">OUI</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="717602742009054" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="345281258250898" type="Function">
+                            <param id="0" name="Name">&quot;GR04_initPin&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="964781309794903" type="Function">
+                            <param id="0" name="Name">&quot;goToMarqueur&quot;</param>
+                            <param id="1" name="Parameter {n}">START</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -155,6 +145,11 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="934828142755122" type="System">
+                            <param id="0" name="Variable">marqueurInit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">END</param>
+                        </condition>
                         <condition id="-4" name="Trigger once while true" sid="298579456576438" type="System" />
                     </conditions>
                     <actions>
@@ -171,6 +166,12 @@
                             <param id="1" name="Parameter {n}">NON</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="410809202048499">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>MARQUEUR 2 = Transition dialogue - Bulle 01</comment>
                 <event-block sid="335514801706985">
@@ -180,20 +181,20 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="478523410777144" type="System">
+                            <param id="0" name="Variable">marqueurInit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">END</param>
+                        </condition>
                         <condition id="-4" name="Trigger once while true" sid="925162278167053" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action disabled="1" id="0" name="Call function" sid="960580639256279" type="Function">
+                            <param id="0" name="Name">&quot;initMarqueur&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <comment>Obligatoire (DEBUT)</comment>
-                        <event-block sid="843728198335146">
-                            <conditions />
-                            <actions>
-                                <action disabled="1" id="0" name="Call function" sid="960580639256279" type="Function">
-                                    <param id="0" name="Name">&quot;initMarqueur&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <comment>Fonction &quot;afficheSecondTitre&quot; : param 0 = titre / param 1 = longueur du background (0 pour invisible, entre 1 et 5 pour la taille) =&gt; A mettre sur chaque marqueur où il doit être présent (pour le retour arrière)</comment>
                         <event-block sid="534779382451780">
                             <conditions />
@@ -212,7 +213,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="161468375705258" type="Function">
                                     <param id="0" name="Name">&quot;afficheBulleXml&quot;</param>
-                                    <param id="1" name="Parameter {n}">GR04_Bulle_img_02.UID{###}GR04_Bulle_txt_02.UID{###}5</param>
+                                    <param id="1" name="Parameter {n}">GR04_Bulle_img_02.UID{###}GR04_Bulle_txt_02.UID{###}1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -235,6 +236,11 @@
                             <param id="0" name="Variable">numeroMarqueur</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="783961093657790" type="System">
+                            <param id="0" name="Variable">marqueurInit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">END</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="682863660134993" type="System" />
                     </conditions>
@@ -266,12 +272,21 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="292976460235310" type="System">
+                            <param id="0" name="Variable">marqueurInit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">END</param>
+                        </condition>
                         <condition id="-4" name="Trigger once while true" sid="355915386377560" type="System" />
                     </conditions>
                     <actions>
                         <action disabled="1" id="0" name="Call function" sid="299162153901598" type="Function">
                             <param id="0" name="Name">&quot;initMarqueur&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action disabled="1" id="-10" name="Add to" sid="526447462089935" type="System">
+                            <param id="0" name="Variable">01_TEST</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="0" name="Call function" sid="335385302699462" type="Function">
                             <param id="0" name="Name">&quot;allLayersInvisible&quot;</param>
@@ -283,11 +298,11 @@
                         </action>
                         <action id="0" name="Call function" sid="571139934386847" type="Function">
                             <param id="0" name="Name">&quot;passageAuto&quot;</param>
-                            <param id="1" name="Parameter {n}">START</param>
+                            <param id="1" name="Parameter {n}">NON</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="845664971260577">
+                <event-block disabled="1" sid="845664971260577">
                     <conditions>
                         <condition id="0" name="On function" sid="512169596267994" type="Function">
                             <param id="0" name="Name">&quot;initNavigation&quot;</param>

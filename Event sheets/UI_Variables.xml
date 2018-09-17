@@ -5,8 +5,8 @@
     <events>
         <variable constant="0" name="Layer_OP" sid="387907044836283" static="0" type="number">0</variable>
         <comment>TEMPORAIRES ( à supprimer à l&apos;export)</comment>
-        <variable constant="0" name="TEST" sid="967162037838578" static="0" type="number">0</variable>
-        <variable constant="0" name="TEST_txt" sid="267059901747998" static="0" type="text"></variable>
+        <variable constant="0" name="01_TEST" sid="967162037838578" static="0" type="number">0</variable>
+        <variable constant="0" name="02_TEST_txt" sid="267059901747998" static="0" type="text"></variable>
         <comment>CONSTANTES</comment>
         <variable constant="1" name="FINAL" sid="254121202076916" static="0" type="number">3</variable>
         <variable constant="1" name="END" sid="670004296417267" static="0" type="number">2</variable>

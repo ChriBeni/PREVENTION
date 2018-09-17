@@ -683,7 +683,7 @@
             <object-type name="GR04_Bulle_img_02" sid="955631641453121">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780053539850913" speed="5">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780053539850913" speed="0">
                         <frame duration="1" hotspotX="0.500418" hotspotY="0.503185" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\fd-titre.png" />
                     </animation>
                 </animation-folder>
@@ -702,7 +702,7 @@
             <object-type name="GR04_Bulle_Gabarit_Orange" sid="900533240381973">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="13" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="621473062964521" speed="5">
+                    <animation framecount="13" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="621473062964521" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BULLES_ORANGE_00.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BULLES_ORANGE_01.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BULLES_ORANGE_02.png" />
@@ -722,7 +722,7 @@
             <object-type name="GR04_Bulle_Gabarit_Bleu" sid="105428640856556">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="13" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="295099221802142" speed="5">
+                    <animation framecount="13" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="295099221802142" speed="0">
                         <frame duration="1" hotspotX="0.500669" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BULLES_BLEU_00.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BULLES_BLEU_01.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BULLES_BLEU_02.png" />
