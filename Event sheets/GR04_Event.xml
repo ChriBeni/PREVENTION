@@ -12,7 +12,6 @@
                 <comment>PARAMETRES</comment>
                 <comment>&quot;modeDeveloppeur&quot; [OUI ou NON] =&gt; affiche en permanance le mouchard</comment>
                 <comment>&quot;boutonSuivTjrsInactif&quot; [OUI ou NON] =&gt;variable générale pour savoir si un marqueur doit être entièrement vu avant de passer à la suite (pour une obligation tempraire, utiliser la fonction &quot;&quot;)</comment>
-                <comment>&quot;goToMarqueur&quot; [à disable si pas besoin] =&gt; Va au numéro de marqueur désiré</comment>
                 <comment>Chargement du titre + vidéo + fichier xml dans Ajax - Fichier à charger dans le répertoire xml du projet</comment>
                 <event-block sid="731168980236983">
                     <conditions>
@@ -28,7 +27,7 @@
                             <param id="1" name="Value">OUI</param>
                         </action>
                         <action id="-9" name="Set value" sid="969230472817674" type="System">
-                            <param id="0" name="Variable">forceBoutonSuivInactif</param>
+                            <param id="0" name="Variable">boutonSuivInactifToujours</param>
                             <param id="1" name="Value">NON</param>
                         </action>
                         <action id="0" name="Call function" sid="563079481847935" type="Function">
@@ -41,6 +40,9 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>PARAMETRES</comment>
+                <comment>&quot;goToMarqueur&quot; [OBLIGATOIRE - à disable si on utilise le goToDev] =&gt; Premet de débuter le granule</comment>
+                <comment>&quot;devGoToMarqueur&quot; [param = N° de marqueur] =&gt; va directemenent au marqueur voulu [à disable si pas besoin]</comment>
                 <event-block sid="831009761671843">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="148353858948955" type="System">
@@ -58,6 +60,10 @@
                         <action id="0" name="Call function" sid="964781309794903" type="Function">
                             <param id="0" name="Name">&quot;goToMarqueur&quot;</param>
                             <param id="1" name="Parameter {n}">START</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="952376293819144" type="Function">
+                            <param id="0" name="Name">&quot;devGoToMarqueur&quot;</param>
+                            <param id="1" name="Parameter {n}">2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -193,7 +199,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="571139934386847" type="Function">
                                     <param id="0" name="Name">&quot;passageAuto&quot;</param>
-                                    <param id="1" name="Parameter {n}">NON</param>
+                                    <param id="1" name="Parameter {n}">OUI</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -262,7 +268,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="934194540750917" type="Function">
                                     <param id="0" name="Name">&quot;passageAuto&quot;</param>
-                                    <param id="1" name="Parameter {n}">OUI</param>
+                                    <param id="1" name="Parameter {n}">NON</param>
                                 </action>
                             </actions>
                         </event-block>

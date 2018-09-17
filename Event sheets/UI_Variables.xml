@@ -43,8 +43,8 @@
         <variable constant="0" name="marqueurGoTo" sid="805148117623186" static="0" type="number">0</variable>
         <variable comment="OUI ou NON" constant="0" name="marqueurPassageAuto" sid="484194698726918" static="0" type="number">100</variable>
         <comment>PARAMETRES</comment>
-        <variable comment="si variable à oui, le bouton suiv est inactif tant qu&apos;on est pas à la fin de la séquence (reste à OUI tant qu&apos;on a pas dit NON)" constant="0" name="forceBoutonSuivInactif" sid="192304305217618" static="0" type="number">0</variable>
-        <variable comment="si variable à oui, le bouton suiv est inactif tant qu&apos;on est pas à la fin de la séquence (reste à OUI tant qu&apos;on a pas dit NON)" constant="0" name="forceBoutonSuivInactif2" sid="439721817960137" static="0" type="number">0</variable>
+        <variable comment="si variable à oui, le bouton suiv est inactif tant qu&apos;on est pas à la fin de la séquence (reste à OUI tant qu&apos;on a pas dit NON)" constant="0" name="boutonSuivInactifToujours" sid="192304305217618" static="0" type="number">0</variable>
+        <variable comment="si variable à oui, le bouton suiv est inactif tant qu&apos;on est pas à la fin de la séquence (reste à OUI tant qu&apos;on a pas dit NON)" constant="0" name="boutonSuivInactifTemporaire" sid="439721817960137" static="0" type="number">0</variable>
         <variable comment="Permet l&apos;affichage du mouchard" constant="0" name="modeDeveloppeur" sid="576439426941931" static="0" type="number">0</variable>
         <variable comment="Numéro du granule" constant="0" name="numeroGranule" sid="199013896521894" static="0" type="text">GR..</variable>
         <variable comment="n° de rang =&gt; permet d&apos;appeler les sons et ss-titres dans l&apos;array" constant="0" name="numeroMarqueur" sid="438890224343227" static="0" type="number">0</variable>

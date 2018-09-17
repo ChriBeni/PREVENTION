@@ -380,7 +380,7 @@
                                         <event-block sid="784695133301030">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="532272677001994" type="System">
-                                                    <param id="0" name="Variable">forceBoutonSuivInactif</param>
+                                                    <param id="0" name="Variable">boutonSuivInactifToujours</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">NON</param>
                                                 </condition>
@@ -400,7 +400,7 @@
                                         <event-block sid="385220027764913">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="225704419703367" type="System">
-                                                    <param id="0" name="Variable">forceBoutonSuivInactif</param>
+                                                    <param id="0" name="Variable">boutonSuivInactifToujours</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">OUI</param>
                                                 </condition>
