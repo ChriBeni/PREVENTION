@@ -304,6 +304,37 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="UI_BTN_reload" sid="338285772931307">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689945013896077" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_RELOAD_01.png">
+                                <collision-poly>
+                                    <point x="0.0946746" y="0.103226" />
+                                    <point x="0.497041" y="0.0258065" />
+                                    <point x="0.846154" y="0.167742" />
+                                    <point x="1" y="0.496774" />
+                                    <point x="0.857988" y="0.845161" />
+                                    <point x="0.497041" y="1" />
+                                    <point x="0.118343" y="0.870968" />
+                                    <point x="0.00591716" y="0.496774" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_RELOAD_02.png">
+                                <collision-poly>
+                                    <point x="0.135714" y="0.141791" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.864286" y="0.141791" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.864286" y="0.858209" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.135714" y="0.858209" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-type name="Nav" sid="455680968235134">
                 <plugin id="Sprite" />
@@ -496,7 +527,18 @@
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399366297888031" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.503597" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\TXT_PAUSE.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.503597" />
+                        <frame duration="1" hotspotX="0.502513" hotspotY="0.505263" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\EFFET_PLAY.png">
+                            <collision-poly>
+                                <point x="0.135678" y="0.142105" />
+                                <point x="0.497487" y="0" />
+                                <point x="0.864322" y="0.142105" />
+                                <point x="1" y="0.5" />
+                                <point x="0.864322" y="0.857895" />
+                                <point x="0.497487" y="1" />
+                                <point x="0.135678" y="0.857895" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -654,25 +696,6 @@
                                 <point x="0.492958" y="0.912621" />
                                 <point x="0.211268" y="0.854369" />
                                 <point x="0.112676" y="0.495146" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="UI_VIDEO_reload" sid="338285772931307">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689945013896077" speed="5">
-                        <frame duration="1" hotspotX="0.502959" hotspotY="0.503226" original-source="C:\Users\nalek\ALEX\_BOULOTS\_POSTE\PREVENTION\GRAPHISME\UI\btn reload.png">
-                            <collision-poly>
-                                <point x="0.0946746" y="0.103226" />
-                                <point x="0.497041" y="0.0258065" />
-                                <point x="0.846154" y="0.167742" />
-                                <point x="1" y="0.496774" />
-                                <point x="0.857988" y="0.845161" />
-                                <point x="0.497041" y="1" />
-                                <point x="0.118343" y="0.870968" />
-                                <point x="0.00591716" y="0.496774" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1700,8 +1723,30 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="495095320554556" speed="0">
-                        <frame duration="1" hotspotX="0.501134" hotspotY="0.50303" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_START_01.png" />
-                        <frame duration="1" hotspotX="0.501134" hotspotY="0.50303" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_START_02.png" />
+                        <frame duration="1" hotspotX="0.501027" hotspotY="0.504762" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_START_01.png">
+                            <collision-poly>
+                                <point x="0.0862423" y="0.2" />
+                                <point x="0.498973" y="0.0571429" />
+                                <point x="0.917865" y="0.190476" />
+                                <point x="0.965092" y="0.5" />
+                                <point x="0.903491" y="0.77619" />
+                                <point x="0.498973" y="0.919048" />
+                                <point x="0.0903491" y="0.790476" />
+                                <point x="0.0184805" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.501027" hotspotY="0.504762" original-source="D:\_Boulots\Boulots_POSTE\RISQUE ROUTIER\GRAPHISME\UI\BTN_START_02.png">
+                            <collision-poly>
+                                <point x="0.102669" y="0.238095" />
+                                <point x="0.498973" y="0.104762" />
+                                <point x="0.903491" y="0.22381" />
+                                <point x="0.944559" y="0.5" />
+                                <point x="0.889117" y="0.742857" />
+                                <point x="0.498973" y="0.871429" />
+                                <point x="0.106776" y="0.752381" />
+                                <point x="0.0390144" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1789,6 +1834,7 @@
                 <member>UI_BTN_Pause</member>
                 <member>UI_BTN_Play</member>
                 <member>UI_BTN_Prec</member>
+                <member>UI_BTN_reload</member>
                 <member>UI_BTN_Son</member>
                 <member>UI_BTN_Soustitre</member>
                 <member>UI_BTN_Suiv</member>
@@ -1983,7 +2029,7 @@
                 <instance-variable name="firstStartFade" sid="101725322258352" type="number" />
             </instance-variables>
         </family>
-        <family name="COMMUN_Sprites" plugin-id="Sprite" sid="334155843800404">
+        <family name="COMMUN_Boutons" plugin-id="Sprite" sid="334155843800404">
             <members>
                 <member>COM_BTN_Commencer</member>
                 <member>COM_BTN_Valider</member>
@@ -2024,6 +2070,8 @@
             <event-sheet>UI_Mecanique.xml</event-sheet>
             <event-sheet>UI_Events.xml</event-sheet>
             <event-sheet>UI_Variables.xml</event-sheet>
+            <event-sheet>UI_Boutons.xml</event-sheet>
+            <event-sheet>UI_Mouchard.xml</event-sheet>
         </event-folder>
         <event-folder name="GR01" />
         <event-folder name="GR03">

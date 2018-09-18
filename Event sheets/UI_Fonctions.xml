@@ -33,124 +33,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="438918317555574" title="GRANULE - BOUTONS">
-            <sub-events>
-                <event-block sid="418742695750898">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="112568847766269" type="System">
-                            <param id="0" name="Variable">etatBoutonValider</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">ACTIF</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="396632999986898">
-                    <conditions>
-                        <condition id="0" name="On function" sid="267796646301853" type="Function">
-                            <param id="0" name="Name">&quot;afficheBoutonValider&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="339530105910004" type="System">
-                            <param id="0" name="Variable">etatBoutonValider</param>
-                            <param id="1" name="Value">ACTIF</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="550421481359471" type="COM_BTN_Valider">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="608869867476771" type="COM_BTN_Valider">
-                            <param id="0" name="X">Function.Param(0)</param>
-                            <param id="1" name="Y">Function.Param(1)</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="709512892436822">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="448679447237272" type="COM_BTN_Valider">
-                                    <param id="0" name="Instance variable">firstStartFade</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">OUI</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="fadeVisible" id="0" name="Restart fade" sid="393259653257876" type="COM_BTN_Valider" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="384959580816921">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="933901092109289" type="COM_BTN_Valider">
-                                    <param id="0" name="Instance variable">firstStartFade</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">NON</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="fadeVisible" id="1" name="Start fade" sid="591261803214919" type="COM_BTN_Valider" />
-                                <action id="-11" name="Add to" sid="717941046021366" type="COM_BTN_Valider">
-                                    <param id="0" name="Instance variable">firstStartFade</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="561540042411770">
-                    <conditions>
-                        <condition id="0" name="On function" sid="462613829663331" type="Function">
-                            <param id="0" name="Name">&quot;cacheBoutonValider&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="616310528126286" type="System">
-                            <param id="0" name="Variable">etatBoutonValider</param>
-                            <param id="1" name="Value">INACTIF</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="507125677159832" type="COM_BTN_Valider">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="588086637528560" type="COM_BTN_Valider">
-                            <param id="0" name="X">-300</param>
-                            <param id="1" name="Y">-300</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="504158289695957">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="876315732892382" type="COM_BTN_Valider">
-                                    <param id="0" name="Instance variable">firstStartFade</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">OUI</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="fadeInvisible" id="0" name="Restart fade" sid="759789054654033" type="COM_BTN_Valider" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="729851357139578">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="469332518598557" type="COM_BTN_Valider">
-                                    <param id="0" name="Instance variable">firstStartFade</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">NON</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="fadeInvisible" id="1" name="Start fade" sid="216702993286206" type="COM_BTN_Valider" />
-                                <action id="-11" name="Add to" sid="542051146040592" type="COM_BTN_Valider">
-                                    <param id="0" name="Instance variable">firstStartFade</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="477816043970644">
-                            <conditions />
-                            <actions />
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="990746182170465" title="GRANULE - TRANSITIONS">
             <sub-events>
                 <event-block sid="686500918100143">
@@ -510,7 +392,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-9" name="Set value" sid="491724741712899" type="System">
-                                                    <param id="0" name="Variable">etatBoutonSuiv</param>
+                                                    <param id="0" name="Variable">etatBoutonNavSuiv</param>
                                                     <param id="1" name="Value">ACTIF</param>
                                                 </action>
                                             </actions>
@@ -525,7 +407,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-9" name="Set value" sid="378280407118017" type="System">
-                                                    <param id="0" name="Variable">etatBoutonSuiv</param>
+                                                    <param id="0" name="Variable">etatBoutonNavSuiv</param>
                                                     <param id="1" name="Value">INACTIF</param>
                                                 </action>
                                             </actions>
@@ -542,7 +424,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Set value" sid="291433771718316" type="System">
-                                            <param id="0" name="Variable">etatBoutonSuiv</param>
+                                            <param id="0" name="Variable">etatBoutonNavSuiv</param>
                                             <param id="1" name="Value">INACTIF</param>
                                         </action>
                                     </actions>

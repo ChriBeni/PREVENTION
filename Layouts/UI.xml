@@ -1767,24 +1767,27 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_VIDEO_reload" uid="181">
+                <instance type="UI_BTN_reload" uid="181">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <handActif>1</handActif>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>960.5</x>
                         <y>540.5</y>
                         <z>0</z>
-                        <width>169</width>
-                        <height>155</height>
+                        <width>140</width>
+                        <height>134</height>
                         <depth>0</depth>
-                        <hotspotX>0.502958596</hotspotX>
-                        <hotspotY>0.503225803</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
