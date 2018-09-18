@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI_Boutons</name>
     <events>
-        <event-group description="" sid="440320302043630" title="NAV - BOUTONS">
+        <event-group description="" sid="440320302043630" title="NAV">
             <sub-events>
                 <event-group description="" sid="829072240127121" title="BTN - Curseur mouseover">
                     <sub-events>
@@ -112,7 +112,7 @@
                 </event-group>
                 <event-group description="" sid="889387212670611" title="BTN PLAY">
                     <sub-events>
-                        <event-group description="" sid="747349421312739" title="BOUTON PLAY - Actif">
+                        <event-group description="" sid="747349421312739" title="BTN PLAY - Actif">
                             <sub-events>
                                 <event-block sid="480321339988826">
                                     <conditions>
@@ -144,7 +144,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="528417465585469" title="BOUTON PLAY - Survol">
+                        <event-group description="" sid="528417465585469" title="BTN PLAY - Survol">
                             <sub-events>
                                 <event-block sid="880041089943645">
                                     <conditions>
@@ -182,7 +182,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="713518904883498" title="BOUTON PLAY - Clic">
+                        <event-group description="" sid="713518904883498" title="BTN PLAY - Clic">
                             <sub-events>
                                 <event-block sid="836686396535195">
                                     <conditions>
@@ -247,11 +247,108 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
+                        <event-group description="" sid="187354615049717" title="BTN PLAY - Fonctions">
+                            <sub-events>
+                                <event-block sid="117350376574143">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="655237546725853" type="Function">
+                                            <param id="0" name="Name">&quot;affichageBoutonPlay&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="892057764929436">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="840638383190031" type="System">
+                                                    <param id="0" name="Variable">AFFICHE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="146419099690265" type="UI_BTN_Play">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="109755082233534" type="UI_BTN_Play">
+                                                    <param id="0" name="X">960</param>
+                                                    <param id="1" name="Y">1035</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="983736164971255">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="397559274010367" type="System">
+                                                    <param id="0" name="Variable">CACHE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="536791915138915" type="UI_BTN_Play">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="671455029393124" type="UI_BTN_Play">
+                                                    <param id="0" name="X">960</param>
+                                                    <param id="1" name="Y">1300</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="637046136450165">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="185057338662312" type="Function">
+                                            <param id="0" name="Name">&quot;affichageEffetBoutonPlay&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-14" name="Set object time scale" sid="797606573697125" type="System">
+                                            <param id="0" name="Object">UI_EFFET_BTN_Play</param>
+                                            <param id="1" name="Time scale">1.0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="411911470788039">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="314134430764939" type="System">
+                                                    <param id="0" name="Variable">AFFICHE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="392838339190002" type="UI_EFFET_BTN_Play">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="3" name="Start" sid="177277770623790" type="UI_EFFET_BTN_Play">
+                                                    <param id="0" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="340408032605975">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="153992033675627" type="System">
+                                                    <param id="0" name="Variable">CACHE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="875402338726743" type="UI_EFFET_BTN_Play">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                                <action id="2" name="Stop" sid="421682548288893" type="UI_EFFET_BTN_Play" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="570673461605709" title="BTN EFFET PAUSE">
+                <event-group description="" sid="570673461605709" title="BTN PAUSE ECRAN">
                     <sub-events>
-                        <event-group description="" sid="508396234433644" title="BOUTON EFFET PAUSE - Clic">
+                        <event-group description="" sid="508396234433644" title="BTN PAUSE ECRAN - Clic">
                             <sub-events>
                                 <event-block sid="376781433770135">
                                     <conditions>
@@ -325,9 +422,9 @@
                         </event-group>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="136877611722684" title="BOUTON PAUSE">
+                <event-group description="" sid="136877611722684" title="BTN PAUSE">
                     <sub-events>
-                        <event-group description="" sid="566561985721152" title="BOUTON PAUSE - Actif">
+                        <event-group description="" sid="566561985721152" title="BTN PAUSE - Actif">
                             <sub-events>
                                 <event-block sid="991245950457934">
                                     <conditions>
@@ -367,7 +464,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="315637281464359" title="BOUTON PAUSE - Survol">
+                        <event-group description="" sid="315637281464359" title="BTN PAUSE - Survol">
                             <sub-events>
                                 <event-block sid="941884972379745">
                                     <conditions>
@@ -405,7 +502,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="256646213511084" title="BOUTON PAUSE - Clic">
+                        <event-group description="" sid="256646213511084" title="BTN PAUSE - Clic">
                             <sub-events>
                                 <event-block sid="390417980370362">
                                     <conditions>
@@ -470,25 +567,280 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
+                        <event-group description="" sid="541020697353113" title="BTN PAUSE - Fonctions">
+                            <sub-events>
+                                <event-block sid="396338538225273">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="357619143812165" type="Function">
+                                            <param id="0" name="Name">&quot;affichageBoutonPause&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="454231260652823">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="850963788005776" type="System">
+                                                    <param id="0" name="Variable">AFFICHE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="964892813604288" type="UI_BTN_Pause">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="213771093937669" type="UI_BTN_Pause">
+                                                    <param id="0" name="X">960</param>
+                                                    <param id="1" name="Y">1035</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="130173218667652">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="538684817295315" type="System">
+                                                    <param id="0" name="Variable">CACHE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="526132878464806" type="UI_BTN_Pause">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="558852122966499" type="UI_BTN_Pause">
+                                                    <param id="0" name="X">960</param>
+                                                    <param id="1" name="Y">1300</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="547634732183201">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="789469448348406" type="Function">
+                                            <param id="0" name="Name">&quot;affichageEffetBoutonPause&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="650416649291261">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="993586635821684" type="System">
+                                                    <param id="0" name="Variable">AFFICHE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="269332987574480" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="829607790642022" type="UI_FOND_Pause">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action behavior="Fade" id="2" name="Set fade-in time" sid="730991479114685" type="UI_FOND_Pause">
+                                                    <param id="0" name="Fade-in time">0.1</param>
+                                                </action>
+                                                <action behavior="Fade" id="4" name="Set fade-out time" sid="105334276694660" type="UI_FOND_Pause">
+                                                    <param id="0" name="Fade-out time">0</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="393777235599597" type="UI_ICON_Pause">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="402249057562006" type="UI_ICON_Pause">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                                <action behavior="Fade" id="2" name="Set fade-in time" sid="805447662810171" type="UI_ICON_Pause">
+                                                    <param id="0" name="Fade-in time">0.3</param>
+                                                </action>
+                                                <action behavior="Fade" id="4" name="Set fade-out time" sid="935522538248962" type="UI_ICON_Pause">
+                                                    <param id="0" name="Fade-out time">0</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="311093402422816">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="281264718427731" type="UI_FOND_Pause">
+                                                            <param id="0" name="Instance variable">firstStartFade</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">NON</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Fade" id="0" name="Restart fade" sid="785953858084633" type="UI_FOND_Pause" />
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="323724754728896">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="629391504270769" type="UI_FOND_Pause">
+                                                            <param id="0" name="Instance variable">firstStartFade</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">OUI</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Fade" id="1" name="Start fade" sid="384035364059730" type="UI_FOND_Pause" />
+                                                        <action id="-10" name="Set value" sid="793042398162955" type="UI_FOND_Pause">
+                                                            <param id="0" name="Instance variable">firstStartFade</param>
+                                                            <param id="1" name="Value">NON</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="634384607980974">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="625991745072607" type="UI_ICON_Pause">
+                                                            <param id="0" name="Instance variable">firstStartFade</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">NON</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Fade" id="0" name="Restart fade" sid="917529241110062" type="UI_ICON_Pause" />
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="734915683820573">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="902927826356832" type="UI_ICON_Pause">
+                                                            <param id="0" name="Instance variable">firstStartFade</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">OUI</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Fade" id="1" name="Start fade" sid="386269261679390" type="UI_ICON_Pause" />
+                                                        <action id="-10" name="Set value" sid="439079193214132" type="UI_ICON_Pause">
+                                                            <param id="0" name="Instance variable">firstStartFade</param>
+                                                            <param id="1" name="Value">NON</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="882883365856375">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="463227496500013" type="System">
+                                                    <param id="0" name="Variable">CACHE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="845798638469467" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="433263375366660" type="UI_ICON_Pause">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                                <action behavior="Fade" id="2" name="Set fade-in time" sid="430232845805106" type="UI_FOND_Pause">
+                                                    <param id="0" name="Fade-in time">0</param>
+                                                </action>
+                                                <action behavior="Fade" id="4" name="Set fade-out time" sid="268989057675306" type="UI_FOND_Pause">
+                                                    <param id="0" name="Fade-out time">0.2</param>
+                                                </action>
+                                                <action behavior="Fade" id="2" name="Set fade-in time" sid="947743768501728" type="UI_ICON_Pause">
+                                                    <param id="0" name="Fade-in time">0</param>
+                                                </action>
+                                                <action behavior="Fade" id="4" name="Set fade-out time" sid="376910811769619" type="UI_ICON_Pause">
+                                                    <param id="0" name="Fade-out time">0.6</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="130800415131372">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="293745382415345" type="UI_FOND_Pause">
+                                                            <param id="0" name="Instance variable">firstStartFade</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">NON</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Fade" id="0" name="Restart fade" sid="295808172772754" type="UI_FOND_Pause" />
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="221607075611422">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="427963991284147" type="UI_FOND_Pause">
+                                                            <param id="0" name="Instance variable">firstStartFade</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">OUI</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Fade" id="1" name="Start fade" sid="560192020519423" type="UI_FOND_Pause" />
+                                                        <action id="-10" name="Set value" sid="628242170961770" type="UI_FOND_Pause">
+                                                            <param id="0" name="Instance variable">firstStartFade</param>
+                                                            <param id="1" name="Value">NON</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="348512481160559">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="727330146284290" type="UI_ICON_Pause">
+                                                            <param id="0" name="Instance variable">firstStartFade</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">NON</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Fade" id="0" name="Restart fade" sid="331884217058714" type="UI_ICON_Pause" />
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="584901982075731">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="323900069890659" type="UI_ICON_Pause">
+                                                            <param id="0" name="Instance variable">firstStartFade</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">OUI</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Fade" id="1" name="Start fade" sid="724135517638814" type="UI_ICON_Pause" />
+                                                        <action id="-10" name="Set value" sid="239770223741332" type="UI_ICON_Pause">
+                                                            <param id="0" name="Instance variable">firstStartFade</param>
+                                                            <param id="1" name="Value">NON</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="375582637830527" title="UI - BOUTON SUIVANT">
+                <event-group description="" sid="375582637830527" title="BTN SUIVANT">
                     <sub-events>
-                        <event-group description="" sid="943229869520921" title="UI - BOUTON SUIVANT - Actif">
+                        <event-group description="" sid="943229869520921" title="BTN SUIVANT - Actif">
                             <sub-events>
                                 <event-block sid="817971225994138">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="902654846280422" type="System">
+                                            <param id="0" name="Variable">setBtnSuivInactifTemporaire</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">OUI</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="799163985325482" type="System">
+                                            <param id="0" name="Variable">etatBoutonNavSuiv</param>
+                                            <param id="1" name="Value">INACTIF</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="516713900701946" type="Function">
+                                            <param id="0" name="Name">&quot;affichageEffetBoutonSuiv&quot;</param>
+                                            <param id="1" name="Parameter {n}">CACHE</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="942681057899262">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="962222403466701" type="System">
                                             <param id="0" name="Variable">etatBoutonNavSuiv</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">ACTIF</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-16" name="Set opacity" sid="462019731045669" type="UI_BTN_Suiv">
+                                        <action id="-16" name="Set opacity" sid="547114338572858" type="UI_BTN_Suiv">
                                             <param id="0" name="Opacity">100</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="990878083150993" type="UI_BTN_Suiv">
+                                        <action id="-10" name="Set value" sid="450243239750022" type="UI_BTN_Suiv">
                                             <param id="0" name="Instance variable">handActif</param>
                                             <param id="1" name="Value">OUI</param>
                                         </action>
@@ -514,7 +866,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="514212335916036" title="UI - BOUTON SUIVANT - Survol">
+                        <event-group description="" sid="514212335916036" title="BTN SUIVANT - Survol">
                             <sub-events>
                                 <event-block sid="350157036062406">
                                     <conditions>
@@ -530,6 +882,23 @@
                                     <actions>
                                         <action id="5" name="Set frame" sid="149868329010838" type="UI_BTN_Suiv">
                                             <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="399079785126407">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="319316649611358" type="Mouse">
+                                            <param id="0" name="Object">UI_BTN_Suiv</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="177129859555173" type="System">
+                                            <param id="0" name="Variable">etatBoutonNavSuiv</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">INACTIF</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="369311334012144" type="UI_BTN_Suiv">
+                                            <param id="0" name="Frame number">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -552,7 +921,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="513498600525206" title="UI - BOUTON SUIVANT - Clic">
+                        <event-group description="" sid="513498600525206" title="BTN SUIVANT - Clic">
                             <sub-events>
                                 <event-block sid="281299545005848">
                                     <conditions>
@@ -570,15 +939,156 @@
                                             <param id="0" name="Name">&quot;goToMarqueur&quot;</param>
                                             <param id="1" name="Parameter {n}">SUIV</param>
                                         </action>
+                                        <action id="5" name="Set frame" sid="520344677600947" type="UI_BTN_Suiv">
+                                            <param id="0" name="Frame number">2</param>
+                                        </action>
                                     </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="381740861417352" title="BTN SUIVANT - Fonctions">
+                            <sub-events>
+                                <event-block sid="534911101410446">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="981767341588730" type="Function">
+                                            <param id="0" name="Name">&quot;affichageBoutonSuiv&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="379722726485885">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="401915771160060" type="System">
+                                                    <param id="0" name="Variable">ACTIF</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="372207217332946">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="931156858825926" type="System">
+                                                            <param id="0" name="Variable">setBtnSuivInactifToujours</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">NON</param>
+                                                        </condition>
+                                                        <condition id="-14" inverted="1" name="Compare variable" sid="958874487497990" type="System">
+                                                            <param id="0" name="Variable">etatTimeline</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">START</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="341549485611604" type="System">
+                                                            <param id="0" name="Variable">setBtnSuivInactifTemporaire</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">NON</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="916332591537244" type="System">
+                                                            <param id="0" name="Variable">etatBoutonNavSuiv</param>
+                                                            <param id="1" name="Value">ACTIF</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="467931590690960">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="289131386642588" type="System">
+                                                            <param id="0" name="Variable">setBtnSuivInactifToujours</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">OUI</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="630901264743872" type="System">
+                                                            <param id="0" name="Variable">etatBoutonNavSuiv</param>
+                                                            <param id="1" name="Value">INACTIF</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="781436156666504">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="779225804863899" type="System">
+                                                            <param id="0" name="Variable">setBtnSuivInactifTemporaire</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">OUI</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="619799249575753" type="System">
+                                                            <param id="0" name="Variable">etatBoutonNavSuiv</param>
+                                                            <param id="1" name="Value">INACTIF</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="860178369853410">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="508915537051190" type="System">
+                                                    <param id="0" name="Variable">INACTIF</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="202688989505303" type="System">
+                                                    <param id="0" name="Variable">etatBoutonNavSuiv</param>
+                                                    <param id="1" name="Value">INACTIF</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="288069305949076">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="215123896381118" type="Function">
+                                            <param id="0" name="Name">&quot;affichageEffetBoutonSuiv&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="753751618169474">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="111815507742136" type="System">
+                                                    <param id="0" name="Variable">AFFICHE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="472829347171015" type="UI_EFFET_BTN_Suiv">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="3" name="Start" sid="614620147648208" type="UI_EFFET_BTN_Suiv">
+                                                    <param id="0" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="514239802610233">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="475004633868503" type="System">
+                                                    <param id="0" name="Variable">CACHE</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="433547681174625" type="UI_EFFET_BTN_Suiv">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                                <action id="2" name="Stop" sid="230696229250027" type="UI_EFFET_BTN_Suiv" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="205443139376251" title="UI - BOUTON PRECEDENT">
+                <event-group description="" sid="205443139376251" title="BTN PRECEDENT">
                     <sub-events>
-                        <event-group description="" sid="376449937466932" title="UI - BOUTON PRECEDENT - Actif">
+                        <event-group description="" sid="376449937466932" title="BTN PRECEDENT - Actif">
                             <sub-events>
                                 <event-block sid="973767471579248">
                                     <conditions>
@@ -618,7 +1128,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="577747967077027" title="UI - BOUTON PRECEDENT - Survol">
+                        <event-group description="" sid="577747967077027" title="BTN PRECEDENT - Survol">
                             <sub-events>
                                 <event-block sid="991018728693460">
                                     <conditions>
@@ -674,7 +1184,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="459308360595693" title="UI - BOUTON PRECEDENT - Clic">
+                        <event-group description="" sid="459308360595693" title="BTN PRECEDENT - Clic">
                             <sub-events>
                                 <event-block sid="793838925503827">
                                     <conditions>
@@ -698,9 +1208,9 @@
                         </event-group>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="378168238751648" title="UI - BOUTON SUBTITLE">
+                <event-group description="" sid="378168238751648" title="BTN SUBTITLE">
                     <sub-events>
-                        <event-group description="" sid="144347618070020" title="UI - BOUTON SUBTITLE - Survol">
+                        <event-group description="" sid="144347618070020" title="BTN SUBTITLE - Survol">
                             <sub-events>
                                 <event-block sid="669975381123585">
                                     <conditions>
@@ -801,7 +1311,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="262192135790452" title="UI - BOUTON SUBTITLE - Clic">
+                        <event-group description="" sid="262192135790452" title="BTN SUBTITLE - Clic">
                             <sub-events>
                                 <event-block sid="240022127786873">
                                     <conditions>
@@ -818,7 +1328,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="669686130497085" title="UI - BOUTON SUBTITLE - Apparition Consigne">
+                        <event-group description="" sid="669686130497085" title="BTN SUBTITLE - Apparition Consigne">
                             <sub-events>
                                 <event-block sid="296405350932491">
                                     <conditions>
@@ -866,9 +1376,9 @@
                         </event-group>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="679653642016362" title="UI - BOUTON CLOSE">
+                <event-group description="" sid="679653642016362" title="BTN CLOSE">
                     <sub-events>
-                        <event-group description="" sid="354493988841298" title="UI - BOUTON CLOSE - Survol">
+                        <event-group description="" sid="354493988841298" title="BTN CLOSE - Survol">
                             <sub-events>
                                 <event-block sid="745593744201163">
                                     <conditions>
@@ -896,7 +1406,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="649617176486908" title="UI - BOUTON CLOSE - Clic">
+                        <event-group description="" sid="649617176486908" title="BTN CLOSE - Clic">
                             <sub-events>
                                 <event-block sid="804228106760895">
                                     <conditions>
@@ -917,7 +1427,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="713592317221178" title="COMMUN - BOUTONS">
+        <event-group description="" sid="713592317221178" title="COMMUN">
             <sub-events>
                 <event-group description="" sid="342740389706136" title="BTN START">
                     <sub-events>

@@ -3,9 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI_Mecanique</name>
     <events>
-        <include>UI_Mouchard</include>
         <include>UI_Variables</include>
         <include>UI_Fonctions</include>
+        <include>UI_Mouchard</include>
         <include>UI_Boutons</include>
         <event-group description="" sid="760408828082165" title="_OLD">
             <sub-events>
@@ -945,24 +945,6 @@
                             <actions>
                                 <action id="33" name="Stop all" sid="101258421572030" type="Audio" />
                                 <action id="-45" name="Reset persisted objects" sid="695951649493307" type="System" />
-                                <action id="0" name="Call function" sid="455189137839799" type="Function">
-                                    <param id="0" name="Name">&quot;checkIndexLayerUI&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="0" name="Call function" sid="169485437838171" type="Function">
-                                    <param id="0" name="Name">&quot;affichageBoutonSuiv&quot;</param>
-                                    <param id="1" name="Parameter {n}">ACTIF</param>
-                                </action>
-                                <action id="0" name="Call function" sid="841939496465694" type="Function">
-                                    <param id="0" name="Name">&quot;affichageEffetBoutonSuiv&quot;</param>
-                                    <param id="1" name="Parameter {n}">CACHE</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="177489120417340" type="UI_BTN_Suiv">
-                                    <param id="0" name="Frame number">0</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="750419933993285" type="UI_BTN_Prec">
-                                    <param id="0" name="Frame number">0</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="134878377963387" type="System">
                                     <param id="0" name="Variable">etatTimeline</param>
                                     <param id="1" name="Value">PLAY</param>
@@ -987,15 +969,27 @@
                                     <param id="0" name="Variable">etatBoutonComValider</param>
                                     <param id="1" name="Value">INACTIF</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="986586788379019" type="System">
+                                    <param id="0" name="Variable">setBtnSuivInactifTemporaire</param>
+                                    <param id="1" name="Value">NON</param>
+                                </action>
+                                <action id="0" name="Call function" sid="455189137839799" type="Function">
+                                    <param id="0" name="Name">&quot;checkIndexLayerUI&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="0" name="Call function" sid="733234117350487" type="Function">
                                     <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
                                     <param id="1" name="Parameter {n}">ACTIF</param>
                                 </action>
-                                <action disabled="1" id="-10" name="Set value" sid="225143186979433" type="COM_BTN_Commencer">
-                                    <param id="0" name="Instance variable">handActif</param>
-                                    <param id="1" name="Value">NON</param>
+                                <action id="0" name="Call function" sid="169485437838171" type="Function">
+                                    <param id="0" name="Name">&quot;affichageBoutonSuiv&quot;</param>
+                                    <param id="1" name="Parameter {n}">ACTIF</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="266274055902376" type="Function">
+                                <action id="0" name="Call function" sid="841939496465694" type="Function">
+                                    <param id="0" name="Name">&quot;affichageEffetBoutonSuiv&quot;</param>
+                                    <param id="1" name="Parameter {n}">CACHE</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="500995887571037" type="Function">
                                     <param id="0" name="Name">&quot;initVariables&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
@@ -1015,17 +1009,9 @@
                                             <param id="0" name="Name">&quot;etatAllNavBoutons&quot;</param>
                                             <param id="1" name="Parameter {n}">INACTIF</param>
                                         </action>
-                                        <action disabled="1" id="-9" name="Set value" sid="128956763879054" type="System">
-                                            <param id="0" name="Variable">etatBoutonComStart</param>
-                                            <param id="1" name="Value">ACTIF</param>
-                                        </action>
                                         <action id="-9" name="Set value" sid="287450475400900" type="System">
                                             <param id="0" name="Variable">etatTimeline</param>
                                             <param id="1" name="Value">START</param>
-                                        </action>
-                                        <action disabled="1" id="-10" name="Set value" sid="723260407449439" type="COM_BTN_Commencer">
-                                            <param id="0" name="Instance variable">handActif</param>
-                                            <param id="1" name="Value">OUI</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1346,6 +1332,13 @@
                                         <action id="-9" name="Set value" sid="674816643187364" type="System">
                                             <param id="0" name="Variable">numeroMarqueur</param>
                                             <param id="1" name="Value">RESET</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="845002832245837" type="System">
+                                            <param id="0" name="Variable">marqueurInit</param>
+                                            <param id="1" name="Value">START</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="548297555634169" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="981868205813946" type="System">
                                             <param id="0" name="Variable">numeroMarqueur</param>

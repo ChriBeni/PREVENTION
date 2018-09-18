@@ -26,7 +26,7 @@
                             <param id="1" name="Value">OUI</param>
                         </action>
                         <action id="-9" name="Set value" sid="969230472817674" type="System">
-                            <param id="0" name="Variable">boutonSuivInactifToujours</param>
+                            <param id="0" name="Variable">setBtnSuivInactifToujours</param>
                             <param id="1" name="Value">NON</param>
                         </action>
                         <action id="0" name="Call function" sid="563079481847935" type="Function">
@@ -194,6 +194,10 @@
                             <param id="0" name="Name">&quot;afficheBulleXml&quot;</param>
                             <param id="1" name="Parameter {n}">GR04_Bulle_img_02.UID{###}GR04_Bulle_txt_02.UID{###}1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="421348183356122" type="System">
+                            <param id="0" name="Variable">setBtnSuivInactifTemporaire</param>
+                            <param id="1" name="Value">OUI</param>
+                        </action>
                         <action id="0" name="Call function" sid="571139934386847" type="Function">
                             <param id="0" name="Name">&quot;passageAuto&quot;</param>
                             <param id="1" name="Parameter {n}">OUI</param>
@@ -268,7 +272,12 @@
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="707586475009695" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action disabled="1" id="-10" name="Add to" sid="800467219612105" type="System">
+                            <param id="0" name="Variable">a_TEST</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
