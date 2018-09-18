@@ -26,7 +26,7 @@
                             <param id="1" name="Value">OUI</param>
                         </action>
                         <action id="-9" name="Set value" sid="969230472817674" type="System">
-                            <param id="0" name="Variable">setBtnSuivInactifToujours</param>
+                            <param id="0" name="Variable">navForceBtnSuivInactif_ALL</param>
                             <param id="1" name="Value">NON</param>
                         </action>
                         <action id="0" name="Call function" sid="563079481847935" type="Function">
@@ -104,6 +104,10 @@
                         <condition id="-4" name="Trigger once while true" sid="182926296944347" type="System" />
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="943879121441810" type="Function">
+                            <param id="0" name="Name">&quot;setNavMarqueurPrec&quot;</param>
+                            <param id="1" name="Parameter {n}">2</param>
+                        </action>
                         <action id="0" name="Call function" sid="559707152899625" type="Function">
                             <param id="0" name="Name">&quot;passageAuto&quot;</param>
                             <param id="1" name="Parameter {n}">NON</param>
@@ -159,6 +163,10 @@
                             <param id="0" name="Name">&quot;afficheBulleXml&quot;</param>
                             <param id="1" name="Parameter {n}">GR04_Bulle_img_02.UID{###}GR04_Bulle_txt_02.UID{###}8</param>
                         </action>
+                        <action id="0" name="Call function" sid="198978679416773" type="Function">
+                            <param id="0" name="Name">&quot;setNavMarqueurSuiv&quot;</param>
+                            <param id="1" name="Parameter {n}">5</param>
+                        </action>
                         <action id="0" name="Call function" sid="248968177864969" type="Function">
                             <param id="0" name="Name">&quot;passageAuto&quot;</param>
                             <param id="1" name="Parameter {n}">NON</param>
@@ -195,7 +203,7 @@
                             <param id="1" name="Parameter {n}">GR04_Bulle_img_02.UID{###}GR04_Bulle_txt_02.UID{###}1</param>
                         </action>
                         <action id="-9" name="Set value" sid="421348183356122" type="System">
-                            <param id="0" name="Variable">setBtnSuivInactifTemporaire</param>
+                            <param id="0" name="Variable">navForceBtnSuivInactif_TEMP</param>
                             <param id="1" name="Value">OUI</param>
                         </action>
                         <action id="0" name="Call function" sid="571139934386847" type="Function">

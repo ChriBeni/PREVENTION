@@ -293,5 +293,37 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="855979941525326" title="NAVIGATION">
+            <sub-events>
+                <comment>Force le marqueur PRECEDENT</comment>
+                <event-block sid="399643497895667">
+                    <conditions>
+                        <condition id="0" name="On function" sid="124782177783048" type="Function">
+                            <param id="0" name="Name">&quot;setNavMarqueurPrec&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="340492833500978" type="System">
+                            <param id="0" name="Variable">navForceMarqueurPrec_TEMP</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Force le marqueur SUIVANT</comment>
+                <event-block sid="555096707174656">
+                    <conditions>
+                        <condition id="0" name="On function" sid="465242798952564" type="Function">
+                            <param id="0" name="Name">&quot;setNavMarqueurSuiv&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="167969273808479" type="System">
+                            <param id="0" name="Variable">navForceMarqueurSuiv_TEMP</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

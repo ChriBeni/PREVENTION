@@ -970,8 +970,16 @@
                                     <param id="1" name="Value">INACTIF</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="986586788379019" type="System">
-                                    <param id="0" name="Variable">setBtnSuivInactifTemporaire</param>
+                                    <param id="0" name="Variable">navForceBtnSuivInactif_TEMP</param>
                                     <param id="1" name="Value">NON</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="649267734607366" type="System">
+                                    <param id="0" name="Variable">navForceMarqueurPrec_TEMP</param>
+                                    <param id="1" name="Value">RESET</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="102000106027843" type="System">
+                                    <param id="0" name="Variable">navForceMarqueurSuiv_TEMP</param>
+                                    <param id="1" name="Value">RESET</param>
                                 </action>
                                 <action id="0" name="Call function" sid="455189137839799" type="Function">
                                     <param id="0" name="Name">&quot;checkIndexLayerUI&quot;</param>
@@ -1063,6 +1071,47 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="148618927543682" type="System">
                                     <param id="0" name="Variable">initSonPlayOk</param>
+                                    <param id="1" name="Value">RESET</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="758807418288933">
+                            <conditions>
+                                <condition id="0" name="On function" sid="417291404932529" type="Function">
+                                    <param id="0" name="Name">&quot;initVariables&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="369715585014488" type="System">
+                                    <param id="0" name="Variable">etatLectureAnim</param>
+                                    <param id="1" name="Value">RESET</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="784691973103810" type="System">
+                                    <param id="0" name="Variable">etatLectureSon</param>
+                                    <param id="1" name="Value">RESET</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="771958701224056" type="System">
+                                    <param id="0" name="Variable">marqueurInit</param>
+                                    <param id="1" name="Value">RESET</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="443856331383089" type="System">
+                                    <param id="0" name="Variable">marqueurPassageAuto</param>
+                                    <param id="1" name="Value">RESET</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="710093219896458" type="System">
+                                    <param id="0" name="Variable">marqueurFin</param>
+                                    <param id="1" name="Value">NON</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="869246443874386" type="System">
+                                    <param id="0" name="Variable">initSonOk</param>
+                                    <param id="1" name="Value">RESET</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="595217661360668" type="System">
+                                    <param id="0" name="Variable">initValuesMouchardOk</param>
+                                    <param id="1" name="Value">RESET</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="602337378099286" type="System">
+                                    <param id="0" name="Variable">initSubtitlesOk</param>
                                     <param id="1" name="Value">RESET</param>
                                 </action>
                             </actions>
@@ -1304,16 +1353,60 @@
                                             <param id="2" name="Value">SUIV</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-10" name="Add to" sid="831456179263660" type="System">
-                                            <param id="0" name="Variable">numeroMarqueur</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="308512146807562" type="System">
-                                            <param id="0" name="Variable">marqueurInit</param>
-                                            <param id="1" name="Value">START</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>Si on n&apos;indique pas de nouvelle valeur au suivant, on navigue normalement</comment>
+                                        <event-block sid="266543547420893">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="361364469621494" type="System">
+                                                    <param id="0" name="Variable">navForceMarqueurSuiv_TEMP</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">RESET</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="831456179263660" type="System">
+                                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>Si on indique une nouvelle valeur au suivant, on ira à ce marqueur au moment du clic</comment>
+                                        <event-block sid="879016481972434">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="523946302522921" type="System">
+                                                    <param id="0" name="Variable">navForceMarqueurSuiv_TEMP</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">RESET</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="781312806565234" type="System">
+                                                    <param id="0" name="Variable">navForceMarqueurSuiv_TEMP</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="660974754904596" type="System">
+                                                    <param id="0" name="Variable">navForceMarqueurSuiv_TEMP</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">xmlNombreNode</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="357473773784685" type="System">
+                                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                                    <param id="1" name="Value">navForceMarqueurSuiv_TEMP</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="670907137694937">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="308512146807562" type="System">
+                                                    <param id="0" name="Variable">marqueurInit</param>
+                                                    <param id="1" name="Value">START</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <variable constant="0" name="marqueurTemp" sid="283377316790695" static="1" type="number">0</variable>
                                 <event-block sid="796763753820209">
@@ -1364,7 +1457,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <comment>Verifie si on ne va pas en dessous du marqueur 0</comment>
+                                        <comment>Si on n&apos;indique pas de nouvelle valeur au precedent, on navigue normalement (si on ne va pas en dessous du marqueur 0)</comment>
                                         <event-block sid="544591831517266">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="970270137994737" type="System">
@@ -1372,13 +1465,49 @@
                                                     <param id="1" name="Comparison">1</param>
                                                     <param id="2" name="Value">0</param>
                                                 </condition>
+                                                <condition id="-14" name="Compare variable" sid="112523800599910" type="System">
+                                                    <param id="0" name="Variable">navForceMarqueurPrec_TEMP</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">RESET</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-11" name="Subtract from" sid="358577023445662" type="System">
                                                     <param id="0" name="Variable">numeroMarqueur</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
-                                                <action id="-9" name="Set value" sid="109823148574432" type="System">
+                                            </actions>
+                                        </event-block>
+                                        <comment>Si on indique une nouvelle valeur au precedent, on ira à ce marqueur au moment du clic</comment>
+                                        <event-block sid="136277907932736">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="440559379515038" type="System">
+                                                    <param id="0" name="Variable">navForceMarqueurPrec_TEMP</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">RESET</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="963512280482770" type="System">
+                                                    <param id="0" name="Variable">navForceMarqueurPrec_TEMP</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="570583034405979" type="System">
+                                                    <param id="0" name="Variable">navForceMarqueurPrec_TEMP</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">xmlNombreNode</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="735563005395354" type="System">
+                                                    <param id="0" name="Variable">numeroMarqueur</param>
+                                                    <param id="1" name="Value">navForceMarqueurPrec_TEMP</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="956123557183279">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="871770941774371" type="System">
                                                     <param id="0" name="Variable">marqueurInit</param>
                                                     <param id="1" name="Value">START</param>
                                                 </action>
@@ -2544,46 +2673,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="758807418288933">
-            <conditions>
-                <condition id="0" name="On function" sid="417291404932529" type="Function">
-                    <param id="0" name="Name">&quot;initVariables&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="369715585014488" type="System">
-                    <param id="0" name="Variable">etatLectureAnim</param>
-                    <param id="1" name="Value">RESET</param>
-                </action>
-                <action id="-9" name="Set value" sid="784691973103810" type="System">
-                    <param id="0" name="Variable">etatLectureSon</param>
-                    <param id="1" name="Value">RESET</param>
-                </action>
-                <action id="-9" name="Set value" sid="771958701224056" type="System">
-                    <param id="0" name="Variable">marqueurInit</param>
-                    <param id="1" name="Value">RESET</param>
-                </action>
-                <action id="-9" name="Set value" sid="443856331383089" type="System">
-                    <param id="0" name="Variable">marqueurPassageAuto</param>
-                    <param id="1" name="Value">RESET</param>
-                </action>
-                <action id="-9" name="Set value" sid="710093219896458" type="System">
-                    <param id="0" name="Variable">marqueurFin</param>
-                    <param id="1" name="Value">NON</param>
-                </action>
-                <action id="-9" name="Set value" sid="869246443874386" type="System">
-                    <param id="0" name="Variable">initSonOk</param>
-                    <param id="1" name="Value">RESET</param>
-                </action>
-                <action id="-9" name="Set value" sid="595217661360668" type="System">
-                    <param id="0" name="Variable">initValuesMouchardOk</param>
-                    <param id="1" name="Value">RESET</param>
-                </action>
-                <action id="-9" name="Set value" sid="602337378099286" type="System">
-                    <param id="0" name="Variable">initSubtitlesOk</param>
-                    <param id="1" name="Value">RESET</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

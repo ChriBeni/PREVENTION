@@ -812,7 +812,7 @@
                                 <event-block sid="817971225994138">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="902654846280422" type="System">
-                                            <param id="0" name="Variable">setBtnSuivInactifTemporaire</param>
+                                            <param id="0" name="Variable">navForceBtnSuivInactif_TEMP</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">OUI</param>
                                         </condition>
@@ -969,7 +969,7 @@
                                                 <event-block sid="372207217332946">
                                                     <conditions>
                                                         <condition id="-14" name="Compare variable" sid="931156858825926" type="System">
-                                                            <param id="0" name="Variable">setBtnSuivInactifToujours</param>
+                                                            <param id="0" name="Variable">navForceBtnSuivInactif_ALL</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Value">NON</param>
                                                         </condition>
@@ -979,7 +979,7 @@
                                                             <param id="2" name="Value">START</param>
                                                         </condition>
                                                         <condition id="-14" name="Compare variable" sid="341549485611604" type="System">
-                                                            <param id="0" name="Variable">setBtnSuivInactifTemporaire</param>
+                                                            <param id="0" name="Variable">navForceBtnSuivInactif_TEMP</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Value">NON</param>
                                                         </condition>
@@ -994,7 +994,7 @@
                                                 <event-block sid="467931590690960">
                                                     <conditions>
                                                         <condition id="-14" name="Compare variable" sid="289131386642588" type="System">
-                                                            <param id="0" name="Variable">setBtnSuivInactifToujours</param>
+                                                            <param id="0" name="Variable">navForceBtnSuivInactif_ALL</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Value">OUI</param>
                                                         </condition>
@@ -1009,7 +1009,7 @@
                                                 <event-block sid="781436156666504">
                                                     <conditions>
                                                         <condition id="-14" name="Compare variable" sid="779225804863899" type="System">
-                                                            <param id="0" name="Variable">setBtnSuivInactifTemporaire</param>
+                                                            <param id="0" name="Variable">navForceBtnSuivInactif_TEMP</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Value">OUI</param>
                                                         </condition>

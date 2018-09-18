@@ -46,9 +46,11 @@
         <variable constant="0" name="marqueurGoTo" sid="805148117623186" static="0" type="number">0</variable>
         <variable comment="OUI ou NON" constant="0" name="marqueurPassageAuto" sid="484194698726918" static="0" type="number">100</variable>
         <comment>PARAMETRES</comment>
-        <variable comment="si variable à oui, le bouton suiv est inactif tant qu&apos;on est pas à la fin de la séquence (reste à OUI tant qu&apos;on a pas dit NON)" constant="0" name="setBtnSuivInactifToujours" sid="192304305217618" static="0" type="number">0</variable>
-        <variable comment="si variable à oui, le bouton suiv est inactif tant qu&apos;on est pas à la fin de la séquence (reste à OUI tant qu&apos;on a pas dit NON)" constant="0" name="setBtnSuivInactifTemporaire" sid="439721817960137" static="0" type="number">0</variable>
-        <variable comment="Permet l&apos;affichage du mouchard" constant="0" name="modeDeveloppeur" sid="576439426941931" static="0" type="number">0</variable>
+        <variable comment="[OUI ou NON] &gt; Inactive le bouton SUIVANT sur tout le granule" constant="0" name="navForceBtnSuivInactif_ALL" sid="192304305217618" static="0" type="number">0</variable>
+        <variable comment="[OUI ou NON] &gt; Inactive le bouton SUIVANT sur un seul marqueur" constant="0" name="navForceBtnSuivInactif_TEMP" sid="439721817960137" static="0" type="number">0</variable>
+        <variable comment="[RESET ou N° Marqueur] &gt; Force le changement de marqueur PRECEDENT" constant="0" name="navForceMarqueurPrec_TEMP" sid="614998733949788" static="0" type="number">0</variable>
+        <variable comment="[RESET ou N° Marqueur] ] &gt; Force le changement de marqueur SUIVANT" constant="0" name="navForceMarqueurSuiv_TEMP" sid="624666585222211" static="0" type="number">0</variable>
+        <variable comment="[OUI ou NON] &gt; Affichage du mouchard" constant="0" name="modeDeveloppeur" sid="576439426941931" static="0" type="number">0</variable>
         <variable comment="Numéro du granule" constant="0" name="numeroGranule" sid="199013896521894" static="0" type="text">GR..</variable>
         <variable comment="n° de rang =&gt; permet d&apos;appeler les sons et ss-titres dans l&apos;array" constant="0" name="numeroMarqueur" sid="438890224343227" static="0" type="number">0</variable>
         <comment>CHARGEMENT</comment>

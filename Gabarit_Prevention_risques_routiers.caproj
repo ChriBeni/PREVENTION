@@ -2091,6 +2091,9 @@
             <event-sheet>GR04_Variables.xml</event-sheet>
         </event-folder>
         <event-folder name="GR05" />
+        <event-folder name="GABARIT">
+            <event-sheet>GR00_Fonctions.xml</event-sheet>
+        </event-folder>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="87" />
